@@ -1,2 +1,2 @@
 # Tutoriais
-Tutorias com fins de automatizar e facilitar instalações.
+Tutorias para fins de automatizar e facilitar instalações.
