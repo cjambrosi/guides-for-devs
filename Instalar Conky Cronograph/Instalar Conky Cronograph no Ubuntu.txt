@@ -1,6 +1,6 @@
 
 
-												Instalar Conky Cronograph no Ubuntu
+					Instalar Conky Cronograph no Ubuntu
 
 
 1º Antes de tudo, atualizar os repositórios e gatilhos do Ubuntu:

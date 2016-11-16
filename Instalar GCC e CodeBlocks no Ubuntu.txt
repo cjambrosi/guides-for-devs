@@ -1,6 +1,6 @@
 
 										
-										Instalar GCC e Code::Blocks no Ubuntu para compilar C++
+					Instalar GCC e Code::Blocks no Ubuntu para compilar C++
 
 
 # Antes de tudo, atualizar os repositórios e gatilhos do Ubuntu:

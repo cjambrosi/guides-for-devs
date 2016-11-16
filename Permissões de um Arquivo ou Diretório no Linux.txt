@@ -1,5 +1,5 @@
 
-										Permissões de um Arquivo ou Diretório no Linux
+					Permissões de um Arquivo ou Diretório no Linux
 
 
 - Abra o terminal do linux, escolha um diretório qualquer e de o seguinte comando:

@@ -1,6 +1,6 @@
 
 
-										Instalar Java no Ubuntu
+					Instalar Java no Ubuntu
 
 
 # Na linha de comando.

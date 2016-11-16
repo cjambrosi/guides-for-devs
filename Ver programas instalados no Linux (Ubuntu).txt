@@ -1,5 +1,5 @@
 
-										Ver programas instalados no Linux (Ubuntu)
+					Ver programas instalados no Linux (Ubuntu)
 										
 
 # Listar todos os programas instalados:										

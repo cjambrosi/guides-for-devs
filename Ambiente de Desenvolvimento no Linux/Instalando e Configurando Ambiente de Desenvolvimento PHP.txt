@@ -1,9 +1,7 @@
 
-
-
-							Instalando e Configurando Ambiente de Desenvolvimento PHP para o CakePHP
-										Pilha LAMP - Apache, MySQL/Postegres, PHP5
-														No Ubuntu
+					Instalando e Configurando Ambiente de Desenvolvimento PHP para o CakePHP
+									Pilha LAMP - Apache, MySQL/Postegres, PHP5
+													No Ubuntu
 
 
 
