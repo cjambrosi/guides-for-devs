@@ -1,6 +1,6 @@
 
 
-										Formatar Pen Drive no Terminal Linux
+					Formatar Pen Drive no Terminal Linux
 
 
 - Sistemas de Arquivos ou File System, refere-se à forma como os dados são armazenados, organizados e acessados no disco pelo sistema operacional. É um artifício imposto pelo sistema operacional e não pelo hardware da máquina. O processo conhecido como "formatação lógica de disco" estabelece um file system em uma partição de HD, em pen drives, disquetes e etc.
