@@ -87,9 +87,9 @@ Formatar Pen Drive no Terminal Linux
 	> sudo umount CAMINHO/DA/UNIDADE
 
 - Exemplo:
-> sudo umount /dev/sdb1
+ > sudo umount /dev/sdb1
 ***ou***
-> sudo umount /media/usuario/PENDRIVE
+ > sudo umount /media/usuario/PENDRIVE
 
 --------------------
 
@@ -120,7 +120,7 @@ Formatar Pen Drive no Terminal Linux
 
 ## Lista de comandos utilizados
 
-**fdisk -l 	=>** Lista os particionamentos. fdisk é um utilitário presente em diversos sistemas operacionais que realiza particionamento de discos rígidos. Há versões do fdisk para Linux, DOS, Windows, FreeDOS e OS/2;
+**fdisk -l =>** Lista os particionamentos. fdisk é um utilitário presente em diversos sistemas operacionais que realiza particionamento de discos rígidos. Há versões do fdisk para Linux, DOS, Windows, FreeDOS e OS/2;
 
 **mount =>** Comando para criar novos Sistemas de Arquivos e também para visualizar os já montados;
 
@@ -140,7 +140,7 @@ Formatar Pen Drive no Terminal Linux
 
 **-f =>** Executa a formatação rápida. Isso ignorará tanto a redução de volume quanto a verificação de setor ruim.
 
-**ntfslabel =>** é uma ferramenta que possui a funcionalidade, renomear ou exibir o rótulo de um sistema de arquivos NTFS;
+**ntfslabel =>** É uma ferramenta que possui a funcionalidade, renomear ou exibir o rótulo de um sistema de arquivos NTFS;
 
 **/dev/sdb1 =>** Partição do disco onde é montado o dispositivo conectado. Sendo a primeira partição do segundo disco rígido SATA ou SCSI. Pode haver vários, por isso devemos ter certeza da partição que queremos formatar.
 
