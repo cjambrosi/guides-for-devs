@@ -1,5 +1,6 @@
 
-# Instalando e Configurando o Composer no Linux (Ubuntu)
+Instalando e Configurando o Composer no Linux (Ubuntu)
+===============================================
 
 --------------------
 
