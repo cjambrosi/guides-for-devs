@@ -19,10 +19,10 @@ Formatar Pen Drive no Terminal Linux
 		Tamanho do setor (lógico/físico): 512 bytes / 512 bytes
 		Tamanho da E/S (mínimo/ideal): 512 bytes / 512 bytes
 		Identificador do disco: 0x00000000
+		
 		Dispositivo Boot  | Início | Fim             | Blocos            | Id | Sistema
 		---------------------|--------|---------------|-----------------|----|------------
 		/dev/sda1	        | 1        | 976773167 | 488386583+ | ee | GPT
-		---------------------|--------|---------------|-----------------|----|------------
 
 		Disco /dev/sdb: 4004 MB, 4004511744 bytes
 		255 cabeças, 63 setores/trilhas, 486 cilindros, total de 7821312 setores
@@ -34,7 +34,7 @@ Formatar Pen Drive no Terminal Linux
 		Dispositivo Boot | Início | Fim         | Blocos     | Id | Sistema
 		--------------------|--------|------------|------------|----|------------------------
 		/dev/sdb1           | 32      | 7821311 | 3910640 | 7  | HPFS/NTFS/exFAT
-		--------------------|--------|------------|------------|----|------------------------
+		
 
 2. Segunda Forma - Digite:
 	
