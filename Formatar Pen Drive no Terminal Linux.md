@@ -82,14 +82,15 @@ Formatar Pen Drive no Terminal Linux
 
 ## Desmontar a unidade do Pen Drive
 
-1. Normalmente, quando colocamos o Pen Drive na porta USB, o Linux (ou qualquer outros SO) já monta ele automaticamente, então para fazermos a formatação, devemos desmontá-lo. Digite o comando a baixo:
+ - Normalmente, quando colocamos o Pen Drive na porta USB, o Linux (ou qualquer outros SO) já monta o automaticamente, então para fazermos a formatação, devemos desmontá-lo. Digite o comando a baixo:
 
 	> sudo umount CAMINHO/DA/UNIDADE
 
-- Exemplo:
- > sudo umount /dev/sdb1
-***ou***
- > sudo umount /media/usuario/PENDRIVE
+ - Exemplo:
+	> sudo umount /dev/sdb1
+
+ - Ou:
+	> sudo umount /media/usuario/PENDRIVE
 
 --------------------
 
@@ -100,13 +101,16 @@ Formatar Pen Drive no Terminal Linux
 	- Formato NTFS (recomentado):
 
 		> sudo mkfs.ntfs -I /dev/sdb1
-		***ou***
-			sudo mkfs.ntfs -f -I /dev/sdb1
-		**ou**	
-			sudo mkntfs -I /dev/sdb1
-		***ou***
-			sudo mkntfs -f -I /dev/sdb1
-
+		
+		-  Ou:
+			> sudo mkfs.ntfs -f -I /dev/sdb1
+			
+		-  Ou:	
+			> sudo mkntfs -I /dev/sdb1
+			
+		-  Ou:
+			> sudo mkntfs -f -I /dev/sdb1
+			
 		- Na formatação para NTFS, a maneira de nomear o dispositivo é diferente. Digite o seguinte comando:
 
 			> sudo ntfslabel /dev/sdb1 NOMEPENDRIVE
@@ -120,7 +124,7 @@ Formatar Pen Drive no Terminal Linux
 
 ## Lista de comandos utilizados
 
-**fdisk -l =>** Lista os particionamentos. fdisk é um utilitário presente em diversos sistemas operacionais que realiza particionamento de discos rígidos. Há versões do fdisk para Linux, DOS, Windows, FreeDOS e OS/2;
+**fdisk -l 	=>** Lista os particionamentos. fdisk é um utilitário presente em diversos sistemas operacionais que realiza particionamento de discos rígidos. Há versões do fdisk para Linux, DOS, Windows, FreeDOS e OS/2;
 
 **mount =>** Comando para criar novos Sistemas de Arquivos e também para visualizar os já montados;
 
@@ -140,7 +144,7 @@ Formatar Pen Drive no Terminal Linux
 
 **-f =>** Executa a formatação rápida. Isso ignorará tanto a redução de volume quanto a verificação de setor ruim.
 
-**ntfslabel =>** É uma ferramenta que possui a funcionalidade, renomear ou exibir o rótulo de um sistema de arquivos NTFS;
+**ntfslabel =>** é uma ferramenta que possui a funcionalidade, renomear ou exibir o rótulo de um sistema de arquivos NTFS;
 
 **/dev/sdb1 =>** Partição do disco onde é montado o dispositivo conectado. Sendo a primeira partição do segundo disco rígido SATA ou SCSI. Pode haver vários, por isso devemos ter certeza da partição que queremos formatar.
 
