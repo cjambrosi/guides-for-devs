@@ -9,6 +9,7 @@ Instalando e Configurando o Composer no Linux (Ubuntu)
 1. Antes de tudo, atualizar os repositórios e gatilhos do Ubuntu:
 
 	> sudo apt-get update
+	
 	> sudo apt-get upgrade
 
 2. Precisaremos da biblioteca "curl" instalada, para baixarmos o pacote Composer. Digite o comando a baixo para instalar:
