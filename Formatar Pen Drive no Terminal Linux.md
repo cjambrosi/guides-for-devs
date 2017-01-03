@@ -82,7 +82,7 @@ Formatar Pen Drive no Terminal Linux
 
 ## Desmontar a unidade do Pen Drive
 
- - Normalmente, quando colocamos o Pen Drive na porta USB, o Linux (ou qualquer outros SO) já monta o automaticamente, então para fazermos a formatação, devemos desmontá-lo. Digite o comando a baixo:
+ - Normalmente, quando colocamos o Pen Drive na porta USB, o Linux (ou qualquer outros SO) já o monta automaticamente, então para fazermos a formatação, devemos desmontá-lo. Digite o comando a baixo:
 
 	> sudo umount CAMINHO/DA/UNIDADE
 
@@ -144,7 +144,7 @@ Formatar Pen Drive no Terminal Linux
 
 **-f =>** Executa a formatação rápida. Isso ignorará tanto a redução de volume quanto a verificação de setor ruim.
 
-**ntfslabel =>** é uma ferramenta que possui a funcionalidade, renomear ou exibir o rótulo de um sistema de arquivos NTFS;
+**ntfslabel =>** É uma ferramenta que possui a funcionalidade, renomear ou exibir o rótulo de um sistema de arquivos NTFS;
 
 **/dev/sdb1 =>** Partição do disco onde é montado o dispositivo conectado. Sendo a primeira partição do segundo disco rígido SATA ou SCSI. Pode haver vários, por isso devemos ter certeza da partição que queremos formatar.
 
