@@ -19,7 +19,7 @@ Instalando e Configurando o Composer no Linux (Ubuntu)
 
 	> curl -sS https://getcomposer.org/installer | php
 
-4. Torne-o executável:
+4. Torne-o executável com o comando a baixo:
 
 	> sudo chmod +x composer.phar
 
@@ -34,15 +34,14 @@ Instalando e Configurando o Composer no Linux (Ubuntu)
 
 ### O que foi instalado?!
 
- - Composer -> É uma ferramenta para gerenciamento de dependências para o PHP que vem ganhando espaço e se tornando cada vez mais indispensável. Com algumas poucas linhas de configurações você define todas as bibliotecas de terceiros ou mesmo suas que deseja/precisa utilizar em seu projeto, o composer encarrega-se de baixá-las e criar um autoloader deixando-as prontas para uso;
+ - **Composer ->** É uma ferramenta para gerenciamento de dependências para o PHP que vem ganhando espaço e se tornando cada vez mais indispensável. Com algumas poucas linhas de configurações você define todas as bibliotecas de terceiros ou mesmo suas que deseja/precisa utilizar em seu projeto, o composer encarrega-se de baixá-las e criar um autoloader deixando-as prontas para uso;
  
- - chmod +x -> Comando que dá permissão de execução apenas;
+ - **chmod +x ->** Comando que dá permissão de execução apenas;
  
- - curl -> Uma biblioteca suportada pelo PHP, que permite que você conecte-se e comunique-se com diferentes tipos de servidor usando diferentes tipos de protocolos. libcurl atualmente suporte os protocolos http, https, ftp, gopher, telnet, dict, file, e ldap. libcurl também suporta certificados HTTPS, HTTP POST, HTTP PUT, upload via FTP (podendo também ser feito com a extensão ftp do PHP), upload HTTP por formulário, proxies, cookies, e autenticação com usuário e senha.
-
-
+ - **curl ->** Uma biblioteca suportada pelo PHP, que permite que você conecte-se e comunique-se com diferentes tipos de servidor usando diferentes tipos de protocolos. libcurl atualmente suporte os protocolos http, https, ftp, gopher, telnet, dict, file, e ldap. libcurl também suporta certificados HTTPS, HTTP POST, HTTP PUT, upload via FTP (podendo também ser feito com a extensão ftp do PHP), upload HTTP por formulário, proxies, cookies, e autenticação com usuário e senha.
 
 ### Fontes:
+
 http://gilbertoalbino.com/instalacao-do-composer-no-ubuntu/
 
 http://tableless.com.br/composer-para-iniciantes/
