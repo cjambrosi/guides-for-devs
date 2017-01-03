@@ -11,7 +11,7 @@ Formatar Pen Drive no Terminal Linux
 	
 	> sudo fdisk -l
 
-- Exemplo de Saída:
+	- Exemplo de saída:
 
 		Disco /dev/sda: 500.1 GB, 500107862016 bytes
 		255 cabeças, 63 setores/trilhas, 60801 cilindros, total de 976773168 setores
