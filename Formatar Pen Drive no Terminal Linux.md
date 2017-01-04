@@ -14,10 +14,15 @@ Formatar Pen Drive no Terminal Linux
 	- Exemplo de saída:
 
 		```Disco /dev/sda: 500.1 GB, 500107862016 bytes
+		
 		255 cabeças, 63 setores/trilhas, 60801 cilindros, total de 976773168 setores
+		
 		Unidades = setores de 1 * 512 = 512 bytes
+		
 		Tamanho do setor (lógico/físico): 512 bytes / 512 bytes
+		
 		Tamanho da E/S (mínimo/ideal): 512 bytes / 512 bytes
+		
 		Identificador do disco: 0x00000000```
 		
 		Dispositivo Boot  | Início | Fim             | Blocos            | Id | Sistema
