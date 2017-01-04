@@ -4,7 +4,7 @@ Formatar Pen Drive no Terminal Linux
 
 #### Sistemas de Arquivos ou File System, refere-se à forma como os dados são armazenados, organizados e acessados no disco pelo sistema operacional. É um artifício imposto pelo sistema operacional e não pelo hardware da máquina. O processo conhecido como "formatação lógica de disco" estabelece um file system em uma partição de HD, em pen drives, disquetes e etc.
 
-----------
+--------------------
 
 ## Identificando o Pen Drive
 1. Primeira Forma - Digite:
@@ -13,23 +13,23 @@ Formatar Pen Drive no Terminal Linux
 
 	- Exemplo de saída:
 
-		Disco /dev/sda: 500.1 GB, 500107862016 bytes
+		`Disco /dev/sda: 500.1 GB, 500107862016 bytes
 		255 cabeças, 63 setores/trilhas, 60801 cilindros, total de 976773168 setores
 		Unidades = setores de 1 * 512 = 512 bytes
 		Tamanho do setor (lógico/físico): 512 bytes / 512 bytes
 		Tamanho da E/S (mínimo/ideal): 512 bytes / 512 bytes
-		Identificador do disco: 0x00000000
+		Identificador do disco: 0x00000000`
 		
 		Dispositivo Boot  | Início | Fim             | Blocos            | Id | Sistema
 		---------------------|--------|---------------|-----------------|----|------------
 		/dev/sda1	        | 1        | 976773167 | 488386583+ | ee | GPT
 
-		Disco /dev/sdb: 4004 MB, 4004511744 bytes
+		`Disco /dev/sdb: 4004 MB, 4004511744 bytes
 		255 cabeças, 63 setores/trilhas, 486 cilindros, total de 7821312 setores
 		Unidades = setores de 1 * 512 = 512 bytes
 		Tamanho do setor (lógico/físico): 512 bytes / 512 bytes
 		Tamanho da E/S (mínimo/ideal): 512 bytes / 512 bytes
-		Identificador do disco: 0x36c439e6
+		Identificador do disco: 0x36c439e6`
 
 		Dispositivo Boot | Início | Fim         | Blocos     | Id | Sistema
 		--------------------|--------|------------|------------|----|------------------------
@@ -42,7 +42,7 @@ Formatar Pen Drive no Terminal Linux
 
 	- Exemplo de saída:
 
-		/dev/sda2 on / type ext4 (rw,errors=remount-ro)
+		`/dev/sda2 on / type ext4 (rw,errors=remount-ro)
 		proc on /proc type proc (rw,noexec,nosuid,nodev)
 		sysfs on /sys type sysfs (rw,noexec,nosuid,nodev)
 		none on /sys/fs/cgroup type tmpfs (rw)
@@ -60,7 +60,7 @@ Formatar Pen Drive no Terminal Linux
 		/dev/sda1 on /boot/efi type vfat (rw)
 		systemd on /sys/fs/cgroup/systemd type cgroup (rw,noexec,nosuid,nodev,none,name=systemd)
 		gvfsd-fuse on /run/user/1000/gvfs type fuse.gvfsd-fuse (rw,nosuid,nodev,user=sim)
-		/dev/sdb1 on /media/usuario/*PENDRIVE* type fuseblk(rw,nosuid,nodev,allow_other,default_permissions,blksize=4096) 
+		/dev/sdb1 on /media/usuario/*PENDRIVE* type fuseblk(rw,nosuid,nodev,allow_other,default_permissions,blksize=4096)`
 
 3. Terceira Forma - Digite:
 
