@@ -14,22 +14,22 @@ Formatar Pen Drive no Terminal Linux
 	- Exemplo de saída:
 
 		`Disco /dev/sda: 500.1 GB, 500107862016 bytes`</br>
-		`255 cabeças, 63 setores/trilhas, 60801 cilindros, total de 976773168 setores`
-		`Unidades = setores de 1 * 512 = 512 bytes`
-		`Tamanho do setor (lógico/físico): 512 bytes / 512 bytes`
-		`Tamanho da E/S (mínimo/ideal): 512 bytes / 512 bytes`
+		`255 cabeças, 63 setores/trilhas, 60801 cilindros, total de 976773168 setores`</br>
+		`Unidades = setores de 1 * 512 = 512 bytes`</br>
+		`Tamanho do setor (lógico/físico): 512 bytes / 512 bytes`</br>
+		`Tamanho da E/S (mínimo/ideal): 512 bytes / 512 bytes`</br>
 		`Identificador do disco: 0x00000000`
 		
 		Dispositivo Boot  | Início | Fim             | Blocos            | Id | Sistema
 		---------------------|--------|---------------|-----------------|----|------------
 		/dev/sda1	        | 1        | 976773167 | 488386583+ | ee | GPT
 
-		`Disco /dev/sdb: 4004 MB, 4004511744 bytes
-		255 cabeças, 63 setores/trilhas, 486 cilindros, total de 7821312 setores
-		Unidades = setores de 1 * 512 = 512 bytes
-		Tamanho do setor (lógico/físico): 512 bytes / 512 bytes
-		Tamanho da E/S (mínimo/ideal): 512 bytes / 512 bytes
-		Identificador do disco: 0x36c439e6`
+		`Disco /dev/sdb: 4004 MB, 4004511744 bytes`</br>
+		`255 cabeças, 63 setores/trilhas, 486 cilindros, total de 7821312 setores`</br>
+		`Unidades = setores de 1 * 512 = 512 bytes`</br>
+		`Tamanho do setor (lógico/físico): 512 bytes / 512 bytes`</br>
+		`Tamanho da E/S (mínimo/ideal): 512 bytes / 512 bytes`</br>
+		`Identificador do disco: 0x36c439e6`
 
 		Dispositivo Boot | Início | Fim         | Blocos     | Id | Sistema
 		--------------------|--------|------------|------------|----|------------------------
@@ -42,25 +42,25 @@ Formatar Pen Drive no Terminal Linux
 
 	- Exemplo de saída:
 
-		`/dev/sda2 on / type ext4 (rw,errors=remount-ro)
-		proc on /proc type proc (rw,noexec,nosuid,nodev)
-		sysfs on /sys type sysfs (rw,noexec,nosuid,nodev)
-		none on /sys/fs/cgroup type tmpfs (rw)
-		none on /sys/fs/fuse/connections type fusectl (rw)
-		none on /sys/kernel/debug type debugfs (rw)
-		none on /sys/kernel/security type securityfs (rw)
-		none on /sys/firmware/efi/efivars type efivarfs (rw)
-		udev on /dev type devtmpfs (rw,mode=0755)
-		devpts on /dev/pts type devpts (rw,noexec,nosuid,gid=5,mode=0620)
-		tmpfs on /run type tmpfs (rw,noexec,nosuid,size=10%,mode=0755)
-		none on /run/lock type tmpfs (rw,noexec,nosuid,nodev,size=5242880)
-		none on /run/shm type tmpfs (rw,nosuid,nodev)
-		none on /run/user type tmpfs (rw,noexec,nosuid,nodev,size=104857600,mode=0755)
-		none on /sys/fs/pstore type pstore (rw)
-		/dev/sda1 on /boot/efi type vfat (rw)
-		systemd on /sys/fs/cgroup/systemd type cgroup (rw,noexec,nosuid,nodev,none,name=systemd)
-		gvfsd-fuse on /run/user/1000/gvfs type fuse.gvfsd-fuse (rw,nosuid,nodev,user=sim)
-		/dev/sdb1 on /media/usuario/*PENDRIVE* type fuseblk(rw,nosuid,nodev,allow_other,default_permissions,blksize=4096)`
+		`/dev/sda2 on / type ext4 (rw,errors=remount-ro)`</br>
+		`proc on /proc type proc (rw,noexec,nosuid,nodev)`</br>
+		`sysfs on /sys type sysfs (rw,noexec,nosuid,nodev)`</br>
+		`none on /sys/fs/cgroup type tmpfs (rw)`</br>
+		`none on /sys/fs/fuse/connections type fusectl (rw)`</br>
+		`none on /sys/kernel/debug type debugfs (rw)`</br>
+		`none on /sys/kernel/security type securityfs (rw)`</br>
+		`none on /sys/firmware/efi/efivars type efivarfs (rw)`</br>
+		`udev on /dev type devtmpfs (rw,mode=0755)`</br>
+		`devpts on /dev/pts type devpts (rw,noexec,nosuid,gid=5,mode=0620)`</br>
+		`tmpfs on /run type tmpfs (rw,noexec,nosuid,size=10%,mode=0755)`</br>
+		`none on /run/lock type tmpfs (rw,noexec,nosuid,nodev,size=5242880)`</br>
+		`none on /run/shm type tmpfs (rw,nosuid,nodev)`</br>
+		`none on /run/user type tmpfs (rw,noexec,nosuid,nodev,size=104857600,mode=0755)`</br>
+		`none on /sys/fs/pstore type pstore (rw)`</br>
+		`/dev/sda1 on /boot/efi type vfat (rw)`</br>
+		`systemd on /sys/fs/cgroup/systemd type cgroup (rw,noexec,nosuid,nodev,none,name=systemd)`</br>
+		`gvfsd-fuse on /run/user/1000/gvfs type fuse.gvfsd-fuse (rw,nosuid,nodev,user=sim)`</br>
+		`/dev/sdb1 on /media/usuario/*PENDRIVE* type fuseblk(rw,nosuid,nodev,allow_other,default_permissions,blksize=4096)`
 
 3. Terceira Forma - Digite:
 
