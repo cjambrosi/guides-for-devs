@@ -1,4 +1,5 @@
 
+
 Instalando e Configurando Ambiente de Desenvolvimento PHP para o CakePHP | Pilha LAMP - Apache, MySQL/Postegres, PHP5 | Ubuntu
 ===============================================
 
@@ -61,16 +62,16 @@ Instalando e Configurando Ambiente de Desenvolvimento PHP para o CakePHP | Pilha
 
 		- Insira as linhas de código a baixo e salve:
 
-			`<Directory />
-			    Options FollowSymLinks
-			    AllowOverride All
-			</Directory>
-			<Directory /var/www>
-			    Options Indexes FollowSymLinks MultiViews
-			    AllowOverride All
-			    Order Allow,Deny
-			    Allow from all
-			</Directory>`
+			`<Directory />`</br>
+			    `Options FollowSymLinks`</br>
+			   ` AllowOverride All`</br>
+			`</Directory>`</br>
+			`<Directory /var/www>`</br>
+			    `Options Indexes FollowSymLinks MultiViews`</br>
+			    `AllowOverride All`</br>
+			    `Order Allow,Deny`</br>
+			    `Allow from all`</br>
+			`</Directory>`
 
 	- Depois de ter salvado o arquivo, reinicie novamente o Apache com o comando:
 
@@ -85,6 +86,7 @@ Instalando e Configurando Ambiente de Desenvolvimento PHP para o CakePHP | Pilha
 	> sudo apt-get install mysql-server libapache2-mod-auth-mysql
 
 - Siga os seguintes passos para a instalação:
+
 		- Nova palavra-passe para o utilizador **"root"** de MySQL:
 			`<Inserir senha escolhida>`
 
@@ -127,7 +129,7 @@ Instalando e Configurando Ambiente de Desenvolvimento PHP para o CakePHP | Pilha
 
 		> sudo mysql_secure_installation
 		
-- Siga os seguintes passos para a configuração:
+	- Siga os seguintes passos para a configuração:
 
 		- Enter current password for root (enter for name): 
 			`<sua senha escolhida para o BD MySQL>`
@@ -185,7 +187,7 @@ Instalando e Configurando Ambiente de Desenvolvimento PHP para o CakePHP | Pilha
 
 		> postgres=# CREATE USER nomedousuario SUPERUSER INHERIT CREATEDB CREATEROLE;
 
-	- Para criar uma Senha ao usuário já criado, entre com o comando a baixo (troque "nomedousuario" pelo seu usuário e troque 'senha' pela sua senha escolhida) e tecle enter: 
+	- Para criar uma Senha ao usuário já criado, entre com o comando a baixo (troque **"nomedousuario"** pelo seu usuário e troque **'senha'** pela sua senha escolhida) e tecle enter: 
 
 		> postgres=# ALTER USER nomedousuario PASSWORD 'senha';
 
@@ -204,10 +206,12 @@ Instalando e Configurando Ambiente de Desenvolvimento PHP para o CakePHP | Pilha
 1. Instalando:
 
 	- **MySQL:**
-			> sudo apt-get install php5 php5-geoip php5-imagick php5-intl php5-mysql php5-mcrypt php5-readline phpmyadmin
+	
+		> sudo apt-get install php5 php5-geoip php5-imagick php5-intl php5-mysql php5-mcrypt php5-readline phpmyadmin
 
 	- **PostgreSQL:**
-			> sudo apt-get install php5 php5-geoip php5-imagick php5-intl php5-pgsql php5-mcrypt php5-readline
+
+		> sudo apt-get install php5 php5-geoip php5-imagick php5-intl php5-pgsql php5-mcrypt php5-readline
 
 2. Configurando:
 
