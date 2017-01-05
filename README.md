@@ -8,7 +8,7 @@ Tutoriais
 --------------------
 
 - [Formatar Pen Drive no Terminal Linux](https://github.com/CristianAmbrosi/tutoriais/blob/master/Formatar%20Pen%20Drive%20no%20Terminal%20Linux.md)
-- [Instalando e Configurando Ambiente de Desenvolvimento PHP](https://github.com/CristianAmbrosi/tutoriais/blob/master/Instalando%20e%20Configurando%20Ambiente%20de%20Desenvolvimento%20PHP.md)
+- [Instalando e Configurando Ambiente de Desenvolvimento PHP no Linux](https://github.com/CristianAmbrosi/tutoriais/blob/master/Instalando%20e%20Configurando%20Ambiente%20de%20Desenvolvimento%20PHP.md)
 - [Instalando e Configurando o Composer](https://github.com/CristianAmbrosi/tutoriais/blob/master/Instalando%20e%20Configurando%20o%20Composer.md)
 - [Instalando e Configurando o Git com o GitHub](https://github.com/CristianAmbrosi/tutoriais/blob/master/Instalando%20e%20Configurando%20o%20Git%20com%20o%20GitHub.md)
 - [Instalar GCC e Code::Blocks no Ubuntu](https://github.com/CristianAmbrosi/tutoriais/blob/master/Instalar%20GCC%20e%20CodeBlocks%20no%20Ubuntu.md)
