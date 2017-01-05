@@ -21,7 +21,7 @@ Tutoriais
 --------------------
 
 #### Editor Markdown utilizado
-   [![](https://github.com/CristianAmbrosi/tutoriais/blob/master/images/stackedit.svg "StackeEdit")](https://stackedit.io)
+   [![](https://github.com/CristianAmbrosi/tutoriais/blob/master/images/stackedit.svg "StackeEdit")](https://stackedit.io) </br>
    [Repositório StackEdit](https://github.com/benweet/stackedit)
 
 --------------------
