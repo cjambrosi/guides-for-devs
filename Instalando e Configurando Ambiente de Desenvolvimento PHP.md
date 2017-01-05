@@ -73,6 +73,8 @@ Instalando e Configurando Ambiente de Desenvolvimento PHP para o CakePHP | Pilha
 			    `Allow from all`</br>
 			`</Directory>`
 
+		- Exemplo: </br>
+			![](https://github.com/CristianAmbrosi/tutoriais/blob/master/images/exemplo-c%C3%B3digo-m%C3%B3dulo-rewrite.png)
 	- Depois de ter salvado o arquivo, reinicie novamente o Apache com o comando:
 
 		> sudo service apache2 restart
