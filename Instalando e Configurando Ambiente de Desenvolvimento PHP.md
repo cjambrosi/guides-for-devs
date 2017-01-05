@@ -87,27 +87,27 @@ Instalando e Configurando Ambiente de Desenvolvimento PHP para o CakePHP | Pilha
 
 - Siga os seguintes passos para a instalação:
 
-		- Nova palavra-passe para o utilizador **"root"** de MySQL:
-			`<Inserir senha escolhida>`
+	- Nova palavra-passe para o utilizador **"root"** de MySQL: </br>
+		`<Inserir senha escolhida>`
 
-		- Repita a palavra-passe para o utilizador **"root"** de MySQL:
-			`<Repetir senha escolhida>`
+	- Repita a palavra-passe para o utilizador **"root"** de MySQL: </br>
+		`<Repetir senha escolhida>`
 
-		- Configurar a base de dados para phpmyadmin com dbconfig-commom?
-			`<Sim>`
+	- Configurar a base de dados para phpmyadmin com dbconfig-commom? </br>
+		`<Sim>`
 
-		- Palavra-passe do utilizador administrativo da base dados:
-			`<Inserir senha escolhida e ok>`
+	- Palavra-passe do utilizador administrativo da base dados: </br>
+		`<Inserir senha escolhida e ok>`
 
-		- Palavra-passe da aplicação MySQL para phpmyadmin:
-			`<Inserir senha escolhida e Ok>`
+	- Palavra-passe da aplicação MySQL para phpmyadmin: </br>
+		`<Inserir senha escolhida e Ok>`
 
-		- Confirmação de senha:
-			`<Confirmar senha escolhida e Ok>`
+	- Confirmação de senha: </br>
+		`<Confirmar senha escolhida e Ok>`
 
-		- Servidor web a configurar automaticamente:
-			[*****] Apache2
-			[ ]	lighttpd
+	- Servidor web a configurar automaticamente:
+		[*****] Apache2
+		[ ]	lighttpd
 
 2. Configurando:
 
@@ -131,7 +131,7 @@ Instalando e Configurando Ambiente de Desenvolvimento PHP para o CakePHP | Pilha
 		
 	- Siga os seguintes passos para a configuração:
 
-		- Enter current password for root (enter for name): 
+		- Enter current password for root (enter for name): </br>
 			`<sua senha escolhida para o BD MySQL>`
 
 		- Change the root password? (Mudar senha do root?)[y/n]: **n**
