@@ -86,7 +86,7 @@ Permissões de um Arquivo ou Diretório no Linux
 		
 				> sudo chmod 755 /var/www/html/
 	
-			- ** *=>** Pegar todas as pastas dentro diretório. Ex:
+			- ** * ** => Pegar todas as pastas dentro diretório. Ex:
 				
 				> sudo chmod 755 /var/www/html/*
 	
@@ -136,7 +136,7 @@ Permissões de um Arquivo ou Diretório no Linux
 
 	- **Obs:** O Grupo já deve existir. 
 	  - Como criar um Grupo?
-	    > sudo addgroup [nome_grupo]
+	  > sudo addgroup [nome_grupo]
 
 --------------------
 
