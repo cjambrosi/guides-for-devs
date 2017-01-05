@@ -3,7 +3,7 @@ Tutoriais
 
 --------------------
 
-###Tutorias para fins de facilitar instalações e tarefas.
+#### Tutorias para fins de facilitar instalações e tarefas.
 
 --------------------
 
@@ -20,3 +20,8 @@ Tutoriais
 
 --------------------
 
+#### Editor Markdown utilizado
+   [![](https://github.com/CristianAmbrosi/tutoriais/blob/master/images/stackedit.svg "StackeEdit")](https://stackedit.io)
+   [Repositório StackEdit](https://github.com/benweet/stackedit)
+
+--------------------
