@@ -106,7 +106,7 @@ Instalando e Configurando Ambiente de Desenvolvimento PHP para o CakePHP | Pilha
 		`<Confirmar senha escolhida e Ok>`
 
 	- Servidor web a configurar automaticamente: </br>
-		[*****] Apache2
+		[*****] Apache2 </br>
 		[ ]	lighttpd
 
 2. Configurando:
