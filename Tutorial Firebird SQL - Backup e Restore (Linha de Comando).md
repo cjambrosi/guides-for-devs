@@ -64,9 +64,9 @@ Ex:
 Ex: 
 	> cd C:\Arquivos de programas\Firebird\Firebird_2_1\bin>
 
-**- Tabela de Parâmetros do Firebird:** </bd>
+- **Tabela de Parâmetros do Firebird:** </bd>
 
-![](https://github.com/CristianAmbrosi/tutoriais/blob/master/images/Tabela_Par%C3%A2metros_Firebird.png)
+  ![](https://github.com/CristianAmbrosi/tutoriais/blob/master/images/Tabela_Par%C3%A2metros_Firebird.png)
 
 --------------------
 
