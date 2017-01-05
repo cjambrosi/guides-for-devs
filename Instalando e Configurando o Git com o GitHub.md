@@ -1,4 +1,5 @@
 
+
 Instalando e Configurando o Git com o GitHub
 ===============================================
 
@@ -37,7 +38,7 @@ Permite além reverter arquivos para um estado anterior, reverter um projeto int
 
 		> sudo apt-get install gitk
 
-	3. Instalar o utilitário de linha de comando "xclip".
+	3. Instalar o utilitário de linha de comando **"xclip"**.
 
 		> sudo apt-get install xclip
 
@@ -48,7 +49,7 @@ Permite além reverter arquivos para um estado anterior, reverter um projeto int
 
 		> sudo apt-get install libcurl4-gnutls-dev libexpat1-dev gettext \libz-dev libssl-dev
 
-	2. Instalada as dependências, ir no site do GitHub onde estão listadas todas as versões do Git, escolher a mais recente ou a que desejar, recomendo instalar a versão mais recente estável. A versão que você vê quando você chega na página do projeto é a ramificação que está sendo trabalhada ativamente. Se você quer a última versão estável, você deve alterar a ramificação para a última tag não "rc".
+	2. Instalada as dependências, ir no site do GitHub onde estão listadas todas as versões do Git, escolher a mais recente ou a que desejar, recomendo instalar a versão mais recente estável. A versão que você vê quando você chega na página do projeto é a ramificação que está sendo trabalhada ativamente. Se você quer a última versão estável, você deve alterar a ramificação para a última tag não **"rc"**.
 
 		> https://github.com/git/git/releases
 
@@ -98,7 +99,7 @@ Permite além reverter arquivos para um estado anterior, reverter um projeto int
 
 6. Gerando a Chave SSH (Protocolo - Secure Shell)
 
-	1. Primeiro, você deve checar para ter certeza que você ainda não possui uma chave SSH. Por padrão, as chaves SSH de um usuário são armazenadas no diretório ~/.ssh. Exemplo:
+	1. Primeiro, você deve checar para ter certeza que você ainda não possui uma chave SSH. Por padrão, as chaves SSH de um usuário são armazenadas no diretório **~/.ssh**. Exemplo:
 
 		> cd ~/.ssh
 		
@@ -108,7 +109,7 @@ Permite além reverter arquivos para um estado anterior, reverter um projeto int
 		-----------------|-------------|-------------
 		config           |  id_dsa.pub
 
-	2. Agora devemos procurar por um par de arquivos chamados "algo" e "algo.pub", onde **algo** é normalmente "id_dsa" ou "id_rsa". O arquivo .pub é a sua chave pública, e o outro arquivo é a sua chave privada. Se você não tem estes arquivos (ou não tem nem mesmo o diretório .ssh), você pode criá-los executando um comando chamado "ssh-keygen", que é fornecido com o pacote SSH em sistemas Linux/Mac. Exemplo:
+	2. Agora devemos procurar por um par de arquivos chamados "algo" e "algo.pub", onde **algo** é normalmente "id_dsa" ou "id_rsa". O arquivo **.pub** é a sua chave pública, e o outro arquivo é a sua chave privada. Se você não tem estes arquivos (ou não tem nem mesmo o diretório .ssh), você pode criá-los executando um comando chamado **"ssh-keygen"**, que é fornecido com o pacote SSH em sistemas Linux/Mac. Exemplo:
 
 		> ssh-keygen
 
@@ -124,7 +125,7 @@ Permite além reverter arquivos para um estado anterior, reverter um projeto int
 			
 			> Enter file in which to save the key (/Users/schacon/.ssh/id_rsa):
 
-		4. Será perguntado a nossa senha para a chave privada. **Essa senha é muito importante, pois se você perder não será possível recuperá-la, é preciso criar uma chave nova**. Inserir uma senha para a chave SSH e pressione **ENTER**.
+		4. Será perguntado para criarmos uma senha para a chave privada. **Essa senha é muito importante, pois se você perder não será possível recuperá-la, é preciso criar uma chave nova**. Inserir uma senha para a chave SSH e pressione **ENTER**.
 
 			> Enter passphrase (empty for no passphrase):
 
@@ -134,10 +135,10 @@ Permite além reverter arquivos para um estado anterior, reverter um projeto int
 
 		6. Criada a chave SSH, ficando semelhante a isso:
 
-			`Your identification has been saved in /Users/schacon/.ssh/id_rsa.
-			Your public key has been saved in /Users/schacon/.ssh/id_rsa.pub.
-			The key fingerprint is:
-			43:c5:5b:5f:b1:f1:50:43:ad:20:a6:92:6a:1f:9a:3a seu_email@example.com`
+			`Your identification has been saved in /Users/schacon/.ssh/id_rsa.`</br>
+			`Your public key has been saved in /Users/schacon/.ssh/id_rsa.pub.`</br>
+			`The key fingerprint is:`</br>
+			`43:c5:5b:5f:b1:f1:50:43:ad:20:a6:92:6a:1f:9a:3a seu_email@example.com`
 
 		7. Para verificar se realmente foram criados os dois arquivos digite o comando a baixo, deverá listar os dois arquivos contendo a chave pública e privada.
 
@@ -152,7 +153,7 @@ Permite além reverter arquivos para um estado anterior, reverter um projeto int
 		
 			> xclip -sel clip ~/.ssh/id_dsa.pub
 
-		2. Copiado o conteúdo do arquivo, acessar a sua conta no site do <i class="icon-provider-github"></i> **[GitHub](https://github.com/)** ,  ir no menu do seu usuário no canto superio direito da tela e clicar na opção "Settings". 
+		2. Copiado o conteúdo do arquivo, acessar a sua conta no site do <i class="icon-provider-github"></i> **[GitHub](https://github.com/)**,  ir no menu do seu usuário no canto superio direito da tela e clicar na opção **"Settings"**. 
 
 		3. Nos menus do lado esquerdo da tela, escolher a opção **"SSH and GPG keys"**.
 
@@ -171,9 +172,9 @@ Permite além reverter arquivos para um estado anterior, reverter um projeto int
 
 		1. Será alertado que a autenticidade não pode ser estabelecida mostrando os dados e vai pedir se queremos continuar conectados ou não. Exemplo:
 
-		    `The authenticity of host 'github.com (192.30.253.113)' can't be established.
-		    RSA key fingerprint is 16:27:ac:a5:76:28:2d:36:63:1b:56:4d:eb:df:a6:48.
-			Are you sure you want to continue connecting (yes/no)? yes`
+		    `The authenticity of host 'github.com (192.30.253.113)' can't be established.`<br>
+		    `RSA key fingerprint is 16:27:ac:a5:76:28:2d:36:63:1b:56:4d:eb:df:a6:48.`<br>
+			`Are you sure you want to continue connecting (yes/no)? yes`
 
 		2. Digitamos **"yes"** para continuarmos conectados.
 			
@@ -230,4 +231,3 @@ https://packages.debian.org/jessie/xclip
 https://packages.debian.org/wheezy/libexpat1-dev
 
 https://packages.debian.org/jessie/libssl-dev
-

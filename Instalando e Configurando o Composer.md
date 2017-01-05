@@ -12,11 +12,11 @@ Instalando e Configurando o Composer no Linux (Ubuntu)
 	
 	> sudo apt-get upgrade
 
-2. Precisaremos da biblioteca "curl" instalada, para baixarmos o pacote Composer. Digite o comando a baixo para instalar:
+2. Precisaremos da biblioteca **"curl"** instalada, para baixarmos o pacote Composer. Digite o comando a baixo para instalar:
 
 	> sudo apt-get install curl
 
-3. Com o comando a baixo, o Composer é baixado direto da fonte e instalado. Será baixado no /home.
+3. Com o comando a baixo, o Composer é baixado direto da fonte e instalado. Será baixado no **/home**.
 
 	> curl -sS https://getcomposer.org/installer | php
 
@@ -29,7 +29,7 @@ Instalando e Configurando o Composer no Linux (Ubuntu)
 	> sudo mv composer.phar /usr/local/bin/composer
 
 
-6. Assim será possível executar o Composer de qualquer lugar do computador, sem a necessidade da extensão ".phar".
+6. Assim será possível executar o Composer de qualquer lugar do computador, sem a necessidade da extensão **".phar"**.
 
 --------------------
 
@@ -48,6 +48,3 @@ http://gilbertoalbino.com/instalacao-do-composer-no-ubuntu/
 http://tableless.com.br/composer-para-iniciantes/
 
 http://php.net/manual/pt_BR/book.curl.php
-
-
-
