@@ -26,7 +26,7 @@ Permissões de um Arquivo ou Diretório no Linux
 - **Nome =>** Nome do ítem ou diretório;
 - **Outros =>** Se não é Proprietário do item e não está no Grupo do item, ele pertence ao conjunto de usuários Outros.
 
-2. O primeiro caractere das permissões é o **TIPO** do que está sendo mostrando, que pode ser:
+2. O primeiro caractere das Permissões é o **TIPO** do que está sendo mostrando, que pode ser:
 
 	- **d =>** Diretório;
 	- **- =>** Arquivo comum de usuário (música, videos, imagens...);
@@ -47,19 +47,19 @@ Permissões de um Arquivo ou Diretório no Linux
 
 4. Entendendo as permissões.
 
-	Leitura(**r**) =  4
-	Escrita(**w**) =  2
+	Leitura(**r**) =  4 </br>
+	Escrita(**w**) =  2 </br>
 	Execução(**x**) = 1
 
 	- Pensaremos nas permissões como sendo bits de **ligados = 1 / desligados = 0**. Convertemos de binário para decimal.
 
-		`rwx = 111 ( 7 | Acesso Total )`
-		`r-- = 100 ( 4 | Somente Leitura )`
-		`-w- = 010 ( 2 | Somente Escrita )`
-		`--x = 001 ( 1 | Somente Execução )`
-		`rw- = 110 ( 6 | Somente Leitura e Escrita )`
-		`r-x = 101 ( 5 | Somente Leitura e Execução )`
-		`-wx = 011 ( 3 | Somente Escrita e Execução )`
+		`rwx = 111 ( 7 | Acesso Total )` </br>
+		`r-- = 100 ( 4 | Somente Leitura )` </br>
+		`-w- = 010 ( 2 | Somente Escrita )` </br>
+		`--x = 001 ( 1 | Somente Execução )` </br>
+		`rw- = 110 ( 6 | Somente Leitura e Escrita )` </br>
+		`r-x = 101 ( 5 | Somente Leitura e Execução )` </br>
+		`-wx = 011 ( 3 | Somente Escrita e Execução )` </br>
 		`--- = 000 ( 0 | Todos Acessos Negados )`
 
 		rwx | rw- |  rw-
@@ -86,7 +86,7 @@ Permissões de um Arquivo ou Diretório no Linux
 		
 				> sudo chmod 755 /var/www/html/
 	
-			- *** =>** Pegar todas as pastas dentro diretório. Ex:
+			- ** * =>** Pegar todas as pastas dentro diretório. Ex:
 				
 				> sudo chmod 755 /var/www/html/*
 	
@@ -106,33 +106,33 @@ Permissões de um Arquivo ou Diretório no Linux
 
 - **Alterar Proprietário:** chown (change owner)
 	
-		- Sintaxe:
-	
-			> chown [novo_proprietário] [arquivo ou diretório]
-	
-			- Arquivo: 
-			
-				> sudo chown goku teste.php
-	
-			- Diretório: 
-			
-				> sudo chown goku teste
-	
-		- **Obs:** O Proprietário já deve existir.
+	- Sintaxe:
+
+		> chown [novo_proprietário] [arquivo ou diretório]
+
+		- Arquivo: 
+		
+			> sudo chown goku teste.php
+
+		- Diretório: 
+		
+			> sudo chown goku teste
+
+	- **Obs:** O Proprietário já deve existir.
 
 - **Alterar o Grupo: chgrp (change group)**
 	
-		- Sintaxe:
+	- Sintaxe:
+	
+		> chgrp [novo_grupo] [arquivo ou diretório]
+
+		- Arquivo: 
 		
-			> chgrp [novo_grupo] [arquivo ou diretório]
+			> sudo chgrp goku teste.php
 
-			- Arquivo: 
-			
-				> sudo chgrp goku teste.php
-
-			- Diretório: 
-			
-				> sudo chgrp goku teste
+		- Diretório: 
+		
+			> sudo chgrp goku teste
 
 	- **Obs:** O Grupo já deve existir. Criar um grupo: sudo addgroup [nome_grupo]
 

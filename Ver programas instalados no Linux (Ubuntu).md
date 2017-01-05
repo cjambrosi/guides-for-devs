@@ -31,7 +31,7 @@ Ver programas instalados no Linux (Ubuntu)
 
 --------------------
 
-## Fonte:
+## Fontes:
 
 https://www.vivaolinux.com.br/dica/O-gerenciador-de-pacotes-dpkg
 

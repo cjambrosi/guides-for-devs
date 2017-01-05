@@ -15,11 +15,15 @@ Instalar Netbeans no Ubuntu
 
 2. Abra o terminal. Vá até o diretório onde foi baixado e dê permissão de execução no arquivo .sh.
 		Ex:
+		
+	> /Downloads$ chmod 777
+	
+	- ou 
 
-	> /Downloads$	chmod 777 ou chmod +x netbeans-8.1-linux.sh
+	> /Downloads$ chmod +x netbeans-8.1-linux.sh
 
 3. Execute o arquivo .sh.
-		Ex:
+	Ex:
 
 	> /Downloads$	./netbeans-8.1-linux.sh
 

@@ -17,7 +17,7 @@ Ex:
 
 3. Em seguida digite no terminal os seguintes comandos:
 
-	> gbak -g -l -b -v -z /caminho-do-arquivo/banco.fbd /caminho-do-backup/banco.fbk -user USUARI_DO_BANCO -pas SENHA_DO_BANCO
+	> gbak -g -l -b -v -z /CAMINHO-DO-ARQUIVO/banco.fbd /CAMINHO-DO-BACKUP/banco.fbk -user USUARI_DO_BANCO -pas SENHA_DO_BANCO
 
 --------------------
 
@@ -34,7 +34,7 @@ Ex:
 
 3. Em seguida digite no terminal os seguintes comandos:
 
-	> gbak -c -v -z /caminho-do-backup/banco.fbk /caminho-do-backup/banco.fbd -user USUARI_DO_BANCO -pas SENHA_DO_BANCO
+	> gbak -c -v -z /CAMINHO-DO-BACKUP/banco.fbk /CAMINHO-DO-BACKUP/banco.fbd -user USUARI_DO_BANCO -pas SENHA_DO_BANCO
 
 	- **Obs: Se tiver dúvidas, pode criar um .NEW e depois renomear normalmente para .fbd.**
 
@@ -61,8 +61,8 @@ Ex:
 - **-c =>** Cria um banco de dados a partir de um arquivo de backup já pronto. (OBRIGATÓRIO PARA O RESTORE)
 
 - **Obs:** No Windows é um pouco diferente, ao invés de usar o **'sudo su'** que é do linux, deve-se acessar a pasta de instalação do Firebird pelo CMD, até a pasta **'bin'** e seguir normalmente os passos. 	
-	Ex: 
-		> cd C:\Arquivos de programas\Firebird\Firebird_2_1\bin>
+Ex: 
+	> cd C:\Arquivos de programas\Firebird\Firebird_2_1\bin>
 
 --------------------
 

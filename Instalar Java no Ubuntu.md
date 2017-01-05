@@ -25,8 +25,8 @@ Instalar Java no Ubuntu
 
 		> sudo apt-get install oracle-java8-installer
 
-		`Do you want to continue [y/n]?	y
-		Do you accept  the Oracle Binary Code license terms?	Yes`
+		`Do you want to continue [y/n]?	y`</br>
+		`Do you accept  the Oracle Binary Code license terms?	Yes`
 				
 
 	5. Verificar se o java foi instalado corretamente. O comando verfica se o JRE foi mesmo instalado na máquina, mostrando as informações do java.
@@ -35,12 +35,12 @@ Instalar Java no Ubuntu
 
 		- Exemplo de saída:
 
-			`java version "1.8.0_101"
-			Java(TM) SE Runtime Environment (build 1.8.0_101-b13)
-			Java HotSpot(TM) 64-Bit Server VM (build 25.101-b13, mixed mode)`
+			`java version "1.8.0_101"`</br>
+			`Java(TM) SE Runtime Environment (build 1.8.0_101-b13)`</br>
+			`Java HotSpot(TM) 64-Bit Server VM (build 25.101-b13, mixed mode)`
 
 
-		6º Passo: Verificar se o java foi configurado corretamente. O camando verfica se o compilador do Java funciona. Ao contrário do Windows que é preciso setar a variável de ambiente, no Ubuntu (Linux) não é preciso.
+	6. Verificar se o java foi configurado corretamente. O camando verfica se o compilador do Java funciona. Ao contrário do Windows que é preciso setar a variável de ambiente, no Ubuntu (Linux) não é preciso.
 
 		> javac -version
 
