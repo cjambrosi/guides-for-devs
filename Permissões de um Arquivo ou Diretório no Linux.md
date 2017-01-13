@@ -110,6 +110,7 @@ Permissões de um Arquivo ou Diretório no Linux
 				
 				> sudo chmod 755 /var/www/html/ -R
 
+
 6. Alterar Proprietário e Grupos de Arquivos e Diretórios no Linux
 
 - **Alterar Proprietário:** chown (change owner)
