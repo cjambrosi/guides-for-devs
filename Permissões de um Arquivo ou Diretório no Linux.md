@@ -87,21 +87,25 @@ Permissões de um Arquivo ou Diretório no Linux
 				> sudo chmod 755 /var/www/html/
 	
 			- * => Pegar todas as pastas dentro diretório. 
+				
 				Ex:
 				
 				> sudo chmod 755 /var/www/html/*
 	
 			- **. =>** Pegar todos os arquivos dentro do diretóio. 
+				
 				Ex:
 				
 				> sudo chmod 755 /var/www/html/.
 	
 			- **.* =>** Tudo no mesmo comando. 
+				
 				Ex:
 				
 				> sudo chmod 755 /var/www/html/.*
 	
 			- **-R =>** Recursivo. 
+				
 				Ex:
 				
 				> sudo chmod 755 /var/www/html/ -R
