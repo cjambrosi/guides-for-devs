@@ -111,7 +111,7 @@ Formatar Pen Drive no Terminal Linux
 		-  Ou:
 			> sudo mkntfs -f -I /dev/sdb1
 			
-		- Na formatação para NTFS, a maneira de nomear o dispositivo é diferente. Digite o seguinte comando:
+		- Após formatar o Pen Drive, podemos renomeá-lo. Na formatação para NTFS, a maneira de nomear o dispositivo é diferente. Digite o seguinte comando:
 
 			> sudo ntfslabel /dev/sdb1 NOMEPENDRIVE
 
