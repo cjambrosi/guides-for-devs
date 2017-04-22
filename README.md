@@ -8,10 +8,10 @@ Tutoriais
 --------------------
 
 - [Formatar Pen Drive no Terminal Linux](https://github.com/CristianAmbrosi/tutoriais/blob/master/Formatar%20Pen%20Drive%20no%20Terminal%20Linux.md)
-- [Instalando e Configurando Ambiente de Desenvolvimento PHP no Linux](https://github.com/CristianAmbrosi/tutoriais/blob/master/Instalando%20e%20Configurando%20Ambiente%20de%20Desenvolvimento%20PHP.md)
+- [Instalando e Configurando Ambiente de Desenvolvimento PHP no Ubuntu >= 16.04](https://github.com/CristianAmbrosi/tutoriais/blob/master/Instalando%20e%20Configurando%20Ambiente%20de%20Desenvolvimento%20PHP.md)
 - [Instalando e Configurando o Composer](https://github.com/CristianAmbrosi/tutoriais/blob/master/Instalando%20e%20Configurando%20o%20Composer.md)
 - [Instalando e Configurando o Git com o GitHub](https://github.com/CristianAmbrosi/tutoriais/blob/master/Instalando%20e%20Configurando%20o%20Git%20com%20o%20GitHub.md)
-- [Instalar GCC e Code::Blocks no Ubuntu](https://github.com/CristianAmbrosi/tutoriais/blob/master/Instalar%20GCC%20e%20CodeBlocks%20no%20Ubuntu.md)
+- [Instalar compilador G++ e Code::Blocks no Ubuntu](https://github.com/CristianAmbrosi/tutoriais/blob/master/Instalar%20G++%20e%20CodeBlocks%20no%20Ubuntu.md)
 - [Instalar Java no Ubuntu](https://github.com/CristianAmbrosi/tutoriais/blob/master/Instalar%20Java%20no%20Ubuntu.md)
 - [Instalar Netbeans no Ubuntu](https://github.com/CristianAmbrosi/tutoriais/blob/master/Instalar%20Netbeans%20no%20Ubuntu.md)
 - [Permissões de um Arquivo ou Diretório no Linux](https://github.com/CristianAmbrosi/tutoriais/blob/master/Permiss%C3%B5es%20de%20um%20Arquivo%20ou%20Diret%C3%B3rio%20no%20Linux.md)
