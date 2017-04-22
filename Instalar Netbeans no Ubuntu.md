@@ -37,12 +37,12 @@ Instalar Netbeans no Ubuntu
 
 3. Na janela **"Escolha a pasta de instalação e o JDK(tm)"**:
 
-	- **Instalar os NetBeans IDEs em:** pode deixar o diretório padrão (/home/user/netbeans-8.1) ou alterar se preferir;
+	- **Instalar os NetBeans IDEs em:** pode deixar o diretório padrão (/home/user/netbeans-8.2) ou alterar se preferir;
 
 	- **JDK(tm) dos NetBeans IDEs:** Se não for encontrado automaticamente e ficar como padrão o diretório **"/usr"** ou outro, deve-se procurar o JDK manualmente (lembrando que ele já deve estar instalado na máquina).
 	Normalmente ele está instalado no diretórido **"/usr/lib/jvm/java-8-oracle"**.
 
-4. Na próxima janela você pode optar por *receber / instalar* ou *não* as atualizações para o Netbeans.
+4. Na próxima janela você pode optar por *receber/instalar* ou *não* as atualizações para o Netbeans.
 
 5. Finalizar.
 
