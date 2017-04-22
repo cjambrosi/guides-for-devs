@@ -143,7 +143,7 @@ Permite além reverter arquivos para um estado anterior, reverter um projeto int
 
 			>  ls ~/.ssh
 			
-			id_rsa  id_rsa.pub
+			`id_rsa  id_rsa.pub`
 
 --------------------
 
@@ -171,21 +171,21 @@ Permite além reverter arquivos para um estado anterior, reverter um projeto int
 
 	> ssh -T git@github.com
 
-	1. Será alertado que a autenticidade não pode ser estabelecida mostrando os dados e vai pedir se queremos continuar conectados ou não. Exemplo:
+	- Será alertado que a autenticidade não pode ser estabelecida mostrando os dados e vai pedir se queremos continuar conectados ou não. Exemplo:
 
 	    `The authenticity of host 'github.com (192.30.253.113)' can't be established.`<br>
 	    `RSA key fingerprint is 16:27:ac:a5:76:28:2d:36:63:1b:56:4d:eb:df:a6:48.`<br>
 		`Are you sure you want to continue connecting (yes/no)? yes`
 
-	2. Digite **"yes"** para continuar conectado.
+	- Digite **"yes"** para continuar conectado.
 		
 		`Are you sure you want to continue connecting (yes/no)?` **`yes`**
 		
-	3. Receberá um alerta dizendo que será adicionado permanentemente a lista de hosts conhecidos, pedindo a senha da chave SSH Privada escolhida anteriormente. Exemplo:
+	- Receberá um alerta dizendo que será adicionado permanentemente a lista de hosts conhecidos, pedindo a senha da chave SSH Privada escolhida anteriormente. Exemplo:
 
 		`Warning: Permanently added the RSA host key for IP address '192.30.253.112' to the list of known hosts.`
 
-	4. Aqui será avisado que o usuário está autenticado, mas que o GitHub não permite acesso por um terminal SSH. Isso não é um problema, se chegar nessa mensagem, tudo ocorreu corretamente, a conexão está funcionando.
+	- Aqui será avisado que o usuário está autenticado, mas que o GitHub não permite acesso por um terminal SSH. Isso não é um problema, se chegar nessa mensagem, tudo ocorreu corretamente, a conexão está funcionando.
 
 		`Hi USER You've successfully authenticated, but GitHub does not provide shell access.`
 
