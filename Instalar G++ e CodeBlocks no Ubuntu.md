@@ -38,6 +38,10 @@ warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.`
 
 2. Para instalar do repositório ofcial do Code::Blocks, digite no terminal:
 
+	> sudo add-apt-repository ppa:damien-moore/codeblocks-stable
+
+	> sudo apt-get update
+
 	> sudo apt-get install codeblocks
 	
 3. Abra o Code::Blocks, vá em "Settings> Compiler". Marque as opções:
@@ -64,7 +68,7 @@ warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.`
 
 ## Desinstalar completamente o Code::Blocks do Ubuntu
 
->sudo apt-get --purge remove codeblocks*
+> sudo apt-get --purge remove codeblocks*
 
 > sudo apt-get autoremove
 

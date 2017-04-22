@@ -7,20 +7,20 @@ Instalar Java no Ubuntu
 
 - Abra o terminal e siga os seguintes passos:
 
-	1. Incluir o repositório oficial do Java.
+	- Incluir o repositório oficial do Java.
 
 		> sudo add-apt-repository ppa:webupd8team/java
 
-	2. Atualizar o repositório.
+	- Atualizar o repositório.
 
 		> sudo apt-get update
 
-	3. *(OPCIONAL)* Pesquisar as versões disponíveis do Java e instalar a desejada. O comando vai listar as informações do pacote.
+	- *(OPCIONAL)* Pesquisar as versões disponíveis do Java e instalar a desejada. O comando vai listar as informações do pacote.
 
 		> sudo apt-cache search java (ou jdk)
 
 
-	4. Instalar o Java.
+	- Instalar o Java.
 
 		> sudo apt-get install oracle-java8-installer
 
@@ -28,7 +28,7 @@ Instalar Java no Ubuntu
 		`Do you accept  the Oracle Binary Code license terms?`**`Yes`**
 				
 
-	5. Verificar se o java foi instalado corretamente. O comando verfica se o JRE foi mesmo instalado na máquina, mostrando as informações do java.
+	- Verificar se o java foi instalado corretamente. O comando verfica se o JRE foi mesmo instalado na máquina, mostrando as informações do java.
 
 		> java -version
 
@@ -39,7 +39,7 @@ Instalar Java no Ubuntu
 			`Java HotSpot(TM) 64-Bit Server VM (build 25.121-b13, mixed mode)`
 
 
-	6. Verificar se o java foi configurado corretamente. O camando verfica se o compilador do Java funciona. Ao contrário do Windows que é preciso setar a Variável de Ambiente, no Ubuntu (Linux) não é preciso.
+	- Verificar se o java foi configurado corretamente. O camando verfica se o compilador do Java funciona. Ao contrário do Windows que é preciso setar a Variável de Ambiente, no Ubuntu (Linux) não é preciso.
 
 		> javac -version
 
