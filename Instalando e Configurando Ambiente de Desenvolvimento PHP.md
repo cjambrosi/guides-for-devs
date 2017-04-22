@@ -52,7 +52,7 @@ Instalando e Configurando Ambiente de Desenvolvimento PHP para o CakePHP | Pilha
 
 	- Dentro do arquivo, na parte inferior, adicione a diretiva **ServerName**, apontando para o seu nome do domínio primário ou o IP público do seu servidor.
 
-		`. . .`
+		`. . .`</br>
 		`ServerName nome_de_domínio_do_servidor_ou_IP`
 
 	- Salve e feche o arquivo. Depois verifique erros de sintaxe com o comando:
@@ -140,7 +140,7 @@ Instalando e Configurando Ambiente de Desenvolvimento PHP para o CakePHP | Pilha
 		and improve security. It checks the strength of password
 		and allows the users to set only those passwords which are
 		secure enough. Would you like to setup VALIDATE PASSWORD plugin?
-		</ br>
+		</br></br>
 		Press y|Y for Yes, any other key for No:  **`y`**
 		
 		- There are three levels of password validation policy:
