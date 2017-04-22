@@ -61,8 +61,8 @@ Instalando e Configurando Ambiente de Desenvolvimento PHP para o CakePHP | Pilha
 
 		- Saída deverá ser:
 
-			`[secondary-label Output]</br>
-			Syntax OK`
+			`[secondary-label Output]`</br>
+			`Syntax OK`
 
 	- Reinicie o Apache para implementar as alterações.
 
