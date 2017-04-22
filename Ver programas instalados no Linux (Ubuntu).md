@@ -1,4 +1,3 @@
-
 Ver programas instalados no Linux (Ubuntu)
 ===============================================
 

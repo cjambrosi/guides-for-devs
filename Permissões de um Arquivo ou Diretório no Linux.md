@@ -1,4 +1,3 @@
-
 Permissões de um Arquivo ou Diretório no Linux
 ===============================================
 

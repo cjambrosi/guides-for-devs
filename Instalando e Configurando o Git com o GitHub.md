@@ -1,5 +1,3 @@
-
-
 Instalando e Configurando o Git com o GitHub
 ===============================================
 
@@ -38,10 +36,6 @@ Permite além reverter arquivos para um estado anterior, reverter um projeto int
 
 		> sudo apt-get install gitk
 
-	3. Instalar o utilitário de linha de comando **"xclip"**.
-
-		> sudo apt-get install xclip
-
 
 3. Direto da Fonte
 	
@@ -75,25 +69,29 @@ Permite além reverter arquivos para um estado anterior, reverter um projeto int
 
 ## Configurando
 	
-1. Configurando nossa identidade:
+1. Instalar o utilitário de linha de comando **"xclip"**.
+
+	> sudo apt-get install xclip
+
+2. Configurando nossa identidade:
 
 	> git config --global user.name "Seu Nome"
 
 	> git config --global user.email seu_email@example.com
 
-2. Habilitar cor nas mensagens de saídas do Git para uma melhor análise.
+3. Habilitar cor nas mensagens de saídas do Git para uma melhor análise.
 
 	> git config --global color.ui true
 
-3. Para corrigir formatação e erros de espaços em branco de um colaborador que utiliza Windows. Pois o Windows usa tanto o carácter "carriage-return" e um "carácter linefeed" para novas linhas em seus arquivos, enquanto os sistemas Mac e Linux usam apenas o carácter "linefeed".
+4. Para corrigir formatação e erros de espaços em branco de um colaborador que utiliza Windows. Pois o Windows usa tanto o carácter "carriage-return" e um "carácter linefeed" para novas linhas em seus arquivos, enquanto os sistemas Mac e Linux usam apenas o carácter "linefeed".
 
 	> git config --global core.autocrlf input
 
-4. Opcionalemnte, podemos configurar um editor de texto padrão para ser usado quando o Git precisar que você escreva uma menssagem. Por padrão, o Git utiliza o editor do sistema, geralmente o VI ou VIM.
+5. Opcionalemnte, podemos configurar um editor de texto padrão para ser usado quando o Git precisar que você escreva uma menssagem. Por padrão, o Git utiliza o editor do sistema, geralmente o VI ou VIM.
 
 	> git config --global core.editor sublime-text
 
-5. Verificar as configurações feitas até o momento:
+6. Verificar as configurações feitas até o momento:
 
 	> git config --list
 
@@ -105,11 +103,11 @@ Permite além reverter arquivos para um estado anterior, reverter um projeto int
 		
 		> ls
 		
-		authorized_keys2 |  id_dsa 	   | known_hosts
+		authorized_keys2 |  id_rsa 	   | known_hosts
 		-----------------|-------------|-------------
-		config           |  id_dsa.pub
+		config           |  id_rsa.pub
 
-	2. Agora devemos procurar por um par de arquivos chamados "algo" e "algo.pub", onde **algo** é normalmente "id_dsa" ou "id_rsa". O arquivo **.pub** é a sua chave pública, e o outro arquivo é a sua chave privada. Se você não tem estes arquivos (ou não tem nem mesmo o diretório .ssh), você pode criá-los executando um comando chamado **"ssh-keygen"**, que é fornecido com o pacote SSH em sistemas Linux/Mac. Exemplo:
+	2. Agora devemos procurar por um par de arquivos chamados "algo" e "algo.pub", onde **algo** é normalmente "id_rsa" ou "id_rsa". O arquivo **.pub** é a sua chave pública, e o outro arquivo é a sua chave privada. Se você não tem estes arquivos (ou não tem nem mesmo o diretório .ssh), você pode criá-los executando um comando chamado **"ssh-keygen"**, que é fornecido com o pacote SSH em sistemas Linux/Mac. Exemplo:
 
 		> ssh-keygen
 
@@ -144,14 +142,14 @@ Permite além reverter arquivos para um estado anterior, reverter um projeto int
 
 			>  ls ~/.ssh
 			
-			id_dsa  id_dsa.pub
+			id_rsa  id_rsa.pub
 			
 			
 	3. Inserir a chave SSH criada no GitHub
 
 		1. Usaremos o programa *"xclip"* instalado anteriormente para copiar o conteúdo do arquivo que contem a chave pública.
 		
-			> xclip -sel clip ~/.ssh/id_dsa.pub
+			> xclip -sel clip ~/.ssh/id_rsa.pub
 
 		2. Copiado o conteúdo do arquivo, acessar a sua conta no site do <i class="icon-provider-github"></i> **[GitHub](https://github.com/)**,  ir no menu do seu usuário no canto superio direito da tela e clicar na opção **"Settings"**. 
 
@@ -184,7 +182,7 @@ Permite além reverter arquivos para um estado anterior, reverter um projeto int
 
 			> Warning: Permanently added the RSA host key for IP address '192.30.253.112' to the list of known hosts.
 
-		4. Aqui será avisado que o usuário está autenticado, mas que o GitHub não permite acesso por um terminal SSH. Isso não é, se chegar nessa mensagem, tudo ocorreu corretamente, a conexão está funcionando.
+		4. Aqui será avisado que o usuário está autenticado, mas que o GitHub não permite acesso por um terminal SSH. Isso não é um problema, se chegar nessa mensagem, tudo ocorreu corretamente, a conexão está funcionando.
 
 			> Hi USER You've successfully authenticated, but GitHub does not provide shell access.
 
@@ -231,3 +229,5 @@ https://packages.debian.org/jessie/xclip
 https://packages.debian.org/wheezy/libexpat1-dev
 
 https://packages.debian.org/jessie/libssl-dev
+
+https://askubuntu.com/questions/765565/how-to-fix-processing-with-runit-and-git-daemon-run

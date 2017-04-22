@@ -1,4 +1,3 @@
-
 Tutorial Firebird SQL - Backup e Restore | (Linha de Comando)
 ===============================================
 

@@ -1,6 +1,4 @@
-
-
-Instalando e Configurando Ambiente de Desenvolvimento PHP para o CakePHP | Pilha: Apache, MySQL/Postegres, PHP5 | Ubuntu
+Instalando e Configurando Ambiente de Desenvolvimento PHP para o CakePHP | Pilha: Apache, MySQL/Postegres, PHP5 | Ubuntu >= 16.04
 ===============================================
 
 --------------------
@@ -46,7 +44,29 @@ Instalando e Configurando Ambiente de Desenvolvimento PHP para o CakePHP | Pilha
 
 		 > "localhost/" ou "127.0.0.1/" 
 
-		- Deverá aparecer a página de configuração padrão do Apache. 
+		- Deverá aparecer a página de configuração padrão do Apache.
+
+	- A seguir, iremos adicionar uma diretiva global chamada **ServerName** para supremir uma mesnagem de aviso do Apache. Então abra o arquivo de configuração principal do Apache.
+
+		> sudo nano /etc/apache2/apache2.conf
+
+	- Dentro do arquivo, na parte inferior, adicione a diretiva **ServerName**, apontando para o seu nome do domínio primário ou o IP público do seu servidor.
+
+		`. . .
+		ServerName nome_de_domínio_do_servidor_ou_IP`
+
+	- Salve e feche o arquivo. Depois verifique erros de sintaxe com o comando:
+
+		> sudo apache2ctl configtest
+
+		- Saída deverá ser:
+
+			`[secondary-label Output]
+			Syntax OK`
+
+	- Reinicie o Apache para implementar as alterações.
+
+		> sudo systemctl restart apache2
 
 	- Devemos habilitar o módulo **mod_rewrite**, o Módulo de Redirecionamento de URL’s do Apache, também conhecido como "URL’s amigáveis".
 
@@ -84,33 +104,16 @@ Instalando e Configurando Ambiente de Desenvolvimento PHP para o CakePHP | Pilha
 ## MySQL
 
 1. Instalando:
-
-	> sudo apt-get install mysql-server libapache2-mod-auth-mysql
-
-- Siga os seguintes passos para a instalação:
+	
+	> sudo apt-get
+	> sudo apt-get install mysql-server
 
 	- Nova palavra-passe para o utilizador **"root"** de MySQL: </br>
 		`<Inserir senha escolhida>`
 
 	- Repita a palavra-passe para o utilizador **"root"** de MySQL: </br>
 		`<Repetir senha escolhida>`
-
-	- Configurar a base de dados para phpmyadmin com dbconfig-commom? </br>
-		`<Sim>`
-
-	- Palavra-passe do utilizador administrativo da base dados: </br>
-		`<Inserir senha escolhida e ok>`
-
-	- Palavra-passe da aplicação MySQL para phpmyadmin: </br>
-		`<Inserir senha escolhida e Ok>`
-
-	- Confirmação de senha: </br>
-		`<Confirmar senha escolhida e Ok>`
-
-	- Servidor web a configurar automaticamente: </br>
-		[*] Apache2 </br>
-		[ ] lighttpd
-
+		
 2. Configurando:
 
 	- Acesse via terminal com seu usuário e senha para saber se está conectando ao banco MySQL com o seguinte comando:
@@ -121,54 +124,60 @@ Instalando e Configurando Ambiente de Desenvolvimento PHP para o CakePHP | Pilha
 
 		> mysql> Ctrl + d
 
-	- Quando a instalação estiver concluída, precisaremos executar alguns comandos adicionais para ter nosso ambiente MySQL configurado de forma segura. 
+	- *(OPCIONAL)* Quando a instalação estiver concluída, precisaremos executar alguns comandos adicionais para ter nosso ambiente MySQL configurado de forma segura. 
+	Iremos executar um script simples de segurança que vai remover alguns padrões perigosos e bloquear um pouco o acesso ao nosso sistema de banco de dados. Inicie o script interativo executando:
 
-	- Primeiro, precisamos dizer ao MySQL para criar sua estrutura de diretório de banco de dados, onde ele irá armazenar suas informações. Ele prepara o terreno, criando a base de dados **"mysql"** (usada para armazenar a configuração do servidor MySQL, incluindo informações sobre os usuários e sobre as demais bases de dados) e também uma base de dados chamada **"test"**, que pode ser usada para testar o servidor. Você pode fazer isto digitando:
-
-		> sudo mysql_install_db
-
-	- Depois, iremos executar um script simples de segurança que vai remover alguns padrões perigosos e bloquear um pouco o acesso ao nosso sistema de banco de dados. Inicie o script interativo executando:
+		- *(IMPORTANTE)* A habilitação dessa funcionalidade é algo que deve ser avaliado. Se habilitado, senhas que não seguem o critério especificado (senha root por exmplo) serão rejeitadas pelo MySQL com um erro. Isso irá causar problemas se você utilizar uma senha fraca juntamente com software que configura automaticamente as credenciais de usuário do MySQL, tais como os pacotes do Ubuntu para o phpMyAdmin. É seguro deixar a validação desativada, mas você deve sempre utilizar senhas fortes e exclusivas para as credenciais do banco de dados.
 
 		> sudo mysql_secure_installation
 		
 	- Siga os seguintes passos para a configuração:
 
-		- Enter current password for root (enter for name): </br>
-			`<sua senha escolhida para o BD MySQL>`
+		- Enter password for user root: `<sua senha escolhida para o BD MySQL>`</br>
 
-		- Change the root password? (Mudar senha do root?)[y/n]: **n**
+		- VALIDATE PASSWORD PLUGIN can be used to test passwords
+		and improve security. It checks the strength of password
+		and allows the users to set only those passwords which are
+		secure enough. Would you like to setup VALIDATE PASSWORD plugin?
+		Press y|Y for Yes, any other key for No:  **`y`**
+		
+		- There are three levels of password validation policy:
+		LOW    Length >= 8
+		MEDIUM Length >= 8, numeric, mixed case, and special characters
+		STRONG Length >= 8, numeric, mixed case, special characters and dictionary file
+		Please enter 0 = LOW, 1 = MEDIUM and 2 = STRONG:  **`0`**, **`1`** ou **`2`**
 
-		- Remove anonymous users? (Remover usuários anônimos?)[y/n]: **y**
+		- Estimated strength of the password: 25 
+		Change the password for root ? ((Press y|Y for Yes, any other key for No): `Se estiver satisfeito com a sua senha atual, digite` **`n`**, `se não digite` **`y`** `para altera-la.`
 
-		- Disallow root login remotely? (Não permitir que o usuário root faça login de outro local que não seja da própria máquina)[y/n]: **y**
+			- Estimated strength of the password: 100 
+			Do you wish to continue with the password provided?(Press y|Y for Yes, any other key for No) : **`n`**
 
-		- Remove test database and access to it? (Remover o teste database?)[y/n]: **y** 
+		- Remove anonymous users? (Press y|Y for Yes, any other key for No): **`y`**
 
-		- Reloaded privilege tables now? (Reloaded dos privilégios?)[y/n]: **y**
+		- Disallow root login remotely? (Press y|Y for Yes, any other key for No): **`y`**
 
-	- Corrigir erro **"Not Found"** do phpmyadmin, quando acessada a URL **"localhost/phpmyadmin"** ou **"127.0.0.1/phpmyadmin"**.
+		- Remove test database and access to it? (Press y|Y for Yes, any other key for No): **`y`** 
 
-		- Abra o arquivo **"apache2.conf"** no modo root com qualquer editor e texto:
-
-			> sudo nano /etc/apache2/apache2.conf
-
-		- No final do arquivo inserir as linhas de código a baixo e salvar.
-
-			` Include /etc/phpmyadmin/apache.conf`
-
-		- Salvado o arquivo, reiniciar o Apache com o comando:
-
-			> sudo service apache2 restart
+		- Reload privilege tables now? (Press y|Y for Yes, any other key for No): **`y`**
 
 --------------------
 
 # PostgreSQL
 
 1. Instalando:
+	
+	> sudo apt-get update
 
-	> sudo apt-get install postgresql-9.3 postgresql-contrib-9.3
+	> sudo apt-get install postgresql postgresql-contrib
 
 	> sudo apt-get install pgadmin3
+
+	- Consultar versão instalada. 
+
+		> psql --version
+
+		`psql (PostgreSQL) 9.5.6`
 		
 
 2. Configurando:
@@ -206,26 +215,58 @@ Instalando e Configurando Ambiente de Desenvolvimento PHP para o CakePHP | Pilha
 ## PHP
 
 1. Instalando:
+	- *(IMPORTANTE)* Se for instalar os dois Bancos de Dados (MySQL e PostgresSQL),  
 
 	- **MySQL:**
+
+		> sudo apt-get update
 	
-		> sudo apt-get install php5 php5-geoip php5-imagick php5-intl php5-mysql php5-mcrypt php5-readline phpmyadmin
+		> sudo apt-get install php7.0 php7.0-cli php7.0-intl php7.0-mysql php7.0-mcrypt php7.0-readline php-geoip php-imagick phpmyadmin libapache2-mod-php7.0 php7.0-mbstring
+
+		- Servidor web a configurar automaticamente: </br>
+			`[*] Apache2` </br>
+			`[ ] lighttpd`
+
+		- Configurar banco de dados para phpmyadmin com dbconfig-common? </br>
+			`<Sim>`
+
+		- Senha MySQL da aplicação para o phpmyadmin: </br>
+			`<Inserir senha escolhida e ok>`
+
+		- Confirmação de senha: </br>
+			`<Confirmar senha escolhida e Ok>`
+
+		- Corrigir erro **"Not Found"** do phpmyadmin, quando acessada a URL **"localhost/phpmyadmin"** ou **"127.0.0.1/phpmyadmin"**.
+
+		- Abra o arquivo **"apache2.conf"** no modo root com qualquer editor e texto:
+
+			> sudo nano /etc/apache2/apache2.conf
+
+		- No final do arquivo inserir as linhas de código a baixo e salvar.
+
+			` Include /etc/phpmyadmin/apache.conf`
+
+		- Salvado o arquivo, reiniciar o Apache com o comando:
+
+			> sudo service apache2 restart
 
 	- **PostgreSQL:**
 
-		> sudo apt-get install php5 php5-geoip php5-imagick php5-intl php5-pgsql php5-mcrypt php5-readline
+		> sudo apt-get update
+
+		> sudo apt-get install php7.0 php7.0-intl php7.0-mcrypt php7.0-readline php-geoip php-imagick php7.0-pgsql
 
 2. Configurando:
 
-	- Ativar a extensão do php5-mcrypt:
+	- Ativar a extensão do php7.0-mcrypt:
 
-		> sudo php5enmod mcrypt
+		> sudo phpenmod mcrypt
 
 	- Depois de ativada a extensão do php5-mcrypt, reiniciar o Apache:
 
 		> sudo service apache2 restart
 
-	- Somente testar se a instalação do PHP está correta. Criar um arquivo **"info.php"** no diretório dos projetos **"/var/www/html"** e dentro do arquivo inserir a função a baixo e salvar.
+	- Teste se a instalação do PHP está correta. Crie um arquivo **"info.php"** no diretório dos projetos **"/var/www/html"** e dentro do arquivo inserira a função a baixo e salve.
 
 		`<?php phpinfo(); ?>`
 
@@ -243,7 +284,7 @@ Instalando e Configurando Ambiente de Desenvolvimento PHP para o CakePHP | Pilha
 
 **pgadmin3 =>** Software gráfico para administração do SGBD PostgreSQL;
 	
-**php5 =>** Linguagem de programação na qual serão feitos os projetos;
+**php7.0 =>** Linguagem de programação na qual serão feitos os projetos;
 
 **apache2-doc =>** Documentação completa do Apache;
 
@@ -251,31 +292,37 @@ Instalando e Configurando Ambiente de Desenvolvimento PHP para o CakePHP | Pilha
 
 **mysql-server =>** Banco de Dados MySQL;
 	
-**postgresql-9.3 =>** Banco de Dados PostgreSQL, instalar a versão estável mais atualizada;
+**postgresql =>** Banco de Dados PostgreSQL, instalar a versão estável mais atualizada;
 	
 **phpmyadmin =>** Aplicação web para o gerenciamneto do SGBD MySQL;
 	
-**php5-geoip =>** Módulo do PHP que permite que você encontre a localização de um endereço IP - Cidade, Estado, País, Longitude, Latitude e outras informações, como o ISP e o tipo de conexão;
+**php-geoip =>** Módulo do PHP que permite que você encontre a localização de um endereço IP - Cidade, Estado, País, Longitude, Latitude e outras informações, como o ISP e o tipo de conexão;
 	
-**php5-imagick =>** É uma extensão nativa do PHP para criar e modificar imagens usando a API do ImageMagick;
+**php-imagick =>** É uma extensão nativa do PHP para criar e modificar imagens usando a API do ImageMagick;
 	
-**php5-intl =>** Contém um módulo para facilitar a internacionalização de scripts PHP;
+**php7.0-intl =>** Contém um módulo para facilitar a internacionalização de scripts PHP;
 
-**php5-pgsql =>** Drive que irá fazer conexão com o Banco de Dados PostgreSQL diretamente de scripts PHP;
+**php7.0-pgsql =>** Drive que irá fazer conexão com o Banco de Dados PostgreSQL diretamente de scripts PHP;
 
-**php5-mysql =>** Este pacote fornece módulos para conexões de banco de dados MySQL diretamente de scripts PHP. Inclui o módulo genérico "mysql", que pode ser usado para conectar-se a todas as versões do MySQL;
+**php7.0-mysql =>** Este pacote fornece módulos para conexões de banco de dados MySQL diretamente de scripts PHP. Inclui o módulo genérico "mysql", que pode ser usado para conectar-se a todas as versões do MySQL;
 
-**php5-mcrypt =>** Pacote que contém um módulo para funções mcrypt em scripts PHP;
+**php7.0-mcrypt =>** Pacote que contém um módulo para funções mcrypt em scripts PHP. Maioria dos Frameworks exige que este módulo esteja ativado;
 
-**php5-readline =>** Pacote que contém um módulo para funções readline (baseado em libedit) em scripts PHP;
+**php7.0-readline =>** Pacote que contém um módulo para funções readline (baseado em libedit) em scripts PHP;
 
-**postgresql-contrib-9.3 =>** Contém diversos utilitários do Banco de Dados PostgreSQL;
+**postgresql-contrib =>** Contém diversos utilitários do Banco de Dados PostgreSQL;
 
 **libapache2-mod-auth-mysql =>** Módulo para o servidor web Apache 2, que permite a autenticação HTTP contra as informações armazenadas em um banco de dados MySQL.
 
 --------------------
 
 # Fontes:
+
+https://www.digitalocean.com/community/tutorials/como-instalar-a-pilha-linux-apache-mysql-php-lamp-no-ubuntu-16-04-pt
+
+https://matheuslima.com.br/instalando-o-nginx-php-7-mysql-lemp/
+
+https://www.vivaolinux.com.br/topico/PHP/The-mbstring-extension-is-missing-Please-check-your-PHP-configuration
 
 - All Packages:
 
@@ -292,6 +339,10 @@ Instalando e Configurando Ambiente de Desenvolvimento PHP para o CakePHP | Pilha
 	http://php.net/manual/pt_BR/function.readline.php
 
 - Criando Usuário PostgreSQL:
+
+	https://www.digitalocean.com/community/tutorials/como-instalar-e-utilizar-o-postgresql-no-ubuntu-16-04-pt
+
+	https://www.rosehosting.com/blog/install-postgresql-with-phppgadmin-on-ubuntu/
 
 	https://www.vivaolinux.com.br/dica/Criacao-de-1edeg;-super-usuario-no-PostgreSQL
 
@@ -314,3 +365,5 @@ Instalando e Configurando Ambiente de Desenvolvimento PHP para o CakePHP | Pilha
 	https://www.youtube.com/watch?v=bDi9h8LJHuE
 
 	https://www.youtube.com/watch?v=LYgQW4a_anA
+
+

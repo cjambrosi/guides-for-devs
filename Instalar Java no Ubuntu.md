@@ -1,4 +1,3 @@
-
 Instalar Java no Ubuntu
 ===============================================
 
@@ -6,9 +5,9 @@ Instalar Java no Ubuntu
 
 ## Na linha de comando.
 
-1. Abra o terminal e siga os seguintes passos:
+- Abra o terminal e siga os seguintes passos:
 
-	1. Fazer o download do repositório.
+	1. Incluir o repositório oficial do Java.
 
 		> sudo add-apt-repository ppa:webupd8team/java
 
@@ -16,17 +15,17 @@ Instalar Java no Ubuntu
 
 		> sudo apt-get update
 
-	3. **(Opcional)** Pesquisar as versões disponíveis do Java e instalar a desejada. O comando vai listar as informações do pacote.
+	3. *(OPCIONAL)* Pesquisar as versões disponíveis do Java e instalar a desejada. O comando vai listar as informações do pacote.
 
-		> sudo apt-cache search java 	(ou jdk)
+		> sudo apt-cache search java (ou jdk)
 
 
 	4. Instalar o Java.
 
 		> sudo apt-get install oracle-java8-installer
 
-		`Do you want to continue [y/n]?	y`</br>
-		`Do you accept  the Oracle Binary Code license terms?	Yes`
+		`Do you want to continue [y/n]?`**`y`**</br>
+		`Do you accept  the Oracle Binary Code license terms?`**`Yes`**
 				
 
 	5. Verificar se o java foi instalado corretamente. O comando verfica se o JRE foi mesmo instalado na máquina, mostrando as informações do java.
@@ -35,18 +34,18 @@ Instalar Java no Ubuntu
 
 		- Exemplo de saída:
 
-			`java version "1.8.0_101"`</br>
-			`Java(TM) SE Runtime Environment (build 1.8.0_101-b13)`</br>
-			`Java HotSpot(TM) 64-Bit Server VM (build 25.101-b13, mixed mode)`
+			`java version "1.8.0_121"`</br>
+			`Java(TM) SE Runtime Environment (build 1.8.0_121-b13)`</br>
+			`Java HotSpot(TM) 64-Bit Server VM (build 25.121-b13, mixed mode)`
 
 
-	6. Verificar se o java foi configurado corretamente. O camando verfica se o compilador do Java funciona. Ao contrário do Windows que é preciso setar a variável de ambiente, no Ubuntu (Linux) não é preciso.
+	6. Verificar se o java foi configurado corretamente. O camando verfica se o compilador do Java funciona. Ao contrário do Windows que é preciso setar a Variável de Ambiente, no Ubuntu (Linux) não é preciso.
 
 		> javac -version
 
 		- Exemplo de saída:
 
-			`javac 1.8.0_101`
+			`javac 1.8.0_121`
 
 --------------------
 
@@ -57,3 +56,4 @@ https://www.youtube.com/watch?v=BTNp4P12DIs
 https://www.digitalocean.com/community/tutorials/como-instalar-o-java-no-ubuntu-com-apt-get-pt
 
 https://www.debian.org/doc/manuals/apt-howto/ch-search.pt-br.html
+

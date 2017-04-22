@@ -1,4 +1,3 @@
-
 Formatar Pen Drive no Terminal Linux
 ===============================================
 

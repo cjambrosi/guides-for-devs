@@ -31,7 +31,7 @@ Instalar Netbeans no Ubuntu
 
 ## Instalação:
 
-1. Na primeira janela de instalação você pode optar pelo quê você que instalar ou não.
+1. Na primeira janela de instalação você pode optar pelo quê você quer instalar ou não.
 
 2. Siga os passos e aceite os termos do **contrato de licença**.
 
