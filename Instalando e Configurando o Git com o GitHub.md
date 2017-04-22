@@ -24,7 +24,7 @@ Permite além reverter arquivos para um estado anterior, reverter um projeto int
 
 2. Do repósitorio Ubuntu
 
-	1. Digitar o comando a baixo
+	- Digitar o comando a baixo
 
 		> sudo apt-get install git-all
 
@@ -32,22 +32,22 @@ Permite além reverter arquivos para um estado anterior, reverter um projeto int
 
 		> sudo apt-get install git
 
-	2. Instalar visualizador grágico do histórico de todos os commits feitos
+	- Instalar visualizador grágico do histórico de todos os commits feitos
 
 		> sudo apt-get install gitk
 
 
 3. Direto da Fonte
 	
-	1. Para instalar a versão mais recente direto da fonte, é preciso instalar as seguintes bibliotecas que o Git depende (url, zlib, openssl, expat e libiconv):
+	- Para instalar a versão mais recente direto da fonte, é preciso instalar as seguintes bibliotecas que o Git depende (url, zlib, openssl, expat e libiconv):
 
 		> sudo apt-get install libcurl4-gnutls-dev libexpat1-dev gettext \libz-dev libssl-dev
 
-	2. Instalada as dependências, ir no site do GitHub onde estão listadas todas as versões do Git, escolher a mais recente ou a que desejar, recomendo instalar a versão mais recente estável. A versão que você vê quando você chega na página do projeto é a ramificação que está sendo trabalhada ativamente. Se você quer a última versão estável, você deve alterar a ramificação para a última tag não **"rc"**.
+	- Instalada as dependências, ir no site do GitHub onde estão listadas todas as versões do Git, escolher a mais recente ou a que desejar, recomendo instalar a versão mais recente estável. A versão que você vê quando você chega na página do projeto é a ramificação que está sendo trabalhada ativamente. Se você quer a última versão estável, você deve alterar a ramificação para a última tag não **"rc"**.
 
 		> https://github.com/git/git/releases
 
-	3. Baixado o pacote, devemos extrair e compilar. Exemplo:
+	- Baixado o pacote, devemos extrair e compilar. Exemplo:
 
 		> tar -zxf git-2.10.1.tar.gz
 
@@ -61,13 +61,13 @@ Permite além reverter arquivos para um estado anterior, reverter um projeto int
 
 		> sudo make install install-doc install-html install-info
 
-	4. Após a conclusão, podemos obter o Git via o próprio Git para atualizações:
+	- Após a conclusão, podemos obter o Git via o próprio Git para atualizações:
 
 		> git clone git://git.kernel.org/pub/scm/git/git.git
 
 --------------------
 
-## Configurando
+## Configurando o Git
 	
 1. Instalar o utilitário de linha de comando **"xclip"**.
 
@@ -95,7 +95,7 @@ Permite além reverter arquivos para um estado anterior, reverter um projeto int
 
 	> git config --list
 
-6. Gerando a Chave SSH (Protocolo - Secure Shell)
+7. Gerando a Chave SSH (Protocolo - Secure Shell)
 
 	1. Primeiro, você deve checar para ter certeza que você ainda não possui uma chave SSH. Por padrão, as chaves SSH de um usuário são armazenadas no diretório **~/.ssh**. Exemplo:
 
@@ -107,84 +107,87 @@ Permite além reverter arquivos para um estado anterior, reverter um projeto int
 		-----------------|-------------|-------------
 		config           |  id_rsa.pub
 
-	2. Agora devemos procurar por um par de arquivos chamados "algo" e "algo.pub", onde **algo** é normalmente "id_rsa" ou "id_rsa". O arquivo **.pub** é a sua chave pública, e o outro arquivo é a sua chave privada. Se você não tem estes arquivos (ou não tem nem mesmo o diretório .ssh), você pode criá-los executando um comando chamado **"ssh-keygen"**, que é fornecido com o pacote SSH em sistemas Linux/Mac. Exemplo:
+	2. Agora devemos procurar por um par de arquivos chamados "algo" e "algo.pub", onde **algo** é normalmente "id_rsa" ou "id_rsa". O arquivo **.pub** é a sua chave pública, e o outro arquivo é a sua chave privada. 
+	Se você não tem estes arquivos (ou não tem nem mesmo o diretório .ssh), você pode criá-los executando um comando chamado **"ssh-keygen"**, que é fornecido com o pacote SSH em sistemas Linux/Mac. Exemplo:
 
 		> ssh-keygen
 
-		1. Opcionalmente, podemos adicionar um comentário na nossa chave SSH para lembrarmos o motivo dessa chave ou simplemente o seu e-Mail, ficando assim:
+		- Opcionalmente, podemos adicionar um comentário na nossa chave SSH para lembrarmos o motivo dessa chave ou simplemente o seu e-Mail, ficando assim:
 
 			> ssh-keygen -C "seu_email@example.com"
 
-		2. Gerando o par de chave SSH pública/privada.
+		- Gerando o par de chave SSH pública/privada.
 
-			> Generating public/private rsa key pair.
+			`Generating public/private rsa key pair.`
 
-		3. Será perguntado qual é o caminho completo e nome do arquivo que conterá a chave. Pressionar **ENTER** para manter o padrão.
+		- Será perguntado qual é o caminho completo e nome do arquivo que conterá a chave. Pressionar **ENTER** para manter o padrão.
 			
-			> Enter file in which to save the key (/Users/schacon/.ssh/id_rsa):
+			`Enter file in which to save the key (/Users/schacon/.ssh/id_rsa):`
 
-		4. Será perguntado para criarmos uma senha para a chave privada. **Essa senha é muito importante, pois se você perder não será possível recuperá-la, é preciso criar uma chave nova**. Inserir uma senha para a chave SSH e pressione **ENTER**.
+		- Será perguntado para criarmos uma senha para a chave privada. **Essa senha é muito importante, pois se você perder não será possível recuperá-la, é preciso criar uma chave nova**. Inserir uma senha para a chave SSH e pressione **ENTER**.
 
-			> Enter passphrase (empty for no passphrase):
+			`Enter passphrase (empty for no passphrase):`
 
-		5. Será perguntado para repetirmos a senha escolhida. Digite a senha novamente para confirmar e pressione **ENTER**.
+		- Será perguntado para repetirmos a senha escolhida. Digite a senha novamente para confirmar e pressione **ENTER**.
 
-			> Enter same passphrase again:
+			`Enter same passphrase again:`
 
-		6. Criada a chave SSH, ficando semelhante a isso:
+		- Criada a chave SSH, ficando semelhante a isso:
 
 			`Your identification has been saved in /Users/schacon/.ssh/id_rsa.`</br>
 			`Your public key has been saved in /Users/schacon/.ssh/id_rsa.pub.`</br>
 			`The key fingerprint is:`</br>
 			`43:c5:5b:5f:b1:f1:50:43:ad:20:a6:92:6a:1f:9a:3a seu_email@example.com`
 
-		7. Para verificar se realmente foram criados os dois arquivos digite o comando a baixo, deverá listar os dois arquivos contendo a chave pública e privada.
+		- Para verificar se realmente foram criados os dois arquivos digite o comando a baixo, deverá listar os dois arquivos contendo a chave pública e privada.
 
 			>  ls ~/.ssh
 			
 			id_rsa  id_rsa.pub
-			
-			
-	3. Inserir a chave SSH criada no GitHub
 
-		1. Usaremos o programa *"xclip"* instalado anteriormente para copiar o conteúdo do arquivo que contem a chave pública.
+--------------------
+
+## Configurando o GitHub
+			
+1. Inserir no GitHub a chave SSH criada no Git
+
+	- Usaremos o programa *"xclip"* instalado anteriormente para copiar o conteúdo do arquivo que contem a chave pública.
+	
+		> xclip -sel clip ~/.ssh/id_rsa.pub
+
+	- Copiado o conteúdo do arquivo, acessar a sua conta no site do <i class="icon-provider-github"></i> **[GitHub](https://github.com/)**, ir no menu do seu usuário no canto superio direito da tela e clicar na opção **"Settings"**. 
+
+	- Nos menus do lado esquerdo da tela, escolher a opção **"SSH and GPG keys"**.
+
+	- Pada adicionar a chave SSH criada, escolha a opção **"New SSH key"**. 
+
+	- Na opção **"Title"**, escolher um título para a chave, para que possamos identificá-la.
+
+	- E na opção **"Key"**, colar o conteúdo da chave pública copiado anteriormente.
+
+	- Para finalizar, clicar em **"Add SSH Key"**, para adicionar a chave pública.
+
+2. Testar a conexão da máquina com o GitHub
+
+	> ssh -T git@github.com
+
+	1. Será alertado que a autenticidade não pode ser estabelecida mostrando os dados e vai pedir se queremos continuar conectados ou não. Exemplo:
+
+	    `The authenticity of host 'github.com (192.30.253.113)' can't be established.`<br>
+	    `RSA key fingerprint is 16:27:ac:a5:76:28:2d:36:63:1b:56:4d:eb:df:a6:48.`<br>
+		`Are you sure you want to continue connecting (yes/no)? yes`
+
+	2. Digite **"yes"** para continuar conectado.
 		
-			> xclip -sel clip ~/.ssh/id_rsa.pub
+		`Are you sure you want to continue connecting (yes/no)?` **`yes`**
+		
+	3. Receberá um alerta dizendo que será adicionado permanentemente a lista de hosts conhecidos, pedindo a senha da chave SSH Privada escolhida anteriormente. Exemplo:
 
-		2. Copiado o conteúdo do arquivo, acessar a sua conta no site do <i class="icon-provider-github"></i> **[GitHub](https://github.com/)**,  ir no menu do seu usuário no canto superio direito da tela e clicar na opção **"Settings"**. 
+		`Warning: Permanently added the RSA host key for IP address '192.30.253.112' to the list of known hosts.`
 
-		3. Nos menus do lado esquerdo da tela, escolher a opção **"SSH and GPG keys"**.
+	4. Aqui será avisado que o usuário está autenticado, mas que o GitHub não permite acesso por um terminal SSH. Isso não é um problema, se chegar nessa mensagem, tudo ocorreu corretamente, a conexão está funcionando.
 
-		4. Pada adicionar a chave SSH criada, escolha a opção **"New SSH key"**. 
-
-		5. Na opção **"Title"**, escolher um título para a chave, para que possamos identificá-la.
-
-		6. E na opção **"Key"**, colar o conteúdo da chave pública copiado anteriormente.
-
-		7. Para finalizar, clicar em **"Add SSH Key"**, para adicionar a chave pública.
-
-
-	4. Testar a conexão da máquina com o GitHub
-
-		> ssh -T git@github.com
-
-		1. Será alertado que a autenticidade não pode ser estabelecida mostrando os dados e vai pedir se queremos continuar conectados ou não. Exemplo:
-
-		    `The authenticity of host 'github.com (192.30.253.113)' can't be established.`<br>
-		    `RSA key fingerprint is 16:27:ac:a5:76:28:2d:36:63:1b:56:4d:eb:df:a6:48.`<br>
-			`Are you sure you want to continue connecting (yes/no)? yes`
-
-		2. Digitamos **"yes"** para continuarmos conectados.
-			
-			> Are you sure you want to continue connecting (yes/no)? *yes*
-			
-		3. Receberá um alerta dizendo que será adicionado permanentemente a lista de hosts conhecidos, pedindo a senha da chave SSH Privada escolhida anteriormente. Exemplo:
-
-			> Warning: Permanently added the RSA host key for IP address '192.30.253.112' to the list of known hosts.
-
-		4. Aqui será avisado que o usuário está autenticado, mas que o GitHub não permite acesso por um terminal SSH. Isso não é um problema, se chegar nessa mensagem, tudo ocorreu corretamente, a conexão está funcionando.
-
-			> Hi USER You've successfully authenticated, but GitHub does not provide shell access.
+		`Hi USER You've successfully authenticated, but GitHub does not provide shell access.`
 
 --------------------
 
