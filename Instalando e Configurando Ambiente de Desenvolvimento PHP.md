@@ -52,8 +52,8 @@ Instalando e Configurando Ambiente de Desenvolvimento PHP para o CakePHP | Pilha
 
 	- Dentro do arquivo, na parte inferior, adicione a diretiva **ServerName**, apontando para o seu nome do domínio primário ou o IP público do seu servidor.
 
-		`. . .
-		ServerName nome_de_domínio_do_servidor_ou_IP`
+		`. . .`
+		`ServerName nome_de_domínio_do_servidor_ou_IP`
 
 	- Salve e feche o arquivo. Depois verifique erros de sintaxe com o comando:
 
@@ -129,6 +129,7 @@ Instalando e Configurando Ambiente de Desenvolvimento PHP para o CakePHP | Pilha
 
 		- *(IMPORTANTE)* A habilitação dessa funcionalidade é algo que deve ser avaliado. Se habilitado, senhas que não seguem o critério especificado (senha root por exmplo) serão rejeitadas pelo MySQL com um erro. Isso irá causar problemas se você utilizar uma senha fraca juntamente com software que configura automaticamente as credenciais de usuário do MySQL, tais como os pacotes do Ubuntu para o phpMyAdmin. É seguro deixar a validação desativada, mas você deve sempre utilizar senhas fortes e exclusivas para as credenciais do banco de dados.
 
+
 		> sudo mysql_secure_installation
 		
 	- Siga os seguintes passos para a configuração:
@@ -139,6 +140,7 @@ Instalando e Configurando Ambiente de Desenvolvimento PHP para o CakePHP | Pilha
 		and improve security. It checks the strength of password
 		and allows the users to set only those passwords which are
 		secure enough. Would you like to setup VALIDATE PASSWORD plugin?
+		</ br>
 		Press y|Y for Yes, any other key for No:  **`y`**
 		
 		- There are three levels of password validation policy:
