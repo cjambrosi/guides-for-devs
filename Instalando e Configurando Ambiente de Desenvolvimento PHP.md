@@ -287,21 +287,21 @@ Geralmente, esse é o endereço que você utiliza para se conectar ao seu servid
 
 1. Primeira Forma:
 
-- A partir da linha de comando, você pode encontrar isso de algumas maneiras. Primeiro, você pode utilizar as ferramentas **iproute2** para obter seu endereço digitando isso:
+	- A partir da linha de comando, você pode encontrar isso de algumas maneiras. Primeiro, você pode utilizar as ferramentas **iproute2** para obter seu endereço digitando isso:
 
-	> ip addr show eth0 | grep inet | awk '{ print $2; }' | sed 's/\/.*$//'
+		> ip addr show eth0 | grep inet | awk '{ print $2; }' | sed 's/\/.*$//'
 
-	- Esse comando vai lhe retornar duas ou três linhas. Todos são endereços corretos, mas seu computador só poderá utilizar um deles, portanto, sinta-se livre para tentar cada um.
+		- Esse comando vai lhe retornar duas ou três linhas. Todos são endereços corretos, mas seu computador só poderá utilizar um deles, portanto, sinta-se livre para tentar cada um.
 
 2. Segunda Forma: 
 
-- Um método alternativo é usar o utilitário **curl** para entrar em contato com algum meio externo para lhe dizer como ele vê o seu servidor. Você pode fazer isso perguntando a um servidor específico qual é o seu IP:
+	- Um método alternativo é usar o utilitário **curl** para entrar em contato com algum meio externo para lhe dizer como ele vê o seu servidor. Você pode fazer isso perguntando a um servidor específico qual é o seu IP:
 
-	> sudo apt-get install curl
+		> sudo apt-get install curl
 
-	> curl http://icanhazip.com
+		> curl http://icanhazip.com
 
-- *Independentemente do meio que você usa para obter seu endereço IP, você pode digitá-lo na barra de endereço do seu navegador web para chegar ao seu servidor.*
+	- *Independentemente do meio que você usa para obter seu endereço IP, você pode digitá-lo na barra de endereço do seu navegador web para chegar ao seu servidor.*
 
 --------------------
 
