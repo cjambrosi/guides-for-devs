@@ -150,11 +150,11 @@ Instalando e Configurando Ambiente de Desenvolvimento PHP para o CakePHP | Pilha
 		STRONG Length >= 8, numeric, mixed case, special characters and dictionary file
 		Please enter 0 = LOW, 1 = MEDIUM and 2 = STRONG:  **`0`**, **`1`** ou **`2`**
 
-		- Estimated strength of the password: 25 
+		- Estimated strength of the password: 25 </br>
 		Change the password for root ? (Press y|Y for Yes, any other key for No): `Se estiver satisfeito com a sua senha atual, digite` **`n`**, `se não digite` **`y`** `para altera-la.`
 
-			- Estimated strength of the password: 100 
-			Do you wish to continue with the password provided?(Press y|Y for Yes, any other key for No) : **`n`**
+			- Estimated strength of the password: 100 </br>
+			Do you wish to continue with the password provided?(Press y|Y for Yes, any other key for No) : **`y`**
 
 		- Remove anonymous users? (Press y|Y for Yes, any other key for No): **`y`**
 
@@ -218,7 +218,7 @@ Instalando e Configurando Ambiente de Desenvolvimento PHP para o CakePHP | Pilha
 ## PHP
 
 1. Instalando:
-	- *(IMPORTANTE)* Se for instalar os dois Bancos de Dados (MySQL e PostgresSQL),  
+	- *(IMPORTANTE)* Se for instalar os dois Bancos de Dados (MySQL e PostgresSQL), cuidar para não instalar novamente os módolos instalados anteriormente e reconfigurá-los.
 
 	- **MySQL:**
 
