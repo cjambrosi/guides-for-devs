@@ -285,7 +285,7 @@ Instalando e Configurando Ambiente de Desenvolvimento PHP para o CakePHP | Pilha
 
 Geralmente, esse é o endereço que você utiliza para se conectar ao seu servidor através do SSH.
 
-1 - Primeira Forma:
+1. Primeira Forma:
 
 - A partir da linha de comando, você pode encontrar isso de algumas maneiras. Primeiro, você pode utilizar as ferramentas **iproute2** para obter seu endereço digitando isso:
 
@@ -293,7 +293,7 @@ Geralmente, esse é o endereço que você utiliza para se conectar ao seu servid
 
 	- Esse comando vai lhe retornar duas ou três linhas. Todos são endereços corretos, mas seu computador só poderá utilizar um deles, portanto, sinta-se livre para tentar cada um.
 
-2 - Segunda Forma: 
+2. Segunda Forma: 
 
 - Um método alternativo é usar o utilitário **curl** para entrar em contato com algum meio externo para lhe dizer como ele vê o seu servidor. Você pode fazer isso perguntando a um servidor específico qual é o seu IP:
 
