@@ -1,4 +1,4 @@
-Instalando e Configurando Ambiente de Desenvolvimento PHP para o CakePHP | Pilha: Apache, MySQL/Postegres, PHP5 | Ubuntu >= 16.04
+Instalando e Configurando Ambiente de Desenvolvimento PHP para o CakePHP | Pilha: Apache, MySQL/Postgres, PHP5 | Ubuntu >= 16.04
 ===============================================
 
 --------------------
@@ -205,11 +205,11 @@ Instalando e Configurando Ambiente de Desenvolvimento PHP para o CakePHP | Pilha
 
 		> postgres=# ALTER USER nomedousuario PASSWORD 'senha';
 
-	- Usuário e senha foram criados. Tecle o comando a baixo para sair da linha de comando do PostegreSQL:
+	- Usuário e senha foram criados. Tecle o comando a baixo para sair da linha de comando do PostgreSQL:
 
 		> postgres=# \q
 
-	- Tecle o comando a baixo para sair do usuário postegres:
+	- Tecle o comando a baixo para sair do usuário postgres:
 
 		> exit
 
