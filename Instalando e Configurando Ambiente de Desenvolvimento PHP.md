@@ -50,7 +50,7 @@ Instalando e Configurando Ambiente de Desenvolvimento PHP para o CakePHP | Pilha
 
 		> sudo nano /etc/apache2/apache2.conf
 
-	- Dentro do arquivo, na parte inferior, adicione a diretiva **ServerName**, apontando para o seu nome do domínio primário ou o IP público do seu servidor.
+	- Dentro do arquivo, na parte inferior, adicione a diretiva **ServerName**, apontando para o seu nome do domínio primário ou o IP público do seu servidor. [(Se não souber como descobrir o IP do seu servidor, vá para o final do tutorial)](##Encontrando-Endereço-IP-Público-do-seu-Servidor).
 
 		`. . .`</br>
 		`ServerName nome_de_domínio_do_servidor_ou_IP`
@@ -166,7 +166,7 @@ Instalando e Configurando Ambiente de Desenvolvimento PHP para o CakePHP | Pilha
 
 --------------------
 
-# PostgreSQL
+## PostgreSQL
 
 1. Instalando:
 	
@@ -281,6 +281,30 @@ Instalando e Configurando Ambiente de Desenvolvimento PHP para o CakePHP | Pilha
 
 --------------------
 
+## Encontrando Endereço IP Público do seu Servidor
+
+Geralmente, esse é o endereço que você utiliza para se conectar ao seu servidor através do SSH.
+
+1 - Primeira Forma:
+
+	- A partir da linha de comando, você pode encontrar isso de algumas maneiras. Primeiro, você pode utilizar as ferramentas **iproute2** para obter seu endereço digitando isso:
+
+	> ip addr show eth0 | grep inet | awk '{ print $2; }' | sed 's/\/.*$//'
+
+	- Esse comando vai lhe retornar duas ou três linhas. Todos são endereços corretos, mas seu computador só poderá utilizar um deles, portanto, sinta-se livre para tentar cada um.
+
+2 - Segunda Forma: 
+
+	- Um método alternativo é usar o utilitário **curl** para entrar em contato com algum meio externo para lhe dizer como ele vê o seu servidor. Você pode fazer isso perguntando a um servidor específico qual é o seu IP:
+
+		> sudo apt-get install curl
+
+		> curl http://icanhazip.com
+
+- *Independentemente do meio que você usa para obter seu endereço IP, você pode digitá-lo na barra de endereço do seu navegador web para chegar ao seu servidor.*
+
+--------------------
+
 ## O que foi instalado?!
 
 **apache2 =>** Servidor web livre mais utilizado no mundo, onde rodam suas aplicações;
@@ -368,5 +392,3 @@ https://www.vivaolinux.com.br/topico/PHP/The-mbstring-extension-is-missing-Pleas
 	https://www.youtube.com/watch?v=bDi9h8LJHuE
 
 	https://www.youtube.com/watch?v=LYgQW4a_anA
-
-
