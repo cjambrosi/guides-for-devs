@@ -1,4 +1,4 @@
-Instalando e Configurando Ambiente de Desenvolvimento PHP para o CakePHP | Pilha: Apache, MySQL/Postgres, PHP5 | Ubuntu >= 16.04
+Instalando e Configurando Ambiente de Desenvolvimento PHP para o CakePHP | Pilha: Apache, MySQL/Postgres, PHP7.0 | Ubuntu >= 16.04
 ===============================================
 
 --------------------
@@ -224,7 +224,7 @@ Instalando e Configurando Ambiente de Desenvolvimento PHP para o CakePHP | Pilha
 
 		> sudo apt-get update
 	
-		> sudo apt-get install php7.0 php7.0-cli php7.0-intl php7.0-mysql php7.0-mcrypt php7.0-readline php-geoip php-imagick phpmyadmin libapache2-mod-php7.0 php7.0-mbstring
+		> sudo apt-get install php7.0 php7.0-cli php7.0-intl php7.0-mcrypt php7.0-readline libapache2-mod-php7.0 php7.0-mbstring php-imagick php7.0-mysql phpmyadmin
 
 		- Servidor web a configurar automaticamente: </br>
 			`[*] Apache2` </br>
@@ -257,7 +257,8 @@ Instalando e Configurando Ambiente de Desenvolvimento PHP para o CakePHP | Pilha
 
 		> sudo apt-get update
 
-		> sudo apt-get install php7.0 php7.0-intl php7.0-mcrypt php7.0-readline php-geoip php-imagick php7.0-pgsql
+		> sudo apt-get install php7.0 php7.0-cli php7.0-intl php7.0-mcrypt php7.0-readline libapache2-mod-php7.0 php7.0-mbstring php-imagick php7.0-pgsql
+
 
 2. Configurando:
 
