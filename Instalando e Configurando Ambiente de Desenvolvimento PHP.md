@@ -1,4 +1,4 @@
-Instalando e Configurando Ambiente de Desenvolvimento PHP para o CakePHP | Pilha: Apache, MySQL/Postgres, PHP7.0 | Ubuntu >= 16.04
+Instalando e Configurando Ambiente de Desenvolvimento PHP para o CakePHP | Pilha: Apache, MySQL/Postgres, PHP 7.0 | Ubuntu >= 16.04
 ===============================================
 
 --------------------
@@ -46,29 +46,7 @@ Instalando e Configurando Ambiente de Desenvolvimento PHP para o CakePHP | Pilha
 
 		- Deverá aparecer a página de configuração padrão do Apache.
 
-	- A seguir, iremos adicionar uma diretiva global chamada **ServerName** para supremir uma mesnagem de aviso do Apache. Então abra o arquivo de configuração principal do Apache.
-
-		> sudo nano /etc/apache2/apache2.conf
-
-	- Dentro do arquivo, na parte inferior, adicione a diretiva **ServerName**, apontando para o seu nome do domínio primário ou o IP público do seu servidor. [(Se não souber como descobrir o IP do seu servidor, vá para o final do tutorial)](#encontrando-endereço-do-ip-público-do-seu-servidor).
-
-		`. . .`</br>
-		`ServerName nome_de_domínio_do_servidor_ou_IP`
-
-	- Salve e feche o arquivo. Depois verifique erros de sintaxe com o comando:
-
-		> sudo apache2ctl configtest
-
-		- Saída deverá ser:
-
-			`[secondary-label Output]`</br>
-			`Syntax OK`
-
-	- Reinicie o Apache para implementar as alterações.
-
-		> sudo systemctl restart apache2
-
-	- Devemos habilitar o módulo **mod_rewrite**, o Módulo de Redirecionamento de URL’s do Apache, também conhecido como "URL’s amigáveis".
+	- A seguir devemos habilitar o módulo **mod_rewrite**, o Módulo de Redirecionamento de URL’s do Apache, também conhecido como "URL’s amigáveis".
 
 		> sudo a2enmod rewrite
 
@@ -95,9 +73,32 @@ Instalando e Configurando Ambiente de Desenvolvimento PHP para o CakePHP | Pilha
 
 		- Exemplo: </br>
 			![](https://github.com/CristianAmbrosi/tutoriais/blob/master/images/exemplo-c%C3%B3digo-m%C3%B3dulo-rewrite.png)
+
 	- Depois de ter salvo o arquivo, reinicie novamente o Apache com o comando:
 
 		> sudo service apache2 restart
+
+	- *(OPCIONAL)* Iremos adicionar uma diretiva global chamada **ServerName** para supremir uma mesnagem de aviso do Apache. Então abra o arquivo de configuração principal do Apache.
+
+		> sudo nano /etc/apache2/apache2.conf
+
+	- Dentro do arquivo, na parte inferior, adicione a diretiva **ServerName**, apontando para o seu nome do domínio primário ou o IP público do seu servidor. [(Se não souber como descobrir o IP do seu servidor, vá para o final do tutorial)](#encontrando-endereço-do-ip-público-do-seu-servidor).
+
+		`. . .`</br>
+		`ServerName nome_de_domínio_do_servidor_ou_IP`
+
+	- Salve e feche o arquivo. Depois verifique erros de sintaxe com o comando:
+
+		> sudo apache2ctl configtest
+
+		- Saída deverá ser:
+
+			`[secondary-label Output]`</br>
+			`Syntax OK`
+
+	- Reinicie o Apache para implementar as alterações.
+
+		> sudo systemctl restart apache2
 
 --------------------
 
@@ -334,13 +335,23 @@ Geralmente, esse é o endereço que você utiliza para se conectar ao seu servid
 
 **php7.0-mysql =>** Este pacote fornece módulos para conexões de banco de dados MySQL diretamente de scripts PHP. Inclui o módulo genérico "mysql", que pode ser usado para conectar-se a todas as versões do MySQL;
 
-**php7.0-mcrypt =>** Pacote que contém um módulo para funções mcrypt em scripts PHP. Maioria dos Frameworks exige que este módulo esteja ativado;
+**php7.0-mcrypt =>** Pacote que contém um módulo para funções mcrypt em scripts PHP, que suporta uma grande variedade de algoritmos de bloco. Maioria dos Frameworks exige que este módulo esteja ativado;
 
 **php7.0-readline =>** Pacote que contém um módulo para funções readline (baseado em libedit) em scripts PHP;
 
+**php7.0-cli =>** Este pacote fornece o interpretador de comandos /usr/bin/php7.0, útil para testar scripts PHP a partir de um shell ou executar tarefas gerais de script de shell.
+
+**php7.0-mbstring =>** Fornece funções de cadeia específicos de vários bytes que ajudam a lidar com a codificação multibyte no PHP. Além disso, mbstring lida com a conversão de codificação de caracteres entre os pares possíveis de codificação.
+
 **postgresql-contrib =>** Contém diversos utilitários do Banco de Dados PostgreSQL;
 
-**libapache2-mod-auth-mysql =>** Módulo para o servidor web Apache 2, que permite a autenticação HTTP contra as informações armazenadas em um banco de dados MySQL.
+**libapache2-mod-auth-mysql =>** Módulo para o servidor web Apache 2, que permite a autenticação HTTP contra as informações armazenadas em um banco de dados.
+
+**curl =>** Uma biblioteca suportada pelo PHP, que permite que você conecte-se e comunique-se com diferentes tipos de servidor usando diferentes tipos de protocolos. libcurl atualmente suporte os protocolos http, https, ftp, gopher, telnet, dict, file, e ldap. libcurl também suporta certificados HTTPS, HTTP POST, HTTP PUT, upload via FTP (podendo também ser feito com a extensão ftp do PHP), upload HTTP por formulário, proxies, cookies, e autenticação com usuário e senha.
+
+**mysql_secure_installation =>** É um script de shell disponível em sistemas Unix. Permite melhorar a segurança da sua instalação do MySQL ou MariaDB.
+
+**icanhazip =>** Retorna seu endereço de IP Externo.
 
 --------------------
 
@@ -348,13 +359,45 @@ Geralmente, esse é o endereço que você utiliza para se conectar ao seu servid
 
 https://www.digitalocean.com/community/tutorials/como-instalar-a-pilha-linux-apache-mysql-php-lamp-no-ubuntu-16-04-pt
 
+https://www.digitalocean.com/community/tutorials/como-instalar-e-utilizar-o-postgresql-no-ubuntu-16-04-pt
+
 https://matheuslima.com.br/instalando-o-nginx-php-7-mysql-lemp/
 
 https://www.vivaolinux.com.br/topico/PHP/The-mbstring-extension-is-missing-Please-check-your-PHP-configuration
 
-- All Packages:
+https://www.rosehosting.com/blog/install-postgresql-with-phppgadmin-on-ubuntu/
+
+https://www.vivaolinux.com.br/dica/Criacao-de-1edeg;-super-usuario-no-PostgreSQL
+
+https://www.digitalocean.com/community/tutorials/how-to-install-and-secure-phpmyadmin-on-ubuntu-14-04
+
+https://www.digitalocean.com/community/tutorials/como-instalar-a-pilha-linux-apache-mysql-php-lamp-no-ubuntu-14-04-pt
+
+https://www.digitalocean.com/community/tutorials/how-to-install-linux-apache-mysql-php-lamp-stack-on-ubuntu-14-04
+
+http://ubuntuserverguide.com/2014/06/how-to-install-lamp-in-ubuntu-server-14-04-lts.html
+
+http://www.ubuntuiniciantes.com.br/2013/08/instalando-o-php-apache-e-postgres-no.html
+
+http://www.hardware.com.br/tutoriais/configurando-servidor-lamp/pagina4.html
+
+http://blog.wfsneto.com.br/2014/06/21/php-configurando-ambiente-de-densenvolvimento-ubuntu-14-04
+
+https://www.youtube.com/watch?v=Q2N5blJ4VIo
+
+https://www.youtube.com/watch?v=bDi9h8LJHuE
+
+https://www.youtube.com/watch?v=LYgQW4a_anA
+
+- Módulos:
 
 	https://www.debian.org/
+
+	http://php.net/manual/pt_BR/intro.mcrypt.php
+
+	http://php.net/manual/pt_BR/intro.mbstring.php
+
+	http://php.net/manual/pt_BR/function.readline.php
 
 - Habilitar mod_rewrite:
 
@@ -362,34 +405,4 @@ https://www.vivaolinux.com.br/topico/PHP/The-mbstring-extension-is-missing-Pleas
 
 	http://book.cakephp.org/3.0/pt/installation.html
 
-- php5-readline:
 
-	http://php.net/manual/pt_BR/function.readline.php
-
-- Criando Usuário PostgreSQL:
-
-	https://www.digitalocean.com/community/tutorials/como-instalar-e-utilizar-o-postgresql-no-ubuntu-16-04-pt
-
-	https://www.rosehosting.com/blog/install-postgresql-with-phppgadmin-on-ubuntu/
-
-	https://www.vivaolinux.com.br/dica/Criacao-de-1edeg;-super-usuario-no-PostgreSQL
-
-	https://www.digitalocean.com/community/tutorials/how-to-install-and-secure-phpmyadmin-on-ubuntu-14-04
-
-	https://www.digitalocean.com/community/tutorials/como-instalar-a-pilha-linux-apache-mysql-php-lamp-no-ubuntu-14-04-pt
-
-	https://www.digitalocean.com/community/tutorials/how-to-install-linux-apache-mysql-php-lamp-stack-on-ubuntu-14-04
-
-	http://ubuntuserverguide.com/2014/06/how-to-install-lamp-in-ubuntu-server-14-04-lts.html
-
-	http://www.ubuntuiniciantes.com.br/2013/08/instalando-o-php-apache-e-postgres-no.html
-
-	http://www.hardware.com.br/tutoriais/configurando-servidor-lamp/pagina4.html
-
-	http://blog.wfsneto.com.br/2014/06/21/php-configurando-ambiente-de-densenvolvimento-ubuntu-14-04
-
-	https://www.youtube.com/watch?v=Q2N5blJ4VIo
-
-	https://www.youtube.com/watch?v=bDi9h8LJHuE
-
-	https://www.youtube.com/watch?v=LYgQW4a_anA
