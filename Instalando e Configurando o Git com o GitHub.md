@@ -24,13 +24,13 @@ Permite além reverter arquivos para um estado anterior, reverter um projeto int
 
 2. Do repósitorio Ubuntu
 
-	- Digitar o comando a baixo
+	- Digitar o comando a baixo *(recomendado)*:
 
-		> sudo apt-get install git-all
+		> sudo apt-get install git 
 
 		- ou
 
-		> sudo apt-get install git
+		> sudo apt-get install git-all
 
 	- Instalar visualizador grágico do histórico de todos os commits feitos
 
