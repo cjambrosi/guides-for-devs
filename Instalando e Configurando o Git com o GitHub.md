@@ -122,7 +122,7 @@ Permite além reverter arquivos para um estado anterior, reverter um projeto int
 
 		- Será perguntado qual é o caminho completo e nome do arquivo que conterá a chave. Pressionar **ENTER** para manter o padrão.
 			
-			`Enter file in which to save the key (/Users/schacon/.ssh/id_rsa):`
+			`Enter file in which to save the key (/home/user/.ssh/id_rsa):`
 
 		- Será perguntado para criarmos uma senha para a chave privada. **Essa senha é muito importante, pois se você perder não será possível recuperá-la, é preciso criar uma chave nova**. Inserir uma senha para a chave SSH e pressione **ENTER**.
 
@@ -134,8 +134,8 @@ Permite além reverter arquivos para um estado anterior, reverter um projeto int
 
 		- Criada a chave SSH, ficando semelhante a isso:
 
-			`Your identification has been saved in /Users/schacon/.ssh/id_rsa.`</br>
-			`Your public key has been saved in /Users/schacon/.ssh/id_rsa.pub.`</br>
+			`Your identification has been saved in /home/user/.ssh/id_rsa.`</br>
+			`Your public key has been saved in /home/user/.ssh/id_rsa.pub.`</br>
 			`The key fingerprint is:`</br>
 			`43:c5:5b:5f:b1:f1:50:43:ad:20:a6:92:6a:1f:9a:3a seu_email@example.com`
 
