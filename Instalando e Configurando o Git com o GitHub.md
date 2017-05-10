@@ -107,7 +107,7 @@ Permite além reverter arquivos para um estado anterior, reverter um projeto int
 		-----------------|-------------|-------------
 		config           |  id_rsa.pub
 
-	- Agora devemos procurar por um par de arquivos chamados "algo" e "algo.pub", onde **algo** é normalmente "id_rsa" ou "id_rsa". O arquivo **.pub** é a sua chave pública, e o outro arquivo é a sua chave privada. 
+	- Agora devemos procurar por um par de arquivos chamados "algo" e "algo.pub", onde **algo** é normalmente "id_rsa" ou "id_dsa". O arquivo **.pub** é a sua chave pública, e o outro arquivo é a sua chave privada. 
 	Se você não tem estes arquivos (ou não tem nem mesmo o diretório .ssh), você pode criá-los executando um comando chamado **"ssh-keygen"**, que é fornecido com o pacote SSH em sistemas Linux/Mac. Exemplo:
 
 		> ssh-keygen

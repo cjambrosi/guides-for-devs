@@ -15,7 +15,7 @@ Tutoriais
 - [Instalar Java no Ubuntu](https://github.com/CristianAmbrosi/tutoriais/blob/master/Instalar%20Java%20no%20Ubuntu.md)
 - [Instalar Netbeans no Ubuntu](https://github.com/CristianAmbrosi/tutoriais/blob/master/Instalar%20Netbeans%20no%20Ubuntu.md)
 - [Permissões de um Arquivo ou Diretório no Linux](https://github.com/CristianAmbrosi/tutoriais/blob/master/Permiss%C3%B5es%20de%20um%20Arquivo%20ou%20Diret%C3%B3rio%20no%20Linux.md)
-- [Backup e Restore no Banco de Dados Firebird SQL](https://github.com/CristianAmbrosi/tutoriais/blob/master/Tutorial%20Firebird%20SQL%20-%20Backup%20e%20Restore%20%28Linha%20de%20Comando%29.md)
+- [Backup e Restore no Banco de Dados Firebird SQL](https://github.com/CristianAmbrosi/tutoriais/blob/master/Backup%20e%20Restore%20no%20Banco%20de%20Dados%20Firebird%20SQL.md)
 - [Ver programas instalados no Linux (Ubuntu)](https://github.com/CristianAmbrosi/tutoriais/blob/master/Ver%20programas%20instalados%20no%20Linux%20%28Ubuntu%29.md)
 
 --------------------
