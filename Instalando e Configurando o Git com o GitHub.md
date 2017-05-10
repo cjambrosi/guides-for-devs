@@ -43,7 +43,7 @@ Permite além reverter arquivos para um estado anterior, reverter um projeto int
 
 		> sudo apt-get install libcurl4-gnutls-dev libexpat1-dev gettext \libz-dev libssl-dev
 
-	- Instalada as dependências, ir no site do GitHub onde estão listadas todas as versões do Git, escolher a mais recente ou a que desejar, recomendo instalar a versão mais recente estável. A versão que você vê quando você chega na página do projeto é a ramificação que está sendo trabalhada ativamente. Se você quer a última versão estável, você deve alterar a ramificação para a última tag não **"rc"**.
+	- Instalada as dependências, ir no site do GitHub onde estão listadas todas as versões do Git, escolher a mais recente ou a que desejar. Recomendo instalar a versão mais recente estável. A versão que você vê quando você chega na página do projeto é a ramificação que está sendo trabalhada ativamente. Se você quer a última versão estável, você deve alterar a ramificação para a última tag não **"rc"**.
 
 		> https://github.com/git/git/releases
 
@@ -89,7 +89,7 @@ Permite além reverter arquivos para um estado anterior, reverter um projeto int
 
 5. Opcionalemnte, podemos configurar um editor de texto padrão para ser usado quando o Git precisar que você escreva uma menssagem. Por padrão, o Git utiliza o editor do sistema, geralmente o VI ou VIM.
 
-	> git config --global core.editor sublime-text
+	> git config --global core.editor vi
 
 6. Verificar as configurações feitas até o momento:
 
@@ -97,7 +97,7 @@ Permite além reverter arquivos para um estado anterior, reverter um projeto int
 
 7. Gerando a Chave SSH (Protocolo - Secure Shell)
 
-	1. Primeiro, você deve checar para ter certeza que você ainda não possui uma chave SSH. Por padrão, as chaves SSH de um usuário são armazenadas no diretório **~/.ssh**. Exemplo:
+	- Primeiro, você deve checar para ter certeza que você ainda não possui uma chave SSH. Por padrão, as chaves SSH de um usuário são armazenadas no diretório **~/.ssh**. Exemplo:
 
 		> cd ~/.ssh
 		
@@ -107,7 +107,7 @@ Permite além reverter arquivos para um estado anterior, reverter um projeto int
 		-----------------|-------------|-------------
 		config           |  id_rsa.pub
 
-	2. Agora devemos procurar por um par de arquivos chamados "algo" e "algo.pub", onde **algo** é normalmente "id_rsa" ou "id_rsa". O arquivo **.pub** é a sua chave pública, e o outro arquivo é a sua chave privada. 
+	- Agora devemos procurar por um par de arquivos chamados "algo" e "algo.pub", onde **algo** é normalmente "id_rsa" ou "id_rsa". O arquivo **.pub** é a sua chave pública, e o outro arquivo é a sua chave privada. 
 	Se você não tem estes arquivos (ou não tem nem mesmo o diretório .ssh), você pode criá-los executando um comando chamado **"ssh-keygen"**, que é fornecido com o pacote SSH em sistemas Linux/Mac. Exemplo:
 
 		> ssh-keygen
@@ -171,7 +171,7 @@ Permite além reverter arquivos para um estado anterior, reverter um projeto int
 
 	> ssh -T git@github.com
 
-	- Será alertado que a autenticidade não pode ser estabelecida mostrando os dados e vai pedir se queremos continuar conectados ou não. Exemplo:
+	- Será alertado que a autenticidade não pode ser estabelecida exibindo os dados e será pedido se queremos continuar conectados ou não. Exemplo:
 
 	    `The authenticity of host 'github.com (192.30.253.113)' can't be established.`<br>
 	    `RSA key fingerprint is 16:27:ac:a5:76:28:2d:36:63:1b:56:4d:eb:df:a6:48.`<br>

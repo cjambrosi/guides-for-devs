@@ -1,4 +1,4 @@
-Tutorial Firebird SQL - Backup e Restore | (Linha de Comando)
+Backup e Restore no Banco de Dados Firebird SQL | (Linha de Comando)
 ===============================================
 
 --------------------
@@ -9,7 +9,7 @@ Tutorial Firebird SQL - Backup e Restore | (Linha de Comando)
 
 	> sudo su firebird
 
-2. Digite sua senha do usuário linux. Você vai estar como administrador do Banco de Dados. 
+2. Digite sua senha do usuário linux. Você estará como administrador do Banco de Dados. 
 Ex: 
 
 	> firebird@usuario:/home/usuario$
@@ -26,7 +26,7 @@ Ex:
 
 	> sudo su firebird
 
-2. Digite sua senha do usuário linux. Você vai estar como administrador do Banco de Dados. 
+2. Digite sua senha do usuário linux. Você estará como administrador do Banco de Dados. 
 Ex:
 
 	> firebird@usuario:/home/usuario$
@@ -41,23 +41,23 @@ Ex:
 
 ## Lista de comandos utilizados
 
-- **USUARI_DO_BANCO =>** sysdba (Por padrão)
+- **USUARI_DO_BANCO =>** sysdba *(Por padrão)*
 
-- **SENHA_DO_BANCO =>** masterkey (Por padrão)
+- **SENHA_DO_BANCO =>** masterkey *(Por padrão)*
 	
 - **.fbk =>** Extensão do arquivo para backup
 
-- **-g =>** Não realiza o processo de garbage collection durante o processo de backup, porém, é recomendado que você sempre realize o garbage collect, pois o mesmo é responsável por excluir as versões de registro que não são mais necessárias. (NÃO É OBRIGATÓRIO E É RESTRITO AO BACKUP)
+- **-g =>** Não realiza o processo de garbage collection durante o processo de backup, porém, é recomendado que você sempre realize o garbage collect, pois o mesmo é responsável por excluir as versões de registro que não são mais necessárias. *(NÃO É OBRIGATÓRIO E É RESTRITO AO BACKUP)*.
 
-- **-l =>** Desativa os índices durante o processo de restauração do banco de dados. (NÃO É OBRIGATÓRIO E É RESTRITO AO BACKUP)
+- **-l =>** Desativa os índices durante o processo de restauração do banco de dados. *(NÃO É OBRIGATÓRIO E É RESTRITO AO BACKUP)*.
 
-- **-b =>** Gera um backup. (OBRIGATÓRIO PARA O BACKUP)
+- **-b =>** Gera um backup. *(OBRIGATÓRIO PARA O BACKUP)*.
 
 - **-v =>** Mostra na tela todo o processo que está sendo executado no backup/restore. (NÃO É OBRIGATÓRIO)
 
-- **-z =>** Mostra a versão do gBak. (NÃO É OBRIGATÓRIO)
+- **-z =>** Mostra a versão do gBak. *(NÃO É OBRIGATÓRIO)*.
 
-- **-c =>** Cria um banco de dados a partir de um arquivo de backup já pronto. (OBRIGATÓRIO PARA O RESTORE)
+- **-c =>** Cria um banco de dados a partir de um arquivo de backup já pronto. *(OBRIGATÓRIO PARA O RESTORE)*.
 
 - **Obs:** No Windows é um pouco diferente, ao invés de usar o **'sudo su'** que é do linux, deve-se acessar a pasta de instalação do Firebird pelo CMD, até a pasta **'bin'** e seguir normalmente os passos. 	
 Ex: 

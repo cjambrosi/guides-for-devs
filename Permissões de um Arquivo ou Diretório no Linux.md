@@ -3,7 +3,7 @@ Permissões de um Arquivo ou Diretório no Linux
 
 --------------------
 
-1. Abra o terminal do linux, escolha um diretório qualquer e de o seguinte comando:
+1. Abra o terminal do linux, escolha um diretório qualquer e dê o seguinte comando:
 	
 	>  ls -l
 	
@@ -18,12 +18,12 @@ Permissões de um Arquivo ou Diretório no Linux
 
 - **Permissões =>** Tipo do ítem e nível permitido de permissão para Leitura, Escrita e Execução do ítem ou diretório;
 - **Links =>** Número de ligações que o ítem possui, no caso do diretório, número de subdiretórios que possui;
-- **Proprietário =>** Quem é o dono, quem criou. É o diretório padrão do usuário, o home;
+- **Proprietário =>** Quem é o dono, quem criou. É o diretório padrão do usuário, o *home*;
 - **Grupo =>** Grupo ao qual pertence o ítem ou diretório. Utilizado para dar permissões à outros usuários;
 - **Tamanho =>**	Em Bytes;
 - **Data e Hora =>** Momento em que foi criado;
 - **Nome =>** Nome do ítem ou diretório;
-- **Outros =>** Se não é Proprietário do item e não está no Grupo do item, ele pertence ao conjunto de usuários Outros.
+- **Outros =>** Se não é Proprietário do ítem e não está no Grupo do ítem, ele pertence ao conjunto de usuários Outros.
 
 2. O primeiro caractere das Permissões é o **TIPO** do que está sendo mostrando, que pode ser:
 
@@ -85,7 +85,7 @@ Permissões de um Arquivo ou Diretório no Linux
 		
 				> sudo chmod 755 /var/www/html/
 	
-			- * => Pegar todas as pastas dentro diretório. 
+			- *** => Pegar todas as pastas dentro diretório. 
 				
 				Ex:
 				
@@ -97,7 +97,7 @@ Permissões de um Arquivo ou Diretório no Linux
 				
 				> sudo chmod 755 /var/www/html/.
 	
-			- **.* =>** Tudo no mesmo comando. 
+			- ***.** =>** Tudo no mesmo comando. 
 				
 				Ex:
 				

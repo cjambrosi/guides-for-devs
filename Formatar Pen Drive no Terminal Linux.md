@@ -95,7 +95,7 @@ Formatar Pen Drive no Terminal Linux
 
 ## Agora a formatação
 
-1. Podemos formatá-lo para diversos formatos de Sistemas de Arquivos (mkfs.vfat, mkfs.ntfs, mkfs.bfs, mkfs.ext2, mkfs.ext3, mkfs.ext4, mkfs.minix, mkfs.msdos, mkfs.vfat, mkfs.xfs, mkfs.xiafs), mas irei demonstrar somente os 2 mais utilizados. Apesar de ser um dos mais primitivos programas de particionamento ainda em uso, o fdisk é o default nestes sistemas e por isso ainda muito usado.
+1. Podemos formatá-lo para diversos formatos de Sistemas de Arquivos (mkfs.vfat, mkfs.ntfs, mkfs.bfs, mkfs.ext2, mkfs.ext3, mkfs.ext4, mkfs.minix, mkfs.msdos, mkfs.vfat, mkfs.xfs, mkfs.xiafs), mas irei demonstrar somente os 2 mais utilizados. Apesar de ser um dos mais primitivos programas de particionamento ainda em uso, o fdisk é o default nestes sistemas e por isso ainda é muito utilizado.
 
 	- Formato NTFS (recomentado):
 
@@ -137,13 +137,13 @@ Formatar Pen Drive no Terminal Linux
 
 **ntfs =>** Formata no sistema de arquivos NTFS;
 
-**-n =>** Nome que escolhido para o dispositivo;
+**-n =>** Nome que é escolhido para o dispositivo;
 
 **-I =>** Partição do Pen Drive (Não é obrigatório);
 
 **-f =>** Executa a formatação rápida. Isso ignorará tanto a redução de volume quanto a verificação de setor ruim.
 
-**ntfslabel =>** É uma ferramenta que possui a funcionalidade, renomear ou exibir o rótulo de um sistema de arquivos NTFS;
+**ntfslabel =>** É uma ferramenta que possui a funcionalidade de renomear ou exibir o rótulo de um sistema de arquivos NTFS;
 
 **/dev/sdb1 =>** Partição do disco onde é montado o dispositivo conectado. Sendo a primeira partição do segundo disco rígido SATA ou SCSI. Pode haver vários, por isso devemos ter certeza da partição que queremos formatar.
 
