@@ -22,7 +22,7 @@ Copyright (C) 2015 Free Software Foundation, Inc.
 This is free software; see the source for copying conditions.  There is NO
 warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.`
 	
-- Se não possuir o compilador, abra o terminal e digite os seguintes comandos:
+- Se não possuir o compilador, abra o terminal e digite o seguinte comando:
 	
 	> sudo apt-get install g++	
 
