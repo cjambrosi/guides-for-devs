@@ -85,7 +85,7 @@ Permissões de um Arquivo ou Diretório no Linux
 		
 				> sudo chmod 755 /var/www/html/
 	
-			- * => Pegar todas as pastas dentro diretório. 
+			- * * * => Pegar todas as pastas dentro diretório. 
 				
 				Ex:
 				
