@@ -124,13 +124,13 @@ Instalar as versões do PHP 5.6 e PHP 7.1 juntas no Ubuntu >= 14.04
 	> sudo a2dismod php5.6
 	
 	- Saída:</br>
-		`odule php5.6 disabled.`</br>
+		`Module php5.6 disabled.`</br>
 		
 	> sudo a2enmod php7.1
 	
 	- Saída:</br>
 		`Enabling module php7.1.`</br>
-
+		
 	> sudo service apache2 restart
 
 	> sudo update-alternatives --set php /usr/bin/php7.1
@@ -169,7 +169,7 @@ Para testar se a versão do PHP 7.1 está funcionando junto a do PHP 5.6, podemo
 - Execute o arquivo com as duas versões do PHP no terminal.
 	> php5.6 teste.php
 	
-	- Ou
+	- Ou</br>
 	
 	> php7.1 teste.php
 	
