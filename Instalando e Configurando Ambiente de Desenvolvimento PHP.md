@@ -1,9 +1,9 @@
-Instalando e Configurando Ambiente de Desenvolvimento PHP para o CakePHP | Pilha: Apache, MySQL/Postgres, PHP 7.0 | Ubuntu >= 16.04
+Instalando e Configurando Ambiente de Desenvolvimento PHP para o CakePHP | Pilha: Apache, MySQL/Postgres, PHP 7.1 | Ubuntu >= 16.04
 ===============================================
 
 --------------------
 
-## Primeiramente, atualizar os repositórios e gatilhos do Ubuntu:
+## Primeiramente, atualizar os repositórios e gatilhos do Ubuntu
 
 > sudo apt-get update
 
@@ -78,7 +78,7 @@ Instalando e Configurando Ambiente de Desenvolvimento PHP para o CakePHP | Pilha
 
 		> sudo service apache2 restart
 
-	- *(OPCIONAL)* Iremos adicionar uma diretiva global chamada **ServerName** para supremir uma mesnagem de aviso do Apache. Então abra o arquivo de configuração principal do Apache.
+	- Agora iremos adicionar uma diretiva global chamada **ServerName** para supremir uma mesnagem de aviso do Apache. Então abra o arquivo de configuração principal do Apache.
 
 		> sudo nano /etc/apache2/apache2.conf
 
@@ -218,14 +218,23 @@ Instalando e Configurando Ambiente de Desenvolvimento PHP para o CakePHP | Pilha
 
 ## PHP
 
+- **Importante**
+		
+	- Se você precisa trabalhar com duas versões do PHP (*5.6 e 7.1*), instale o PHP por esse passo-a-passo.
+
+	- Se for instalar os dois Bancos de Dados (MySQL e PostgresSQL), deve manter atenção para instalar somente os módulos necessários para cada um.
+
 1. Instalando:
-	- *(IMPORTANTE)* Se for instalar os dois Bancos de Dados (MySQL e PostgresSQL), cuidar para não instalar novamente os módolos instalados anteriormente e reconfigurá-los.
+
+	- Adicionar o repositório:
+	
+		> sudo add-apt-repository ppa:ondrej/php
 
 	- **MySQL:**
 
 		> sudo apt-get update
 	
-		> sudo apt-get install php7.0 php7.0-cli php7.0-intl php7.0-mcrypt php7.0-readline libapache2-mod-php7.0 php7.0-mbstring php-imagick php7.0-mysql phpmyadmin
+		> sudo apt-get install php7.1 php7.1-cli php7.1-intl php7.1-mcrypt php7.1-opcache php7.1-readline libapache2-mod-php7.1 php7.1-mbstring php7.1-json php7.1-curl php-imagick php7.1-mysql phpmyadmin
 
 		- Servidor web a configurar automaticamente: </br>
 			`[*] Apache2` </br>
@@ -258,16 +267,16 @@ Instalando e Configurando Ambiente de Desenvolvimento PHP para o CakePHP | Pilha
 
 		> sudo apt-get update
 
-		> sudo apt-get install php7.0 php7.0-cli php7.0-intl php7.0-mcrypt php7.0-readline libapache2-mod-php7.0 php7.0-mbstring php-imagick php7.0-pgsql
+		> sudo apt-get install php7.1 php7.1-cli php7.1-intl php7.1-mcrypt php7.1-opcache php7.1-readline libapache2-mod-php7.1 php7.1-mbstring php7.1-json php7.1-curl php-imagick php7.1-pgsql
 
 
 2. Configurando:
 
-	- Ativar a extensão do php7.0-mcrypt:
+	- Ativar a extensão do php7.1-mcrypt:
 
 		> sudo phpenmod mcrypt
 
-	- Depois de ativada a extensão do php5-mcrypt, reiniciar o Apache:
+	- Depois de ativada a extensão do php7.1-mcrypt, reiniciar o Apache:
 
 		> sudo service apache2 restart
 
@@ -313,7 +322,7 @@ Geralmente, esse é o endereço que você utiliza para se conectar ao seu servid
 
 **pgadmin3 =>** Software gráfico para administração do SGBD PostgreSQL;
 	
-**php7.0 =>** Linguagem de programação na qual serão feitos os projetos;
+**php7.1 =>** Linguagem de programação na qual serão feitos os projetos;
 
 **apache2-doc =>** Documentação completa do Apache;
 
@@ -329,19 +338,19 @@ Geralmente, esse é o endereço que você utiliza para se conectar ao seu servid
 	
 **php-imagick =>** É uma extensão nativa do PHP para criar e modificar imagens usando a API do ImageMagick;
 	
-**php7.0-intl =>** Contém um módulo para facilitar a internacionalização de scripts PHP;
+**php7.1-intl =>** Contém um módulo para facilitar a internacionalização de scripts PHP;
 
-**php7.0-pgsql =>** Drive que irá fazer conexão com o Banco de Dados PostgreSQL diretamente de scripts PHP;
+**php7.1-pgsql =>** Drive que irá fazer conexão com o Banco de Dados PostgreSQL diretamente de scripts PHP;
 
-**php7.0-mysql =>** Este pacote fornece módulos para conexões de banco de dados MySQL diretamente de scripts PHP. Inclui o módulo genérico "mysql", que pode ser usado para conectar-se a todas as versões do MySQL;
+**php7.1-mysql =>** Este pacote fornece módulos para conexões de banco de dados MySQL diretamente de scripts PHP. Inclui o módulo genérico "mysql", que pode ser usado para conectar-se a todas as versões do MySQL;
 
-**php7.0-mcrypt =>** Pacote que contém um módulo para funções mcrypt em scripts PHP, que suporta uma grande variedade de algoritmos de bloco. Maioria dos Frameworks exige que este módulo esteja ativado;
+**php7.1-mcrypt =>** Pacote que contém um módulo para funções mcrypt em scripts PHP, que suporta uma grande variedade de algoritmos de bloco. Maioria dos Frameworks exige que este módulo esteja ativado;
 
-**php7.0-readline =>** Pacote que contém um módulo para funções readline (baseado em libedit) em scripts PHP;
+**php7.1-readline =>** Pacote que contém um módulo para funções readline (baseado em libedit) em scripts PHP;
 
-**php7.0-cli =>** Este pacote fornece o interpretador de comandos /usr/bin/php7.0, útil para testar scripts PHP a partir de um shell ou executar tarefas gerais de script de shell.
+**php7.1-cli =>** Este pacote fornece o interpretador de comandos /usr/bin/php7.0, útil para testar scripts PHP a partir de um shell ou executar tarefas gerais de script de shell.
 
-**php7.0-mbstring =>** Fornece funções de cadeia específicos de vários bytes que ajudam a lidar com a codificação multibyte no PHP. Além disso, mbstring lida com a conversão de codificação de caracteres entre os pares possíveis de codificação.
+**php7.1-mbstring =>** Fornece funções de cadeia específicos de vários bytes que ajudam a lidar com a codificação multibyte no PHP. Além disso, mbstring lida com a conversão de codificação de caracteres entre os pares possíveis de codificação.
 
 **postgresql-contrib =>** Contém diversos utilitários do Banco de Dados PostgreSQL;
 
