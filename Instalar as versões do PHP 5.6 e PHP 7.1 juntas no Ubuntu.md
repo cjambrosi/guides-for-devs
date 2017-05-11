@@ -83,7 +83,7 @@ Instalar as versões do PHP 5.6 e PHP 7.1 juntas no Ubuntu >= 14.04
 
 	- Verificar a versão instalada:
 			
-			> php -v
+		> php -v
 			
 	- Ou:
 	
@@ -123,46 +123,48 @@ Instalar as versões do PHP 5.6 e PHP 7.1 juntas no Ubuntu >= 14.04
 	
 	> sudo a2dismod php5.6
 	
-	- Saída:
-		`Module php5.6 disabled.`
+	- Saída: </ br>
+		`Module php5.6 disabled.`</ br>
 		
 	> sudo a2enmod php7.1
 	
-	- Saída:
-		`Enabling module php7.1.`
+	- Saída:</ br>
+		`Enabling module php7.1.`</ br>
 
 	> sudo service apache2 restart
+
 	> sudo update-alternatives --set php /usr/bin/php7.1
 
 - Se estiver na versão do PHP 7.1 e quiser usar a versão do PHP 5.6, digite os comandos na seguinte ordem:
 	
 	> sudo a2dismod php7.1
 	
-	- Saída:
-		`Module php7.1 disabled.`
+	- Saída:</ br>
+		`Module php7.1 disabled.`</ br>
 
 	> sudo a2enmod php5.6
 	
-	- Saída:
-		`Enabling module php5.6.`
+	- Saída:</ br>
+		`Enabling module php5.6.`</ br>
 
 	> sudo service apache2 restart
+
 	> sudo update-alternatives --set php /usr/bin/php5.6
 
 --------------------
 
 ## Testar as duas versões instaladas
-Para testar se a versão do PHP 7.1 está funcionando junto a do PHP 5.6, podemos utilizar um código simples usando o operador de comparação `Spaceship (nave espacial, <=>)`, que está disponível a partir do PHP 7.0.
+Para testar se a versão do PHP 7.1 está funcionando junto a do PHP 5.6, podemos utilizar um código simples usando o operador de comparação *Spaceship (nave espacial, <=>)*, que está disponível a partir do PHP 7.0.
 
-- Crie um arquivo em algum diretório do sistema com um nome qualquer (teste.php, por exemplo), e cole o código a baixo:
-	`<?php
-		$var1 = var_dump(10 <=> 10);
-		echo $var1; //  0
-		$var2 = var_dump(10 <=> 5);
-		echo $var2; //  1
-		$var3 = var_dump(5 <=> 10);
-		echo $var3; // -1
-	?>`
+- Crie um arquivo em algum diretório do sistema com um nome qualquer (teste.php, por exemplo), e cole o código a baixo:</ br>
+	`<?php`</ br>
+		`$var1 = var_dump(10 <=> 10);`</ br>
+		`echo $var1; //  0`</ br>
+		`$var2 = var_dump(10 <=> 5);`</ br>
+		`echo $var2; //  1`</ br>
+		`$var3 = var_dump(5 <=> 10);`</ br>
+		`echo $var3; // -1`</ br>
+	`?>`</ br>
 	
 - Execute o arquivo com as duas versões do PHP no terminal.
 	> php5.6 teste.php
@@ -175,20 +177,12 @@ Para testar se a versão do PHP 7.1 está funcionando junto a do PHP 5.6, podemo
  
 	`PHP Parse error:  syntax error, unexpected '>' in /home/sim/Área de Trabalho/teste.php on line 2`
 
-- Versão PHP 7.1. Deverá gerar a seguinte saída:
-	`int(0)
-	int(1)
-	int(-1)`
+- Versão PHP 7.1. Deverá gerar a seguinte saída:</ br>
+	`int(0)`</ br>
+	`int(1)`</ br>
+	`int(-1)`</ br>
 
---------------------
 
-## (Opcional) Criar Alias para agilizar na alternância entre as duas versões
-
-	- 
-
-		>
-
-		>
 
 --------------------
 
