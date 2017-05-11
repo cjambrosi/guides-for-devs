@@ -43,10 +43,10 @@ Instalar as versões do PHP 5.6 e PHP 7.1 juntas no Ubuntu >= 14.04
 
 	- Exemplo de saída:
 
-		`PHP 5.6.30-10+deb.sury.org~xenial+2 (cli)</br>
-		Copyright (c) 1997-2016 The PHP Group</br>
-		Zend Engine v2.6.0, Copyright (c) 1998-2016 Zend Technologies</br>
-		    with Zend OPcache v7.0.6-dev, Copyright (c) 1999-2016, by Zend Technologies</br>`
+		`PHP 5.6.30-10+deb.sury.org~xenial+2 (cli)`</br>
+		Copyright (c) 1997-2016 The PHP Group`</br>
+		Zend Engine v2.6.0, Copyright (c) 1998-2016 Zend Technologies`</br>
+		    with Zend OPcache v7.0.6-dev, Copyright (c) 1999-2016, by Zend Technologies`</br>
 
 - Instalando o PHP 7.1
 
@@ -62,10 +62,10 @@ Instalar as versões do PHP 5.6 e PHP 7.1 juntas no Ubuntu >= 14.04
 
 	- Exemplo de saída:
 
-		`PHP 7.1.4-1+deb.sury.org~xenial+1 (cli) (built: Apr 11 2017 22:12:32) ( NTS )</br>
-		Copyright (c) 1997-2017 The PHP Group</br>
-		Zend Engine v3.1.0, Copyright (c) 1998-2017 Zend Technologies</br>
-		    with Zend OPcache v7.1.4-1+deb.sury.org~xenial+1, Copyright (c) 1999-2017, by Zend Technologies</br>`
+		`PHP 7.1.4-1+deb.sury.org~xenial+1 (cli) (built: Apr 11 2017 22:12:32) ( NTS )
+		Copyright (c) 1997-2017 The PHP Group
+		Zend Engine v3.1.0, Copyright (c) 1998-2017 Zend Technologies
+		    with Zend OPcache v7.1.4-1+deb.sury.org~xenial+1, Copyright (c) 1999-2017, by Zend Technologies`
 
 --------------------
 
@@ -91,10 +91,10 @@ Instalar as versões do PHP 5.6 e PHP 7.1 juntas no Ubuntu >= 14.04
 
 	- Exemplo de saída:
 
-		`PHP 5.6.30-10+deb.sury.org~xenial+2 (cli)</br>
-		Copyright (c) 1997-2016 The PHP Group</br>
-		Zend Engine v2.6.0, Copyright (c) 1998-2016 Zend Technologies</br>
-		    with Zend OPcache v7.0.6-dev, Copyright (c) 1999-2016, by Zend Technologies</br>`
+		`PHP 5.6.30-10+deb.sury.org~xenial+2 (cli)
+		Copyright (c) 1997-2016 The PHP Group
+		Zend Engine v2.6.0, Copyright (c) 1998-2016 Zend Technologies
+		    with Zend OPcache v7.0.6-dev, Copyright (c) 1999-2016, by Zend Technologies`
 
 - Instalando o PHP 7.1
 
@@ -110,10 +110,10 @@ Instalar as versões do PHP 5.6 e PHP 7.1 juntas no Ubuntu >= 14.04
 
 	- Exemplo de saída:
 
-		`PHP 7.1.4-1+deb.sury.org~xenial+1 (cli) (built: Apr 11 2017 22:12:32) ( NTS )</br>
-		Copyright (c) 1997-2017 The PHP Group</br>
-		Zend Engine v3.1.0, Copyright (c) 1998-2017 Zend Technologies</br>
-		    with Zend OPcache v7.1.4-1+deb.sury.org~xenial+1, Copyright (c) 1999-2017, by Zend Technologies</br>`
+		`PHP 7.1.4-1+deb.sury.org~xenial+1 (cli) (built: Apr 11 2017 22:12:32) ( NTS )
+		Copyright (c) 1997-2017 The PHP Group
+		Zend Engine v3.1.0, Copyright (c) 1998-2017 Zend Technologies
+		    with Zend OPcache v7.1.4-1+deb.sury.org~xenial+1, Copyright (c) 1999-2017, by Zend Technologies`
 
 --------------------
 
@@ -124,12 +124,12 @@ Instalar as versões do PHP 5.6 e PHP 7.1 juntas no Ubuntu >= 14.04
 	> sudo a2dismod php5.6
 	
 	- Saída:
-		`</br>odule php5.6 disabled.</br>`
+		`odule php5.6 disabled.`
 		
 	> sudo a2enmod php7.1
 	
 	- Saída:
-		`</br>Enabling module php7.1.</br>`
+		`Enabling module php7.1.`
 
 	> sudo service apache2 restart
 
@@ -140,12 +140,12 @@ Instalar as versões do PHP 5.6 e PHP 7.1 juntas no Ubuntu >= 14.04
 	> sudo a2dismod php7.1
 	
 	- Saída:
-		`</br>Module php7.1 disabled.`</br>
+		`Module php7.1 disabled.`
 
 	> sudo a2enmod php5.6
 	
 	- Saída:
-		`</br>Enabling module php5.6.</br>`
+		`Enabling module php5.6.`
 
 	> sudo service apache2 restart
 
@@ -157,14 +157,14 @@ Instalar as versões do PHP 5.6 e PHP 7.1 juntas no Ubuntu >= 14.04
 Para testar se a versão do PHP 7.1 está funcionando junto a do PHP 5.6, podemos utilizar um código simples usando o operador de comparação *Spaceship (nave espacial, <=>)*, que está disponível a partir do PHP 7.0.
 
 - Crie um arquivo em algum diretório do sistema com um nome qualquer (teste.php, por exemplo), e cole o código a baixo:
-	`</br><?php</br>`
-		`$var1 = var_dump(10 <=> 10);</br>`
-		`echo $var1; //  0</br>`
-		`$var2 = var_dump(10 <=> 5);</br>`
-		`echo $var2; //  1</br>`
-		`$var3 = var_dump(5 <=> 10);</br>`
-		`echo $var3; // -1</br>`
-	`?></br>`
+	`<?php`
+		`$var1 = var_dump(10 <=> 10);`
+		`echo $var1; //  0`
+		`$var2 = var_dump(10 <=> 5);`
+		`echo $var2; //  1`
+		`$var3 = var_dump(5 <=> 10);`
+		`echo $var3; // -1`
+	`?>`
 	
 - Execute o arquivo com as duas versões do PHP no terminal.
 	> php5.6 teste.php
@@ -178,9 +178,9 @@ Para testar se a versão do PHP 7.1 está funcionando junto a do PHP 5.6, podemo
 	`PHP Parse error:  syntax error, unexpected '>' in /home/sim/Área de Trabalho/teste.php on line 2`
 
 - Versão PHP 7.1. Deverá gerar a seguinte saída:
-	`</br>int(0)</br>`
-	`int(1)</br>`
-	`int(-1)</br>`
+	`int(0)`
+	`int(1)`
+	`int(-1)`
 
 
 
