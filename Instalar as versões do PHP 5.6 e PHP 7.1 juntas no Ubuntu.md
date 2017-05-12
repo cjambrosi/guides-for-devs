@@ -153,7 +153,7 @@ Para testar se a versão do PHP 7.1 está funcionando junto a do PHP 5.6, podemo
 - Execute o arquivo com as duas versões do PHP no terminal.
 	> php5.6 teste.php
 	
-		- Ou:
+- Ou:
 	
 	> php7.1 teste.php
 	
@@ -188,7 +188,9 @@ Para testar se a versão do PHP 7.1 está funcionando junto a do PHP 5.6, podemo
 
 	- Exemplo:
 
-- Por fim, para gravar definitivamente os Alias e ser possível executá-los, digite o comando o baixo:
+		![](https://github.com/CristianAmbrosi/tutoriais/blob/master/images/alias-php-bashrc.png)
+
+- Por fim, para gravar definitivamente os alias e ser possível executá-los, digite o comando o baixo:
 
 	> source ~/.bashrc
 
