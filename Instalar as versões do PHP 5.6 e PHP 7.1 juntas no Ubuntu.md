@@ -174,7 +174,7 @@ Para testar se a versão do PHP 7.1 está funcionando junto a do PHP 5.6, podemo
 
 	> sudo nano ~/.bashrc
 
-- Inclua os alias no arquivo, de preferência junto aos outros alias existentes.
+- Inclua os aliases no arquivo, de preferência junto aos outros aliases existentes.
 
 	> alias phpV5='sudo a2dismod php7.1; sudo a2enmod php5.6; sudo service apache2 restart | sudo update-alternatives --set php /usr/bin/php5.6'
 
@@ -190,7 +190,7 @@ Para testar se a versão do PHP 7.1 está funcionando junto a do PHP 5.6, podemo
 
 		![](https://github.com/CristianAmbrosi/tutoriais/blob/master/images/alias-php-bashrc.png)
 
-- Por fim, para gravar definitivamente os alias e ser possível executá-los, digite o comando o baixo:
+- Por fim, para gravar definitivamente os aliases e ser possível executá-los, digite o comando o baixo:
 
 	> source ~/.bashrc
 
