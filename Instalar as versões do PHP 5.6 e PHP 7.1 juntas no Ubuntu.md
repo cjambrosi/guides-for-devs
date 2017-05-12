@@ -157,11 +157,11 @@ Para testar se a versão do PHP 7.1 está funcionando junto a do PHP 5.6, podemo
 	
 	> php7.1 teste.php
 	
-- Versão PHP 5.6 -> Deverá ocorrer o erro a baixo, pois não há suporte para este operador.
+- Versão PHP 5.6 **->** Deverá ocorrer o erro a baixo, pois não há suporte para este operador.
  
 	`PHP Parse error:  syntax error, unexpected '>' in /home/sim/Área de Trabalho/teste.php on line 2`
 
-- Versão PHP 7.1 -> Deverá gerar a seguinte saída:
+- Versão PHP 7.1 **->** Deverá gerar a seguinte saída:
 	</br>`int(0)`</br>
 	`int(1)`</br>
 	`int(-1)`</br>
@@ -170,7 +170,7 @@ Para testar se a versão do PHP 7.1 está funcionando junto a do PHP 5.6, podemo
 
 ### (*Opcional*) Podemos criar um par de *Alias* para não termos que digitar todo aquele comando enorme
 
-- Para criá-los, é preciso modidificar o arquivo **.bashrc** que se encontra em **/home/USER/.bashrc** (se não existir o arquivo, crie-o). Abra o arquivo com permissão de super usuário no editor de texto que preferir.
+- Para criá-los, é preciso modidificar o arquivo **.bashrc** que se encontra em **/home/USER/.bashrc** (se não existir o arquivo, crie-o). Abra o arquivo com privilégios de super usuário no editor de texto que preferir.
 
 	> sudo nano ~/.bashrc
 
