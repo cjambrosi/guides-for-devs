@@ -119,19 +119,19 @@ Instalar as versões do PHP 5.6 e PHP 7.1 juntas no Ubuntu >= 14.04
 
 ## Alternando entre as duas versões instaladas
 
-- Se estiver na versão do PHP 5.6 e quiser usar a versão do PHP 7.1, digite o comando a baixo:
+- Se estiver na versão do **PHP 5.6** e quiser usar a versão do **PHP 7.1**, digite o comando a baixo:
 
 	> sudo a2dismod php5.6; sudo a2enmod php7.1; sudo service apache2 restart | sudo update-alternatives --set php /usr/bin/php7.1
 
-		- Ou:
+	- Ou:
 
 	> sudo a2dismod php5.6; sudo a2enmod php7.1; sudo service apache2 restart; echo 2 | sudo update-alternatives --config php
 
-- Se estiver na versão do PHP 7.1 e quiser usar a versão do PHP 5.6, digite os comandos na seguinte ordem:
+- Se estiver na versão do **PHP 7.1** e quiser usar a versão do **PHP 5.6**, digite os comandos na seguinte ordem:
 
 	> sudo a2dismod php7.1; sudo a2enmod php5.6; sudo service apache2 restart | sudo update-alternatives --set php /usr/bin/php5.6
 
-		- Ou:
+	- Ou:
 
 	> sudo a2dismod php7.1; sudo a2enmod php5.6; sudo service apache2 restart; echo 1 | sudo update-alternatives --config php
 
@@ -168,29 +168,29 @@ Para testar se a versão do PHP 7.1 está funcionando junto a do PHP 5.6, podemo
 
 --------------------
 
-## (*Opcional*) Podemos criar um par de *Alias* para não termos que digitar todo aquele comando enorme
+### (*Opcional*) Podemos criar um par de *Alias* para não termos que digitar todo aquele comando enorme
 
-	- Para criá-los, é preciso modidificar o arquivo **.bashrc** que se encontra em **/home/USER/.bashrc** (se não existir o arquivo, crie-o). Abra o arquivo com permissão de super usuário no editor de texto que preferir.
+- Para criá-los, é preciso modidificar o arquivo **.bashrc** que se encontra em **/home/USER/.bashrc** (se não existir o arquivo, crie-o). Abra o arquivo com permissão de super usuário no editor de texto que preferir.
 
-		> sudo nano ~/.bashrc
+	> sudo nano ~/.bashrc
 
-	- Inclua os alias no arquivo, de preferência junto aos outros alias existentes.
+- Inclua os alias no arquivo, de preferência junto aos outros alias existentes.
 
-		> alias phpV5='sudo a2dismod php7.1; sudo a2enmod php5.6; sudo service apache2 restart | sudo update-alternatives --set php /usr/bin/php5.6'
+	> alias phpV5='sudo a2dismod php7.1; sudo a2enmod php5.6; sudo service apache2 restart | sudo update-alternatives --set php /usr/bin/php5.6'
 
-		> alias phpV7='sudo a2dismod php5.6; sudo a2enmod php7.1; sudo service apache2 restart | sudo update-alternatives --set php /usr/bin/php7.1'
+	> alias phpV7='sudo a2dismod php5.6; sudo a2enmod php7.1; sudo service apache2 restart | sudo update-alternatives --set php /usr/bin/php7.1'
 
-	- Ou:
+- Ou:
 
-		> alias phpV5='sudo a2dismod php7.1; sudo a2enmod php5.6; sudo service apache2 restart; echo 1 | sudo update-alternatives --config php'
+	> alias phpV5='sudo a2dismod php7.1; sudo a2enmod php5.6; sudo service apache2 restart; echo 1 | sudo update-alternatives --config php'
 
-		> alias phpV7='sudo a2dismod php5.6; sudo a2enmod php7.1; sudo service apache2 restart; echo 2 | sudo update-alternatives --config php'
+	> alias phpV7='sudo a2dismod php5.6; sudo a2enmod php7.1; sudo service apache2 restart; echo 2 | sudo update-alternatives --config php'
 
-		- Exemplo:
+	- Exemplo:
 
-	- Por fim, para gravar definitivamente os Alias e ser possível executá-los, digite o comando o baixo:
+- Por fim, para gravar definitivamente os Alias e ser possível executá-los, digite o comando o baixo:
 
-		> source ~/.bashrc
+	> source ~/.bashrc
 
 --------------------
 
