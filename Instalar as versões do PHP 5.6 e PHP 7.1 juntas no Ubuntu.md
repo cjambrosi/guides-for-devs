@@ -157,11 +157,11 @@ Para testar se a versão do PHP 7.1 está funcionando junto a do PHP 5.6, podemo
 	
 	> php7.1 teste.php
 	
-- Versão PHP 5.6 **->** Deverá ocorrer o erro a baixo, pois não há suporte para este operador.
+- Versão PHP 5.6 -> Deverá ocorrer o erro a baixo, pois não há suporte para este operador.
  
 	`PHP Parse error:  syntax error, unexpected '>' in /home/sim/Área de Trabalho/teste.php on line 2`
 
-- Versão PHP 7.1 **->** Deverá gerar a seguinte saída:
+- Versão PHP 7.1 -> Deverá gerar a seguinte saída:
 	</br>`int(0)`</br>
 	`int(1)`</br>
 	`int(-1)`</br>
