@@ -62,10 +62,10 @@ Instalar as versões do PHP 5.6 e PHP 7.1 juntas no Ubuntu >= 14.04
 
 	- Exemplo de saída:
 
-		`PHP 7.1.4-1+deb.sury.org~xenial+1 (cli) (built: Apr 11 2017 22:12:32) ( NTS )`</br>
+		`PHP 7.1.5-1+deb.sury.org~xenial+1 (cli) (built: Apr 11 2017 22:12:32) ( NTS )`</br>
 		`Copyright (c) 1997-2017 The PHP Group`</br>
 		`Zend Engine v3.1.0, Copyright (c) 1998-2017 Zend Technologies`</br>
-		    `with Zend OPcache v7.1.4-1+deb.sury.org~xenial+1, Copyright (c) 1999-2017, by Zend Technologies`</br>
+		    `with Zend OPcache v7.1.5-1+deb.sury.org~xenial+1, Copyright (c) 1999-2017, by Zend Technologies`</br>
 
 --------------------
 
@@ -110,46 +110,30 @@ Instalar as versões do PHP 5.6 e PHP 7.1 juntas no Ubuntu >= 14.04
 
 	- Exemplo de saída:
 
-		`PHP 7.1.4-1+deb.sury.org~xenial+1 (cli) (built: Apr 11 2017 22:12:32) ( NTS )`</br>
+		`PHP 7.1.5-1+deb.sury.org~xenial+1 (cli) (built: Apr 11 2017 22:12:32) ( NTS )`</br>
 		`Copyright (c) 1997-2017 The PHP Group`</br>
 		`Zend Engine v3.1.0, Copyright (c) 1998-2017 Zend Technologies`</br>
-		    `with Zend OPcache v7.1.4-1+deb.sury.org~xenial+1, Copyright (c) 1999-2017, by Zend Technologies`</br>
+		    `with Zend OPcache v7.1.5-1+deb.sury.org~xenial+1, Copyright (c) 1999-2017, by Zend Technologies`</br>
 
 --------------------
 
 ## Alternando entre as duas versões instaladas
 
-- Se estiver na versão do PHP 5.6 e quiser usar a versão do PHP 7.1, digite os comandos na seguinte ordem:
-	
-	> sudo a2dismod php5.6
-	
-	- Saída:</br>
-		`Module php5.6 disabled.`</br>
-		
-	> sudo a2enmod php7.1
-	
-	- Saída:</br>
-		`Enabling module php7.1.`</br>
+- Se estiver na versão do PHP 5.6 e quiser usar a versão do PHP 7.1, digite o comando a baixo:
 
-	> sudo service apache2 restart
+	> sudo a2dismod php5.6; sudo a2enmod php7.1; sudo service apache2 restart | sudo update-alternatives --set php /usr/bin/php7.1
 
-	> sudo update-alternatives --set php /usr/bin/php7.1
+		- Ou:
+
+	> sudo a2dismod php5.6; sudo a2enmod php7.1; sudo service apache2 restart; echo 2 | sudo update-alternatives --config php
 
 - Se estiver na versão do PHP 7.1 e quiser usar a versão do PHP 5.6, digite os comandos na seguinte ordem:
-	
-	> sudo a2dismod php7.1
-	
-	- Saída:</br>
-		`Module php7.1 disabled.`</br>
 
-	> sudo a2enmod php5.6
-	
-	- Saída:</br>
-		`Enabling module php5.6.`</br>
+	> sudo a2dismod php7.1; sudo a2enmod php5.6; sudo service apache2 restart | sudo update-alternatives --set php /usr/bin/php5.6
 
-	> sudo service apache2 restart
+		- Ou:
 
-	> sudo update-alternatives --set php /usr/bin/php5.6
+	> sudo a2dismod php7.1; sudo a2enmod php5.6; sudo service apache2 restart; echo 1 | sudo update-alternatives --config php
 
 --------------------
 
@@ -169,20 +153,44 @@ Para testar se a versão do PHP 7.1 está funcionando junto a do PHP 5.6, podemo
 - Execute o arquivo com as duas versões do PHP no terminal.
 	> php5.6 teste.php
 	
-	- Ou
+		- Ou:
 	
 	> php7.1 teste.php
 	
-- Versão PHP 5.6. Deverá ocorrer o erro a baixo, pois não há suporte para este operador.
+- Versão PHP 5.6 -> Deverá ocorrer o erro a baixo, pois não há suporte para este operador.
  
 	`PHP Parse error:  syntax error, unexpected '>' in /home/sim/Área de Trabalho/teste.php on line 2`
 
-- Versão PHP 7.1. Deverá gerar a seguinte saída:
+- Versão PHP 7.1 -> Deverá gerar a seguinte saída:
 	</br>`int(0)`</br>
 	`int(1)`</br>
 	`int(-1)`</br>
 
+--------------------
 
+## (*Opcional*) Podemos criar um par de *Alias* para não termos que digitar todo aquele comando enorme
+
+	- Para criá-los, é preciso modidificar o arquivo **.bashrc** que se encontra em **/home/USER/.bashrc** (se não existir o arquivo, crie-o). Abra o arquivo com permissão de super usuário no editor de texto que preferir.
+
+		> sudo nano ~/.bashrc
+
+	- Inclua os alias no arquivo, de preferência junto aos outros alias existentes.
+
+		> alias phpV5='sudo a2dismod php7.1; sudo a2enmod php5.6; sudo service apache2 restart | sudo update-alternatives --set php /usr/bin/php5.6'
+
+		> alias phpV7='sudo a2dismod php5.6; sudo a2enmod php7.1; sudo service apache2 restart | sudo update-alternatives --set php /usr/bin/php7.1'
+
+	- Ou:
+
+		> alias phpV5='sudo a2dismod php7.1; sudo a2enmod php5.6; sudo service apache2 restart; echo 1 | sudo update-alternatives --config php'
+
+		> alias phpV7='sudo a2dismod php5.6; sudo a2enmod php7.1; sudo service apache2 restart; echo 2 | sudo update-alternatives --config php'
+
+		- Exemplo:
+
+	- Por fim, para gravar definitivamente os Alias e ser possível executá-los, digite o comando o baixo:
+
+		> source ~/.bashrc
 
 --------------------
 
@@ -193,3 +201,7 @@ https://tecadmin.net/install-php5-on-ubuntu/
 https://phpraxis.wordpress.com/2016/05/16/install-php-5-6-or-5-5-in-ubuntu-16-04-lts-xenial-xerus/
 
 http://php.net/manual/pt_BR/language.operators.comparison.php
+
+https://www.linuxdescomplicado.com.br/2015/06/criar-comandos-usando-alias.html
+
+http://sejalivre.org/como-usar-aliases-para-personalizar-comandos-no-ubuntu/
