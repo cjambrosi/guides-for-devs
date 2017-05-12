@@ -36,7 +36,7 @@ Instalando e Configurando Ambiente de Desenvolvimento PHP para o CakePHP | Pilha
 		    DirectoryIndex index.php index.html index.cgi index.pl index.xhtml index.htm
 		</IfModule>`
 
-	- Depois disso, precisamos reiniciar o servidor web Apache de forma que nossas alterações sejam reconhecidas. Você pode fazer isto digitando o seguinte comando:
+	- Depois disso, precisamos reinicie o servidor web Apache de forma que nossas alterações sejam reconhecidas. Você pode fazer isto digitando o seguinte comando:
 
 		> sudo service apache2 restart
 
@@ -280,7 +280,7 @@ Instalando e Configurando Ambiente de Desenvolvimento PHP para o CakePHP | Pilha
 
 		> sudo service apache2 restart
 
-	- Teste se a instalação do PHP está correta. Crie um arquivo **"info.php"** no diretório dos projetos **"/var/www/html"** e dentro do arquivo inserira a função a baixo e salve.
+	- Teste se a instalação do PHP está correta. Crie um arquivo **"info.php"** no diretório dos projetos **"/var/www/html"** e dentro do arquivo inserir a função a baixo e salve.
 
 		`<?php phpinfo(); ?>`
 
