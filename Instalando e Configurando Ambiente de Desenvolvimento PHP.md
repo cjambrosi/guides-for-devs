@@ -364,39 +364,46 @@ Geralmente, esse é o endereço que você utiliza para se conectar ao seu servid
 
 --------------------
 
-# Fontes:
+## Fontes:
 
-https://www.digitalocean.com/community/tutorials/como-instalar-a-pilha-linux-apache-mysql-php-lamp-no-ubuntu-16-04-pt
+- Pilha LAMP
 
-https://www.digitalocean.com/community/tutorials/como-instalar-e-utilizar-o-postgresql-no-ubuntu-16-04-pt
+	https://www.digitalocean.com/community/tutorials/como-instalar-a-pilha-linux-apache-mysql-php-lamp-no-ubuntu-16-04-pt
+	
+	https://www.digitalocean.com/community/tutorials/how-to-install-and-secure-phpmyadmin-on-ubuntu-14-04
 
-https://matheuslima.com.br/instalando-o-nginx-php-7-mysql-lemp/
+	https://www.digitalocean.com/community/tutorials/como-instalar-a-pilha-linux-apache-mysql-php-lamp-no-ubuntu-14-04-pt
 
-https://www.vivaolinux.com.br/topico/PHP/The-mbstring-extension-is-missing-Please-check-your-PHP-configuration
+	https://www.digitalocean.com/community/tutorials/how-to-install-linux-apache-mysql-php-lamp-stack-on-ubuntu-14-04
 
-https://www.rosehosting.com/blog/install-postgresql-with-phppgadmin-on-ubuntu/
+	http://ubuntuserverguide.com/2014/06/how-to-install-lamp-in-ubuntu-server-14-04-lts.html
 
-https://www.vivaolinux.com.br/dica/Criacao-de-1edeg;-super-usuario-no-PostgreSQL
+	http://www.hardware.com.br/tutoriais/configurando-servidor-lamp/pagina4.html
+	
+	http://blog.wfsneto.com.br/2014/06/21/php-configurando-ambiente-de-densenvolvimento-ubuntu-14-04
 
-https://www.digitalocean.com/community/tutorials/how-to-install-and-secure-phpmyadmin-on-ubuntu-14-04
+	https://www.youtube.com/watch?v=Q2N5blJ4VIo
 
-https://www.digitalocean.com/community/tutorials/como-instalar-a-pilha-linux-apache-mysql-php-lamp-no-ubuntu-14-04-pt
+	https://www.youtube.com/watch?v=bDi9h8LJHuE
+	
+- PostgreSQL
+	
+	https://www.digitalocean.com/community/tutorials/como-instalar-e-utilizar-o-postgresql-no-ubuntu-16-04-pt
+	
+	http://www.ubuntuiniciantes.com.br/2013/08/instalando-o-php-apache-e-postgres-no.html
 
-https://www.digitalocean.com/community/tutorials/how-to-install-linux-apache-mysql-php-lamp-stack-on-ubuntu-14-04
+	https://www.rosehosting.com/blog/install-postgresql-with-phppgadmin-on-ubuntu/
+	
+	https://www.vivaolinux.com.br/dica/Criacao-de-1edeg;-super-usuario-no-PostgreSQL
+	
+	https://www.youtube.com/watch?v=LYgQW4a_anA
 
-http://ubuntuserverguide.com/2014/06/how-to-install-lamp-in-ubuntu-server-14-04-lts.html
+	- PHP
+	
+	https://matheuslima.com.br/instalando-o-nginx-php-7-mysql-lemp/
 
-http://www.ubuntuiniciantes.com.br/2013/08/instalando-o-php-apache-e-postgres-no.html
+	https://www.vivaolinux.com.br/topico/PHP/The-mbstring-extension-is-missing-Please-check-your-PHP-configuration
 
-http://www.hardware.com.br/tutoriais/configurando-servidor-lamp/pagina4.html
-
-http://blog.wfsneto.com.br/2014/06/21/php-configurando-ambiente-de-densenvolvimento-ubuntu-14-04
-
-https://www.youtube.com/watch?v=Q2N5blJ4VIo
-
-https://www.youtube.com/watch?v=bDi9h8LJHuE
-
-https://www.youtube.com/watch?v=LYgQW4a_anA
 
 - Módulos:
 
