@@ -398,7 +398,7 @@ Geralmente, esse é o endereço que você utiliza para se conectar ao seu servid
 	
 	https://www.youtube.com/watch?v=LYgQW4a_anA
 
-	- PHP
+- PHP
 	
 	https://matheuslima.com.br/instalando-o-nginx-php-7-mysql-lemp/
 
