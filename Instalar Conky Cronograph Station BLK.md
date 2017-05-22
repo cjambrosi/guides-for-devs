@@ -1,6 +1,8 @@
 Instalar Conky Cronograph Station BLK 8.0 Modificado no Ubuntu
 ===============================================
 
+![](https://github.com/CristianAmbrosi/tutoriais/blob/master/images/conky-blk.gif)
+
 --------------------
 
 - **Este Conky foi modificado a meu gosto, se desejar pode instalar seguindo os mesmos passos a versão mais recente do repositório [*oficial*](https://github.com/drxspace/cronoconky).** 
@@ -69,8 +71,8 @@ Instalar Conky Cronograph Station BLK 8.0 Modificado no Ubuntu
 --------------------
 
 - **O que é o serviço hddtemp?**</br>
-O aplicativo *hddtemp* serve para monitorar a temperatura do seu HD, através da leitura dos dados do S.M.A.R.T. O propósito do S.M.A.R.T é antecipar falhas no dispositivo de armazenamento, o que permite ao usuário se prevenir de perda de dados.
-O *hddtemp* busca informações sobre a temperatura do disco rígido nos dados fornecidos pelo S.M.A.R.T — desde que o dispositivo tenha suporte ao recurso.
+O aplicativo *hddtemp* serve para monitorar a temperatura do seu HD, através da leitura dos dados do S.M.A.R.T. O propósito do S.M.A.R.T é antecipar falhas no dispositivo de armazenamento, o que permite ao usuário se prevenir de perda de dados.</br>
+O *hddtemp* busca informações sobre a temperatura do disco rígido nos dados fornecidos pelo S.M.A.R.T — desde que o dispositivo tenha suporte ao recurso.</br>
 O aplicativo pode ser executado como um comando simples ou como daemon (controla um serviço provido pelo seu sistema), para obter informações de todos os servidores.
 
 --------------------
