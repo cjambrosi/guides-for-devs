@@ -5,7 +5,7 @@ Instalar Conky Cronograph Station BLK 8.0 Modificado no Ubuntu
 
 --------------------
 
-- **Este Conky foi modificado a meu gosto, se desejar pode instalar seguindo os mesmos passos a versão mais recente do repositório [*oficial*](https://github.com/drxspace/cronoconky).** 
+- **Este Conky foi modificado a meu gosto, se desejar pode instalar seguindo os mesmos passos da versão mais recente do repositório [*oficial*](https://github.com/drxspace/cronoconky).** 
 
 --------------------
 
