@@ -13,6 +13,7 @@ Tutoriais
 - [Instalar as versões do PHP 5.6 e PHP 7.1 juntas no Ubuntu >= 14.04](https://github.com/CristianAmbrosi/tutoriais/blob/master/Instalar%20as%20vers%C3%B5es%20do%20PHP%205.6%20e%20PHP%207.1%20juntas%20no%20Ubuntu.md)
 - [Instalando e Configurando o Composer](https://github.com/CristianAmbrosi/tutoriais/blob/master/Instalando%20e%20Configurando%20o%20Composer.md)
 - [Instalando e Configurando o Git com o GitHub](https://github.com/CristianAmbrosi/tutoriais/blob/master/Instalando%20e%20Configurando%20o%20Git%20com%20o%20GitHub.md)
+- [Instalar Node.js no Ubuntu](https://github.com/CristianAmbrosi/tutoriais/blob/master/Instalar%20Node.js%20no%20Ubuntu.md)
 - [Instalar compilador G++ e Code::Blocks no Ubuntu](https://github.com/CristianAmbrosi/tutoriais/blob/master/Instalar%20G++%20e%20CodeBlocks%20no%20Ubuntu.md)
 - [Instalar Java no Ubuntu](https://github.com/CristianAmbrosi/tutoriais/blob/master/Instalar%20Java%20no%20Ubuntu.md)
 - [Instalar Netbeans no Ubuntu](https://github.com/CristianAmbrosi/tutoriais/blob/master/Instalar%20Netbeans%20no%20Ubuntu.md)
