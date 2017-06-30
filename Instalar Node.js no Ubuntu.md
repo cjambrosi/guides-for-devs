@@ -4,7 +4,7 @@ Instalar o Node.js no Ubuntu
 --------------------
 
 #### O que é o Node.js?<br/>
-##### Node.js é uma plataforma para desenvolvimento de aplicações server-side (que trabalha no lado do servidor) baseadas em rede utilizando JavaScript e o V8 JavaScript Engine, ou seja, com Node.js podemos criar uma variedade de aplicações Web utilizando apenas código em JavaScript (client-side, que trabalha no lado do cliente).
+Node.js é uma plataforma para desenvolvimento de aplicações server-side (que trabalha no lado do servidor) baseadas em rede utilizando JavaScript e o V8 JavaScript Engine, ou seja, com Node.js podemos criar uma variedade de aplicações Web utilizando apenas código em JavaScript (client-side, que trabalha no lado do cliente).
 
 - Nas distribuições baseadas no Debian (Ubuntu obviamente), é muito comum utilizarmos *apt-get install nome-do-pacote*. Com o Node isso pode ocasionar em problemas de conflito entre os nomes *node* e *node.js* (ao menos até o momento que escrevo esse passo-a-passo), pois o NPM que é o gerenciador de dependêcias ficará perdido e algumas funções não funcionaram.
 - O recomendado é instalar o **arquivo binário** do Node ou instalar o **NVM primeiro e depois o Node**, que é o que será feito aqui. Assim, se quisermos podemos instalar várias versões do Node e ficar alternando entre elas.
@@ -17,11 +17,11 @@ Instalar o Node.js no Ubuntu
 
 	> sudo apt-get update sudo apt-get install build-essential libssl-dev
 
-2. Agora vamos baixar o script de instalação do repositório oficial e executá-lo.
+2. Agora vamos baixar o script de instalação do repositório oficial e executá-lo, somente com o comando a baixo.
 
 	> curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.2/install.sh | bash
 
-	- O número da versão **(v0.33.2)** pode mudar com o tempo, então acesse o [**repositório oficial**](https://github.com/creationix/nvm) para procurar a versão mais nova.
+	- O número da versão **(v0.33.2)** pode mudar com o tempo, então acesse o [**repositório oficial**](https://github.com/creationix/nvm) para procurar a versão mais recente.
 
 3. Para o terminal reconhecer as configurações feitas, execute o comando a baixo ou feche e abra-o novamente.
 
