@@ -13,29 +13,35 @@ Node.js é uma plataforma para desenvolvimento de aplicações server-side (que 
 
 ## Instalação
 
-1. Antes de instalar o NVM, precisamos instalar algumas depêndencias. Abra o terminal e digite o comando a baixo:
+1. Atualize os repositórios e gatilhos do Ubuntu
 
-	> sudo apt-get update sudo apt-get install build-essential libssl-dev
+	> sudo apt-get update
 
-2. Agora vamos baixar o script de instalação do repositório oficial e executá-lo, somente com o comando a baixo.
+	> sudo apt-get upgrade
+
+2. Antes de instalar o NVM, precisamos instalar algumas depêndencias. Abra o terminal e digite o comando a baixo:
+
+	> sudo apt-get install build-essential libssl-dev
+
+3. Agora vamos baixar o script de instalação do repositório oficial e executá-lo, somente com o comando a baixo.
 
 	> curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.2/install.sh | bash
 
 	- O número da versão **(v0.33.2)** pode mudar com o tempo, então acesse o [**repositório oficial**](https://github.com/creationix/nvm) para procurar a versão mais recente.
 
-3. Para o terminal reconhecer as configurações feitas, execute o comando a baixo ou feche e abra-o novamente.
+4. Para o terminal reconhecer as configurações feitas, execute o comando a baixo ou feche e abra-o novamente.
 
 	> source ~/.bashrc
 
-4. Rode o comando a baixo para exibir as várias versões do Node, pois assim saberemos que está funcionando corretamente.
+5. Rode o comando a baixo para exibir as várias versões do Node, pois assim saberemos que está funcionando corretamente.
 
 	> nvm ls-remote
 
-5. Para instalar o Node, escolha a versão mais recente ou aquela que você preferir:
+6. Para instalar o Node, escolha a versão mais recente ou aquela que você preferir:
 
 	> nvm install v8.1.2
 
-6. Verifique a versão do Node instalado com o comando a baixo:
+7. Verifique a versão do Node instalado com o comando a baixo:
 
 	> node -v
 
