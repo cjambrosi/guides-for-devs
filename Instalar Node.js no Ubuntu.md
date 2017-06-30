@@ -3,15 +3,15 @@ Instalar o Node.js no Ubuntu
 
 --------------------
 
-### O que é Node.js?<br/>
-Node.js é uma plataforma para desenvolvimento de aplicações server-side (trabalho no lado do servidor) baseadas em rede utilizando JavaScript e o V8 JavaScript Engine, ou seja, com Node.js podemos criar uma variedade de aplicações Web utilizando apenas código em JavaScript (client-side, trabalha no lado do cliente).
+#### O que é o Node.js?<br/>
+##### Node.js é uma plataforma para desenvolvimento de aplicações server-side (que trabalha no lado do servidor) baseadas em rede utilizando JavaScript e o V8 JavaScript Engine, ou seja, com Node.js podemos criar uma variedade de aplicações Web utilizando apenas código em JavaScript (client-side, que trabalha no lado do cliente).
+
+- Nas distribuições baseadas no Debian (Ubuntu obviamente), é muito comum utilizarmos *apt-get install nome-do-pacote*. Com o Node isso pode ocasionar em problemas de conflito entre os nomes *node* e *node.js* (ao menos até o momento que escrevo esse passo-a-passo), pois o NPM que é o gerenciador de dependêcias ficará perdido e algumas funções não funcionaram.
+- O recomendado é instalar o **arquivo binário** do Node ou instalar o **NVM primeiro e depois o Node**, que é o que será feito aqui. Assim, se quisermos podemos instalar várias versões do Node e ficar alternando entre elas.
 
 --------------------
 
 ## Instalação
-
-- Nas distribuições baseadas no Debian (Ubuntu obviamente), é muito comum utilizarmos *apt-get install nome-do-pacote*. Com o Node isso pode ocasionar em problemas de conflito entre os nomes *node* e *node.js* (ao menos até o momento que escrevo esse passo-a-passo), pois o NPM que é o gerenciador de dependêcias ficará perdido e algumas funções não funcionaram.
-- O recomendado é instalar o **arquivo binário** do Node ou instalar o **NVM primeiro e depois o Node**, que é o que será feito aqui. Assim, se quisermos podemos instalar várias versões do Node e ficar alternando entre elas.
 
 1. Antes de instalar o NVM, precisamos instalar algumas depêndencias. Abra o terminal e digite o comando a baixo:
 
@@ -21,11 +21,13 @@ Node.js é uma plataforma para desenvolvimento de aplicações server-side (trab
 
 	> curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.2/install.sh | bash
 
+	- O número da versão **(v0.33.2)** pode mudar com o tempo, então acesse o [**repositório oficial**](https://github.com/creationix/nvm) para procurar a versão mais nova.
+
 3. Para o terminal reconhecer as configurações feitas, execute o comando a baixo ou feche e abra-o novamente.
 
 	> source ~/.bashrc
 
-4. Rode o comando a baixo para exibir as várias versõs do Node, pois assim saberemos que está funcionando corretamente.
+4. Rode o comando a baixo para exibir as várias versões do Node, pois assim saberemos que está funcionando corretamente.
 
 	> nvm ls-remote
 
