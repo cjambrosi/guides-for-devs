@@ -211,7 +211,7 @@ Permite além reverter arquivos para um estado anterior, reverter um projeto int
 
 --------------------
 
-## Fontes
+## Referências
 
 https://git-scm.com/book/pt-br/v1
 

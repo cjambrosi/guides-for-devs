@@ -40,7 +40,7 @@ Instalando e Configurando o Composer no Linux (Ubuntu)
  
  - **curl =>** Uma biblioteca suportada pelo PHP, que permite que você conecte-se e comunique-se com diferentes tipos de servidores usando diferentes tipos de protocolos. *libcurl* atualmente suporta os protocolos http, https, ftp, gopher, telnet, dict, file, e ldap. libcurl também suporta certificados HTTPS, HTTP POST, HTTP PUT, upload via FTP (podendo também ser feito com a extensão ftp do PHP), upload HTTP por formulário, proxies, cookies, e autenticação com usuário e senha.
 
-### Fontes:
+### Referências
 
 http://gilbertoalbino.com/instalacao-do-composer-no-ubuntu/
 

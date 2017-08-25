@@ -178,7 +178,7 @@ Formatar Pen Drive no Terminal Linux
 
 --------------------
 
-## Fontes
+## Referências
 
 http://www.guiafoca.org/cgs/guia/iniciante/ch-disc.html
 	

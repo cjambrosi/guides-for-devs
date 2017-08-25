@@ -23,7 +23,7 @@ Node.js é uma plataforma para desenvolvimento de aplicações server-side (que 
 
 	> sudo apt-get install build-essential libssl-dev
 
-3. Agora vamos baixar o script de instalação do repositório oficial e executá-lo, somente com o comando a baixo.
+3. Agora vamos baixar o script de instalação/atualização do NVM, a partir do repositório oficial e executá-lo com o comando a baixo.
 
 	> curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.2/install.sh | bash
 
@@ -33,7 +33,7 @@ Node.js é uma plataforma para desenvolvimento de aplicações server-side (que 
 
 	> source ~/.bashrc
 
-5. Rode o comando a baixo para exibir as várias versões do Node, pois assim saberemos que está funcionando corretamente.
+5. Rode o comando a baixo para exibir as várias versões do Node, pois assim saberemos que o NVM está funcionando corretamente e veremos qual/quais versões iremos instalar.
 
 	> nvm ls-remote
 

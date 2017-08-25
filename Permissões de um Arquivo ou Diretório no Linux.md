@@ -149,7 +149,7 @@ Permissões de um Arquivo ou Diretório no Linux
 
 --------------------
 
-## Fonte
+## Referências
 
 https://www.youtube.com/watch?v=C-X_HmtGqPk
 

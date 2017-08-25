@@ -1,4 +1,4 @@
-Instalando e Configurando Ambiente de Desenvolvimento PHP para o CakePHP | Pilha: Apache, MySQL/Postgres, PHP 7.1 | Ubuntu >= 16.04
+Instalando e Configurando Ambiente de Desenvolvimento PHP | Pilha: Apache, MySQL/Postgres, PHP 7.1 | Ubuntu >= 16.04
 ===============================================
 
 --------------------
@@ -36,7 +36,7 @@ Instalando e Configurando Ambiente de Desenvolvimento PHP para o CakePHP | Pilha
 		    DirectoryIndex index.php index.html index.cgi index.pl index.xhtml index.htm
 		</IfModule>`
 
-	- Depois disso, precisamos reinicie o servidor web Apache de forma que nossas alterações sejam reconhecidas. Você pode fazer isto digitando o seguinte comando:
+	- Depois disso, precisamos reiniciar o servidor web Apache de forma que nossas alterações sejam reconhecidas. Você pode fazer isto digitando o seguinte comando:
 
 		> sudo service apache2 restart
 
@@ -54,7 +54,7 @@ Instalando e Configurando Ambiente de Desenvolvimento PHP para o CakePHP | Pilha
 
 		> sudo service apache2 restart
 
-	- O módulo **rewrite** foi ativado, mas o apache não configurou nada além da linha que ativa o módulo no arquivo de configuração do módulo, deixando assim por conta de você editar manualmente os arquivos dos sites padrões. Acesse:
+	- O módulo **rewrite** foi ativado, mas o apache não configurou nada além da linha que ativa o módulo no arquivo de configuração do mesmo, deixando assim por conta de você editar manualmente os arquivos dos sites padrões. Acesse:
 
 		> sudo nano /etc/apache2/sites-available/000-default.conf
 
@@ -196,21 +196,23 @@ Instalando e Configurando Ambiente de Desenvolvimento PHP para o CakePHP | Pilha
 
 	- Conecte no banco com o comando (deve aparecer a mensagem de boas vindas):
 
-		> postgres=# psql
+		> psql
 
 	- Para criar o Usuário, entre com o comando a baixo (troque **"nomedousuario"** pelo seu usuário) e tecle enter:
 
-		> postgres=# CREATE USER nomedousuario SUPERUSER INHERIT CREATEDB CREATEROLE;
+		> CREATE USER nomedousuario SUPERUSER INHERIT CREATEDB CREATEROLE;
 
 	- Para criar uma Senha ao usuário já criado, entre com o comando a baixo (troque **"nomedousuario"** pelo seu usuário e troque **'senha'** pela sua senha escolhida) e tecle enter: 
 
-		> postgres=# ALTER USER nomedousuario PASSWORD 'senha';
+		> ALTER USER nomedousuario PASSWORD 'senha';
 
-	- Usuário e senha foram criados. Tecle o comando a baixo para sair da linha de comando do PostgreSQL:
+	- Usuário e senha foram criados. Tecle o comando a baixo para sair da linha de comando do PostgreSQL e do root:
 
-		> postgres=# \q
+		> \q
 
-	- Tecle o comando a baixo para sair do usuário postgres:
+	- Digite os comandos a baixo para sair do usuário postgres e do usuário root:
+
+		> exit
 
 		> exit
 
@@ -221,6 +223,8 @@ Instalando e Configurando Ambiente de Desenvolvimento PHP para o CakePHP | Pilha
 - **Importante**
 		
 	- Se você precisa trabalhar com duas versões do PHP (*5.6 e 7.1*), instale o PHP por esse **[passo-a-passo](https://github.com/CristianAmbrosi/tutoriais/blob/master/Instalar%20as%20vers%C3%B5es%20do%20PHP%205.6%20e%20PHP%207.1%20juntas%20no%20Ubuntu.md)**.
+
+	- Assim que instaladas as duas versões, volte para este tutorial para terminar as configurações dos Bancos de Dados.
 
 	- Se for instalar os dois Bancos de Dados (MySQL e PostgresSQL), deve manter atenção para instalar somente os módulos necessários para cada um.
 
@@ -364,7 +368,7 @@ Geralmente, esse é o endereço que você utiliza para se conectar ao seu servid
 
 --------------------
 
-## Fontes:
+## Referências
 
 - Pilha LAMP
 

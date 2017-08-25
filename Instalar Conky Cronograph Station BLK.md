@@ -77,7 +77,7 @@ O aplicativo pode ser executado como um comando simples ou como daemon (controla
 
 --------------------
 
-- Fontes:
+- Referências
 
 	http://www.upubuntu.com/2012/06/conky-cronograph-station-elegant.html
 

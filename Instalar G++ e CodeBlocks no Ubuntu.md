@@ -76,7 +76,7 @@ warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.`
 
 --------------------
 
-## Fontes
+## Referências
 
 http://www.dummies.com/how-to/content/how-to-install-c-codeblocks-in-ubuntu-linux.html
 

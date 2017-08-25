@@ -48,6 +48,6 @@ Instalar Netbeans no Ubuntu
 
 --------------------
 
-# Fontes:
+# Referências
 
 https://www.youtube.com/watch?v=74QEhBpzixs

@@ -168,7 +168,7 @@ Para testar se a versão do PHP 7.1 está funcionando junto a do PHP 5.6, podemo
 
 --------------------
 
-### (*Opcional*) Podemos criar um par de *Alias* para não termos que digitar todo aquele comando enorme
+### (*Opcional*) Podemos criar um par de *Alias* para não termos que digitar todo aquele comando enorme para alterar as versões do PHP
 
 - Para criá-los, é preciso modidificar o arquivo **.bashrc** que se encontra em **/home/USER/.bashrc** (se não existir o arquivo, crie-o). Abra o arquivo com privilégios de super usuário no editor de texto que preferir.
 
@@ -196,7 +196,7 @@ Para testar se a versão do PHP 7.1 está funcionando junto a do PHP 5.6, podemo
 
 --------------------
 
-## Fontes:
+## Referências
 
 https://tecadmin.net/install-php5-on-ubuntu/
 

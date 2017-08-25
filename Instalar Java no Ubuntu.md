@@ -24,7 +24,8 @@ Instalar Java no Ubuntu
 
 		> sudo apt-get install oracle-java8-installer
 
-		`Do you want to continue [y/n]?`**`y`**</br>
+	- Dê *Ok* na opção que aparecerá e depois aceite os termos da licença.
+
 		`Do you accept  the Oracle Binary Code license terms?`**`Yes`**
 				
 
@@ -49,7 +50,7 @@ Instalar Java no Ubuntu
 
 --------------------
 
-## Fontes:
+## Referências
 
 https://www.youtube.com/watch?v=BTNp4P12DIs
 
