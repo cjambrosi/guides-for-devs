@@ -117,6 +117,26 @@ Instalar as versões do PHP 5.6 e PHP 7.1 juntas no Ubuntu >= 14.04
 
 --------------------
 
+## Habilitar as mensagens de erros do PHP (5.6 / 7.1).
+
+	- Para habilitar as mensagens erros, precisamos editar o arquivo o arquivo *php.ini*. Acesse o diretório referente a versão do PHP que você instalou e depois abra o arquivo com privilégios de super administrador.
+
+		> cd /etc/php/5.6/apache2
+
+		> cd /etc/php/7.1/apache2
+
+		> sudo sudo nano php.ini
+
+	- Com o arquivo aberto, procure pela variável **display_errors**. Altere o valor de *Off* para *On*, como na imagem a baixo:
+
+		![](https://github.com/CristianAmbrosi/tutoriais/blob/master/images/hab-mesg-erro.png)
+
+	- Salve o arquivo e reinicie o apache.
+
+		> sudo service apache2 restart
+
+--------------------
+
 ## Alternando entre as duas versões instaladas
 
 - Se estiver na versão do **PHP 5.6** e quiser usar a versão do **PHP 7.1**, digite o comando a baixo:
@@ -170,7 +190,7 @@ Para testar se a versão do PHP 7.1 está funcionando junto a do PHP 5.6, podemo
 
 ### (*Opcional*) Podemos criar um par de *Alias* para não termos que digitar todo aquele comando enorme para alterar as versões do PHP
 
-- Para criá-los, é preciso modidificar o arquivo **.bashrc** que se encontra em **/home/USER/.bashrc** (se não existir o arquivo, crie-o). Abra o arquivo com privilégios de super usuário no editor de texto que preferir.
+- Para criá-los, é preciso modidificar o arquivo **.bashrc** que se encontra em **/home/USER/.bashrc** (se não existir o arquivo, crie-o). Abra o arquivo com privilégios de super administrador no editor de texto que preferir.
 
 	> sudo nano ~/.bashrc
 
@@ -207,3 +227,5 @@ http://php.net/manual/pt_BR/language.operators.comparison.php
 https://www.linuxdescomplicado.com.br/2015/06/criar-comandos-usando-alias.html
 
 http://sejalivre.org/como-usar-aliases-para-personalizar-comandos-no-ubuntu/
+
+http://ubuntuforum-br.org/index.php?topic=74091.0

@@ -284,6 +284,25 @@ Instalando e Configurando Ambiente de Desenvolvimento PHP | Pilha: Apache, MySQL
 
 		> sudo service apache2 restart
 
+	- Habilitar as mensagens de erros do PHP (5.6 / 7.1).
+
+		- Para habilitar as mensagens erros, precisamos editar o arquivo o arquivo *php.ini*. Acesse o diretório referente a versão do PHP que você instalou e depois abra o arquivo com privilégios de super administrador.
+
+			> cd /etc/php/5.6/apache2
+
+			> cd /etc/php/7.1/apache2
+
+			> sudo sudo nano php.ini
+
+		- Com o arquivo aberto, procure pela variável **display_errors**. Altere o valor de *Off* para *On*, como na imagem a baixo:
+
+			![](https://github.com/CristianAmbrosi/tutoriais/blob/master/images/hab-mesg-erro.png)
+
+		- Salve o arquivo e reinicie o apache.
+
+			> sudo service apache2 restart
+
+
 	- Teste se a instalação do PHP está correta. Crie um arquivo **"info.php"** no diretório dos projetos **"/var/www/html"** e dentro do arquivo inserir a função a baixo e salve.
 
 		`<?php phpinfo(); ?>`
@@ -407,6 +426,8 @@ Geralmente, esse é o endereço que você utiliza para se conectar ao seu servid
 	https://matheuslima.com.br/instalando-o-nginx-php-7-mysql-lemp/
 
 	https://www.vivaolinux.com.br/topico/PHP/The-mbstring-extension-is-missing-Please-check-your-PHP-configuration
+
+	http://ubuntuforum-br.org/index.php?topic=74091.0
 
 
 - Módulos:
