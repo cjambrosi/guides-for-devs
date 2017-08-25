@@ -40,7 +40,7 @@ Permissões de um Arquivo ou Diretório no Linux
 	rwx			    | r-x	     | r-x
 
 	- **r =>** Read (Permissão de Leitura do arquivo. Ver o conteúdo do diretório);
-	- ** w =>** Write (Permissão de Escrita do ítem. Alterar o contúdo de um arquivo ou diretório);
+	- **w =>** Write (Permissão de Escrita do ítem. Alterar o contúdo de um arquivo ou diretório);
 	- **x =>** Execution (Permissçao de Execução. Executar um arquivo ou Entrar num diretório);
 	- **- =>** Sem permissão.
 
