@@ -119,21 +119,21 @@ Instalar as versões do PHP 5.6 e PHP 7.1 juntas no Ubuntu >= 14.04
 
 ## Habilitar as mensagens de erros do PHP (5.6 / 7.1).
 
-	- Para habilitar as mensagens erros, precisamos editar o arquivo *php.ini*. Acesse o diretório referente a versão do PHP que você instalou e depois abra o arquivo com privilégios de super administrador.
+- Para habilitar as mensagens erros, precisamos editar o arquivo *php.ini*. Acesse o diretório referente a versão do PHP que você instalou e depois abra o arquivo com privilégios de super administrador.
 
-		> cd /etc/php/5.6/apache2
+	> cd /etc/php/5.6/apache2
 
-		> cd /etc/php/7.1/apache2
+	> cd /etc/php/7.1/apache2
 
-		> sudo nano php.ini
+	> sudo nano php.ini
 
-	- Com o arquivo aberto, procure pela variável **display_errors**. Altere o valor de *Off* para *On*, como na imagem a baixo:
+- Com o arquivo aberto, procure pela variável **display_errors**. Altere o valor de *Off* para *On*, como na imagem a baixo:
 
-		![](https://github.com/CristianAmbrosi/tutoriais/blob/master/images/hab-mesg-erro.png)
+	![](https://github.com/CristianAmbrosi/tutoriais/blob/master/images/hab-mesg-erro.png)
 
-	- Salve o arquivo e reinicie o apache.
+- Salve o arquivo e reinicie o apache.
 
-		> sudo service apache2 restart
+	> sudo service apache2 restart
 
 --------------------
 
