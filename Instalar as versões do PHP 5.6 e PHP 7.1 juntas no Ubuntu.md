@@ -117,27 +117,50 @@ Instalar as versões do PHP 5.6 e PHP 7.1 juntas no Ubuntu >= 14.04
 
 --------------------
 
-## Habilitar as mensagens de erros do PHP (5.6 / 7.1).
+## Configurando
 
-- Para habilitar as mensagens erros, precisamos editar o arquivo *php.ini*. Acesse o diretório referente a versão do PHP que você instalou e depois abra o arquivo com privilégios de super administrador.
+	- Ativar as extensões *php5.6-mcrypt*, *php7.1-mcrypt* e *php5.6-mbstring*, *php7.1-mbstring*:
 
-	> cd /etc/php/5.6/apache2
+		> sudo phpenmod mcrypt
 
-	> cd /etc/php/7.1/apache2
+		> sudo phpenmod mbstring
 
-	> sudo nano php.ini
+	- Depois de ativada as extensões, reinicie o Apache:
 
-- Com o arquivo aberto, procure pelas variáveis **display_errors**, **display_startup_errors** e **log_errors**. Altere o valor de *Off* para *On* nas variáveis, assim como na imagem a baixo:
+		> sudo service apache2 restart
 
-	![](https://github.com/CristianAmbrosi/tutoriais/blob/master/images/hab-mesg-erro.png)
+	- Habilitar as mensagens de erros do PHP (5.6 / 7.1).
 
-- Procure pela variável **error_log**, remova o **;** da frente e configure um caminho para armazenar o arquivo de logs de erros, assim como na imagem a baixo *(certifique-se de que o arquivo tenha permissão de leitura e escrita)*:
+		- Para habilitar as mensagens erros, precisamos editar o arquivo *php.ini*. Acesse o diretório referente a versão do PHP que você instalou e depois abra o arquivo com privilégios de super administrador.
 
-	![](https://github.com/CristianAmbrosi/tutoriais/blob/master/images/arq-log-erro.png)
+			> cd /etc/php/5.6/apache2
 
-- Salve o arquivo e reinicie o apache.
+			> cd /etc/php/7.1/apache2
 
-	> sudo service apache2 restart
+			> sudo nano php.ini
+
+		- Com o arquivo aberto, procure pelas variáveis **display_errors**, **display_startup_errors** e **log_errors**. Altere o valor de *Off* para *On* nas variáveis, como na imagem a baixo:
+
+			![](https://github.com/CristianAmbrosi/tutoriais/blob/master/images/hab-mesg-erro.png)
+
+		- Procure pela variável **error_log**, remova o **;** da frente e configure um caminho para armazenar o arquivo de logs de erros, assim como na imagem a baixo *(certifique-se de que o arquivo tenha permissão de leitura e escrita)*:
+
+			![](https://github.com/CristianAmbrosi/tutoriais/blob/master/images/arq-log-erro.png)
+
+		- Salve o arquivo e reinicie o apache.
+
+			> sudo service apache2 restart
+
+
+	- Teste se a instalação do PHP está correta. Crie um arquivo **"info.php"** no diretório dos projetos **"/var/www/html"** e dentro do arquivo inserir a função a baixo e salve.
+
+		`<?php phpinfo(); ?>`
+
+	- Ir no navegador e acessar o arquivo pela URL: 
+			
+		> "localhost/info.php" ou "127.0.0.1/info.php" 
+
+	- Se abrir a página de informações do PHP, a instalação da linguagem está correta.
 
 --------------------
 
