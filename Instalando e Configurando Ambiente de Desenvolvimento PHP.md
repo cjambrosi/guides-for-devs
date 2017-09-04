@@ -224,6 +224,8 @@ Instalando e Configurando Ambiente de Desenvolvimento PHP | Pilha: Apache, MySQL
 		
 	- Se você precisa trabalhar com duas versões do PHP (*5.6 e 7.1*), instale o PHP por esse **[passo-a-passo](https://github.com/CristianAmbrosi/tutoriais/blob/master/Instalar%20as%20vers%C3%B5es%20do%20PHP%205.6%20e%20PHP%207.1%20juntas%20no%20Ubuntu.md)**.
 
+	- Assim que instaladas as duas versões, volte para este tutorial para terminar as configurações dos Bancos de Dados.
+
 	- Se for instalar os dois Bancos de Dados (MySQL e PostgresSQL), deve manter atenção para instalar somente os módulos necessários para cada um.
 
 1. Instalando:
