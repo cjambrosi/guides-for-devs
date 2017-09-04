@@ -298,7 +298,7 @@ Instalando e Configurando Ambiente de Desenvolvimento PHP | Pilha: Apache, MySQL
 
 			![](https://github.com/CristianAmbrosi/tutoriais/blob/master/images/hab-mesg-erro.png)
 
-		- Procure pela variável **error_log**, remova o *;* da frente e configure um caminho para armazenar o arquivo de logs de erros, assim como na imagem a baixo *(certifique-se de que o arquivo tenha permissão de leitura e escrita)*:
+		- Procure pela variável **error_log**, remova o **;** da frente e configure um caminho para armazenar o arquivo de logs de erros, assim como na imagem a baixo *(certifique-se de que o arquivo tenha permissão de leitura e escrita)*:
 
 			![](https://github.com/CristianAmbrosi/tutoriais/blob/master/images/arq-log-erro.png)
 

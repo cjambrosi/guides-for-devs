@@ -131,7 +131,7 @@ Instalar as versões do PHP 5.6 e PHP 7.1 juntas no Ubuntu >= 14.04
 
 	![](https://github.com/CristianAmbrosi/tutoriais/blob/master/images/hab-mesg-erro.png)
 
-- Procure pela variável **error_log**, remova o *;* da frente e configure um caminho para armazenar o arquivo de logs de erros, assim como na imagem a baixo *(certifique-se de que o arquivo tenha permissão de leitura e escrita)*:
+- Procure pela variável **error_log**, remova o **;** da frente e configure um caminho para armazenar o arquivo de logs de erros, assim como na imagem a baixo *(certifique-se de que o arquivo tenha permissão de leitura e escrita)*:
 
 	![](https://github.com/CristianAmbrosi/tutoriais/blob/master/images/arq-log-erro.png)
 
