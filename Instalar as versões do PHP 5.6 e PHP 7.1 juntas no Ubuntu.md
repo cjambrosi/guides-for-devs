@@ -127,11 +127,11 @@ Instalar as versões do PHP 5.6 e PHP 7.1 juntas no Ubuntu >= 14.04
 
 	> sudo nano php.ini
 
-- Com o arquivo aberto, procure pelas variáveis **display_errors**, **display_startup_errors** e **log_errors**. Altere o valor de *Off* para *On* nas variáveis, como na imagem a baixo:
+- Com o arquivo aberto, procure pelas variáveis **display_errors**, **display_startup_errors** e **log_errors**. Altere o valor de *Off* para *On* nas variáveis, assim como na imagem a baixo:
 
 	![](https://github.com/CristianAmbrosi/tutoriais/blob/master/images/hab-mesg-erro.png)
 
-- Procure pela variável **error_log** e configure um caminho para armazenar o arquivo de logs de erros, assim como na imagem a baixo *(certifique-se de que o arquivo tenha permissão de leitura e escrita)*:
+- Procure pela variável **error_log**, remova o *;* da frente e configure um caminho para armazenar o arquivo de logs de erros, assim como na imagem a baixo *(certifique-se de que o arquivo tenha permissão de leitura e escrita)*:
 
 	![](https://github.com/CristianAmbrosi/tutoriais/blob/master/images/arq-log-erro.png)
 
