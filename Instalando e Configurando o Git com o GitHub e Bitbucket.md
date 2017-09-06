@@ -1,4 +1,4 @@
-Instalando e Configurando o Git com o GitHub
+Instalando e Configurando o Git com o GitHub e Bitbucket
 ===============================================
 
 #### O que é uma ferramenta de Controle de Versão?
@@ -22,7 +22,7 @@ Permite além reverter arquivos para um estado anterior, reverter um projeto int
 	
 	> sudo apt-get upgrade
 
-2. Do repósitorio Ubuntu
+2. A partir do repósitorio do Ubuntu
 
 	- Digitar o comando a baixo *(recomendado)*:
 
@@ -35,35 +35,6 @@ Permite além reverter arquivos para um estado anterior, reverter um projeto int
 	- Instalar visualizador grágico do histórico de todos os commits feitos
 
 		> sudo apt-get install gitk
-
-
-3. Direto da Fonte
-	
-	- Para instalar a versão mais recente direto da fonte, é preciso instalar as seguintes bibliotecas que o Git depende (url, zlib, openssl, expat e libiconv):
-
-		> sudo apt-get install libcurl4-gnutls-dev libexpat1-dev gettext \libz-dev libssl-dev
-
-	- Instalada as dependências, ir no site do GitHub onde estão listadas todas as versões do Git, escolher a mais recente ou a que desejar. Recomendo instalar a versão mais recente estável. A versão que você vê quando você chega na página do projeto é a ramificação que está sendo trabalhada ativamente. Se você quer a última versão estável, você deve alterar a ramificação para a última tag não **"rc"**.
-
-		> https://github.com/git/git/releases
-
-	- Baixado o pacote, devemos extrair e compilar. Exemplo:
-
-		> tar -zxf git-2.10.1.tar.gz
-
-		> cd git-2.10.1
-
-		> make configure
-
-		> ./configure --prefix=/usr
-
-		> make all doc info
-
-		> sudo make install install-doc install-html install-info
-
-	- Após a conclusão, podemos obter o Git via o próprio Git para atualizações:
-
-		> git clone git://git.kernel.org/pub/scm/git/git.git
 
 --------------------
 
@@ -149,13 +120,13 @@ Permite além reverter arquivos para um estado anterior, reverter um projeto int
 
 ## Configurando o GitHub
 			
-1. Inserir no GitHub a chave SSH criada no Git
+1. Inserir no GitHub a chave SSH criada do Git
 
 	- Usaremos o programa *"xclip"* instalado anteriormente para copiar o conteúdo do arquivo que contem a chave pública.
 	
 		> xclip -sel clip ~/.ssh/id_rsa.pub
 
-	- Copiado o conteúdo do arquivo, acessar a sua conta no site do <i class="icon-provider-github"></i> **[GitHub](https://github.com/)**, ir no menu do seu usuário no canto superio direito da tela e clicar na opção **"Settings"**. 
+	- Copiado o conteúdo do arquivo, acesse a sua conta no site do <i class="icon-provider-github"></i> **[GitHub](https://github.com/)** e acesse as configurações da sua conta. 
 
 	- Nos menus do lado esquerdo da tela, escolher a opção **"SSH and GPG keys"**.
 
@@ -169,9 +140,11 @@ Permite além reverter arquivos para um estado anterior, reverter um projeto int
 
 2. Testar a conexão da máquina com o GitHub
 
-	> ssh -T git@github.com
+	- Após configurar a chave, devemos testar a conexão com o GitHub usando o comando a baixo.
 
-	- Será alertado que a autenticidade não pode ser estabelecida exibindo os dados e será pedido se queremos continuar conectados ou não. Exemplo:
+		> ssh -T git@github.com
+
+	- Será alertado que a autenticidade não pode ser estabelecida exibindo os dados e se queremos continuar conectados ou não. Exemplo:
 
 	    `The authenticity of host 'github.com (192.30.253.113)' can't be established.`<br>
 	    `RSA key fingerprint is 16:27:ac:a5:76:28:2d:36:63:1b:56:4d:eb:df:a6:48.`<br>
@@ -185,9 +158,33 @@ Permite além reverter arquivos para um estado anterior, reverter um projeto int
 
 		`Warning: Permanently added the RSA host key for IP address '192.30.253.112' to the list of known hosts.`
 
-	- Aqui será avisado que o usuário está autenticado, mas que o GitHub não permite acesso por um terminal SSH. Isso não é um problema, se chegar nessa mensagem, tudo ocorreu corretamente, a conexão está funcionando.
+	- Será alertado que o usuário está autenticado, mas que o GitHub não permite acesso por um terminal SSH. Isso não é um problema, se chegar nessa mensagem, tudo ocorreu corretamente, a conexão está funcionando.
 
 		`Hi USER You've successfully authenticated, but GitHub does not provide shell access.`
+
+--------------------
+
+## Configurando o Bitbucket
+
+1. Inserir no Bitbucket a chave SSH criada do Git
+
+	- Usaremos o programa *"xclip"* instalado anteriormente para copiar o conteúdo do arquivo que contem a chave pública.
+	
+		> xclip -sel clip ~/.ssh/id_rsa.pub
+
+	- Copiado o conteúdo do arquivo, acesse a sua conta no site do <i class="icon-provider-github"></i> **[Bitbucket](https://bitbucket.org/)** e acesse as configurações da sua conta.
+
+	- Na sessão de segurança, acesse o menu **"SSH keys"**. Clique no botão **"Add key"** para abrir a janela de inserção.
+
+	- No campo **"Label"** de um nome para sua chave e no campo **"Key"** cole a chave copiada anteriormente. Feito isso clique no botão **"Add key"** para adicioná-la.
+
+2. Testar a conexão da máquina com o Bitbucket
+
+	- Após configurar a chave, devemos testar a conexão com o Bitbucket com o comando a baixo.
+
+		> ssh -T git@bitbucket.org
+
+	- 
 
 --------------------
 
@@ -216,6 +213,8 @@ Permite além reverter arquivos para um estado anterior, reverter um projeto int
 https://git-scm.com/book/pt-br/v1
 
 https://try.github.io/
+
+https://confluence.atlassian.com/bitbucket/set-up-an-ssh-key-728138079.html
 
 https://www.youtube.com/watch?v=WVLhm1AMeYE&list=PLInBAd9OZCzzHBJjLFZzRl6DgUmOeG3H0
 
