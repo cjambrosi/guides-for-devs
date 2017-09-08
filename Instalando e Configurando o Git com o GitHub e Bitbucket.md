@@ -110,7 +110,7 @@ Permite além reverter arquivos para um estado anterior, reverter um projeto int
 			`The key fingerprint is:`</br>
 			`43:c5:5b:5f:b1:f1:50:43:ad:20:a6:92:6a:1f:9a:3a seu_email@example.com`
 
-		- Para verificar se realmente foram criados os dois arquivos digite o comando a baixo, deverá listar os dois arquivos contendo a chave pública e privada.
+		- Para verificar se realmente foram criados os dois arquivos digite o comando a baixo. Deverá listar os dois arquivos contendo a chave pública e privada.
 
 			>  ls ~/.ssh
 			
@@ -154,11 +154,11 @@ Permite além reverter arquivos para um estado anterior, reverter um projeto int
 		
 		`Are you sure you want to continue connecting (yes/no)?` **`yes`**
 		
-	- Receberá um alerta dizendo que será adicionado permanentemente a lista de hosts conhecidos, pedindo a senha da chave SSH Privada escolhida anteriormente. Exemplo:
+	- Receberá um alerta dizendo que será adicionado permanentemente a lista de hosts conhecidos, pedindo a senha da chave SSH escolhida anteriormente. Exemplo:
 
-		`Warning: Permanently added the RSA host key for IP address '192.30.253.112' to the list of known hosts.`
+		`Warning: Permanently added the RSA host key for IP address '104.192.143.1' to the list of known hosts.`
 
-	- Será alertado que o usuário está autenticado, mas que o GitHub não permite acesso por um terminal SSH. Isso não é um problema, se chegar nessa mensagem, tudo ocorreu corretamente, a conexão está funcionando.
+	- Será alertado que o usuário está autenticado, mas que o GitHub não permite acesso por um terminal Shell. Isso não é um problema, se chegar nessa mensagem, tudo ocorreu corretamente, a conexão está funcionando.
 
 		`Hi USER You've successfully authenticated, but GitHub does not provide shell access.`
 
@@ -172,11 +172,11 @@ Permite além reverter arquivos para um estado anterior, reverter um projeto int
 	
 		> xclip -sel clip ~/.ssh/id_rsa.pub
 
-	- Copiado o conteúdo do arquivo, acesse a sua conta no site do <i class="icon-provider-github"></i> **[Bitbucket](https://bitbucket.org/)** e acesse as configurações da sua conta.
+	- Copiado o conteúdo do arquivo, acesse as configurações da sua conta no site <i class="icon-provider-github"></i> **[Bitbucket](https://bitbucket.org/)**.
 
 	- Na sessão de segurança, acesse o menu **"SSH keys"**. Clique no botão **"Add key"** para abrir a janela de inserção.
 
-	- No campo **"Label"** de um nome para sua chave e no campo **"Key"** cole a chave copiada anteriormente. Feito isso clique no botão **"Add key"** para adicioná-la.
+	- No campo **"Label"** de um nome para sua chave e no campo **"Key*"** cole a chave copiada anteriormente. Feito isso clique no botão **"Add key"** para adicioná-la.
 
 2. Testar a conexão da máquina com o Bitbucket
 
@@ -185,6 +185,18 @@ Permite além reverter arquivos para um estado anterior, reverter um projeto int
 		> ssh -T git@bitbucket.org
 
 	- 
+
+	- Receberá um alerta dizendo que será adicionado permanentemente a lista de hosts conhecidos, pedindo a senha da chave SSH escolhida anteriormente. Exemplo: 
+
+		`Warning: Permanently added the RSA host key for IP address '104.192.143.1' to the list of known hosts.`
+
+	- Também será informado quais contas tem permissão para fazer login com essa chave, e um aviso de que você pode utilizar o Git ou o HG (Mercurial) para se conectar ao Bitbucket, mas que acesso via Shell está desabilitado.
+
+		`logged in as USER.`
+
+		`You can use git or hg to connect to Bitbucket. Shell access is disabled.`
+
+	- Ao chegar nessas mensagens, quer dizer que as configurações ocorreram corretamente e que a conexão está funcionando.
 
 --------------------
 
