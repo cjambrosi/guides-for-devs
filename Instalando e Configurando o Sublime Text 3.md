@@ -29,7 +29,7 @@ Instalando e Configurando o Sublime Text 3 no Ubuntu
 
 		> sudo apt-get install sublime-text
 
-	- **Obs:** Algumas vezes instalando desta forma, não é possível escolher o Sublime Text como editor de texto padrão do sistema. [(Clique aqui para corrigir esse problema)](#sublimte-text-como-editor-de-texto-padrão-do-sistema).
+	- **Obs:** Algumas vezes instalando desta forma, não é possível escolher o Sublime Text como editor de texto padrão do sistema. [Clique aqui para corrigir esse problema](#sublimte-text-como-editor-de-texto-padrão-do-sistema).
 
 2. Segunda forma de instalação. Através do PPA criado pela esquipe **[WebUp8](http://www.webupd8.org/)**. Apesar de não ser um repositório oficial, é muito confiável. Único porém, é que terá um pequeno atraso para a versão mais recente lançada do Sublime Text.
 
@@ -57,7 +57,7 @@ Instalando e Configurando o Sublime Text 3 no Ubuntu
 
 2. Instalado o Package Constrol, vamos utilizá-lo para instalar outros plugins. O Sublime Text possui uma infinidade de plugins.
 
-	- Acesse o Package Control pelo atalho **CTRL**+**Shift**+**P**. Para instalar um plugin, digite o comando a baixo seguido do nome do plugin:
+	- Acesse o Package Control pelo atalho **Ctrl**+**Shift**+**P**. Para instalar um plugin, digite o comando a baixo seguido do nome do plugin:
 
 		> install package Color Highlighter
 
@@ -67,7 +67,7 @@ Instalando e Configurando o Sublime Text 3 no Ubuntu
 
 		> remove package Color Highlighter
 
-	- Logo a baixo, há uma [(lista com alguns bons plugins)](#) para serem instalados.
+	- Logo a baixo, há uma [lista com alguns bons plugins](#) para serem instalados.
 
 --------------------
 
