@@ -9,6 +9,7 @@ Tutoriais
 
 - [Instalar Conky Cronograph Station BLK 8.4 Modificado no Ubuntu](https://github.com/CristianAmbrosi/tutoriais/blob/master/Instalar%20Conky%20Cronograph%20Station%20BLK.md)
 - [Formatar Pen Drive no Terminal Linux](https://github.com/CristianAmbrosi/tutoriais/blob/master/Formatar%20Pen%20Drive%20no%20Terminal%20Linux.md)
+- [Instalando e Configurando o Sublime Text 3 no Ubuntu](https://github.com/CristianAmbrosi/tutoriais/blob/master/Instalando%20e%20Configurando%20o%20Sublime%20Text%203.md)
 - [Instalando e Configurando Ambiente de Desenvolvimento PHP no Ubuntu >= 16.04](https://github.com/CristianAmbrosi/tutoriais/blob/master/Instalando%20e%20Configurando%20Ambiente%20de%20Desenvolvimento%20PHP.md)
 - [Instalar as versões do PHP 5.6 e PHP 7.1 juntas no Ubuntu >= 14.04](https://github.com/CristianAmbrosi/tutoriais/blob/master/Instalar%20as%20vers%C3%B5es%20do%20PHP%205.6%20e%20PHP%207.1%20juntas%20no%20Ubuntu.md)
 - [Instalando e Configurando o Composer](https://github.com/CristianAmbrosi/tutoriais/blob/master/Instalando%20e%20Configurando%20o%20Composer.md)

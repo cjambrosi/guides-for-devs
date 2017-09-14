@@ -31,7 +31,7 @@ Instalando e Configurando o Sublime Text 3 no Ubuntu
 
 	- **Obs:** Algumas vezes instalando desta forma, não é possível escolher o Sublime Text como editor de texto padrão do sistema. [(Clique aqui para corrigir esse problema)](#sublimte-text-como-editor-de-texto-padrão-do-sistema).
 
-2. Segunda forma de instalação. Através do PPA criado pela esquipe **[WebUp8](http://www.webupd8.org/)**. Apesar de não ser um repositório oficial, é muito confiável. Único porém é que terá um pequeno atraso para a versão mais recente lançada do Sublime Text.
+2. Segunda forma de instalação. Através do PPA criado pela esquipe **[WebUp8](http://www.webupd8.org/)**. Apesar de não ser um repositório oficial, é muito confiável. Único porém, é que terá um pequeno atraso para a versão mais recente lançada do Sublime Text.
 
 	- Adicione o repositório a baixo e atualize-o:
 
@@ -47,9 +47,9 @@ Instalando e Configurando o Sublime Text 3 no Ubuntu
 
 ## Configurações do Usuário
 
-- Vá em **Preferences** e clique em **Settings**. Será aberto dois arquivos JSON, o da esquerda é o arquivo **Default**, onde tem todas as opções com suas configurações padrões. O da direita é o arquivo **User**, onde é possível modificar as opções padrões para o gosto do usuário.
+- Vá em **Preferences** e clique em **Settings**. Será aberto dois arquivos JSON, o da esquerda é o arquivo **Default**, onde há todas as opções com suas configurações padrões. O da direita é o arquivo **User**, onde é possível modificar as opções padrões para o gosto do usuário.
 
-- No arquivo **User** (a direita), dentro das chaves *{}*, adicione as variáveis que deseja alterar os valores padrões e salve-o. Abaixo, algumas variáveis alteradas de exemplo:
+- No arquivo **User** (a direita), dentro das chaves **{}**, adicione as variáveis que deseja alterar os valores padrões e salve. Abaixo, algumas variáveis alteradas de exemplo:
 
 	`{` <br />
 	&nbsp;&nbsp;&nbsp;&nbsp;`// Usa a fonte Menlo como padrão.`<br />
@@ -78,19 +78,19 @@ Instalando e Configurando o Sublime Text 3 no Ubuntu
 
 ## Sublimte Text como editor de texto padrão do sistema
 
-	- Acesse seguinte diretório:
+- Acesse seguinte diretório:
 
-		> cd ~/.local/share/applications/
+	> cd ~/.local/share/applications/
 
-	- Deve existir um arquivo chamado **sublime_text.desktop** ou semelhante (se não existir, crie-o). Abra o arquivo com permissão de super usuário:
+- Deve existir um arquivo chamado **sublime_text.desktop** ou semelhante (se não existir, crie-o). Abra o arquivo com permissão de super usuário:
 
-		> sudo nano sublime_text.desktop
+	> sudo nano sublime_text.desktop
 
-	- Na linha **Exec=/opt/sublime_text/sublime_text** adicione o atributo **%F**, assim como na imagem a baixo:
+- Na linha **Exec=/opt/sublime_text/sublime_text** adicione o atributo **%F**, assim como na imagem a baixo:
 
-		![](https://github.com/CristianAmbrosi/tutoriais/blob/master/images/st-editor-padrao.png)
+	![](https://github.com/CristianAmbrosi/tutoriais/blob/master/images/st-editor-padrao.png)
 
-	- Salve o arquivo e verifique nas opções se já é possível escolher o Sublime Text como editor de texto padrão para seus arquivos.
+- Salve o arquivo e verifique nas opções se já é possível escolher o Sublime Text como editor de texto padrão para seus arquivos.
 
 --------------------
 
