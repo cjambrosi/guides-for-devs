@@ -2,7 +2,7 @@ Instalando e Configurando o Git com o GitHub e Bitbucket
 ===============================================
 
 #### O que é uma ferramenta de Controle de Versão?
-Resumidamente, é um sistema que registra as mudanças feitas em um arquivo ou um conjunto de arquivos ao longo do tempo de forma que você possa recuperar versões específicas. Pode ser usado com praticamente qualquer tipo de arquivo em um computador. 
+Resumidamente, é um sistema que registra as mudanças feitas em um arquivo ou um conjunto de arquivos ao longo do tempo de forma que você possa recuperar versões específicas. Pode ser usado com praticamente qualquer tipo de arquivo em um computador.
 Permite além reverter arquivos para um estado anterior, reverter um projeto inteiro para um estado anterior, comparar mudanças feitas ao decorrer do tempo, ver quem foi o último a modificar algo que pode estar causando problemas, quem introduziu um bug e muito mais. Usar um VCS normalmente significa que se você estragou algo ou perdeu arquivos, poderá facilmente reavê-los. Além disso, você pode controlar tudo sem maiores esforços.
 
 #### Exemplos de ferramentas para Controle de Versão.
@@ -16,17 +16,17 @@ Permite além reverter arquivos para um estado anterior, reverter um projeto int
 
 ## Instalando
 
-1. Primeiramente, atualizar os repositórios e gatilhos do Ubuntu:
+1. Antes de tudo, atualize os repositórios e gatilhos do Ubuntu:
 
 	> sudo apt-get update
-	
+
 	> sudo apt-get upgrade
 
 2. A partir do repósitorio do Ubuntu
 
 	- Digitar o comando a baixo *(recomendado)*:
 
-		> sudo apt-get install git 
+		> sudo apt-get install git
 
 		- ou
 
@@ -39,7 +39,7 @@ Permite além reverter arquivos para um estado anterior, reverter um projeto int
 --------------------
 
 ## Configurando o Git
-	
+
 1. Instalar o utilitário de linha de comando **"xclip"**.
 
 	> sudo apt-get install xclip
@@ -71,14 +71,14 @@ Permite além reverter arquivos para um estado anterior, reverter um projeto int
 	- Primeiro, você deve checar para ter certeza que você ainda não possui uma chave SSH. Por padrão, as chaves SSH de um usuário são armazenadas no diretório **~/.ssh**. Exemplo:
 
 		> cd ~/.ssh
-		
+
 		> ls
-		
+
 		authorized_keys2 |  id_rsa 	   | known_hosts
 		-----------------|-------------|-------------
 		config           |  id_rsa.pub
 
-	- Agora devemos procurar por um par de arquivos chamados "algo" e "algo.pub", onde **algo** é normalmente "id_rsa" ou "id_dsa". O arquivo **.pub** é a sua chave pública, e o outro arquivo é a sua chave privada. 
+	- Agora devemos procurar por um par de arquivos chamados "algo" e "algo.pub", onde **algo** é normalmente "id_rsa" ou "id_dsa". O arquivo **.pub** é a sua chave pública, e o outro arquivo é a sua chave privada.
 	Se você não tem estes arquivos (ou não tem nem mesmo o diretório .ssh), você pode criá-los executando um comando chamado **"ssh-keygen"**, que é fornecido com o pacote SSH em sistemas Linux/Mac. Exemplo:
 
 		> ssh-keygen
@@ -92,7 +92,7 @@ Permite além reverter arquivos para um estado anterior, reverter um projeto int
 			`Generating public/private rsa key pair.`
 
 		- Será perguntado qual é o caminho completo e nome do arquivo que conterá a chave. Pressionar **ENTER** para manter o padrão.
-			
+
 			`Enter file in which to save the key (/home/user/.ssh/id_rsa):`
 
 		- Será perguntado para criarmos uma senha para a chave privada. **Essa senha é muito importante, pois se você perder não será possível recuperá-la, é preciso criar uma chave nova**. Inserir uma senha para a chave SSH e pressione **ENTER**.
@@ -113,24 +113,24 @@ Permite além reverter arquivos para um estado anterior, reverter um projeto int
 		- Para verificar se realmente foram criados os dois arquivos digite o comando a baixo. Deverá listar os dois arquivos contendo a chave pública e privada.
 
 			>  ls ~/.ssh
-			
+
 			`id_rsa  id_rsa.pub`
 
 --------------------
 
 ## Configurando o GitHub
-			
+
 1. Inserir no GitHub a chave SSH criada do Git
 
 	- Usaremos o programa *"xclip"* instalado anteriormente para copiar o conteúdo do arquivo que contem a chave pública.
-	
+
 		> xclip -sel clip ~/.ssh/id_rsa.pub
 
-	- Copiado o conteúdo do arquivo, acesse a sua conta no site do <i class="icon-provider-github"></i> **[GitHub](https://github.com/)** e acesse as configurações da sua conta. 
+	- Copiado o conteúdo do arquivo, acesse a sua conta no site do <i class="icon-provider-github"></i> **[GitHub](https://github.com/)** e acesse as configurações da sua conta.
 
 	- Nos menus do lado esquerdo da tela, escolher a opção **"SSH and GPG keys"**.
 
-	- Pada adicionar a chave SSH criada, escolha a opção **"New SSH key"**. 
+	- Pada adicionar a chave SSH criada, escolha a opção **"New SSH key"**.
 
 	- Na opção **"Title"**, escolher um título para a chave, para que possamos identificá-la.
 
@@ -151,9 +151,9 @@ Permite além reverter arquivos para um estado anterior, reverter um projeto int
 		`Are you sure you want to continue connecting (yes/no)? yes`
 
 	- Digite **"yes"** para continuar conectado.
-		
+
 		`Are you sure you want to continue connecting (yes/no)?` **`yes`**
-		
+
 	- Receberá um alerta dizendo que será adicionado permanentemente a lista de hosts conhecidos, pedindo a senha da chave SSH escolhida anteriormente. Exemplo:
 
 		`Warning: Permanently added the RSA host key for IP address '104.192.143.1' to the list of known hosts.`
@@ -169,7 +169,7 @@ Permite além reverter arquivos para um estado anterior, reverter um projeto int
 1. Inserir no Bitbucket a chave SSH criada do Git
 
 	- Usaremos o programa *"xclip"* instalado anteriormente para copiar o conteúdo do arquivo que contem a chave pública.
-	
+
 		> xclip -sel clip ~/.ssh/id_rsa.pub
 
 	- Copiado o conteúdo do arquivo, acesse as configurações da sua conta no site <i class="icon-provider-github"></i> **[Bitbucket](https://bitbucket.org/)**.
@@ -184,9 +184,9 @@ Permite além reverter arquivos para um estado anterior, reverter um projeto int
 
 		> ssh -T git@bitbucket.org
 
-	- 
+	-
 
-	- Receberá um alerta dizendo que será adicionado permanentemente a lista de hosts conhecidos, pedindo a senha da chave SSH escolhida anteriormente. Exemplo: 
+	- Receberá um alerta dizendo que será adicionado permanentemente a lista de hosts conhecidos, pedindo a senha da chave SSH escolhida anteriormente. Exemplo:
 
 		`Warning: Permanently added the RSA host key for IP address '104.192.143.1' to the list of known hosts.`
 

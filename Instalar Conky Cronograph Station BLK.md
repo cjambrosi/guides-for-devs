@@ -5,18 +5,18 @@ Instalar Conky Cronograph Station BLK 8.4 Modificado no Ubuntu
 
 --------------------
 
-- **Este Conky foi modificado a meu gosto, se desejar seguindo os mesmos passos, pode instalar a versão mais recente do repositório [*oficial*](https://github.com/drxspace/cronoconky).** 
+- **Este Conky foi modificado a meu gosto, se desejar seguindo os mesmos passos, pode instalar a versão mais recente do repositório [*oficial*](https://github.com/drxspace/cronoconky).**
 
 --------------------
 
-- Primeiramente, atualizar os repositórios e gatilhos do Ubuntu
+- Antes de tudo, atualize os repositórios e gatilhos do Ubuntu:
 
 	> sudo apt-get update
 
 	> sudo apt-get upgrade
 
 - Baixe o arquivo compactado neste link e descompacte-o:
-	
+
 	- [**Conky Cronograph Station BLK 8.4 Modificado**](/files/cronoconky-blk-8.0-modificado.tar.gz?raw=true)
 
 - Descompactado o arquivo, entre na pasta pelo terminal e execute o arquivo *debians_install.sh*.

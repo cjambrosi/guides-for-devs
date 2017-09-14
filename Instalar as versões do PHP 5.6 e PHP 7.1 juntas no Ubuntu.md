@@ -13,7 +13,7 @@ Instalar as versões do PHP 5.6 e PHP 7.1 juntas no Ubuntu >= 14.04
 
 --------------------
 
-## Primeiramente, atualizar os repositórios e gatilhos do Ubuntu
+## Antes de tudo, atualize os repositórios e gatilhos do Ubuntu:
 
 > sudo apt-get update
 
@@ -24,21 +24,21 @@ Instalar as versões do PHP 5.6 e PHP 7.1 juntas no Ubuntu >= 14.04
 ## Para o Banco de Dados MySQL
 
 - Adicionar o repositório:
-	
+
 	> sudo add-apt-repository ppa:ondrej/php
 
 	> sudo apt-get update
 
 - Instalando o PHP 5.6
-	
+
 	> sudo apt-get install php5.6 php5.6-cli php5.6-intl php5.6-mcrypt php5.6-opcache php5.6-readline libapache2-mod-php5.6 php5.6-mbstring php5.6-json php5.6-curl php-imagick php5.6-mysql phpmyadmin
-	
+
 	- Verificar a versão instalada:
-		
+
 		> php -v
-		
+
 	- Ou:
-	
+
 		> php --version
 
 	- Exemplo de saída:
@@ -51,13 +51,13 @@ Instalar as versões do PHP 5.6 e PHP 7.1 juntas no Ubuntu >= 14.04
 - Instalando o PHP 7.1
 
 	> sudo apt-get install php7.1 php7.1-cli php7.1-intl php7.1-mcrypt php7.1-opcache php7.1-readline libapache2-mod-php7.1 php7.1-mbstring php7.1-json php7.1-curl php-imagick php7.1-mysql phpmyadmin
-	
+
 	- Verificar a versão instalada:
-		
+
 		> php -v
-		
+
 	- Ou:
-	
+
 		> php --version
 
 	- Exemplo de saída:
@@ -74,19 +74,19 @@ Instalar as versões do PHP 5.6 e PHP 7.1 juntas no Ubuntu >= 14.04
 - Adicionar o repositório:
 
 	> sudo add-apt-repository ppa:ondrej/php
-	
+
 	> sudo apt-get update
-	
+
 - Instalando o PHP 5.6
 
 	> sudo apt-get install php5.6 php5.6-cli php5.6-intl php5.6-mcrypt php5.6-opcache php5.6-readline libapache2-mod-php5.6 php5.6-mbstring php5.6-json php5.6-curl php-imagick php5.6-pgsql
 
 	- Verificar a versão instalada:
-			
+
 		> php -v
-			
+
 	- Ou:
-	
+
 		> php --version
 
 	- Exemplo de saída:
@@ -101,11 +101,11 @@ Instalar as versões do PHP 5.6 e PHP 7.1 juntas no Ubuntu >= 14.04
 	> sudo apt-get install php7.1 php7.1-cli php7.1-intl php7.1-mcrypt php7.1-opcache php7.1-readline libapache2-mod-php7.1 php7.1-mbstring php7.1-json php7.1-curl php-imagick php7.1-pgsql
 
 	- Verificar a versão instalada:
-		
+
 		> php -v
-		
+
 	- Ou:
-	
+
 		> php --version
 
 	- Exemplo de saída:
@@ -131,7 +131,7 @@ Instalar as versões do PHP 5.6 e PHP 7.1 juntas no Ubuntu >= 14.04
 
 - Habilitar as mensagens de erros do PHP (5.6 / 7.1).
 
-	- Para habilitar as mensagens erros, precisamos editar o arquivo *php.ini*. Acesse o diretório referente a versão do PHP que você instalou e depois abra o arquivo com privilégios de super administrador.
+	- Para habilitar as mensagens erros, precisamos editar o arquivo *php.ini*. Acesse o diretório referente a versão do PHP que você instalou e depois abra o arquivo com privilégios de super usuário.
 
 		> cd /etc/php/5.6/apache2
 
@@ -152,13 +152,13 @@ Instalar as versões do PHP 5.6 e PHP 7.1 juntas no Ubuntu >= 14.04
 		> sudo service apache2 restart
 
 
-- Teste se a instalação do PHP está correta. Crie um arquivo **"info.php"** no diretório dos projetos **"/var/www/html"** e dentro do arquivo inserir a função a baixo e salve.
+- Teste se a instalação do PHP está correta. Crie um arquivo **"info.php"** no diretório dos projetos **"/var/www/html"** e dentro do arquivo insira a função a baixo e salve.
 
 	`<?php phpinfo(); ?>`
 
-- Ir no navegador e acessar o arquivo pela URL: 
-		
-	> "localhost/info.php" ou "127.0.0.1/info.php" 
+- Vá no navegador e acesse o arquivo pela URL:
+
+	> "localhost/info.php" ou "127.0.0.1/info.php"
 
 - Se abrir a página de informações do PHP, a instalação da linguagem está correta.
 
@@ -196,16 +196,16 @@ Para testar se a versão do PHP 7.1 está funcionando junto a do PHP 5.6, podemo
 		`$var3 = var_dump(5 <=> 10);`</br>
 		`echo $var3; // -1`</br>
 	`?>`</br>
-	
+
 - Execute o arquivo com as duas versões do PHP no terminal.
 	> php5.6 teste.php
-	
+
 - Ou:
-	
+
 	> php7.1 teste.php
-	
+
 - Versão PHP 5.6 -> Deverá ocorrer o erro a baixo, pois não há suporte para este operador.
- 
+
 	`PHP Parse error:  syntax error, unexpected '>' in /home/sim/Área de Trabalho/teste.php on line 2`
 
 - Versão PHP 7.1 -> Deverá gerar a seguinte saída:
@@ -217,7 +217,7 @@ Para testar se a versão do PHP 7.1 está funcionando junto a do PHP 5.6, podemo
 
 ### (*Opcional*) Podemos criar um par de *Alias* para não termos que digitar todo aquele comando enorme para alterar as versões do PHP
 
-- Para criá-los, é preciso modidificar o arquivo **.bashrc** que se encontra em **/home/USER/.bashrc** (se não existir o arquivo, crie-o). Abra o arquivo com privilégios de super administrador no editor de texto que preferir.
+- Para criá-los, é preciso modidificar o arquivo **.bashrc** que se encontra em **/home/USER/.bashrc** (se não existir o arquivo, crie-o). Abra o arquivo com privilégios de super usuário no editor de texto que preferir.
 
 	> sudo nano ~/.bashrc
 

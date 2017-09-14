@@ -3,7 +3,7 @@ Instalando e Configurando Ambiente de Desenvolvimento PHP | Pilha: Apache, MySQL
 
 --------------------
 
-## Primeiramente, atualizar os repositórios e gatilhos do Ubuntu
+## Antes de tudo, atualize os repositórios e gatilhos do Ubuntu:
 
 > sudo apt-get update
 
@@ -42,7 +42,7 @@ Instalando e Configurando Ambiente de Desenvolvimento PHP | Pilha: Apache, MySQL
 
 	- Para saber se o servidor já está respondendo, abra seu navegador e acesse a URL:
 
-		 > "localhost/" ou "127.0.0.1/" 
+		 > "localhost/" ou "127.0.0.1/"
 
 		- Deverá aparecer a página de configuração padrão do Apache.
 
@@ -105,7 +105,7 @@ Instalando e Configurando Ambiente de Desenvolvimento PHP | Pilha: Apache, MySQL
 ## MySQL
 
 1. Instalando:
-	
+
 	> sudo apt-get update
 
 	> sudo apt-get install mysql-server
@@ -115,7 +115,7 @@ Instalando e Configurando Ambiente de Desenvolvimento PHP | Pilha: Apache, MySQL
 
 	- Repita a palavra-passe para o utilizador **"root"** de MySQL: </br>
 		`<Repetir senha escolhida>`
-		
+
 2. Configurando:
 
 	- Acesse via terminal com seu usuário e senha para saber se está conectando ao banco MySQL com o seguinte comando:
@@ -126,14 +126,14 @@ Instalando e Configurando Ambiente de Desenvolvimento PHP | Pilha: Apache, MySQL
 
 		> mysql> Ctrl + d
 
-	- *(OPCIONAL)* Quando a instalação estiver concluída, precisaremos executar alguns comandos adicionais para ter nosso ambiente MySQL configurado de forma segura. 
+	- *(OPCIONAL)* Quando a instalação estiver concluída, precisaremos executar alguns comandos adicionais para ter nosso ambiente MySQL configurado de forma segura.
 	Iremos executar um script simples de segurança que vai remover alguns padrões perigosos e bloquear um pouco o acesso ao nosso sistema de banco de dados. Inicie o script interativo executando:
 
 		- *(IMPORTANTE)* A habilitação dessa funcionalidade é algo que deve ser avaliado. Se habilitado, senhas que não seguem o critério especificado (senha root por exmplo) serão rejeitadas pelo MySQL com um erro. Isso irá causar problemas se você utilizar uma senha fraca juntamente com software que configura automaticamente as credenciais de usuário do MySQL, tais como os pacotes do Ubuntu para o phpMyAdmin. É seguro deixar a validação desativada, mas você deve sempre utilizar senhas fortes e exclusivas para as credenciais do banco de dados.
 		</br></br>
-		
+
 		> sudo mysql_secure_installation
-		
+
 	- Siga os seguintes passos para a configuração:
 
 		- Enter password for user root: `<sua senha escolhida para o BD MySQL>`</br>
@@ -144,7 +144,7 @@ Instalando e Configurando Ambiente de Desenvolvimento PHP | Pilha: Apache, MySQL
 		secure enough. Would you like to setup VALIDATE PASSWORD plugin?
 		</br></br>
 		Press y|Y for Yes, any other key for No:  **`y`**
-		
+
 		- There are three levels of password validation policy:
 		LOW    Length >= 8
 		MEDIUM Length >= 8, numeric, mixed case, and special characters
@@ -161,7 +161,7 @@ Instalando e Configurando Ambiente de Desenvolvimento PHP | Pilha: Apache, MySQL
 
 		- Disallow root login remotely? (Press y|Y for Yes, any other key for No): **`y`**
 
-		- Remove test database and access to it? (Press y|Y for Yes, any other key for No): **`y`** 
+		- Remove test database and access to it? (Press y|Y for Yes, any other key for No): **`y`**
 
 		- Reload privilege tables now? (Press y|Y for Yes, any other key for No): **`y`**
 
@@ -170,23 +170,23 @@ Instalando e Configurando Ambiente de Desenvolvimento PHP | Pilha: Apache, MySQL
 ## PostgreSQL
 
 1. Instalando:
-	
+
 	> sudo apt-get update
 
 	> sudo apt-get install postgresql postgresql-contrib
 
 	> sudo apt-get install pgadmin3
 
-	- Consultar versão instalada. 
+	- Consultar versão instalada.
 
 		> psql --version
 
 		`psql (PostgreSQL) 9.5.6`
-		
+
 
 2. Configurando:
 
-	- Depois de instalado o SGBD Postgres, vamos criar o primeiro usuário do Banco de Dados. Logue-se como usuário **root** usando o comando a baixo: 
+	- Depois de instalado o SGBD Postgres, vamos criar o primeiro usuário do Banco de Dados. Logue-se como usuário **root** usando o comando a baixo:
 
 		> sudo -i
 
@@ -202,7 +202,7 @@ Instalando e Configurando Ambiente de Desenvolvimento PHP | Pilha: Apache, MySQL
 
 		> CREATE USER nomedousuario SUPERUSER INHERIT CREATEDB CREATEROLE;
 
-	- Para criar uma Senha ao usuário já criado, entre com o comando a baixo (troque **"nomedousuario"** pelo seu usuário e troque **'senha'** pela sua senha escolhida) e tecle enter: 
+	- Para criar uma Senha ao usuário já criado, entre com o comando a baixo (troque **"nomedousuario"** pelo seu usuário e troque **'senha'** pela sua senha escolhida) e tecle enter:
 
 		> ALTER USER nomedousuario PASSWORD 'senha';
 
@@ -221,7 +221,7 @@ Instalando e Configurando Ambiente de Desenvolvimento PHP | Pilha: Apache, MySQL
 ## PHP
 
 - **Importante**
-		
+
 	- Se você precisa trabalhar com duas versões do PHP (*5.6 e 7.1*), instale o PHP por esse **[passo-a-passo](https://github.com/CristianAmbrosi/tutoriais/blob/master/Instalar%20as%20vers%C3%B5es%20do%20PHP%205.6%20e%20PHP%207.1%20juntas%20no%20Ubuntu.md)**.
 
 	- Assim que instaladas as duas versões, volte para este tutorial para terminar as configurações dos Bancos de Dados.
@@ -231,13 +231,13 @@ Instalando e Configurando Ambiente de Desenvolvimento PHP | Pilha: Apache, MySQL
 1. Instalando:
 
 	- Adicionar o repositório:
-	
+
 		> sudo add-apt-repository ppa:ondrej/php
 
 	- **MySQL:**
 
 		> sudo apt-get update
-	
+
 		> sudo apt-get install php7.1 php7.1-cli php7.1-intl php7.1-mcrypt php7.1-opcache php7.1-readline libapache2-mod-php7.1 php7.1-mbstring php7.1-json php7.1-curl php-imagick php7.1-mysql phpmyadmin
 
 		- Servidor web a configurar automaticamente: </br>
@@ -288,7 +288,7 @@ Instalando e Configurando Ambiente de Desenvolvimento PHP | Pilha: Apache, MySQL
 
 	- Habilitar as mensagens de erros do PHP 7.1.
 
-		- Para habilitar as mensagens erros, precisamos editar o arquivo *php.ini*. Acesse o diretório referente a versão do PHP que você instalou e depois abra o arquivo com privilégios de super administrador.
+		- Para habilitar as mensagens erros, precisamos editar o arquivo *php.ini*. Acesse o diretório referente a versão do PHP que você instalou e depois abra o arquivo com privilégios de super usuário.
 
 			> cd /etc/php/7.1/apache2
 
@@ -307,13 +307,13 @@ Instalando e Configurando Ambiente de Desenvolvimento PHP | Pilha: Apache, MySQL
 			> sudo service apache2 restart
 
 
-	- Teste se a instalação do PHP está correta. Crie um arquivo **"info.php"** no diretório dos projetos **"/var/www/html"** e dentro do arquivo inserir a função a baixo e salve.
+	- Teste se a instalação do PHP está correta. Crie um arquivo **"info.php"** no diretório dos projetos **"/var/www/html"** e dentro do arquivo insira a função a baixo e salve.
 
 		`<?php phpinfo(); ?>`
 
-	- Ir no navegador e acessar o arquivo pela URL: 
-			
-		> "localhost/info.php" ou "127.0.0.1/info.php" 
+	- Vá no navegador e acesse o arquivo pela URL:
+
+		> "localhost/info.php" ou "127.0.0.1/info.php"
 
 	- Se abrir a página de informações do PHP, a instalação da linguagem está correta.
 
@@ -331,7 +331,7 @@ Geralmente, esse é o endereço que você utiliza para se conectar ao seu servid
 
 		- Esse comando vai lhe retornar duas ou três linhas. Todos são endereços corretos, mas seu computador só poderá utilizar um deles, portanto, sinta-se livre para tentar cada um.
 
-2. Segunda Forma: 
+2. Segunda Forma:
 
 	- Um método alternativo é usar o utilitário **curl** para entrar em contato com algum meio externo para lhe dizer como ele vê o seu servidor. Você pode fazer isso perguntando a um servidor específico qual é o seu IP:
 
@@ -348,7 +348,7 @@ Geralmente, esse é o endereço que você utiliza para se conectar ao seu servid
 **apache2 =>** Servidor web livre mais utilizado no mundo, onde rodam suas aplicações;
 
 **pgadmin3 =>** Software gráfico para administração do SGBD PostgreSQL;
-	
+
 **php7.1 =>** Linguagem de programação na qual serão feitos os projetos;
 
 **apache2-doc =>** Documentação completa do Apache;
@@ -356,15 +356,15 @@ Geralmente, esse é o endereço que você utiliza para se conectar ao seu servid
 **apache2-utils =>** Contém diversos utilitários de gerenciamento do Apache que possívelmente serão utilizados;
 
 **mysql-server =>** Banco de Dados MySQL;
-	
+
 **postgresql =>** Banco de Dados PostgreSQL, instalar a versão estável mais atualizada;
-	
+
 **phpmyadmin =>** Aplicação web para o gerenciamneto do SGBD MySQL;
-	
+
 **php-geoip =>** Módulo do PHP que permite que você encontre a localização de um endereço IP - Cidade, Estado, País, Longitude, Latitude e outras informações, como o ISP e o tipo de conexão;
-	
+
 **php-imagick =>** É uma extensão nativa do PHP para criar e modificar imagens usando a API do ImageMagick;
-	
+
 **php7.1-intl =>** Contém um módulo para facilitar a internacionalização de scripts PHP;
 
 **php7.1-pgsql =>** Drive que irá fazer conexão com o Banco de Dados PostgreSQL diretamente de scripts PHP;
@@ -396,7 +396,7 @@ Geralmente, esse é o endereço que você utiliza para se conectar ao seu servid
 - Pilha LAMP
 
 	https://www.digitalocean.com/community/tutorials/como-instalar-a-pilha-linux-apache-mysql-php-lamp-no-ubuntu-16-04-pt
-	
+
 	https://www.digitalocean.com/community/tutorials/how-to-install-and-secure-phpmyadmin-on-ubuntu-14-04
 
 	https://www.digitalocean.com/community/tutorials/como-instalar-a-pilha-linux-apache-mysql-php-lamp-no-ubuntu-14-04-pt
@@ -406,27 +406,27 @@ Geralmente, esse é o endereço que você utiliza para se conectar ao seu servid
 	http://ubuntuserverguide.com/2014/06/how-to-install-lamp-in-ubuntu-server-14-04-lts.html
 
 	http://www.hardware.com.br/tutoriais/configurando-servidor-lamp/pagina4.html
-	
+
 	http://blog.wfsneto.com.br/2014/06/21/php-configurando-ambiente-de-densenvolvimento-ubuntu-14-04
 
 	https://www.youtube.com/watch?v=Q2N5blJ4VIo
 
 	https://www.youtube.com/watch?v=bDi9h8LJHuE
-	
+
 - PostgreSQL
-	
+
 	https://www.digitalocean.com/community/tutorials/como-instalar-e-utilizar-o-postgresql-no-ubuntu-16-04-pt
-	
+
 	http://www.ubuntuiniciantes.com.br/2013/08/instalando-o-php-apache-e-postgres-no.html
 
 	https://www.rosehosting.com/blog/install-postgresql-with-phppgadmin-on-ubuntu/
-	
+
 	https://www.vivaolinux.com.br/dica/Criacao-de-1edeg;-super-usuario-no-PostgreSQL
-	
+
 	https://www.youtube.com/watch?v=LYgQW4a_anA
 
 - PHP
-	
+
 	https://matheuslima.com.br/instalando-o-nginx-php-7-mysql-lemp/
 
 	https://www.vivaolinux.com.br/topico/PHP/The-mbstring-extension-is-missing-Please-check-your-PHP-configuration

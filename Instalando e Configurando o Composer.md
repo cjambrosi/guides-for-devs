@@ -5,10 +5,10 @@ Instalando e Configurando o Composer no Linux (Ubuntu)
 
 ## Instalar
 
-1. Antes de tudo, atualizar os repositórios e gatilhos do Ubuntu:
+1. Antes de tudo, atualize os repositórios e gatilhos do Ubuntu:
 
 	> sudo apt-get update
-	
+
 	> sudo apt-get upgrade
 
 2. Precisaremos da biblioteca **"curl"** instalada, para baixarmos o pacote Composer. Digite o comando a baixo para instalar:
@@ -35,9 +35,9 @@ Instalando e Configurando o Composer no Linux (Ubuntu)
 ## O que foi instalado?!
 
  - **Composer =>** É uma ferramenta para gerenciamento de dependências para o PHP que vem ganhando espaço e se tornando cada vez mais indispensável. Com algumas poucas linhas de configurações você define todas as bibliotecas de terceiros ou mesmo suas que deseja/precisa utilizar em seu projeto, o composer encarrega-se de baixá-las e criar um autoloader deixando-as prontas para uso;
- 
+
  - **chmod +x =>** Comando que dá permissão de execução apenas;
- 
+
  - **curl =>** Uma biblioteca suportada pelo PHP, que permite que você conecte-se e comunique-se com diferentes tipos de servidores usando diferentes tipos de protocolos. *libcurl* atualmente suporta os protocolos http, https, ftp, gopher, telnet, dict, file, e ldap. libcurl também suporta certificados HTTPS, HTTP POST, HTTP PUT, upload via FTP (podendo também ser feito com a extensão ftp do PHP), upload HTTP por formulário, proxies, cookies, e autenticação com usuário e senha.
 
 ### Referências

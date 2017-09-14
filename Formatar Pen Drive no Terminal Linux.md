@@ -7,7 +7,7 @@ Formatar Pen Drive no Terminal Linux
 
 ## Identificando o Pen Drive
 1. Primeira Forma - Digite:
-	
+
 	> sudo fdisk -l
 
 	- Exemplo de saída:
@@ -18,7 +18,7 @@ Formatar Pen Drive no Terminal Linux
 		`Tamanho do setor (lógico/físico): 512 bytes / 512 bytes`</br>
 		`Tamanho da E/S (mínimo/ideal): 512 bytes / 512 bytes`</br>
 		`Identificador do disco: 0x00000000`
-		
+
 		Dispositivo Boot  | Início | Fim             | Blocos            | Id | Sistema
 		---------------------|--------|---------------|-----------------|----|------------
 		/dev/sda1	        | 1        | 976773167 | 488386583+ | ee | GPT
@@ -33,10 +33,10 @@ Formatar Pen Drive no Terminal Linux
 		Dispositivo Boot | Início | Fim         | Blocos     | Id | Sistema
 		--------------------|--------|------------|------------|----|------------------------
 		/dev/sdb1           | 32      | 7821311 | 3910640 | 7  | HPFS/NTFS/exFAT
-		
+
 
 2. Segunda Forma - Digite:
-	
+
 	> mount
 
 	- Exemplo de saída:
@@ -66,28 +66,28 @@ Formatar Pen Drive no Terminal Linux
 	> lsblk
 
 	- Exemplo de saída:
-	
+
 			NAME   MAJ:MIN RM   SIZE RO TYPE MOUNTPOINT
-			sda      8:0    0 465,8G  0 disk 
+			sda      8:0    0 465,8G  0 disk
 			├─sda1   8:1    0   512M  0 part /boot/efi
 			├─sda2   8:2    0 461,8G  0 part /
 			└─sda3   8:3    0   3,5G  0 part [SWAP]
-			sdb      8:16   1   3,7G  0 disk 
+			sdb      8:16   1   3,7G  0 disk
 			└─sdb1   8:17   1   3,7G  0 part /media/usuario/*PENDRIVE*
-			sr0     11:0    1  1024M  0 rom 
+			sr0     11:0    1  1024M  0 rom
 
 
 --------------------
 
 ## Desmontar a unidade do Pen Drive
 
- - Normalmente, quando colocamos o Pen Drive na porta USB, o Linux (ou qualquer outros SO) já o monta automaticamente, então para fazermos a formatação, devemos desmontá-lo. Digite o comando a baixo:
+ - Normalmente, quando colocamos o Pen Drive na porta USB, o Linux (ou qualquer outro SO) já o monta automaticamente, então para fazermos a formatação, devemos desmontá-lo. Digite o comando a baixo:
 
 	> sudo umount CAMINHO/DA/UNIDADE
 
 	 - Exemplo:
 		> sudo umount /dev/sdb1
-	
+
 	 - Ou:
 		> sudo umount /media/usuario/PENDRIVE
 
@@ -100,16 +100,16 @@ Formatar Pen Drive no Terminal Linux
 	- Formato NTFS (recomentado):
 
 		> sudo mkfs.ntfs -I /dev/sdb1
-		
+
 		-  Ou:
 			> sudo mkfs.ntfs -f -I /dev/sdb1
-			
-		-  Ou:	
+
+		-  Ou:
 			> sudo mkntfs -I /dev/sdb1
-			
+
 		-  Ou:
 			> sudo mkntfs -f -I /dev/sdb1
-			
+
 		- Após formatar o Pen Drive, podemos renomeá-lo. Na formatação para NTFS, a maneira de nomear o dispositivo é diferente. Digite o seguinte comando:
 
 			> sudo ntfslabel /dev/sdb1 NOMEPENDRIVE
@@ -152,7 +152,7 @@ Formatar Pen Drive no Terminal Linux
 ## Breve explicação sobre os Sistemas de Arquivos NTFS e FAT32
 
 - **NTFS (New Technology File System):** É um sistema de arquivos que surgiu juntamente com o lançamento do Windows NT. O NTFS possui várias características, em caso de falhas, por exemplo, quando o computador tem um desligamento repentino, ele tem a capacidade de reverter os dados para a condição anterior ao problema. Também possui a característica de suportar uma replicação de dados, como acontece nos sistemas RAID, por exemplo. O esquema de permissões de acesso é outra característica do NTFS. O NTFS dá a possibilidade de o usuário definir quem pode e como acessar pastas ou arquivos. Ele também possui muita eficiência no trabalho com grandes arquivos e também unidades de discos bastante cheias.
-	
+
 	- Características:
 		- Cria partições maiores que 32GB;
 		- Tem capacidade de compactar arquivos e economizar espaço em disco;
@@ -167,7 +167,7 @@ Formatar Pen Drive no Terminal Linux
 - **FAT32 (File Allocation Table):** O sistema de arquivos FAT32 utiliza 32 bits no endereçamento de dados. Com o FAT32, é possível usar clusters menores, no geral de 4 KB, mesmo que a unidade ofereça maior capacidade de armazenamento. Assim, o desperdício acaba sendo menor.
 	O sucesso da grande compatibilidade do FAT32 com programas, drivers de dispositivo e as redes existentes, foi reestruturado com o mínimo de alterações na arquitetura do Windows, nas estruturas de dados internos, em APIs e também no formato no disco. Como o FAT32 precisa de 4 bytes para poder armazenar valores do cluster, várias estruturas de dados internos e no disco e APIs publicados foram refeitas ou mesmo expandidas. Ferramentas e drivers existentes continuarão funcionando em unidades FAT32.
 	Seguramente podemos dizer que o FAT32 é mais confiável. Ele tem a capacidade de posicionar o diretório principal em qualquer lugar do disco. Comparando com os sistemas antigos de FAT, havia uma grande limitação no número de entradas que podiam ser alocadas no diretório principal. Com o FAT32 não há essa preocupação. O FAT32 tem a capacidade de suportar partições de até 2 TB.
-	
+
 	- Características:
 		- É compatível com todos os sistemas operacionais;
 		- Ocupa menos espaço no disco USB;
@@ -181,7 +181,7 @@ Formatar Pen Drive no Terminal Linux
 ## Referências
 
 http://www.guiafoca.org/cgs/guia/iniciante/ch-disc.html
-	
+
 http://pajeonline.blogspot.com.br/2011/07/como-formatar-em-ntfs-no-linux-hd.html
 
 http://www.linuxdescomplicado.com.br/2013/12/voce-pergunta-como-formatar-um-pendrive.html
