@@ -53,7 +53,7 @@ Instalando e Configurando o Sublime Text 3 no Ubuntu
 
 		> https://packagecontrol.io/installation#st3
 
-	- No Sublime Text, abra o console indo na opção de menu **View** > **Show Console**. Cole o código copiado no console e pressione Enter. A instalação deverá ser bem rápida.
+	- No Sublime Text, abra o console indo na opção de menu **View** > **Show Console**. Cole o código copiado no console e pressione Enter. Após terminada a instalação, reinicie o Sublime Text.
 
 2. Instalado o Package Constrol, vamos utilizá-lo para instalar outros plugins. O Sublime Text possui uma infinidade de plugins.
 
@@ -61,13 +61,13 @@ Instalando e Configurando o Sublime Text 3 no Ubuntu
 
 		> install package Color Highlighter
 
-		- Você também pode apenas digitar *install* e pressionar Enter, que vai aparecer uma lista de plugins para você instalar.
+		- Você também pode apenas digitar *install* e pressionar Enter, que irá aparecer uma lista de plugins para você instalar.
 
 	- Se quiser remover um plugin, digite o comando a baixo seguido do nome do plugin:
 
 		> remove package Color Highlighter
 
-	- Logo a baixo, há uma [lista com alguns bons plugins](#) para serem instalados.
+	- Logo a baixo, há uma [lista com alguns bons plugins](#lista-de-alguns-plugins-para-usar-no-sublimte-text) para serem instalados.
 
 --------------------
 
@@ -101,6 +101,34 @@ Instalando e Configurando o Sublime Text 3 no Ubuntu
 	&nbsp;&nbsp;&nbsp;&nbsp;`// Deixa os diretórios em negrito na sidebar.`<br />
 	&nbsp;&nbsp;&nbsp;&nbsp;`"bold_folder_labels": true`<br />
 	`}`<br />
+
+--------------------
+
+## Lista de alguns plugins para usar no Sublimte Text
+
+- [EMMET](https://packagecontrol.io/packages/Emmet)
+
+- [Color Highlighter](https://github.com/Monnoroch/ColorHighlighter)
+
+- [CSS3](https://github.com/y0ssar1an/CSS3)
+
+- [DocBlockr](https://packagecontrol.io/packages/DocBlockr)
+
+- [PHPCS](https://packagecontrol.io/packages/Phpcs)
+
+- [PHP Companion](https://packagecontrol.io/packages/PHP%20Companion)
+
+- [Laravel 5 Artisan](https://packagecontrol.io/packages/Laravel%205%20Artisan)
+
+- [jQuery](https://packagecontrol.io/packages/jQuery)
+
+- [AngularJS](https://packagecontrol.io/packages/AngularJS)
+
+- [Sub­lime­CodeIn­tel](https://github.com/SublimeCodeIntel/SublimeCodeIntel)
+
+- [Side­BarEn­hance­ments](https://packagecontrol.io/packages/SideBarEnhancements)
+
+- [AutoFileName](https://packagecontrol.io/packages/AutoFileName)
 
 --------------------
 
@@ -142,4 +170,24 @@ Instalando e Configurando o Sublime Text 3 no Ubuntu
 
 	https://packagecontrol.io/installation
 
+	http://sublimetextdicas.com.br/11-plugins-para-php-no-sublime-text/
+
+	https://tableless.com.br/7-plugins-sublime-text-que-voce-deveria-conhecer/
+
+	https://medium.com/@juniorb2s/melhores-plugins-sublime-para-php-4b011aa02cdf
+
+	https://willianjusten.com.br/meus-plugins-favoritos-do-sublime-text/
+
+	https://medium.com/@MariaSpr/sublime-text-3-essential-packages-2596133aead9
+
+	https://umdevweb.wordpress.com/2015/10/04/instalando-o-sublime-text-3-e-configurando-plugins-part-2/
+
+	http://aslanbakan.com/en/blog/33-essential-sublime-text-plugins-for-all-developers/
+
 	http://www.devmedia.com.br/sublime-text-ide-introducao-a-melhor-ide-para-desenvolvimento/34117
+
+	https://tableless.com.br/sublime-text-2-meu-novo-editor/
+
+	https://nandovieira.com.br/configurando-o-sublime-text-2
+
+	https://webdesign.tutsplus.com/pt/articles/simple-visual-enhancements-for-better-coding-in-sublime-text--webdesign-18052
