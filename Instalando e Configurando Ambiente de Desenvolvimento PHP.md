@@ -46,7 +46,7 @@ Instalando e Configurando Ambiente de Desenvolvimento PHP | Pilha: Apache, MySQL
 
 		- Deverá aparecer a página de configuração padrão do Apache.
 
-	- A seguir devemos habilitar o módulo **mod_rewrite**, o Módulo de Redirecionamento de URL’s do Apache, também conhecido como "URL’s amigáveis".
+	- A seguir devemos habilitar o módulo **mod_rewrite**, o Módulo de Redirecionamento de URL’s do Apache, também conhecido como "URL’s amigáveis":
 
 		> sudo a2enmod rewrite
 
@@ -78,7 +78,7 @@ Instalando e Configurando Ambiente de Desenvolvimento PHP | Pilha: Apache, MySQL
 
 		> sudo service apache2 restart
 
-	- Agora iremos adicionar uma diretiva global chamada **ServerName** para supremir uma mesnagem de aviso do Apache. Então abra o arquivo de configuração principal do Apache.
+	- Agora iremos adicionar uma diretiva global chamada **ServerName** para supremir uma mesnagem de aviso do Apache. Então abra o arquivo de configuração principal do Apache:
 
 		> sudo nano /etc/apache2/apache2.conf
 
@@ -96,7 +96,7 @@ Instalando e Configurando Ambiente de Desenvolvimento PHP | Pilha: Apache, MySQL
 			`[secondary-label Output]`</br>
 			`Syntax OK`
 
-	- Reinicie o Apache para implementar as alterações.
+	- Reinicie o Apache para implementar as alterações:
 
 		> sudo systemctl restart apache2
 
@@ -177,7 +177,7 @@ Instalando e Configurando Ambiente de Desenvolvimento PHP | Pilha: Apache, MySQL
 
 	> sudo apt-get install pgadmin3
 
-	- Consultar versão instalada.
+	- Consultar versão instalada:
 
 		> psql --version
 
@@ -259,7 +259,7 @@ Instalando e Configurando Ambiente de Desenvolvimento PHP | Pilha: Apache, MySQL
 
 			> sudo nano /etc/apache2/apache2.conf
 
-		- No final do arquivo inserir as linhas de código a baixo e salvar.
+		- No final do arquivo inserir as linhas de código a baixo e salvar:
 
 			` Include /etc/phpmyadmin/apache.conf`
 
@@ -288,7 +288,7 @@ Instalando e Configurando Ambiente de Desenvolvimento PHP | Pilha: Apache, MySQL
 
 	- Habilitar as mensagens de erros do PHP 7.1.
 
-		- Para habilitar as mensagens erros, precisamos editar o arquivo *php.ini*. Acesse o diretório referente a versão do PHP que você instalou e depois abra o arquivo com privilégios de super usuário.
+		- Para habilitar as mensagens erros, precisamos editar o arquivo *php.ini*. Acesse o diretório referente a versão do PHP que você instalou e depois abra o arquivo com privilégios de super usuário:
 
 			> cd /etc/php/7.1/apache2
 
@@ -302,12 +302,12 @@ Instalando e Configurando Ambiente de Desenvolvimento PHP | Pilha: Apache, MySQL
 
 			![](https://github.com/CristianAmbrosi/tutoriais/blob/master/images/arq-log-erro.png)
 
-		- Salve o arquivo e reinicie o apache.
+		- Salve o arquivo e reinicie o apache:
 
 			> sudo service apache2 restart
 
 
-	- Teste se a instalação do PHP está correta. Crie um arquivo **"info.php"** no diretório dos projetos **"/var/www/html"** e dentro do arquivo insira a função a baixo e salve.
+	- Teste se a instalação do PHP está correta. Crie um arquivo **"info.php"** no diretório dos projetos **"/var/www/html"** e dentro do arquivo insira a função a baixo e salve:
 
 		`<?php phpinfo(); ?>`
 

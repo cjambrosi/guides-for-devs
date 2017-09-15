@@ -15,7 +15,7 @@ Instalando e Configurando o Composer no Linux (Ubuntu)
 
 	> sudo apt-get install curl
 
-3. Com o comando a baixo, o Composer é baixado direto da fonte e instalado. Será baixado no **/home**.
+3. Com o comando a baixo, o Composer é baixado direto da fonte e instalado. Será baixado no **/home**:
 
 	> curl -sS https://getcomposer.org/installer | php
 
@@ -23,7 +23,7 @@ Instalando e Configurando o Composer no Linux (Ubuntu)
 
 	> sudo chmod +x composer.phar
 
-5. Vamos mover o arquivo Composer para pasta de executáveis local.
+5. Vamos mover o arquivo Composer para pasta de executáveis local:
 
 	> sudo mv composer.phar /usr/local/bin/composer
 

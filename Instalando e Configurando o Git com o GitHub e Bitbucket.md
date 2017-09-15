@@ -32,7 +32,7 @@ Permite além reverter arquivos para um estado anterior, reverter um projeto int
 
 		> sudo apt-get install git-all
 
-	- Instalar visualizador grágico do histórico de todos os commits feitos
+	- Instalar visualizador grágico do histórico de todos os commits feitos:
 
 		> sudo apt-get install gitk
 
@@ -40,7 +40,7 @@ Permite além reverter arquivos para um estado anterior, reverter um projeto int
 
 ## Configurando o Git
 
-1. Instalar o utilitário de linha de comando **"xclip"**.
+1. Instalar o utilitário de linha de comando **"xclip"**:
 
 	> sudo apt-get install xclip
 
@@ -50,15 +50,15 @@ Permite além reverter arquivos para um estado anterior, reverter um projeto int
 
 	> git config --global user.email seu_email@example.com
 
-3. Habilitar cor nas mensagens de saídas do Git para uma melhor análise.
+3. Habilitar cor nas mensagens de saídas do Git para uma melhor análise:
 
 	> git config --global color.ui true
 
-4. Para corrigir formatação e erros de espaços em branco de um colaborador que utiliza Windows. Pois o Windows usa tanto o carácter "carriage-return" e um "carácter linefeed" para novas linhas em seus arquivos, enquanto os sistemas Mac e Linux usam apenas o carácter "linefeed".
+4. Para corrigir formatação e erros de espaços em branco de um colaborador que utiliza Windows. Pois o Windows usa tanto o carácter "carriage-return" e um "carácter linefeed" para novas linhas em seus arquivos, enquanto os sistemas Mac e Linux usam apenas o carácter "linefeed":
 
 	> git config --global core.autocrlf input
 
-5. Opcionalemnte, podemos configurar um editor de texto padrão para ser usado quando o Git precisar que você escreva uma menssagem. Por padrão, o Git utiliza o editor do sistema, geralmente o VI ou VIM.
+5. Opcionalemnte, podemos configurar um editor de texto padrão para ser usado quando o Git precisar que você escreva uma menssagem. Por padrão, o Git utiliza o editor do sistema, geralmente o VI ou VIM:
 
 	> git config --global core.editor vi
 
