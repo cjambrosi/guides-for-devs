@@ -104,6 +104,24 @@ Instalando e Configurando o Sublime Text 3 no Ubuntu
 
 --------------------
 
+## Sublimte Text como editor de texto padrão do sistema
+
+- Acesse o seguinte diretório:
+
+	> cd ~/.local/share/applications/
+
+- Deve existir um arquivo chamado **sublime_text.desktop** ou semelhante (se não existir, crie-o). Abra o arquivo com permissão de super usuário:
+
+	> sudo nano sublime_text.desktop
+
+- Na linha **Exec=/opt/sublime_text/sublime_text** adicione o atributo **%F**, assim como na imagem a baixo:
+
+	![](https://github.com/CristianAmbrosi/tutoriais/blob/master/images/st-editor-padrao.png)
+
+- Salve o arquivo e verifique nas opções se já é possível escolher o Sublime Text como editor de texto padrão para seus arquivos.
+
+--------------------
+
 ## Lista de alguns plugins para usar no Sublimte Text
 
 - [EMMET](https://packagecontrol.io/packages/Emmet)
@@ -129,24 +147,6 @@ Instalando e Configurando o Sublime Text 3 no Ubuntu
 - [Side­BarEn­hance­ments](https://packagecontrol.io/packages/SideBarEnhancements)
 
 - [AutoFileName](https://packagecontrol.io/packages/AutoFileName)
-
---------------------
-
-## Sublimte Text como editor de texto padrão do sistema
-
-- Acesse o seguinte diretório:
-
-	> cd ~/.local/share/applications/
-
-- Deve existir um arquivo chamado **sublime_text.desktop** ou semelhante (se não existir, crie-o). Abra o arquivo com permissão de super usuário:
-
-	> sudo nano sublime_text.desktop
-
-- Na linha **Exec=/opt/sublime_text/sublime_text** adicione o atributo **%F**, assim como na imagem a baixo:
-
-	![](https://github.com/CristianAmbrosi/tutoriais/blob/master/images/st-editor-padrao.png)
-
-- Salve o arquivo e verifique nas opções se já é possível escolher o Sublime Text como editor de texto padrão para seus arquivos.
 
 --------------------
 
