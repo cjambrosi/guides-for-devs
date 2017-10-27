@@ -86,9 +86,10 @@ warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.`
 
 	`int main(){`<br />
 
-		`cout << "Hello World!" << endl;`<br />
+	&nbsp;&nbsp;&nbsp;&nbsp;`cout << "Hello World!" << endl;`<br />
 
-		`return 0;`<br />
+	&nbsp;&nbsp;&nbsp;&nbsp;`return 0;`<br />
+
 	`}`
 
 2. Para compilar o algoritmo e gerar um arquivo binário, digite o comando a baixo:
