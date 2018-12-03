@@ -225,8 +225,6 @@ Permite além reverter arquivos para um estado anterior, reverter um projeto int
 
 --------------------
 
---------------------
-
 ## O que foi instalado?!
 
 **libcurl4-gnutls-dev =>** Pacote que fornece os arquivos de desenvolvimento (includes, static library, páginas manuais) que permitem construir softwares que usem libcurl;
