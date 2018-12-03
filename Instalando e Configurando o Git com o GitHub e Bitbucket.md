@@ -169,6 +169,12 @@ Permite além reverter arquivos para um estado anterior, reverter um projeto int
 
 		> ssh -T git@github.com
 
+		- **Importante!** Se você estivar em algum lugar que utilize firewall, por exemplo na sua empresa, possivelmente você terá a porta padrão SSH que o Git utiliza bloqueada ou em uso. Para corrigir esse problema, siga o tutorial a baixo:
+
+			- **[Erro de Conexão do Git - Porta 22 Bloqueada]**(https://github.com/CristianAmbrosi/tutoriais/blob/master/Erro%20de%20Conex%C3%A3o%20-%20Porta%2022%20Bloqueada.md)
+
+		- **Corrigido, siga esse tutorial normalmente.**
+
 	- Será alertado que a autenticidade não pode ser estabelecida exibindo os dados e se queremos continuar conectados ou não. Exemplo:
 
 	    `The authenticity of host 'github.com (192.30.253.113)' can't be established.`<br>
