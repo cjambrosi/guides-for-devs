@@ -24,7 +24,7 @@ Permite além reverter arquivos para um estado anterior, reverter um projeto int
 
 2. A partir do repósitorio do Ubuntu
 
-	- Digitar o comando a baixo *(recomendado)*:
+	- Digite o comando a baixo *(recomendado)*:
 
 		> sudo apt-get install git
 
@@ -40,7 +40,7 @@ Permite além reverter arquivos para um estado anterior, reverter um projeto int
 
 ## Configurando o Git
 
-1. Instalar o utilitário de linha de comando **"xclip"**:
+1. Se preferir, instale o utilitário de linha de comando **xclip**:
 
 	> sudo apt-get install xclip
 
@@ -54,13 +54,36 @@ Permite além reverter arquivos para um estado anterior, reverter um projeto int
 
 	> git config --global color.ui true
 
-4. Para corrigir formatação e erros de espaços em branco de um colaborador que utiliza Windows. Pois o Windows usa tanto o carácter "carriage-return" e um "carácter linefeed" para novas linhas em seus arquivos, enquanto os sistemas Mac e Linux usam apenas o carácter "linefeed":
+4. Para corrigir formatação e erros de espaços em branco de um colaborador que utiliza Windows. Pois o Windows usa tanto o carácter **carriage-return** e um carácter **linefeed** para novas linhas em seus arquivos, enquanto os sistemas Mac e Linux usam apenas o carácter **linefeed**:
 
 	> git config --global core.autocrlf input
 
-5. Opcionalemnte, podemos configurar um editor de texto padrão para ser usado quando o Git precisar que você escreva uma menssagem. Por padrão, o Git utiliza o editor do sistema, geralmente o VI ou VIM:
+5. Opcionalemnte, podemos configurar um editor de texto padrão para ser usado quando o Git precisar que você escreva uma menssagem. 
 
-	> git config --global core.editor vi
+	- Opcinalmente utilizado o Visual Studio Code. Para configurá-lo corretamente, siga os comandos a baixo:
+
+		> git config --global core.editor "code --wait"
+
+		> git config --global -e
+
+		- Abra o arquivo de configuração global do Git e cole os comandos a baixo:
+
+		`[merge]`</br>
+			&nbsp;&nbsp;&nbsp;&nbsp;`tool = vscode`</br>
+		`[mergetool "vscode"]`</br>
+			&nbsp;&nbsp;&nbsp;&nbsp;`cmd = code --wait $MERGED`</br>
+		`[diff]`</br>
+			&nbsp;&nbsp;&nbsp;&nbsp;`tool = vscode`</br>
+		`[difftool "vscode"]`</br>
+			&nbsp;&nbsp;&nbsp;&nbsp;`cmd = code --wait --diff $LOCAL $REMOTE`</br>
+
+		- Exemplo:
+
+			![](https://github.com/CristianAmbrosi/tutoriais/blob/master/images/git-vscode-config.png)
+
+	- Por padrão, o Git utiliza o editor do sistema, geralmente o VI ou VIM:
+
+		> git config --global core.editor vi
 
 6. Verificar as configurações feitas até o momento:
 
@@ -78,24 +101,26 @@ Permite além reverter arquivos para um estado anterior, reverter um projeto int
 		-----------------|-------------|-------------
 		config           |  id_rsa.pub
 
-	- Agora devemos procurar por um par de arquivos chamados "algo" e "algo.pub", onde **algo** é normalmente "id_rsa" ou "id_dsa". O arquivo **.pub** é a sua chave pública, e o outro arquivo é a sua chave privada.
-	Se você não tem estes arquivos (ou não tem nem mesmo o diretório .ssh), você pode criá-los executando um comando chamado **"ssh-keygen"**, que é fornecido com o pacote SSH em sistemas Linux/Mac. Exemplo:
+	- Agora devemos procurar por um par de arquivos chamados, geralmente, de **id_rsa** ou **id_dsa**. O arquivo **.pub** é a sua chave pública, e o outro arquivo é a sua chave privada. 
+  
+	- Se você não possui esses arquivos (ou não possui nem mesmo o diretório .ssh), você pode criá-los executando um comando chamado **"ssh-keygen"**, que é fornecido com o pacote SSH em sistemas Linux/Mac. Exemplo:
 
-		> ssh-keygen
+		> ssh-keygen -C "seu_email@example.com"
 
-		- Opcionalmente, podemos adicionar um comentário na nossa chave SSH para lembrarmos o motivo dessa chave ou simplemente o seu e-Mail, ficando assim:
+		- O texto qu está em **" "** é opcional, pois assim podemos ter um comentário na chave SSH para lembrarmos o motivo dessa chave ou simplemente pode ser o seu e-Mail. Se preferir pode criar a chave sem cometário, usando somente o comando:
 
-			> ssh-keygen -C "seu_email@example.com"
+			> ssh-keygen
 
 		- Gerando o par de chave SSH pública/privada.
 
 			`Generating public/private rsa key pair.`
 
-		- Será perguntado qual é o caminho completo e nome do arquivo que conterá a chave. Pressionar **ENTER** para manter o padrão.
+		- Será perguntado qual o caminho completo e o nome do arquivo que conterá a chave. Pressionar **ENTER** para manter o padrão ou passe o caminho que preferir.
 
 			`Enter file in which to save the key (/home/user/.ssh/id_rsa):`
 
-		- Será perguntado para criarmos uma senha para a chave privada. **Essa senha é muito importante, pois se você perder não será possível recuperá-la, é preciso criar uma chave nova**. Inserir uma senha para a chave SSH e pressione **ENTER**.
+		- Será perguntado para criarmos uma senha para a chave privada. **Essa senha é muito importante, pois se você perder não será possível recuperá-la, é preciso criar uma chave nova**. 
+		Insira uma senha para a chave SSH e pressione **ENTER**. Ou somente pressione **ENTER** para não utilizar uma senha.
 
 			`Enter passphrase (empty for no passphrase):`
 
@@ -103,14 +128,14 @@ Permite além reverter arquivos para um estado anterior, reverter um projeto int
 
 			`Enter same passphrase again:`
 
-		- Criada a chave SSH, ficando semelhante a isso:
+		- Criada a chave SSH, a saída final será algo semelhante a isso:
 
 			`Your identification has been saved in /home/user/.ssh/id_rsa.`</br>
 			`Your public key has been saved in /home/user/.ssh/id_rsa.pub.`</br>
 			`The key fingerprint is:`</br>
 			`43:c5:5b:5f:b1:f1:50:43:ad:20:a6:92:6a:1f:9a:3a seu_email@example.com`
 
-		- Para verificar se realmente foram criados os dois arquivos digite o comando a baixo. Deverá listar os dois arquivos contendo a chave pública e privada.
+		- Para verificar se realmente foram criados os dois arquivos digite o comando a baixo no caminho escolhido. Deverá listar os dois arquivos contendo a chave pública e privada.
 
 			>  ls ~/.ssh
 
@@ -122,25 +147,25 @@ Permite além reverter arquivos para um estado anterior, reverter um projeto int
 
 1. Inserir no GitHub a chave SSH criada do Git
 
-	- Usaremos o programa *"xclip"* instalado anteriormente para copiar o conteúdo do arquivo que contem a chave pública.
+	- Se você instalou o programa **xclip** digite o comando a baixo para copiar o conteúdo do arquivo que contem a chave pública. Se não, abra em editor de texto e copie o conteúdo.
 
 		> xclip -sel clip ~/.ssh/id_rsa.pub
 
-	- Copiado o conteúdo do arquivo, acesse a sua conta no site do <i class="icon-provider-github"></i> **[GitHub](https://github.com/)** e acesse as configurações da sua conta.
+	- Copiado o conteúdo do arquivo, acesse a sua conta no site do <i class="icon-provider-github"></i> **[GitHub](https://github.com/)** e vá nas configurações da sua conta.
 
-	- Nos menus do lado esquerdo da tela, escolher a opção **"SSH and GPG keys"**.
+	- Nos menus do lado esquerdo da tela, escolha a opção **SSH and GPG keys**.
 
-	- Pada adicionar a chave SSH criada, escolha a opção **"New SSH key"**.
+	- Pada adicionar a chave SSH criada, escolha a opção **New SSH key**.
 
-	- Na opção **"Title"**, escolher um título para a chave, para que possamos identificá-la.
+	- Na opção **Title**, escolha um título para a chave, para que possamos identificá-la.
 
-	- E na opção **"Key"**, colar o conteúdo da chave pública copiado anteriormente.
+	- E na opção **Key**, cole o conteúdo da chave pública copiado anteriormente.
 
-	- Para finalizar, clicar em **"Add SSH Key"**, para adicionar a chave pública.
+	- Para finalizar, clique em **Add SSH Key**, para adicionar a chave pública.
 
 2. Testar a conexão da máquina com o GitHub
 
-	- Após configurar a chave, devemos testar a conexão com o GitHub usando o comando a baixo.
+	- Após configurar a chave, devemos testar a conexão com o GitHub usando o comando a baixo:
 
 		> ssh -T git@github.com
 
@@ -168,15 +193,15 @@ Permite além reverter arquivos para um estado anterior, reverter um projeto int
 
 1. Inserir no Bitbucket a chave SSH criada do Git
 
-	- Usaremos o programa *"xclip"* instalado anteriormente para copiar o conteúdo do arquivo que contem a chave pública.
+	- Se você instalou o programa **xclip** digite o comando a baixo para copiar o conteúdo do arquivo que contem a chave pública. Se não, abra em editor de texto e copie o conteúdo.
 
 		> xclip -sel clip ~/.ssh/id_rsa.pub
 
 	- Copiado o conteúdo do arquivo, acesse as configurações da sua conta no site <i class="icon-provider-github"></i> **[Bitbucket](https://bitbucket.org/)**.
 
-	- Na sessão de segurança, acesse o menu **"SSH keys"**. Clique no botão **"Add key"** para abrir a janela de inserção.
+	- Na sessão de segurança, acesse o menu **SSH keys**. Clique no botão **Add key** para abrir a janela de inserção.
 
-	- No campo **"Label"** de um nome para sua chave e no campo **"Key*"** cole a chave copiada anteriormente. Feito isso clique no botão **"Add key"** para adicioná-la.
+	- No campo **Label** de um nome para sua chave e no campo **Key** cole a chave copiada anteriormente. Feito isso clique no botão **Add key** para adicioná-la.
 
 2. Testar a conexão da máquina com o Bitbucket
 
@@ -200,6 +225,8 @@ Permite além reverter arquivos para um estado anterior, reverter um projeto int
 
 --------------------
 
+--------------------
+
 ## O que foi instalado?!
 
 **libcurl4-gnutls-dev =>** Pacote que fornece os arquivos de desenvolvimento (includes, static library, páginas manuais) que permitem construir softwares que usem libcurl;
@@ -214,7 +241,7 @@ Permite além reverter arquivos para um estado anterior, reverter um projeto int
 
 **Git =>** Ferramenta de Controle de Versão, criado por Linus Torvalds em 2005;
 
-**gitk =>** Basicamente uma ferramenta visual para o git log e ele aceita aproximadamente todas as opções de filtros que o git log aceita;
+**gitk =>** Basicamente uma ferramenta visual para o git log, ele aceita aproximadamente todas as opções de filtros que o git log aceita;
 
 **xclip =>** Utilitário de linha de comando. Pode ler dados de padrão ou um arquivo e colocá-lo em uma seleção X (área de transferência) para colar em outras aplicações X. xclip também pode imprimir uma seleção X para a saída padrão, que pode então ser redirecionada para um arquivo ou outro programa.
 
