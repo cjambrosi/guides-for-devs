@@ -60,13 +60,13 @@ Permite além reverter arquivos para um estado anterior, reverter um projeto int
 
 5. Opcionalemnte, podemos configurar um editor de texto padrão para ser usado quando o Git precisar que você escreva uma menssagem. 
 
-	- Opcinalmente utilizado o Visual Studio Code. Para configurá-lo corretamente, siga os comandos a baixo:
+	- Opcinalmente utilizo o Visual Studio Code. Para configurá-lo corretamente, siga os comandos a baixo:
 
 		> git config --global core.editor "code --wait"
 
-		> git config --global -e
-
 		- Abra o arquivo de configuração global do Git e cole os comandos a baixo:
+		
+		> git config --global -e
 
 		`[merge]`</br>
 			&nbsp;&nbsp;&nbsp;&nbsp;`tool = vscode`</br>
@@ -103,11 +103,11 @@ Permite além reverter arquivos para um estado anterior, reverter um projeto int
 
 	- Agora devemos procurar por um par de arquivos chamados, geralmente, de **id_rsa** ou **id_dsa**. O arquivo **.pub** é a sua chave pública, e o outro arquivo é a sua chave privada. 
   
-	- Se você não possui esses arquivos (ou não possui nem mesmo o diretório .ssh), você pode criá-los executando um comando chamado **"ssh-keygen"**, que é fornecido com o pacote SSH em sistemas Linux/Mac. Exemplo:
+	- Se você não possui esses arquivos (ou não possui nem mesmo o diretório .ssh), você pode criá-los executando um comando chamado **ssh-keygen**, que é fornecido com o pacote SSH em sistemas Linux/Mac. Exemplo:
 
 		> ssh-keygen -C "seu_email@example.com"
 
-		- O texto qu está em **" "** é opcional, pois assim podemos ter um comentário na chave SSH para lembrarmos o motivo dessa chave ou simplemente pode ser o seu e-Mail. Se preferir pode criar a chave sem cometário, usando somente o comando:
+		- O texto que está em **" "** é opcional, pois assim podemos ter um comentário na chave SSH para lembrarmos o motivo dessa chave ou simplemente pode ser o seu e-Mail. Se preferir pode criar a chave sem cometário, usando somente o comando:
 
 			> ssh-keygen
 
@@ -147,7 +147,7 @@ Permite além reverter arquivos para um estado anterior, reverter um projeto int
 
 1. Inserir no GitHub a chave SSH criada do Git
 
-	- Se você instalou o programa **xclip** digite o comando a baixo para copiar o conteúdo do arquivo que contem a chave pública. Se não, abra em editor de texto e copie o conteúdo.
+	- Se você instalou o programa **xclip** digite o comando a baixo para copiar o conteúdo do arquivo que contem a chave pública. Se não, abra em um editor de texto e copie o conteúdo.
 
 		> xclip -sel clip ~/.ssh/id_rsa.pub
 
@@ -155,7 +155,7 @@ Permite além reverter arquivos para um estado anterior, reverter um projeto int
 
 	- Nos menus do lado esquerdo da tela, escolha a opção **SSH and GPG keys**.
 
-	- Pada adicionar a chave SSH criada, escolha a opção **New SSH key**.
+	- Para adicionar a chave SSH criada, escolha a opção **New SSH key**.
 
 	- Na opção **Title**, escolha um título para a chave, para que possamos identificá-la.
 
