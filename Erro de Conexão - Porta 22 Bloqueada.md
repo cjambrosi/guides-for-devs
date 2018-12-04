@@ -15,7 +15,17 @@ Erro de Conexão do Git - Porta 22 Bloqueada
 
 - Antes de tentar corrigir o problema, vamos testar se alterando a porta do servidor HTTPS (443) será possível fazer conexão. Para isso, use o comando a baixo:
 
-    > ssh -T -p 443 git@ssh.github.com
+    - GitHub:
+
+        > ssh -T -p 443 git@ssh.github.com
+
+    - Bitbucket
+
+        > ssh -T -p 443 git@bitbucket.org
+
+    - GitLab
+
+        > ssh -T -p 443 git@gitlab.com
 
 - Se a resposta for algo semelhante a isso, quer dizer que é possível fazer conexão SSH alterando a porta do servidor HTTPS.
 
@@ -25,7 +35,7 @@ Erro de Conexão do Git - Porta 22 Bloqueada
 
 ## Corrigindo para o GitHub
 
-1. Abra o arquivo de configuração do Git com o comando a baixo, utilizando editor de texto (geralmente está nesse caminho):
+1. Abra o arquivo de configuração do Git com o comando a baixo, utilizando um editor de texto (geralmente está nesse caminho):
 
     > code ~/.ssh/config
 
@@ -39,7 +49,7 @@ Erro de Conexão do Git - Porta 22 Bloqueada
 
 ## Corrigindo para o Bitbucket
 
-1. Abra o arquivo de configuração do Git com o comando a baixo, utilizando editor de texto (geralmente está nesse caminho):
+1. Abra o arquivo de configuração do Git com o comando a baixo, utilizando um editor de texto (geralmente está nesse caminho):
 
     > code ~/.ssh/config
 
@@ -53,7 +63,7 @@ Erro de Conexão do Git - Porta 22 Bloqueada
 
 ## Corrigindo para o GitLab
 
-1. Abra o arquivo de configuração do Git com o comando a baixo, utilizando editor de texto (geralmente está nesse caminho):
+1. Abra o arquivo de configuração do Git com o comando a baixo, utilizando um editor de texto (geralmente está nesse caminho):
 
     > code ~/.ssh/config
 
