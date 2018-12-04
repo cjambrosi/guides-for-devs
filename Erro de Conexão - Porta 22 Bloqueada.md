@@ -33,7 +33,7 @@ Erro de Conexão do Git - Porta 22 Bloqueada
 
 --------------------
 
-## Corrigindo para o GitHub
+## Correção para o GitHub
 
 1. Abra o arquivo de configuração do Git com o comando a baixo, utilizando um editor de texto (geralmente está nesse caminho):
 
@@ -47,7 +47,7 @@ Erro de Conexão do Git - Porta 22 Bloqueada
 
 --------------------
 
-## Corrigindo para o Bitbucket
+## Correção para o Bitbucket
 
 1. Abra o arquivo de configuração do Git com o comando a baixo, utilizando um editor de texto (geralmente está nesse caminho):
 
@@ -61,7 +61,7 @@ Erro de Conexão do Git - Porta 22 Bloqueada
 
 --------------------
 
-## Corrigindo para o GitLab
+## Correção para o GitLab
 
 1. Abra o arquivo de configuração do Git com o comando a baixo, utilizando um editor de texto (geralmente está nesse caminho):
 
