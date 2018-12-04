@@ -3,7 +3,9 @@ Erro de Conexão do Git - Porta 22 Bloqueada
 
 --------------------
 
-- Na maioria das vezes optamos por utilizar conexão SSH para clonar repositórios, ao invés de usar a clonagem por [HTTPS](https://help.github.com/articles/caching-your-github-password-in-git/). Mas alguns firewalls e a maioria dos servidores proxy podem interferir na conexão, bloqueado a porta utilizada, por exemplo.
+- Na maioria das vezes optamos por utilizar conexão SSH para clonar repositórios, ao invés de usar a clonagem por [HTTPS](https://help.github.com/articles/caching-your-github-password-in-git/). Mas alguns firewalls e a maioria dos servidores Proxy podem interferir na conexão, bloqueado a porta utilizada, por exemplo:
+
+    ![](https://github.com/CristianAmbrosi/tutoriais/blob/master/images/error-port22-git.png)
 
 - Para resolver o problema, alteramos a porta padrão que o Git utiliza, especificando para a porta 443 do servidor HTTPS.
 
