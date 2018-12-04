@@ -32,7 +32,7 @@ Permite além reverter arquivos para um estado anterior, reverter um projeto int
 
 		> sudo apt-get install git-all
 
-	- Instalar visualizador grágico do histórico de todos os commits feitos:
+	- Instale o visualizador grágico do histórico de todos os commits feitos:
 
 		> sudo apt-get install gitk
 
@@ -54,11 +54,11 @@ Permite além reverter arquivos para um estado anterior, reverter um projeto int
 
 	> git config --global color.ui true
 
-4. Para corrigir formatação e erros de espaços em branco de um colaborador que utiliza Windows. Pois o Windows usa tanto o carácter **carriage-return** e um carácter **linefeed** para novas linhas em seus arquivos, enquanto os sistemas Mac e Linux usam apenas o carácter **linefeed**:
+4. Para corrigir formatação e erros de espaços em branco de um colaborador que utiliza Windows. Pois o Windows usa tanto o caracter **carriage-return** e um caracter **linefeed** para novas linhas em seus arquivos, enquanto os sistemas Mac e Linux usam apenas o caracter **linefeed**:
 
 	> git config --global core.autocrlf input
 
-5. Opcionalemnte, podemos configurar um editor de texto padrão para ser usado quando o Git precisar que você escreva uma menssagem. 
+5. Podemos configurar um editor de texto padrão para ser usado quando o Git precisar que você escreva uma menssagem. 
 
 	- Opcinalmente utilizo o Visual Studio Code. Para configurá-lo corretamente, siga os comandos a baixo:
 
@@ -85,7 +85,7 @@ Permite além reverter arquivos para um estado anterior, reverter um projeto int
 
 		> git config --global core.editor vi
 
-6. Verificar as configurações feitas até o momento:
+6. Para verificar as configurações feitas até o momento:
 
 	> git config --list
 
@@ -97,9 +97,9 @@ Permite além reverter arquivos para um estado anterior, reverter um projeto int
 
 		> ls
 
-		authorized_keys2 |  id_rsa 	   | known_hosts
-		-----------------|-------------|-------------
-		config           |  id_rsa.pub
+	| authorized_keys2 | id_rsa         | known_hosts |
+	| ---------------- | -------------- | ----------- |
+	| **config**       | **id_rsa.pub** |
 
 	- Agora devemos procurar por um par de arquivos chamados, geralmente, de **id_rsa** ou **id_dsa**. O arquivo **.pub** é a sua chave pública, e o outro arquivo é a sua chave privada. 
   
@@ -169,7 +169,7 @@ Permite além reverter arquivos para um estado anterior, reverter um projeto int
 
 		> ssh -T git@github.com
 
-		- **Importante!** Se você estivar em algum lugar que utilize firewall, por exemplo na sua empresa, possivelmente você terá a porta padrão SSH que o Git utiliza bloqueada ou em uso. Para corrigir esse problema, siga o tutorial a baixo:
+		- **Importante!** Se você estivar em algum lugar que utilize firewall ou servidor Proxy, por exemplo na sua empresa, possivelmente você terá a porta padrão SSH que o Git utiliza bloqueada ou em uso. Para corrigir esse problema, siga o tutorial a baixo:
 
 			- **[Erro de Conexão do Git - Porta 22 Bloqueada](https://github.com/CristianAmbrosi/tutoriais/blob/master/Erro%20de%20Conex%C3%A3o%20-%20Porta%2022%20Bloqueada.md)**
 
@@ -215,6 +215,12 @@ Permite além reverter arquivos para um estado anterior, reverter um projeto int
 
 		> ssh -T git@bitbucket.org
 
+		- **Importante!** Se você estivar em algum lugar que utilize firewall ou servidor Proxy, por exemplo na sua empresa, possivelmente você terá a porta padrão SSH que o Git utiliza bloqueada ou em uso. Para corrigir esse problema, siga o tutorial a baixo:
+
+			- **[Erro de Conexão do Git - Porta 22 Bloqueada](https://github.com/CristianAmbrosi/tutoriais/blob/master/Erro%20de%20Conex%C3%A3o%20-%20Porta%2022%20Bloqueada.md)**
+
+		- **Corrigido, siga esse tutorial normalmente.**
+
 	-
 
 	- Receberá um alerta dizendo que será adicionado permanentemente a lista de hosts conhecidos, pedindo a senha da chave SSH escolhida anteriormente. Exemplo:
@@ -238,8 +244,6 @@ Permite além reverter arquivos para um estado anterior, reverter um projeto int
 **libexpat1-dev =>** Pacote que contém o arquivo de cabeçalho e bibliotecas de desenvolvimento de expat, a biblioteca C para analisar XML. Isso significa que você registrar manipuladores com o analisador antes de iniciar a análise. Esses manipuladores são chamados quando o analisador descobre as estruturas associadas no documento que está sendo analisado;
 
 **gettext =>** Interessante para os autores e mantenedores de outros pacotes ou programas que eles querem ver internacionalizados;
-
-**libz-dev =>** Não encontrado;
 
 **libssl-dev =>** Este pacote é parte da implementação do projeto OpenSSL do SSL e TLS, protocolos de criptografia para comunicação segura através da Internet. Ele contém bibliotecas de desenvolvimento, arquivos de cabeçalhos e manpages para libssl e libcrypto;
 
