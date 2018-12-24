@@ -81,10 +81,6 @@ Permite além reverter arquivos para um estado anterior, reverter um projeto int
 
 			![](https://github.com/CristianAmbrosi/tutoriais/blob/master/images/git-vscode-config.png)
 
-	- Por padrão, o Git utiliza o editor do sistema, geralmente o VI ou VIM:
-
-		> git config --global core.editor vi
-
 6. Para verificar as configurações feitas até o momento:
 
 	> git config --list
@@ -169,7 +165,7 @@ Permite além reverter arquivos para um estado anterior, reverter um projeto int
 
 		> ssh -T git@github.com
 
-		- **Importante!** Se você estivar em algum lugar que utilize firewall ou servidor Proxy, por exemplo na sua empresa, possivelmente você terá a porta padrão SSH que o Git utiliza bloqueada ou em uso. Para corrigir esse problema, siga o tutorial a baixo:
+		- **Importante!** Se você estiver em algum lugar que utilize firewall ou servidor Proxy, por exemplo na sua empresa, possivelmente você terá a porta padrão SSH que o Git utiliza bloqueada ou em uso. Para corrigir esse problema, siga o tutorial a baixo:
 
 			- **[Erro de Conexão do Git - Porta 22 Bloqueada](https://github.com/CristianAmbrosi/tutoriais/blob/master/Erro%20de%20Conex%C3%A3o%20-%20Porta%2022%20Bloqueada.md)**
 
