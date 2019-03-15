@@ -78,7 +78,7 @@ Instalando e Configurando Ambiente de Desenvolvimento PHP | Pilha: Apache, MySQL
 
 		> sudo service apache2 restart
 
-	- Agora iremos adicionar uma diretiva global chamada **ServerName** para supremir uma mesnagem de aviso do Apache. Então abra o arquivo de configuração principal do Apache:
+	- Agora iremos adicionar uma diretiva global chamada **ServerName** para supremir uma mensagem de aviso do Apache. Então abra o arquivo de configuração principal do Apache:
 
 		> sudo nano /etc/apache2/apache2.conf
 
