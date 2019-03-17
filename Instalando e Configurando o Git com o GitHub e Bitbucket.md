@@ -16,49 +16,45 @@ Permite além reverter arquivos para um estado anterior, reverter um projeto int
 
 ## Instalando
 
-1. Antes de tudo, atualize os repositórios e gatilhos do Ubuntu:
+1. Antes de tudo, atualize os repositórios e gatilhos do sistema:
 
-	> sudo apt-get update
+	> sudo apt update
 
-	> sudo apt-get upgrade
+	> sudo apt upgrade
 
-2. A partir do repósitorio do Ubuntu
+2. A partir do repósitorio do padrão
 
 	- Digite o comando a baixo *(recomendado)*:
 
-		> sudo apt-get install git
+		> sudo apt install git
 
 		- ou
 
-		> sudo apt-get install git-all
+		> sudo apt install git-all
 
 	- Instale o visualizador grágico do histórico de todos os commits feitos:
 
-		> sudo apt-get install gitk
+		> sudo apt install gitk
 
 --------------------
 
 ## Configurando o Git
 
-1. Se preferir, instale o utilitário de linha de comando **xclip**:
-
-	> sudo apt-get install xclip
-
-2. Configurando nossa identidade:
+1. Configurando nossa identidade:
 
 	> git config --global user.name "Seu Nome"
 
 	> git config --global user.email seu_email@example.com
 
-3. Habilitar cor nas mensagens de saídas do Git para uma melhor análise:
+2. Habilitar cor nas mensagens de saídas do Git para uma melhor análise:
 
 	> git config --global color.ui true
 
-4. Para corrigir formatação e erros de espaços em branco de um colaborador que utiliza Windows. Pois o Windows usa tanto o caracter **carriage-return** e um caracter **linefeed** para novas linhas em seus arquivos, enquanto os sistemas Mac e Linux usam apenas o caracter **linefeed**:
+3. Para corrigir formatação e erros de espaços em branco de um colaborador que utiliza Windows. O Windows usa tanto o caracter **carriage-return** e um caracter **linefeed** para novas linhas em seus arquivos, enquanto os sistemas Mac e Linux usam apenas o caracter **linefeed**:
 
 	> git config --global core.autocrlf input
 
-5. Podemos configurar um editor de texto padrão para ser usado quando o Git precisar que você escreva uma menssagem. 
+4. Podemos configurar um editor de texto padrão, para ser usado quando o Git precisar que você escreva uma menssagem. 
 
 	- Opcinalmente utilizo o Visual Studio Code. Para configurá-lo corretamente, siga os comandos a baixo:
 
@@ -81,17 +77,15 @@ Permite além reverter arquivos para um estado anterior, reverter um projeto int
 
 			![](https://github.com/CristianAmbrosi/tutoriais/blob/master/images/git-vscode-config.png)
 
-6. Para verificar as configurações feitas até o momento:
+5. Para verificar as configurações feitas até o momento:
 
 	> git config --list
 
-7. Gerando a Chave SSH (Protocolo - Secure Shell)
+6. Gerando a Chave SSH (Protocolo - Secure Shell)
 
 	- Primeiro, você deve checar para ter certeza que você ainda não possui uma chave SSH. Por padrão, as chaves SSH de um usuário são armazenadas no diretório **~/.ssh**. Exemplo:
 
-		> cd ~/.ssh
-
-		> ls
+		> ls ~/.ssh
 
 	| authorized_keys2 | id_rsa         | known_hosts |
 	| ---------------- | -------------- | ----------- |
@@ -99,7 +93,7 @@ Permite além reverter arquivos para um estado anterior, reverter um projeto int
 
 	- Agora devemos procurar por um par de arquivos chamados, geralmente, de **id_rsa** ou **id_dsa**. O arquivo **.pub** é a sua chave pública, e o outro arquivo é a sua chave privada. 
   
-	- Se você não possui esses arquivos (ou não possui nem mesmo o diretório .ssh), você pode criá-los executando um comando chamado **ssh-keygen**, que é fornecido com o pacote SSH em sistemas Linux/Mac. Exemplo:
+	- Se você não possui esses arquivos (ou não possui nem mesmo o diretório .ssh), você pode gerá-los executando um comando chamado **ssh-keygen**, que é fornecido com o pacote SSH em sistemas Linux/Mac. Exemplo:
 
 		> ssh-keygen -C "seu_email@example.com"
 
@@ -111,7 +105,7 @@ Permite além reverter arquivos para um estado anterior, reverter um projeto int
 
 			`Generating public/private rsa key pair.`
 
-		- Será perguntado qual o caminho completo e o nome do arquivo que conterá a chave. Pressionar **ENTER** para manter o padrão ou passe o caminho que preferir.
+		- Será perguntado qual o caminho completo e o nome do arquivo que conterá a chave. Pressione **ENTER** para manter o padrão ou passe o caminho que preferir.
 
 			`Enter file in which to save the key (/home/user/.ssh/id_rsa):`
 
@@ -143,11 +137,11 @@ Permite além reverter arquivos para um estado anterior, reverter um projeto int
 
 1. Inserir no GitHub a chave SSH criada do Git
 
-	- Se você instalou o programa **xclip** digite o comando a baixo para copiar o conteúdo do arquivo que contem a chave pública. Se não, abra em um editor de texto e copie o conteúdo.
+	- Se preferir, instale o utilitário de linha de comando **xclip**. Digite o comando a baixo para copiar o conteúdo do arquivo que contem a chave pública. Se não, abra em um editor de texto e copie o conteúdo.
 
 		> xclip -sel clip ~/.ssh/id_rsa.pub
 
-	- Copiado o conteúdo do arquivo, acesse a sua conta no site do <i class="icon-provider-github"></i> **[GitHub](https://github.com/)** e vá nas configurações da sua conta.
+	- Com o conteúdo do arquivo copiado, acesse a sua conta no site do <i class="icon-provider-github"></i> **[GitHub](https://github.com/)** e vá nas configurações da sua conta.
 
 	- Nos menus do lado esquerdo da tela, escolha a opção **SSH and GPG keys**.
 
@@ -195,7 +189,7 @@ Permite além reverter arquivos para um estado anterior, reverter um projeto int
 
 1. Inserir no Bitbucket a chave SSH criada do Git
 
-	- Se você instalou o programa **xclip** digite o comando a baixo para copiar o conteúdo do arquivo que contem a chave pública. Se não, abra em editor de texto e copie o conteúdo.
+	- Se preferir, instale o utilitário de linha de comando **xclip**. Digite o comando a baixo para copiar o conteúdo do arquivo que contem a chave pública. Se não, abra em um editor de texto e copie o conteúdo.
 
 		> xclip -sel clip ~/.ssh/id_rsa.pub
 
@@ -216,8 +210,6 @@ Permite além reverter arquivos para um estado anterior, reverter um projeto int
 			- **[Erro de Conexão do Git - Porta 22 Bloqueada](https://github.com/CristianAmbrosi/tutoriais/blob/master/Erro%20de%20Conex%C3%A3o%20-%20Porta%2022%20Bloqueada.md)**
 
 		- **Corrigido, siga esse tutorial normalmente.**
-
-	-
 
 	- Receberá um alerta dizendo que será adicionado permanentemente a lista de hosts conhecidos, pedindo a senha da chave SSH escolhida anteriormente. Exemplo:
 
