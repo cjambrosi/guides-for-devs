@@ -13,7 +13,7 @@ Node.js é uma plataforma para desenvolvimento de aplicações server-side (que 
 
 ## Instalação
 
-1. Antes de tudo, atualize os repositórios e gatilhos do Ubuntu:
+1. Antes de tudo, atualize os repositórios e o sistema:
 
 	> sudo apt-get update
 

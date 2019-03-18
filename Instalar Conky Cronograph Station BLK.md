@@ -9,7 +9,7 @@ Instalar Conky Cronograph Station BLK 8.4 Modificado no Ubuntu
 
 --------------------
 
-- Antes de tudo, atualize os repositórios e gatilhos do Ubuntu:
+- Antes de tudo, atualize os repositórios e o sistema:
 
 	> sudo apt-get update
 

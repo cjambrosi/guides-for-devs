@@ -16,7 +16,7 @@ Permite além reverter arquivos para um estado anterior, reverter um projeto int
 
 ## Instalando
 
-1. Antes de tudo, atualize os repositórios e gatilhos do sistema:
+1. Antes de tudo, atualize os repositórios e o sistema:
 
 	> sudo apt update
 

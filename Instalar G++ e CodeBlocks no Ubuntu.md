@@ -3,7 +3,7 @@ Instalar o compilador G++ e Code::Blocks no Ubuntu, para compilar C++
 
 --------------------
 
-## Antes de tudo, atualizar os repositórios e gatilhos do Ubuntu:
+## Antes de tudo, atualize os repositórios e o sistema:
 
 > sudo apt-get update
 

@@ -3,7 +3,7 @@ Instalando e Configurando Ambiente de Desenvolvimento PHP | Pilha: Apache, MySQL
 
 --------------------
 
-## Antes de tudo, atualize os repositórios e gatilhos do sistema:
+## Antes de tudo, atualize os repositórios e o sistema:
 
 > sudo apt update
 

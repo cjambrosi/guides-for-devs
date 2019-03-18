@@ -7,6 +7,12 @@ Instalar Netbeans no Ubuntu
 
 --------------------
 
+## Antes de tudo, atualize os repositórios e o sistema:
+
+  > sudo apt update
+
+  > sudo apt upgrade
+
 ## Baixando e Executando o instalador:
 
 1. Acessar o site do Netbeans.org, ir na página de downloads e baixar a versão que desejar.

@@ -13,7 +13,7 @@ Instalar as versões do PHP 5.6 e PHP 7.1 juntas no Ubuntu >= 14.04
 
 --------------------
 
-## Antes de tudo, atualize os repositórios e gatilhos do Ubuntu:
+## Antes de tudo, atualize os repositórios e o sistema:
 
 > sudo apt-get update
 

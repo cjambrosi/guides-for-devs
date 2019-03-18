@@ -5,7 +5,7 @@ Instalando e Configurando o Composer no Linux (Ubuntu)
 
 ## Instalar
 
-1. Antes de tudo, atualize os repositórios e gatilhos do Ubuntu:
+1. Antes de tudo, atualize os repositórios e o sistema:
 
 	> sudo apt-get update
 
