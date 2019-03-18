@@ -1,13 +1,13 @@
-Instalando e Configurando Ambiente de Desenvolvimento PHP | Pilha: Apache, MySQL/Postgres, PHP 7.1 | Ubuntu >= 16.04
+Instalando e Configurando Ambiente de Desenvolvimento PHP | Pilha: Apache, MySQL/Postgres, PHP 7
 ===============================================
 
 --------------------
 
-## Antes de tudo, atualize os repositórios e gatilhos do Ubuntu:
+## Antes de tudo, atualize os repositórios e gatilhos do sistema:
 
-> sudo apt-get update
+> sudo apt update
 
-> sudo apt-get upgrade
+> sudo apt upgrade
 
 --------------------
 
@@ -15,12 +15,12 @@ Instalando e Configurando Ambiente de Desenvolvimento PHP | Pilha: Apache, MySQL
 
 1. Instalando:
 
-	> sudo apt-get install apache2 apache2-doc apache2-utils
+	> sudo apt install apache2 apache2-doc apache2-utils
 
 
 2. Configurando:
 
-	- Quando uma pasta é requisitada, o Apache olha/busca primeiramente um arquivo chamado **"index.html"**, mas queremos que ele dê preferência aos arquivos PHP, então faremos o Apache olhar/buscar um arquivo **"index.php"**, para isso basta configurarmos o arquivo **"dir.conf"** com privilégios de root:
+	- Quando uma pasta é requisitada, o Apache busca primeiramente um arquivo chamado **"index.html"**, mas queremos que ele dê preferência aos arquivos PHP, então faremos o Apache buscar um arquivo **"index.php"**, para isso basta configurar o arquivo **"dir.conf"** com privilégios de root:
 
 		> sudo nano /etc/apache2/mods-enabled/dir.conf
 
@@ -50,11 +50,18 @@ Instalando e Configurando Ambiente de Desenvolvimento PHP | Pilha: Apache, MySQL
 
 		> sudo a2enmod rewrite
 
-	- Feito isso, reinicie seu apache:
+		- Saída:
+			```
+			Enabling module rewrite.
+			To activate the new configuration, you need to run:
+				systemctl restart apache2
+			```
+
+	- Feito isso, reinicie seu Apache:
 
 		> sudo service apache2 restart
 
-	- O módulo **rewrite** foi ativado, mas o apache não configurou nada além da linha que ativa o módulo no arquivo de configuração do mesmo, deixando assim por conta de você editar manualmente os arquivos dos sites padrões. Acesse:
+	- O módulo **rewrite** foi ativado, mas o Apache não configurou nada além da linha que ativa o módulo no arquivo de configuração do mesmo, deixando assim por conta de você editar manualmente os arquivos dos sites padrões. Acesse:
 
 		> sudo nano /etc/apache2/sites-available/000-default.conf
 
@@ -106,9 +113,9 @@ Instalando e Configurando Ambiente de Desenvolvimento PHP | Pilha: Apache, MySQL
 
 1. Instalando:
 
-	> sudo apt-get update
+	> sudo apt update
 
-	> sudo apt-get install mysql-server
+	> sudo apt install mysql-server
 
 	- Nova palavra-passe para o utilizador **"root"** de MySQL: </br>
 		`<Inserir senha escolhida>`
@@ -171,11 +178,11 @@ Instalando e Configurando Ambiente de Desenvolvimento PHP | Pilha: Apache, MySQL
 
 1. Instalando:
 
-	> sudo apt-get update
+	> sudo apt update
 
-	> sudo apt-get install postgresql postgresql-contrib
+	> sudo apt install postgresql postgresql-contrib
 
-	> sudo apt-get install pgadmin3
+	> sudo apt install pgadmin3
 
 	- Consultar versão instalada:
 
@@ -236,9 +243,9 @@ Instalando e Configurando Ambiente de Desenvolvimento PHP | Pilha: Apache, MySQL
 
 	- **MySQL:**
 
-		> sudo apt-get update
+		> sudo apt update
 
-		> sudo apt-get install php7.1 php7.1-cli php7.1-intl php7.1-mcrypt php7.1-opcache php7.1-readline libapache2-mod-php7.1 php7.1-mbstring php7.1-json php7.1-curl php-imagick php7.1-mysql phpmyadmin
+		> sudo apt install php7.1 php7.1-cli php7.1-intl php7.1-mcrypt php7.1-opcache php7.1-readline libapache2-mod-php7.1 php7.1-mbstring php7.1-json php7.1-curl php-imagick php7.1-mysql phpmyadmin
 
 		- Servidor web a configurar automaticamente: </br>
 			`[*] Apache2` </br>
@@ -269,9 +276,9 @@ Instalando e Configurando Ambiente de Desenvolvimento PHP | Pilha: Apache, MySQL
 
 	- **PostgreSQL:**
 
-		> sudo apt-get update
+		> sudo apt update
 
-		> sudo apt-get install php7.1 php7.1-cli php7.1-intl php7.1-mcrypt php7.1-opcache php7.1-readline libapache2-mod-php7.1 php7.1-mbstring php7.1-json php7.1-curl php-imagick php7.1-pgsql
+		> sudo apt install php7.1 php7.1-cli php7.1-intl php7.1-mcrypt php7.1-opcache php7.1-readline libapache2-mod-php7.1 php7.1-mbstring php7.1-json php7.1-curl php-imagick php7.1-pgsql
 
 
 2. Configurando:
@@ -335,7 +342,7 @@ Geralmente, esse é o endereço que você utiliza para se conectar ao seu servid
 
 	- Um método alternativo é usar o utilitário **curl** para entrar em contato com algum meio externo para lhe dizer como ele vê o seu servidor. Você pode fazer isso perguntando a um servidor específico qual é o seu IP:
 
-		> sudo apt-get install curl
+		> sudo apt install curl
 
 		> curl http://icanhazip.com
 
