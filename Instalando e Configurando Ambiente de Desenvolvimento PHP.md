@@ -54,7 +54,7 @@ Instalando e Configurando Ambiente de Desenvolvimento PHP | Pilha: Apache, MySQL
 			```
 			Enabling module rewrite.
 			To activate the new configuration, you need to run:
-				systemctl restart apache2
+			   systemctl restart apache2
 			```
 
 	- Feito isso, reinicie seu Apache:
