@@ -91,13 +91,15 @@ Instalando e Configurando Ambiente de Desenvolvimento PHP | Pilha: Apache, MySQL
 
 	- Dentro do arquivo, na parte inferior, adicione a diretiva **ServerName**, apontando para o seu nome do domínio primário ou o IP público do seu servidor. [(Se não souber como descobrir o IP do seu servidor, vá para o final do tutorial)](#encontrando-endereço-do-ip-público-do-seu-servidor).
 
-		`. . .`</br>
-		`ServerName nome_de_domínio_do_servidor_ou_IP`
-
-		ou
-
-		`. . .`</br>
-		`ServerName localhost
+		```
+		. . .
+		ServerName nome_de_domínio_do_servidor_ou_IP
+		```
+		- ou
+		```
+		. . .</br>
+		ServerName localhost
+		```
 
 	- Salve e feche o arquivo. Depois verifique erros de sintaxe com o comando:
 
