@@ -66,17 +66,18 @@ Instalando e Configurando Ambiente de Desenvolvimento PHP | Pilha: Apache, MySQL
 		> sudo nano /etc/apache2/sites-available/000-default.conf
 
 		- Insira as linhas de código a baixo e salve:
-
-			`<Directory />`</br>
-			    `Options FollowSymLinks`</br>
-			   ` AllowOverride All`</br>
-			`</Directory>`</br>
-			`<Directory /var/www>`</br>
-			    `Options Indexes FollowSymLinks MultiViews`</br>
-			    `AllowOverride All`</br>
-			    `Order Allow,Deny`</br>
-			    `Allow from all`</br>
-			`</Directory>`
+			```
+			<Directory />
+			   Options FollowSymLinks
+			   AllowOverride All
+			</Directory>
+			<Directory /var/www>
+			    Options Indexes FollowSymLinks MultiViews
+			    AllowOverride All`</br>
+			    Order Allow,Deny
+			    Allow from all
+			</Directory>
+			```
 
 		- Exemplo: </br>
 			![](https://github.com/CristianAmbrosi/tutoriais/blob/master/images/exemplo-c%C3%B3digo-m%C3%B3dulo-rewrite.png)
@@ -97,7 +98,7 @@ Instalando e Configurando Ambiente de Desenvolvimento PHP | Pilha: Apache, MySQL
 		```
 		- ou
 		```
-		. . .</br>
+		. . .
 		ServerName localhost
 		```
 
