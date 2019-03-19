@@ -123,13 +123,7 @@ Instalando e Configurando Ambiente de Desenvolvimento PHP | Pilha: Apache, MySQL
 
 	> sudo apt update
 
-	> sudo apt install mysql-server
-
-	- Nova palavra-passe para o utilizador **"root"** de MySQL: </br>
-		`<Inserir senha escolhida>`
-
-	- Repita a palavra-passe para o utilizador **"root"** de MySQL: </br>
-		`<Repetir senha escolhida>`
+	> sudo apt install mariadb-server
 
 2. Configurando:
 
@@ -141,8 +135,7 @@ Instalando e Configurando Ambiente de Desenvolvimento PHP | Pilha: Apache, MySQL
 
 		> mysql> Ctrl + d
 
-	- *(OPCIONAL)* Quando a instalação estiver concluída, precisaremos executar alguns comandos adicionais para ter nosso ambiente MySQL configurado de forma segura.
-	Iremos executar um script simples de segurança que vai remover alguns padrões perigosos e bloquear um pouco o acesso ao nosso sistema de banco de dados. Inicie o script interativo executando:
+	- Quando a instalação estiver concluída, é preciso executar alguns comandos adicionais para ter nosso ambiente MariaDB configurado de forma segura. Isso vai remover alguns padrões perigosos e bloquear um pouco o acesso ao nosso sistema de banco de dados. Inicie o script interativo executando:
 
 		- *(IMPORTANTE)* A habilitação dessa funcionalidade é algo que deve ser avaliado. Se habilitado, senhas que não seguem o critério especificado (senha root por exmplo) serão rejeitadas pelo MySQL com um erro. Isso irá causar problemas se você utilizar uma senha fraca juntamente com software que configura automaticamente as credenciais de usuário do MySQL, tais como os pacotes do Ubuntu para o phpMyAdmin. É seguro deixar a validação desativada, mas você deve sempre utilizar senhas fortes e exclusivas para as credenciais do banco de dados.
 		</br></br>
@@ -150,6 +143,18 @@ Instalando e Configurando Ambiente de Desenvolvimento PHP | Pilha: Apache, MySQL
 		> sudo mysql_secure_installation
 
 	- Siga os seguintes passos para a configuração:
+
+		- In order to log into MariaDB to secure it, we'll need the current
+			password for the root user.  If you've just installed MariaDB, and
+			you haven't set the root password yet, the password will be blank,
+			so you should just press enter here.
+			</br></br>
+			Enter current password for root (enter for none):
+
+		- OK, successfully used password, moving on...</br>
+			Setting the root password ensures that nobody can log into the MariaDB root user without the proper authorisation.
+			</br></br>
+			Set root password? [Y/n] 
 
 		- Enter password for user root: `<sua senha escolhida para o BD MySQL>`</br>
 
