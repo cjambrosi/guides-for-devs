@@ -127,11 +127,13 @@ Instalando e Configurando Ambiente de Desenvolvimento PHP
 
 	> sudo apt install mariadb-server
 
-	- O seriviço do banco deve ser iniciado automaticamente. Use o comando a baixa para verificar:
+	- Na instação, não será mais solicitado que seja definida uma senha ou quaisquer outras configurações. 
+	
+	- O seriviço do banco de dados deve ser iniciado automaticamente. Use o comando a baixa para verificar:
 
 		> sudo systemctl status mariadb
 
-		- Saída:
+		- Saída de exemplo:
 
 		```
 		```
@@ -165,6 +167,54 @@ Instalando e Configurando Ambiente de Desenvolvimento PHP
 
         - Reloading the privilege tables will ensure that all changes made so far will take effect immediately.</br>
         Reload privilege tables now? [Y/n]: **`y`**
+
+3. Correção do erro **#1698**. Erro ao logar com um cliente como o phpMyAdmin
+
+    1. Primeira maneira (recomendada): 
+
+        - No sistema Debian, o usuário **root** do MariaDB é configurado o plugin **unix_socket** para autentificação por padrão. Isso permite uma maior segurança e usabilidade em muitos casos, mas também pode complicar quando é preciso permitir privilégios administrativos de um programa externo (por exemplo, phpMyAdmin). 
+
+        - Como o servidor usa a conta **raiz** para tarefas como rotação de log e iniciar e parar o servidor, é melhor não alterar os detalhes de autenticação da conta **raiz** . Mudar as credenciais da conta **/etc/mysql/debian.cnf** pode funcionar inicialmente, mas as atualizações de pacotes podem substituir essas alterações. Em vez de modificar a conta **raiz** , os mantenedores do pacote recomendam a criação de uma conta **administrativa** separada com privilégidos de **root**, caso você precise configurar o acesso baseado em senha.
+
+        - Para fazer isso, crie um novo usuário **USER** com os mesmos recursos da conta raiz (root), mas configurada para autenticação de **senha** que será usado no logar do usuario **root**. Para fazer isso, abra o prompt do MariaDB no seu terminal e altere o nome de usuário e a senha para corresponder às suas preferências:
+	    
+            > sudo mysql
+
+            > GRANT ALL ON \*.\* TO 'USER'@'localhost' IDENTIFIED BY 'PASSWORD' WITH GRANT OPTION;
+
+        - Substitua **USER** pelo usuário que achar melhor.
+
+        - Substitua **PASSWORD** pela senha que achar melhor.
+
+        - Libere os privilégios para garantir que eles sejam salvos e estejam disponíveis na sessão atual:
+
+	        > FLUSH PRIVILEGES;
+
+		- Criado novo usuário, pode sair do prompt do MariaDB:
+
+		    > exit
+
+        - Para testar o novo usuário criado, é possível tentar se conectar ao banco de dados pela ferramenta **mysqladmin**, que é um cliente que permite executar comandos administrativos.
+
+	        > mysqladmin -u USER -p version
+
+		    - Saída de exemplo:
+		
+		    ```
+            Enter password: 
+            mysqladmin  Ver 9.1 Distrib 10.1.37-MariaDB, for debian-linux-gnu on x86_64
+            Copyright (c) 2000, 2018, Oracle, MariaDB Corporation Ab and others.
+
+            Server version		10.1.37-MariaDB-0+deb9u1
+            Protocol version	10
+            Connection		Localhost via UNIX socket
+            UNIX socket		/var/run/mysqld/mysqld.sock
+            Uptime:			1 hour 4 min 27 sec
+
+            Threads: 1  Questions: 10  Slow queries: 0  Opens: 17  Flush tables: 1  Open tables: 11  Queries per second avg: 0.002
+		    ```
+
+	2. Segunda maneira: 
 
 --------------------
 
