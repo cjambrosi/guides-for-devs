@@ -182,9 +182,9 @@ Instalando e Configurando Ambiente de Desenvolvimento PHP
 
             > GRANT ALL ON \*.\* TO 'USER'@'localhost' IDENTIFIED BY 'PASSWORD' WITH GRANT OPTION;
 
-        - Substitua **USER** pelo usuário que achar melhor.
+            - Substitua **USER** pelo usuário que achar melhor.
 
-        - Substitua **PASSWORD** pela senha que achar melhor.
+            - Substitua **PASSWORD** pela senha que achar melhor.
 
         - Libere os privilégios para garantir que eles sejam salvos e estejam disponíveis na sessão atual:
 
