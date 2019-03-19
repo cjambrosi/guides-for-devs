@@ -127,15 +127,7 @@ Instalando e Configurando Ambiente de Desenvolvimento PHP | Pilha: Apache, MySQL
 
 2. Configurando:
 
-	- Acesse via terminal com seu usuário e senha para saber se está conectando ao banco MySQL com o seguinte comando:
-
-		> mysql -uroot -p
-
-	- O comando **"-u"** serve para passar o usuário, no caso **"root"** (sem espaço entre os dois) e o comando **"-p"** vai pedir a senha do usuário. Para sair do banco na linha de comando pressione:
-
-		> mysql> Ctrl + d
-
-	- Quando a instalação estiver concluída, é preciso executar alguns comandos adicionais para ter nosso ambiente MariaDB configurado de forma segura. Isso vai remover alguns padrões perigosos e bloquear um pouco o acesso ao nosso sistema de banco de dados. Inicie o script interativo executando:
+	- Quando a instalação estiver concluída, é preciso executar alguns comandos adicionais para ter nosso ambiente com o MariaDB configurado de forma segura. Isso vai remover alguns padrões perigosos e bloquear um pouco o acesso ao nosso sistema de banco de dados. Inicie o script interativo executando:
 
 		- *(IMPORTANTE)* A habilitação dessa funcionalidade é algo que deve ser avaliado. Se habilitado, senhas que não seguem o critério especificado (senha root por exmplo) serão rejeitadas pelo MySQL com um erro. Isso irá causar problemas se você utilizar uma senha fraca juntamente com software que configura automaticamente as credenciais de usuário do MySQL, tais como os pacotes do Ubuntu para o phpMyAdmin. É seguro deixar a validação desativada, mas você deve sempre utilizar senhas fortes e exclusivas para as credenciais do banco de dados.
 		</br></br>
@@ -145,45 +137,41 @@ Instalando e Configurando Ambiente de Desenvolvimento PHP | Pilha: Apache, MySQL
 	- Siga os seguintes passos para a configuração:
 
 		- In order to log into MariaDB to secure it, we'll need the current
-			password for the root user.  If you've just installed MariaDB, and
-			you haven't set the root password yet, the password will be blank,
-			so you should just press enter here.
-			</br></br>
-			Enter current password for root (enter for none):
+		password for the root user.  If you've just installed MariaDB, and
+		you haven't set the root password yet, the password will be blank,
+		so you should just press enter here.
+		</br>
+		Enter current password for root (enter for none):
 
 		- OK, successfully used password, moving on...</br>
-			Setting the root password ensures that nobody can log into the MariaDB root user without the proper authorisation.
-			</br></br>
-			Set root password? [Y/n] 
+		Setting the root password ensures that nobody can log into the MariaDB root user without the proper authorisation.
+		</br>
+		Set root password? [Y/n] 
 
-		- Enter password for user root: `<sua senha escolhida para o BD MySQL>`</br>
+		- By default, a MariaDB installation has an anonymous user, allowing anyone
+		to log into MariaDB without having to have a user account created for
+		them.  This is intended only for testing, and to make the installation
+		go a bit smoother.  You should remove them before moving into a
+		production environment.
+		</br>
+		Remove anonymous users? [Y/n]: **`y`**
 
-		- VALIDATE PASSWORD PLUGIN can be used to test passwords
-		and improve security. It checks the strength of password
-		and allows the users to set only those passwords which are
-		secure enough. Would you like to setup VALIDATE PASSWORD plugin?
-		</br></br>
-		Press y|Y for Yes, any other key for No:  **`y`**
+		- Normally, root should only be allowed to connect from 'localhost'.  This
+		ensures that someone cannot guess at the root password from the network. 
+		</br>
+		Disallow root login remotely? [Y/n]: **`y`**
 
-		- There are three levels of password validation policy:
-		LOW    Length >= 8
-		MEDIUM Length >= 8, numeric, mixed case, and special characters
-		STRONG Length >= 8, numeric, mixed case, special characters and dictionary file
-		Please enter 0 = LOW, 1 = MEDIUM and 2 = STRONG:  **`0`**, **`1`** ou **`2`**
+		
+		- By default, MariaDB comes with a database named 'test' that anyone can
+		access.  This is also intended only for testing, and should be removed
+		before moving into a production environment.
+		</br>
+		Remove test database and access to it? [Y/n]: **`y`**
 
-		- Estimated strength of the password: 25 </br>
-		Change the password for root ? (Press y|Y for Yes, any other key for No): `Se estiver satisfeito com a sua senha atual, digite` **`n`**, `se não digite` **`y`** `para altera-la.`
-
-			- Estimated strength of the password: 100 </br>
-			Do you wish to continue with the password provided?(Press y|Y for Yes, any other key for No) : **`y`**
-
-		- Remove anonymous users? (Press y|Y for Yes, any other key for No): **`y`**
-
-		- Disallow root login remotely? (Press y|Y for Yes, any other key for No): **`y`**
-
-		- Remove test database and access to it? (Press y|Y for Yes, any other key for No): **`y`**
-
-		- Reload privilege tables now? (Press y|Y for Yes, any other key for No): **`y`**
+		- Reloading the privilege tables will ensure that all changes made so far
+		will take effect immediately.
+		</br>
+		Reload privilege tables now? [Y/n]: **`y`**
 
 --------------------
 
