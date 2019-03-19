@@ -1,5 +1,7 @@
-Instalando e Configurando Ambiente de Desenvolvimento PHP | Pilha: Apache, MySQL/Postgres, PHP 7
+Instalando e Configurando Ambiente de Desenvolvimento PHP
 ===============================================
+
+## Pilha: Apache, MySQL/MariaDB/Postgres, PHP 7
 
 --------------------
 
@@ -117,7 +119,7 @@ Instalando e Configurando Ambiente de Desenvolvimento PHP | Pilha: Apache, MySQL
 
 --------------------
 
-## MySQL
+## MariaDB
 
 1. Instalando:
 
@@ -125,53 +127,44 @@ Instalando e Configurando Ambiente de Desenvolvimento PHP | Pilha: Apache, MySQL
 
 	> sudo apt install mariadb-server
 
+	- O seriviço do banco deve ser iniciado automaticamente. Use o comando a baixa para verificar:
+
+		> sudo systemctl status mariadb
+
+		- Saída:
+
+		```
+		```
+
 2. Configurando:
 
-	- Quando a instalação estiver concluída, é preciso executar alguns comandos adicionais para ter nosso ambiente com o MariaDB configurado de forma segura. Isso vai remover alguns padrões perigosos e bloquear um pouco o acesso ao nosso sistema de banco de dados. Inicie o script interativo executando:
+	- Quando a instalação estiver concluída, é preciso executar alguns comandos adicionais para ter nosso ambiente com o MariaDB configurado de forma segura. Isso irá remover alguns padrões perigosos e bloquear um pouco o acesso ao nosso sistema de banco de dados. Inicie o script interativo executando:
 
 		- *(IMPORTANTE)* A habilitação dessa funcionalidade é algo que deve ser avaliado. Se habilitado, senhas que não seguem o critério especificado (senha root por exmplo) serão rejeitadas pelo MySQL com um erro. Isso irá causar problemas se você utilizar uma senha fraca juntamente com software que configura automaticamente as credenciais de usuário do MySQL, tais como os pacotes do Ubuntu para o phpMyAdmin. É seguro deixar a validação desativada, mas você deve sempre utilizar senhas fortes e exclusivas para as credenciais do banco de dados.
 		</br></br>
 
 		> sudo mysql_secure_installation
 
-	- Siga os seguintes passos para a configuração:
+    - Siga os seguintes passos para a configuração:
 
-		- In order to log into MariaDB to secure it, we'll need the current
-		password for the root user.  If you've just installed MariaDB, and
-		you haven't set the root password yet, the password will be blank,
-		so you should just press enter here.
-		</br>
-		Enter current password for root (enter for none):
+        - In order to log into MariaDB to secure it, we'll need the current password for the root user.  If you've just installed MariaDB, and you haven't set the root password yet, the password will be blank, so you should just press enter here. </br>
+        Enter current password for root (enter for none):
 
-		- OK, successfully used password, moving on...</br>
-		Setting the root password ensures that nobody can log into the MariaDB root user without the proper authorisation.
-		</br>
-		Set root password? [Y/n] 
+        - OK, successfully used password, moving on...</br>
+        Setting the root password ensures that nobody can log into the MariaDB root user without the proper authorisation.</br>
+        Set root password? [Y/n] 
 
-		- By default, a MariaDB installation has an anonymous user, allowing anyone
-		to log into MariaDB without having to have a user account created for
-		them.  This is intended only for testing, and to make the installation
-		go a bit smoother.  You should remove them before moving into a
-		production environment.
-		</br>
-		Remove anonymous users? [Y/n]: **`y`**
+        - By default, a MariaDB installation has an anonymous user, anyone to log into MariaDB without having to have a user account created for them. This is intended only for testing, and to make the installation go a bit smoother.  You should remove them before moving into a production environment.</br>
+        Remove anonymous users? [Y/n]: **`y`**
 
-		- Normally, root should only be allowed to connect from 'localhost'.  This
-		ensures that someone cannot guess at the root password from the network. 
-		</br>
-		Disallow root login remotely? [Y/n]: **`y`**
+        - Normally, root should only be allowed to connect from 'localhost'.  This ensures that someone cannot guess at the root password from network. </br>
+         Disallow root login remotely? [Y/n]: **`y`**
 
-		
-		- By default, MariaDB comes with a database named 'test' that anyone can
-		access.  This is also intended only for testing, and should be removed
-		before moving into a production environment.
-		</br>
-		Remove test database and access to it? [Y/n]: **`y`**
+        - By default, MariaDB comes with a database named 'test' that anyone can access.  This is also intended only for testing, and should be removed before moving into a production environment.</br>
+        Remove test database and access to it? [Y/n]: **`y`**
 
-		- Reloading the privilege tables will ensure that all changes made so far
-		will take effect immediately.
-		</br>
-		Reload privilege tables now? [Y/n]: **`y`**
+        - Reloading the privilege tables will ensure that all changes made so far will take effect immediately.</br>
+        Reload privilege tables now? [Y/n]: **`y`**
 
 --------------------
 
