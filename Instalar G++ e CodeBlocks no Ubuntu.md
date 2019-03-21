@@ -86,9 +86,9 @@ warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.`
 
 	int main() {
 
-		cout << "Hello World!" << endl;
+      cout << "Hello World!" << endl;
 
-		return 0;
+	  return 0;
 
 	}
 	```
