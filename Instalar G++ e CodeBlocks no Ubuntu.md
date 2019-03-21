@@ -26,7 +26,7 @@ warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.`
 
 	> sudo apt-get install g++
 
-	`Instalar a última versão estável do compilador do C++`
+	`Instala a última versão estável do compilador do C++`
 
 --------------------
 
@@ -79,18 +79,19 @@ warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.`
 ## Compilar algoritmo pelo terminal Linux
 
 1. Escreva um código em C++ e salve o arquivo com a extensão **.cpp**.
+	```
+	#include <bits/stdc++.h>
 
-	`#include <bits/stdc++.h>`<br />
+	using namespace std;
 
-	`using namespace std;`<br />
+	int main() {
 
-	`int main(){`<br />
+		cout << "Hello World!" << endl;
 
-	&nbsp;&nbsp;&nbsp;&nbsp;`cout << "Hello World!" << endl;`<br />
+		return 0;
 
-	&nbsp;&nbsp;&nbsp;&nbsp;`return 0;`<br />
-
-	`}`
+	}
+	```
 
 2. Para compilar o algoritmo e gerar um arquivo binário, digite o comando a baixo:
 
