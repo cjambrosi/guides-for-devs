@@ -281,27 +281,14 @@ Instalando e Configurando Ambiente de Desenvolvimento PHP
 
 2. Configurando:
 
-	1. Ativar as extensões *php7.1-mcrypt* e *php7.3-mbstring*:
+	1. Ativar as extensões *php7.3-mbstring* e *php7.0-mcrypt*:
 
 		> sudo phpenmod mbstring
 		
+		- Ative a extensão **php7.0-mcrypt** somente se você instalou o PHP 7.0 ou 7.1 pelo repositório padrão. Até o momento, não existe a versão 7.2 ou 7.3 para a extensão **mcrypt**, ao invés dela está sendo usada a biblioteca **libsodium** para criptografia.
+
 		> sudo phpenmod mcrypt
 
-		- Até o momento, não existe a versão 7.3 para a extensão **mcrypt**, então possivelmente quando for ativá-la irá retornar a *warning*:
-
-			`WARNING: Module mcrypt ini file doesn't exist under /etc/php/7.3/mods-available`
-		
-		- Para solucionar este problema, podemos criar um link para a extensão 7.1 que instalamos com o comando a baixo:
-
-			> sudo ln -s /etc/php/7.1/mods-available/mcrypt.ini /etc/php/7.2/mods-available/
-
-		- Ative a extensão novamente:
-
-			> sudo phpenmod mcrypt
-
-		- Depois de ativada as extensões, reinicie o Apache:
-
-			> sudo service apache2 restart
 
 	2. Habilitar as mensagens de erros do PHP 7.1.
 
