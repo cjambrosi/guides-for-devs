@@ -1,7 +1,7 @@
 Instalando e Configurando Ambiente de Desenvolvimento PHP
 ===============================================
 
-## Pilha: Apache, MySQL/MariaDB/Postgres, PHP 7
+## Pilha: Apache, MariaDB, PHP 7
 
 --------------------
 
@@ -218,126 +218,92 @@ Instalando e Configurando Ambiente de Desenvolvimento PHP
 
 --------------------
 
-## PostgreSQL
-
-1. Instalando:
-
-	> sudo apt update
-
-	> sudo apt install postgresql postgresql-contrib
-
-	> sudo apt install pgadmin3
-
-	- Consultar versão instalada:
-
-		> psql --version
-
-		`psql (PostgreSQL) 9.5.6`
-
-
-2. Configurando:
-
-	- Depois de instalado o SGBD Postgres, vamos criar o primeiro usuário do Banco de Dados. Logue-se como usuário **root** usando o comando a baixo:
-
-		> sudo -i
-
-	- Entre como usuário postgres com o comando:
-
-		> su postgres
-
-	- Conecte no banco com o comando (deve aparecer a mensagem de boas vindas):
-
-		> psql
-
-	- Para criar o Usuário, entre com o comando a baixo (troque **"nomedousuario"** pelo seu usuário) e tecle enter:
-
-		> CREATE USER nomedousuario SUPERUSER INHERIT CREATEDB CREATEROLE;
-
-	- Para criar uma Senha ao usuário já criado, entre com o comando a baixo (troque **"nomedousuario"** pelo seu usuário e troque **'senha'** pela sua senha escolhida) e tecle enter:
-
-		> ALTER USER nomedousuario PASSWORD 'senha';
-
-	- Usuário e senha foram criados. Tecle o comando a baixo para sair da linha de comando do PostgreSQL e do root:
-
-		> \q
-
-	- Digite os comandos a baixo para sair do usuário postgres e do usuário root:
-
-		> exit
-
-		> exit
-
---------------------
-
 ## PHP
 
-- **Importante**
-
-	- Se você precisa trabalhar com duas versões do PHP (*5.6 e 7.1*), instale o PHP por esse **[passo-a-passo](https://github.com/CristianAmbrosi/tutoriais/blob/master/Instalar%20as%20vers%C3%B5es%20do%20PHP%205.6%20e%20PHP%207.1%20juntas%20no%20Ubuntu.md)**.
-
-	- Assim que instaladas as duas versões, volte para este tutorial para terminar as configurações dos Bancos de Dados.
-
-	- Se for instalar os dois Bancos de Dados (MySQL e PostgresSQL), deve manter atenção para instalar somente os módulos necessários para cada um.
+- 
 
 1. Instalando:
 
-	- Adicionar o repositório:
-
-		> sudo add-apt-repository ppa:ondrej/php
-
-	- **MySQL:**
+	- Instalando apartir do repositório oficial do Debian:
 
 		> sudo apt update
 
-		> sudo apt install php7.1 php7.1-cli php7.1-intl php7.1-mcrypt php7.1-opcache php7.1-readline libapache2-mod-php7.1 php7.1-mbstring php7.1-json php7.1-curl php-imagick php7.1-mysql phpmyadmin
+		> sudo apt install php7.0 php7.0-cli php7.0-intl php7.0-mcrypt php7.0-opcache php7.0-readline libapache2-mod-php7.0 php7.0-mbstring php7.0-json php7.0-curl php-imagick php7.0-mysql phpmyadmin
 
-		- Servidor web a configurar automaticamente: </br>
-			`[*] Apache2` </br>
-			`[ ] lighttpd`
-
-		- Configurar banco de dados para phpmyadmin com dbconfig-common? </br>
-			`<Sim>`
-
-		- Senha MySQL da aplicação para o phpmyadmin: </br>
-			`<Inserir senha escolhida e ok>`
-
-		- Confirmação de senha: </br>
-			`<Confirmar senha escolhida e Ok>`
-
-		- Agora iremos corrigir o erro **"Not Found"** do phpmyadmin, quando acessada a URL **"localhost/phpmyadmin"** ou **"127.0.0.1/phpmyadmin"**.
-
-		- Abra o arquivo **"apache2.conf"** no modo root com qualquer editor e texto:
-
-			> sudo nano /etc/apache2/apache2.conf
-
-		- No final do arquivo inserir as linhas de código a baixo e salvar:
-
-			` Include /etc/phpmyadmin/apache.conf`
-
-		- Salvado o arquivo, reiniciar o Apache com o comando:
-
-			> sudo service apache2 restart
-
-	- **PostgreSQL:**
+	- Instalando apartir do repositório....:
 
 		> sudo apt update
 
-		> sudo apt install php7.1 php7.1-cli php7.1-intl php7.1-mcrypt php7.1-opcache php7.1-readline libapache2-mod-php7.1 php7.1-mbstring php7.1-json php7.1-curl php-imagick php7.1-pgsql
+		- Instale as dependências necessárias para adicionar um novo repositório via HTTPS:
 
+			> sudo apt install apt-transport-https ca-certificates curl software-properties-common
 
-2. Configurando:
+		- Importe a chave GPG do repositório do **ondrej**:
 
-	- Ativar as extensões *php7.1-mcrypt* e *php7.1-mbstring*:
+			> sudo wget -q https://packages.sury.org/php/apt.gpg -O- | sudo apt-key add -
 
-		> sudo phpenmod mcrypt
+		- Adicione o repositório do **ondrej** à lista de repositórios de software do seu sistema:
 
-		> sudo phpenmod mbstring
+			> echo "deb https://packages.sury.org/php/ stretch main" | sudo tee /etc/apt/sources.list.d/php.list
 
-	- Depois de ativada as extensões, reinicie o Apache:
+		- Atualize novamente os repositórios do sismetema e instale o PHP:
+
+			> sudo apt update
+
+			> sudo apt install php7.3 php7.3-cli php7.3-intl php7.3-opcache php7.3-readline libapache2-mod-php7.3 php7.3-mbstring php7.3-json php7.3-curl php-imagick php7.3-mysql phpmyadmin
+
+	- Servidor web a configurar automaticamente: </br>
+		`[*] Apache2` </br>
+		`[ ] lighttpd`
+
+	- Configurar banco de dados para phpmyadmin com dbconfig-common? </br>
+		`<Sim>`
+
+	- Senha MySQL da aplicação para o phpmyadmin: </br>
+		`<Insera uma senha e ok>`
+
+	- Confirmação de senha: </br>
+		`<Confirme a senha escolhida e Ok>`
+
+	- Agora iremos corrigir o erro **"Not Found"** do phpmyadmin, quando acessada a URL **"localhost/phpmyadmin"** ou **"127.0.0.1/phpmyadmin"**.
+
+	- Abra o arquivo **"apache2.conf"** no modo root com qualquer editor e texto:
+
+		> sudo nano /etc/apache2/apache2.conf
+
+	- No final do arquivo, inclua as linhas de código a baixo e salve:
+
+		`Include /etc/phpmyadmin/apache.conf`
+
+	- Reinicie o Apache com o comando:
 
 		> sudo service apache2 restart
 
-	- Habilitar as mensagens de erros do PHP 7.1.
+2. Configurando:
+
+	1. Ativar as extensões *php7.1-mcrypt* e *php7.3-mbstring*:
+
+		> sudo phpenmod mbstring
+		
+		> sudo phpenmod mcrypt
+
+		- Até o momento, não existe a versão 7.3 para a extensão **mcrypt**, então possivelmente quando for ativá-la irá retornar a *warning*:
+
+			`WARNING: Module mcrypt ini file doesn't exist under /etc/php/7.3/mods-available`
+		
+		- Para solucionar este problema, podemos criar um link para a extensão 7.1 que instalamos com o comando a baixo:
+
+			> sudo ln -s /etc/php/7.1/mods-available/mcrypt.ini /etc/php/7.2/mods-available/
+
+		- Ative a extensão novamente:
+
+			> sudo phpenmod mcrypt
+
+		- Depois de ativada as extensões, reinicie o Apache:
+
+			> sudo service apache2 restart
+
+	2. Habilitar as mensagens de erros do PHP 7.1.
 
 		- Para habilitar as mensagens erros, precisamos editar o arquivo *php.ini*. Acesse o diretório referente a versão do PHP que você instalou e depois abra o arquivo com privilégios de super usuário:
 
@@ -358,15 +324,15 @@ Instalando e Configurando Ambiente de Desenvolvimento PHP
 			> sudo service apache2 restart
 
 
-	- Teste se a instalação do PHP está correta. Crie um arquivo **"info.php"** no diretório dos projetos **"/var/www/html"** e dentro do arquivo insira a função a baixo e salve:
+	3. Teste se a instalação do PHP está correta. Crie um arquivo **"info.php"** no diretório dos projetos **"/var/www/html"** e dentro do arquivo insira a função a baixo e salve:
 
 		`<?php phpinfo(); ?>`
 
-	- Vá no navegador e acesse o arquivo pela URL:
+		- Vá no navegador e acesse o arquivo pela URL:
 
-		> "localhost/info.php" ou "127.0.0.1/info.php"
+			> "localhost/info.php" ou "127.0.0.1/info.php"
 
-	- Se abrir a página de informações do PHP, a instalação da linguagem está correta.
+		- Se abrir a página de informações do PHP, a instalação da linguagem está correta.
 
 --------------------
 
