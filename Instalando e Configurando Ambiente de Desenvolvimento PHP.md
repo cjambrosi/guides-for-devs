@@ -84,7 +84,7 @@ Instalando e Configurando Ambiente de Desenvolvimento PHP
 		- Exemplo: </br>
 			![](https://github.com/CristianAmbrosi/tutoriais/blob/master/images/exemplo-c%C3%B3digo-m%C3%B3dulo-rewrite.png)
 
-	- Depois de ter salvo o arquivo, reinicie novamente o Apache com o comando:
+	- Depois de salvar o aquivo, reinicie novamente o Apache com o comando:
 
 		> sudo service apache2 restart
 
@@ -104,7 +104,7 @@ Instalando e Configurando Ambiente de Desenvolvimento PHP
 		ServerName localhost
 		```
 
-	- Salve e feche o arquivo. Depois verifique erros de sintaxe com o comando:
+	- Salve e feche o arquivo. Depois, verifique erros de sintaxe com o comando:
 
 		> sudo apache2ctl configtest
 
@@ -116,6 +116,10 @@ Instalando e Configurando Ambiente de Desenvolvimento PHP
 	- Reinicie o Apache para implementar as alterações:
 
 		> sudo systemctl restart apache2
+
+	- Verifique a versão do Apache com o comando a baixo:
+
+		> sudo apache2 -v
 
 --------------------
 
@@ -160,57 +164,52 @@ Instalando e Configurando Ambiente de Desenvolvimento PHP
         - Reloading the privilege tables will ensure that all changes made so far will take effect immediately.</br>
         Reload privilege tables now? [Y/n]: **`y`**
 
-3. Correção do erro **#1698**. Erro ao logar com um cliente como o phpMyAdmin
+3. Correção do erro **#1698**. Erro ao logar com um cliente como o phpMyAdmin.
 
-    1. Primeira maneira (recomendada): 
+	- No sistema Debian, o usuário **root** do MariaDB é configurado o plugin **unix_socket** para autentificação por padrão. Isso permite uma maior segurança e usabilidade em muitos casos, mas também pode complicar quando é preciso permitir privilégios administrativos de um programa externo (por exemplo, phpMyAdmin). 
 
-        - No sistema Debian, o usuário **root** do MariaDB é configurado o plugin **unix_socket** para autentificação por padrão. Isso permite uma maior segurança e usabilidade em muitos casos, mas também pode complicar quando é preciso permitir privilégios administrativos de um programa externo (por exemplo, phpMyAdmin). 
+	- Como o servidor usa a conta **raiz** para tarefas como rotação de log e iniciar e parar o servidor, é melhor não alterar os detalhes de autenticação da conta **raiz** . Mudar as credenciais da conta **/etc/mysql/debian.cnf** pode funcionar inicialmente, mas as atualizações de pacotes podem substituir essas alterações. Em vez de modificar a conta **raiz** , os mantenedores do pacote recomendam a criação de uma conta **administrativa** separada com privilégidos de **root**, caso você precise configurar o acesso baseado em senha.
 
-        - Como o servidor usa a conta **raiz** para tarefas como rotação de log e iniciar e parar o servidor, é melhor não alterar os detalhes de autenticação da conta **raiz** . Mudar as credenciais da conta **/etc/mysql/debian.cnf** pode funcionar inicialmente, mas as atualizações de pacotes podem substituir essas alterações. Em vez de modificar a conta **raiz** , os mantenedores do pacote recomendam a criação de uma conta **administrativa** separada com privilégidos de **root**, caso você precise configurar o acesso baseado em senha.
+	- Para fazer isso, crie um novo usuário **USER** com os mesmos recursos da conta raiz (root), mas configurada para autenticação de **senha** que será usado no logar do usuario **root**. Para fazer isso, abra o prompt do MariaDB no seu terminal e altere o nome de usuário e a senha para corresponder às suas preferências:
+	
+		> sudo mysql
 
-        - Para fazer isso, crie um novo usuário **USER** com os mesmos recursos da conta raiz (root), mas configurada para autenticação de **senha** que será usado no logar do usuario **root**. Para fazer isso, abra o prompt do MariaDB no seu terminal e altere o nome de usuário e a senha para corresponder às suas preferências:
-	    
-            > sudo mysql
+		> GRANT ALL ON \*.\* TO 'USER'@'localhost' IDENTIFIED BY 'PASSWORD' WITH GRANT OPTION;
 
-            > GRANT ALL ON \*.\* TO 'USER'@'localhost' IDENTIFIED BY 'PASSWORD' WITH GRANT OPTION;
+		- Substitua **USER** pelo usuário que achar melhor.
 
-            - Substitua **USER** pelo usuário que achar melhor.
+		- Substitua **PASSWORD** pela senha que achar melhor.
 
-            - Substitua **PASSWORD** pela senha que achar melhor.
+	- Libere os privilégios para garantir que eles sejam salvos e estejam disponíveis na sessão atual:
 
-        - Libere os privilégios para garantir que eles sejam salvos e estejam disponíveis na sessão atual:
+		> FLUSH PRIVILEGES;
 
-	        > FLUSH PRIVILEGES;
+	- Criado novo usuário, pode sair do prompt do MariaDB:
 
-		- Criado novo usuário, pode sair do prompt do MariaDB:
+		> exit
 
-		    > exit
+	- Para testar o novo usuário criado, é possível tentar se conectar ao banco de dados pela ferramenta **mysqladmin**, que é um cliente que permite executar comandos administrativos.
 
-        - Para testar o novo usuário criado, é possível tentar se conectar ao banco de dados pela ferramenta **mysqladmin**, que é um cliente que permite executar comandos administrativos.
+		> mysqladmin -u USER -p version
 
-	        > mysqladmin -u USER -p version
+		- Saída de exemplo:
+	
+		```
+		mysqladmin  Ver 9.1 Distrib 10.1.37-MariaDB, for debian-linux-gnu on x86_64
+		Copyright (c) 2000, 2018, Oracle, MariaDB Corporation Ab and others.
 
-		    - Saída de exemplo:
-		
-		    ```
-            Enter password: 
-            mysqladmin  Ver 9.1 Distrib 10.1.37-MariaDB, for debian-linux-gnu on x86_64
-            Copyright (c) 2000, 2018, Oracle, MariaDB Corporation Ab and others.
+		Server version		10.1.37-MariaDB-0+deb9u1
+		Protocol version	10
+		Connection		Localhost via UNIX socket
+		UNIX socket		/var/run/mysqld/mysqld.sock
+		Uptime:			1 hour 4 min 27 sec
 
-            Server version		10.1.37-MariaDB-0+deb9u1
-            Protocol version	10
-            Connection		Localhost via UNIX socket
-            UNIX socket		/var/run/mysqld/mysqld.sock
-            Uptime:			1 hour 4 min 27 sec
-
-            Threads: 1  Questions: 10  Slow queries: 0  Opens: 17  Flush tables: 1  Open tables: 11  Queries per second avg: 0.002
-		    ```
-
-	2. Segunda maneira: 
+		Threads: 1  Questions: 10  Slow queries: 0  Opens: 17  Flush tables: 1  Open tables: 11  Queries per second avg: 0.002
+		```
 
 --------------------
 
-## PHP
+## PHP 7
 
 - Atualmente, o PHP 7.0 está diponível para o Debian 9 Stable. Para instalar uma versão mais recente do PHP, é preciso adicionar a DPA do desenvolvedor [**Ondrej**](https://deb.sury.org/), que é o responsável pelo empacotamento do PHP no Debian e no Ubuntu, tanto na versão Stable quanto nas versões Unstable e Testing do Debian.
 
@@ -261,6 +260,10 @@ Instalando e Configurando Ambiente de Desenvolvimento PHP
 
 		> sudo service apache2 restart
 
+	- Verifique a versão do PHP instalado com o comando:
+
+		> php --version
+
 2. Configurando:
 
 	1. Corrigindo o erro **"Not Found"** do phpmyadmin, quando acessada a URL **"localhost/phpmyadmin"** ou **"127.0.0.1/phpmyadmin"**.
@@ -281,7 +284,7 @@ Instalando e Configurando Ambiente de Desenvolvimento PHP
 
 		> sudo phpenmod mbstring
 		
-		- Ative a extensão **php7.0-mcrypt** somente se você instalou o PHP 7.0 ou 7.1 pelo repositório padrão. Até o momento, não existe a versão 7.2 ou 7.3 para a extensão **mcrypt**, ao invés dela está sendo usada a biblioteca **libsodium** para criptografia.
+		- *Ative a extensão **php7.0-mcrypt** somente se você instalou o PHP 7.0 ou 7.1 pelo repositório padrão. Até o momento, não existe a versão 7.2 ou 7.3 para a extensão **mcrypt**, ao invés dela está sendo usada a biblioteca **libsodium** para criptografia.*
 
 		> sudo phpenmod mcrypt
 
@@ -374,15 +377,7 @@ Geralmente, esse é o endereço que você utiliza para se conectar ao seu servid
 
 1. Primeira Forma:
 
-	- A partir da linha de comando, você pode encontrar isso de algumas maneiras. Primeiro, você pode utilizar as ferramentas **iproute2** para obter seu endereço digitando isso:
-
-		> ip addr show eth0 | grep inet | awk '{ print $2; }' | sed 's/\/.*$//'
-
-		- Esse comando vai lhe retornar duas ou três linhas. Todos são endereços corretos, mas seu computador só poderá utilizar um deles, portanto, sinta-se livre para tentar cada um.
-
-2. Segunda Forma:
-
-	- Um método alternativo é usar o utilitário **curl** para entrar em contato com algum meio externo para lhe dizer como ele vê o seu servidor. Você pode fazer isso perguntando a um servidor específico qual é o seu IP:
+	- Utilizando a ferramenta **cURL** para entrar em contato com algum meio externo, para lhe dizer como ele vê o seu servidor. Você pode fazer isso perguntando a um servidor específico qual é o seu IP:
 
 		> sudo apt install curl
 
@@ -390,53 +385,13 @@ Geralmente, esse é o endereço que você utiliza para se conectar ao seu servid
 
 	- *Independentemente do meio que você usa para obter seu endereço IP, você pode digitá-lo na barra de endereço do seu navegador web para chegar ao seu servidor.*
 
---------------------
+2. Segunda Forma:
+	
+	- Você pode utilizar as ferramentas do **iproute2** para obter seu endereço digitando isso:
 
-## O que foi instalado?!
+		> ip addr show eth0 | grep inet | awk '{ print $2; }' | sed 's/\/.*$//'
 
-**apache2 =>** Servidor web livre mais utilizado no mundo, onde rodam suas aplicações;
-
-**pgadmin3 =>** Software gráfico para administração do SGBD PostgreSQL;
-
-**php7.1 =>** Linguagem de programação na qual serão feitos os projetos;
-
-**apache2-doc =>** Documentação completa do Apache;
-
-**apache2-utils =>** Contém diversos utilitários de gerenciamento do Apache que possívelmente serão utilizados;
-
-**mysql-server =>** Banco de Dados MySQL;
-
-**postgresql =>** Banco de Dados PostgreSQL, instalar a versão estável mais atualizada;
-
-**phpmyadmin =>** Aplicação web para o gerenciamneto do SGBD MySQL;
-
-**php-geoip =>** Módulo do PHP que permite que você encontre a localização de um endereço IP - Cidade, Estado, País, Longitude, Latitude e outras informações, como o ISP e o tipo de conexão;
-
-**php-imagick =>** É uma extensão nativa do PHP para criar e modificar imagens usando a API do ImageMagick;
-
-**php7.1-intl =>** Contém um módulo para facilitar a internacionalização de scripts PHP;
-
-**php7.1-pgsql =>** Drive que irá fazer conexão com o Banco de Dados PostgreSQL diretamente de scripts PHP;
-
-**php7.1-mysql =>** Este pacote fornece módulos para conexões de banco de dados MySQL diretamente de scripts PHP. Inclui o módulo genérico "mysql", que pode ser usado para conectar-se a todas as versões do MySQL;
-
-**php7.1-mcrypt =>** Pacote que contém um módulo para funções mcrypt em scripts PHP, que suporta uma grande variedade de algoritmos de bloco. Maioria dos Frameworks exige que este módulo esteja ativado;
-
-**php7.1-readline =>** Pacote que contém um módulo para funções readline (baseado em libedit) em scripts PHP;
-
-**php7.1-cli =>** Este pacote fornece o interpretador de comandos /usr/bin/php7.0, útil para testar scripts PHP a partir de um shell ou executar tarefas gerais de script de shell.
-
-**php7.1-mbstring =>** Fornece funções de cadeia específicos de vários bytes que ajudam a lidar com a codificação multibyte no PHP. Além disso, mbstring lida com a conversão de codificação de caracteres entre os pares possíveis de codificação.
-
-**postgresql-contrib =>** Contém diversos utilitários do Banco de Dados PostgreSQL;
-
-**libapache2-mod-auth-mysql =>** Módulo para o servidor web Apache 2, que permite a autenticação HTTP contra as informações armazenadas em um banco de dados.
-
-**curl =>** Uma biblioteca suportada pelo PHP, que permite que você conecte-se e comunique-se com diferentes tipos de servidor usando diferentes tipos de protocolos. libcurl atualmente suporte os protocolos http, https, ftp, gopher, telnet, dict, file, e ldap. libcurl também suporta certificados HTTPS, HTTP POST, HTTP PUT, upload via FTP (podendo também ser feito com a extensão ftp do PHP), upload HTTP por formulário, proxies, cookies, e autenticação com usuário e senha.
-
-**mysql_secure_installation =>** É um script de shell disponível em sistemas Unix. Permite melhorar a segurança da sua instalação do MySQL ou MariaDB.
-
-**icanhazip =>** Retorna seu endereço de IP Externo.
+		- Esse comando vai lhe retornar duas ou três linhas. Todos são endereços corretos, mas seu computador só poderá utilizar um deles, portanto, sinta-se livre para tentar cada um.
 
 --------------------
 
@@ -444,37 +399,41 @@ Geralmente, esse é o endereço que você utiliza para se conectar ao seu servid
 
 - Pilha LAMP
 
+	https://elias.praciano.com/2017/07/como-instalar-um-servidor-web-lamp-no-debian-9/
+
+	https://www.linuxbabe.com/debian/install-lamp-stack-debian-9-stretch
+
+	https://www.vivaolinux.com.br/topico/Apache-Web-Server/Erro-ao-acessar-o-apache2
+
+	https://askubuntu.com/questions/256013/apache-error-could-not-reliably-determine-the-servers-fully-qualified-domain-n
+
+	https://www.digitalocean.com/community/tutorials/how-to-install-linux-apache-mariadb-php-lamp-stack-debian9
+
 	https://www.digitalocean.com/community/tutorials/como-instalar-a-pilha-linux-apache-mysql-php-lamp-no-ubuntu-16-04-pt
 
 	https://www.digitalocean.com/community/tutorials/how-to-install-and-secure-phpmyadmin-on-ubuntu-14-04
 
-	https://www.digitalocean.com/community/tutorials/como-instalar-a-pilha-linux-apache-mysql-php-lamp-no-ubuntu-14-04-pt
-
-	https://www.digitalocean.com/community/tutorials/how-to-install-linux-apache-mysql-php-lamp-stack-on-ubuntu-14-04
-
-	http://ubuntuserverguide.com/2014/06/how-to-install-lamp-in-ubuntu-server-14-04-lts.html
-
-	http://www.hardware.com.br/tutoriais/configurando-servidor-lamp/pagina4.html
-
-	http://blog.wfsneto.com.br/2014/06/21/php-configurando-ambiente-de-densenvolvimento-ubuntu-14-04
+	https://ubuntuserverguide.com/2014/06/how-to-install-lamp-in-ubuntu-server-14-04-lts.html
 
 	https://www.youtube.com/watch?v=Q2N5blJ4VIo
 
 	https://www.youtube.com/watch?v=bDi9h8LJHuE
 
-- PostgreSQL
-
-	https://www.digitalocean.com/community/tutorials/como-instalar-e-utilizar-o-postgresql-no-ubuntu-16-04-pt
-
-	http://www.ubuntuiniciantes.com.br/2013/08/instalando-o-php-apache-e-postgres-no.html
-
-	https://www.rosehosting.com/blog/install-postgresql-with-phppgadmin-on-ubuntu/
-
-	https://www.vivaolinux.com.br/dica/Criacao-de-1edeg;-super-usuario-no-PostgreSQL
-
-	https://www.youtube.com/watch?v=LYgQW4a_anA
-
 - PHP
+
+	https://linuxize.com/post/how-to-install-php-on-debian-9/
+
+    https://www.rosehosting.com/blog/how-to-install-php-7-2-on-debian-9/
+
+    https://lukasmestan.com/install-libsodium-extension-in-php7/
+
+    https://stackoverflow.com/questions/48363789/warning-module-mcrypt-ini-file-doesnt-exist-under-etc-php-7-2-mods-available
+
+	https://www.digitalocean.com/community/tutorials/how-to-use-systemctl-to-manage-systemd-services-and-units
+
+	https://www.vivaolinux.com.br/topico/Iniciantes-no-Linux/comando-service-e-invoke-rcd-nao-funciona-debian-8-help-me
+
+	https://pt.wikihow.com/Reiniciar-Servi%C3%A7os-no-Linux
 
 	https://matheuslima.com.br/instalando-o-nginx-php-7-mysql-lemp/
 
@@ -482,6 +441,15 @@ Geralmente, esse é o endereço que você utiliza para se conectar ao seu servid
 
 	http://ubuntuforum-br.org/index.php?topic=74091.0
 
+- MariaDB
+
+	https://www.digitalocean.com/community/tutorials/how-to-install-mariadb-on-debian-9
+
+	https://linuxize.com/post/how-to-install-mariadb-on-debian-9/
+
+	http://eriberto.pro.br/blog/2018/09/04/instalando-e-configurando-mariadb-no-debian-9/
+
+	https://stackoverflow.com/questions/50409788/mysql-8-create-new-user-with-password-not-working
 
 - Módulos:
 
@@ -498,20 +466,3 @@ Geralmente, esse é o endereço que você utiliza para se conectar ao seu servid
 	http://gilbertoalbino.com/linux-habilitar-mod_rewrite-no-ubuntu/
 
 	http://book.cakephp.org/3.0/pt/installation.html
-
-
-
-
-
-
-
-
-
-php
-    https://linuxize.com/post/how-to-install-php-on-debian-9/
-
-    https://www.rosehosting.com/blog/how-to-install-php-7-2-on-debian-9/
-
-    https://lukasmestan.com/install-libsodium-extension-in-php7/
-
-    https://stackoverflow.com/questions/48363789/warning-module-mcrypt-ini-file-doesnt-exist-under-etc-php-7-2-mods-available
