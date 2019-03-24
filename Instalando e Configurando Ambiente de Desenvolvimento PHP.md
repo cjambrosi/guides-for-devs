@@ -129,21 +129,13 @@ Instalando e Configurando Ambiente de Desenvolvimento PHP
 
 	- Na instação, não será mais solicitado que seja definida uma senha ou quaisquer outras configurações. 
 	
-	- O seriviço do banco de dados deve ser iniciado automaticamente. Use o comando a baixa para verificar:
+	- O seriviço do banco de dados deve ser iniciado automaticamente. Use o comando a baixo para verificar:
 
 		> sudo systemctl status mariadb
-
-		- Saída de exemplo:
-
-		```
-		```
 
 2. Configurando:
 
 	- Quando a instalação estiver concluída, é preciso executar alguns comandos adicionais para ter nosso ambiente com o MariaDB configurado de forma segura. Isso irá remover alguns padrões perigosos e bloquear um pouco o acesso ao nosso sistema de banco de dados. Inicie o script interativo executando:
-
-		- *(IMPORTANTE)* A habilitação dessa funcionalidade é algo que deve ser avaliado. Se habilitado, senhas que não seguem o critério especificado (senha root por exmplo) serão rejeitadas pelo MySQL com um erro. Isso irá causar problemas se você utilizar uma senha fraca juntamente com software que configura automaticamente as credenciais de usuário do MySQL, tais como os pacotes do Ubuntu para o phpMyAdmin. É seguro deixar a validação desativada, mas você deve sempre utilizar senhas fortes e exclusivas para as credenciais do banco de dados.
-		</br></br>
 
 		> sudo mysql_secure_installation
 
@@ -220,7 +212,7 @@ Instalando e Configurando Ambiente de Desenvolvimento PHP
 
 ## PHP
 
-- 
+- Atualmente, o PHP 7.0 está diponível para o Debian 9 Stable. Para instalar uma versão mais recente do PHP, é preciso adicionar a DPA do desenvolvedor [**Ondrej**](https://deb.sury.org/), que é o responsável pelo empacotamento do PHP no Debian e no Ubuntu, tanto na versão Stable quanto nas versões Unstable e Testing do Debian.
 
 1. Instalando:
 
@@ -230,7 +222,7 @@ Instalando e Configurando Ambiente de Desenvolvimento PHP
 
 		> sudo apt install php7.0 php7.0-cli php7.0-intl php7.0-mcrypt php7.0-opcache php7.0-readline libapache2-mod-php7.0 php7.0-mbstring php7.0-json php7.0-curl php-imagick php7.0-mysql phpmyadmin
 
-	- Instalando apartir do repositório....:
+	- Instalando apartir do repositório do [**Ondrej - Packages Sury**](https://packages.sury.org/php/):
 
 		> sudo apt update
 
@@ -238,15 +230,15 @@ Instalando e Configurando Ambiente de Desenvolvimento PHP
 
 			> sudo apt install apt-transport-https ca-certificates curl software-properties-common
 
-		- Importe a chave GPG do repositório do **ondrej**:
+		- Importe a chave GPG do repositório:
 
 			> sudo wget -q https://packages.sury.org/php/apt.gpg -O- | sudo apt-key add -
 
-		- Adicione o repositório do **ondrej** à lista de repositórios de software do seu sistema:
+		- Adicione o repositório do à lista de repositórios de softwares do seu sistema:
 
 			> echo "deb https://packages.sury.org/php/ stretch main" | sudo tee /etc/apt/sources.list.d/php.list
 
-		- Atualize novamente os repositórios do sismetema e instale o PHP:
+		- Atualize novamente os repositórios do sistema e instale o PHP:
 
 			> sudo apt update
 
@@ -260,20 +252,10 @@ Instalando e Configurando Ambiente de Desenvolvimento PHP
 		`<Sim>`
 
 	- Senha MySQL da aplicação para o phpmyadmin: </br>
-		`<Insera uma senha e ok>`
+		`<Insira uma senha e ok>`
 
 	- Confirmação de senha: </br>
 		`<Confirme a senha escolhida e Ok>`
-
-	- Agora iremos corrigir o erro **"Not Found"** do phpmyadmin, quando acessada a URL **"localhost/phpmyadmin"** ou **"127.0.0.1/phpmyadmin"**.
-
-	- Abra o arquivo **"apache2.conf"** no modo root com qualquer editor e texto:
-
-		> sudo nano /etc/apache2/apache2.conf
-
-	- No final do arquivo, inclua as linhas de código a baixo e salve:
-
-		`Include /etc/phpmyadmin/apache.conf`
 
 	- Reinicie o Apache com o comando:
 
@@ -281,7 +263,21 @@ Instalando e Configurando Ambiente de Desenvolvimento PHP
 
 2. Configurando:
 
-	1. Ativar as extensões *php7.3-mbstring* e *php7.0-mcrypt*:
+	1. Corrigindo o erro **"Not Found"** do phpmyadmin, quando acessada a URL **"localhost/phpmyadmin"** ou **"127.0.0.1/phpmyadmin"**.
+
+		- Abra o arquivo **"apache2.conf"** no modo root com qualquer editor e texto:
+
+			> sudo nano /etc/apache2/apache2.conf
+
+		- No final do arquivo, inclua as linhas de código a baixo e salve:
+
+			`Include /etc/phpmyadmin/apache.conf`
+
+		- Reinicie o Apache com o comando:
+
+			> sudo service apache2 restart
+
+	2. Ativar as extensões *php7.3-mbstring* e *php7.0-mcrypt*:
 
 		> sudo phpenmod mbstring
 		
@@ -289,8 +285,7 @@ Instalando e Configurando Ambiente de Desenvolvimento PHP
 
 		> sudo phpenmod mcrypt
 
-
-	2. Habilitar as mensagens de erros do PHP 7.1.
+	3. Habilitar as mensagens de erros do PHP 7.1.
 
 		- Para habilitar as mensagens erros, precisamos editar o arquivo *php.ini*. Acesse o diretório referente a versão do PHP que você instalou e depois abra o arquivo com privilégios de super usuário:
 
@@ -311,7 +306,7 @@ Instalando e Configurando Ambiente de Desenvolvimento PHP
 			> sudo service apache2 restart
 
 
-	3. Teste se a instalação do PHP está correta. Crie um arquivo **"info.php"** no diretório dos projetos **"/var/www/html"** e dentro do arquivo insira a função a baixo e salve:
+	4. Teste se a instalação do PHP está correta. Crie um arquivo **"info.php"** no diretório dos projetos **"/var/www/html"** e dentro do arquivo insira a função a baixo e salve:
 
 		`<?php phpinfo(); ?>`
 
@@ -320,6 +315,56 @@ Instalando e Configurando Ambiente de Desenvolvimento PHP
 			> "localhost/info.php" ou "127.0.0.1/info.php"
 
 		- Se abrir a página de informações do PHP, a instalação da linguagem está correta.
+
+--------------------
+
+## Gerenciar os serviços Apache e MariaDB no sistema
+
+- Verificar todos os serviços atualmente em execução, use o comando a baixo:
+
+	> ps -A
+
+- Desabilitar ou habilitar os serviços na inicialização do sistema.
+
+- Verificar status dos serviços:
+
+	> sudo systemctl status apache2
+
+	> sudo systemctl status mariadb
+
+	- Apache:
+
+		- Para desabilitar o serviço use:
+
+			> sudo systemctl stop apache2
+
+			> sudo systemctl disable apache2
+
+		- Para habilitar o serviço use:
+
+			> sudo systemctl enable apache2
+
+			> sudo systemctl start mariadb
+
+	- MariaDB:
+
+		- Para desabilitar o serviço use:
+
+			> sudo systemctl stop mariadb
+
+			> sudo systemctl disable mariadb
+
+		- Para habilitar o serviço use:
+
+			> sudo systemctl enable mariadb
+
+			> sudo systemctl start mariadb
+
+	- Para reiniciar um serviço use:
+
+		> sudo systemctl restart apache2
+
+		> sudo systemctl restart mariadb
 
 --------------------
 
@@ -455,3 +500,18 @@ Geralmente, esse é o endereço que você utiliza para se conectar ao seu servid
 	http://book.cakephp.org/3.0/pt/installation.html
 
 
+
+
+
+
+
+
+
+php
+    https://linuxize.com/post/how-to-install-php-on-debian-9/
+
+    https://www.rosehosting.com/blog/how-to-install-php-7-2-on-debian-9/
+
+    https://lukasmestan.com/install-libsodium-extension-in-php7/
+
+    https://stackoverflow.com/questions/48363789/warning-module-mcrypt-ini-file-doesnt-exist-under-etc-php-7-2-mods-available
