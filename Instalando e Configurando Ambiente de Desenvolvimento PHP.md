@@ -46,7 +46,7 @@ Instalando e Configurando Ambiente de Desenvolvimento PHP
 
 		 > "localhost/" ou "127.0.0.1/"
 
-		- Deverá aparecer a página de configuração padrão do Apache.
+		- Devere aparecer a página de configuração padrão do Apache.
 
 	- A seguir devemos habilitar o módulo **mod_rewrite**, o Módulo de Redirecionamento de URL’s do Apache, também conhecido como "URL’s amigáveis":
 
@@ -108,7 +108,7 @@ Instalando e Configurando Ambiente de Desenvolvimento PHP
 
 		> sudo apache2ctl configtest
 
-		- Saída deverá ser:
+		- Saída deve ser:
 
 			`[secondary-label Output]`</br>
 			`Syntax OK`
@@ -131,7 +131,7 @@ Instalando e Configurando Ambiente de Desenvolvimento PHP
 
 	> sudo apt install mariadb-server
 
-	- Na instação, não será mais solicitado que seja definida uma senha ou quaisquer outras configurações. 
+	- Na instalação, não é mais solicitado que seja definida uma senha ou quaisquer outras configurações. 
 	
 	- O seriviço do banco de dados deve ser iniciado automaticamente. Use o comando a baixo para verificar:
 
@@ -166,9 +166,9 @@ Instalando e Configurando Ambiente de Desenvolvimento PHP
 
 3. Correção do erro **#1698**. Erro ao logar com um cliente como o phpMyAdmin.
 
-	- No sistema Debian, o usuário **root** do MariaDB é configurado o plugin **unix_socket** para autentificação por padrão. Isso permite uma maior segurança e usabilidade em muitos casos, mas também pode complicar quando é preciso permitir privilégios administrativos de um programa externo (por exemplo, phpMyAdmin). 
+	- No sistema Debian, no usuário **root** do MariaDB é configurado o plugin **unix_socket** para autentificação por padrão. Isso permite uma maior segurança e usabilidade em muitos casos, mas também pode complicar quando é preciso permitir privilégios administrativos de um programa externo (por exemplo, phpMyAdmin). 
 
-	- Como o servidor usa a conta **raiz** para tarefas como rotação de log e iniciar e parar o servidor, é melhor não alterar os detalhes de autenticação da conta **raiz** . Mudar as credenciais da conta **/etc/mysql/debian.cnf** pode funcionar inicialmente, mas as atualizações de pacotes podem substituir essas alterações. Em vez de modificar a conta **raiz** , os mantenedores do pacote recomendam a criação de uma conta **administrativa** separada com privilégidos de **root**, caso você precise configurar o acesso baseado em senha.
+	- Como o servidor usa a conta **raiz** para tarefas como rotação de log e iniciar, para o servidor é melhor não alterar os detalhes de autenticação da conta **raiz** . Mudar as credenciais da conta **/etc/mysql/debian.cnf** pode funcionar inicialmente, mas as atualizações de pacotes podem substituir essas alterações. Em vez de modificar a conta **raiz** , os mantenedores do pacote recomendam a criação de uma conta **administrativa** separada com privilégidos de **root**, caso você precise configurar o acesso baseado em senha.
 
 	- Para fazer isso, crie um novo usuário **USER** com os mesmos recursos da conta raiz (root), mas configurada para autenticação de **senha** que será usado no logar do usuario **root**. Para fazer isso, abra o prompt do MariaDB no seu terminal e altere o nome de usuário e a senha para corresponder às suas preferências:
 	
@@ -284,7 +284,7 @@ Instalando e Configurando Ambiente de Desenvolvimento PHP
 
 		> sudo phpenmod mbstring
 		
-		- *Ative a extensão **php7.0-mcrypt** somente se você instalou o PHP 7.0 ou 7.1 pelo repositório padrão. Até o momento, não existe a versão 7.2 ou 7.3 para a extensão **mcrypt**, ao invés dela está sendo usada a biblioteca **libsodium** para criptografia.*
+		- *Ative a extensão **php7.0-mcrypt** somente se você instalou o PHP 7.0 ou 7.1 pelo repositório padrão. Até o momento, não existe a versão 7.2 ou 7.3 para a extensão **mcrypt**, ao invés dela, está sendo usada a biblioteca **libsodium** para criptografia.*
 
 		> sudo phpenmod mcrypt
 
@@ -292,9 +292,7 @@ Instalando e Configurando Ambiente de Desenvolvimento PHP
 
 		- Para habilitar as mensagens erros, precisamos editar o arquivo *php.ini*. Acesse o diretório referente a versão do PHP que você instalou e depois abra o arquivo com privilégios de super usuário:
 
-			> cd /etc/php/7.1/apache2
-
-			> sudo nano php.ini
+			> sudo nano /etc/php/7.*/apache2/php.ini
 
 		- Com o arquivo aberto, procure pelas variáveis **display_errors**, **display_startup_errors** e **log_errors**. Altere o valor de *Off* para *On* nas variáveis, como na imagem a baixo:
 
@@ -323,51 +321,51 @@ Instalando e Configurando Ambiente de Desenvolvimento PHP
 
 ## Gerenciar os serviços Apache e MariaDB no sistema
 
-- Verificar todos os serviços atualmente em execução, use o comando a baixo:
+- Para verificar todos os serviços atualmente em execução, use o comando a baixo:
 
 	> ps -A
 
 - Desabilitar ou habilitar os serviços na inicialização do sistema.
 
-- Verificar status dos serviços:
+    - Verificar status dos serviços:
 
-	> sudo systemctl status apache2
+    	> sudo systemctl status apache2
 
-	> sudo systemctl status mariadb
+    	> sudo systemctl status mariadb
 
-	- Apache:
+    	- Apache:
 
-		- Para desabilitar o serviço use:
+    		- Para desabilitar o serviço use:
 
-			> sudo systemctl stop apache2
+    			> sudo systemctl stop apache2
 
-			> sudo systemctl disable apache2
+    			> sudo systemctl disable apache2
 
-		- Para habilitar o serviço use:
+    		- Para habilitar o serviço use:
 
-			> sudo systemctl enable apache2
+    			> sudo systemctl enable apache2
 
-			> sudo systemctl start mariadb
+    			> sudo systemctl start mariadb
 
-	- MariaDB:
+    	- MariaDB:
 
-		- Para desabilitar o serviço use:
+    		- Para desabilitar o serviço use:
 
-			> sudo systemctl stop mariadb
+    			> sudo systemctl stop mariadb
 
-			> sudo systemctl disable mariadb
+    			> sudo systemctl disable mariadb
 
-		- Para habilitar o serviço use:
+    		- Para habilitar o serviço use:
 
-			> sudo systemctl enable mariadb
+    			> sudo systemctl enable mariadb
 
-			> sudo systemctl start mariadb
+    			> sudo systemctl start mariadb
 
-	- Para reiniciar um serviço use:
+    	- Para reiniciar um serviço use:
 
-		> sudo systemctl restart apache2
+    		> sudo systemctl restart apache2
 
-		> sudo systemctl restart mariadb
+    		> sudo systemctl restart mariadb
 
 --------------------
 
