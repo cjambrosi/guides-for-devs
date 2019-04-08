@@ -46,7 +46,7 @@ Instalando e Configurando Ambiente de Desenvolvimento PHP
 
 		 > "localhost/" ou "127.0.0.1/"
 
-		- Devere aparecer a página de configuração padrão do Apache.
+		- Deve aparecer a página de configuração padrão do Apache.
 
 	- A seguir devemos habilitar o módulo **mod_rewrite**, o Módulo de Redirecionamento de URL’s do Apache, também conhecido como "URL’s amigáveis":
 
@@ -75,7 +75,7 @@ Instalando e Configurando Ambiente de Desenvolvimento PHP
 			</Directory>
 			<Directory /var/www>
 			    Options Indexes FollowSymLinks MultiViews
-			    AllowOverride All`</br>
+			    AllowOverride All
 			    Order Allow,Deny
 			    Allow from all
 			</Directory>
