@@ -7,13 +7,13 @@ Instalando e Configurando o Composer no Linux (Ubuntu)
 
 1. Antes de tudo, atualize os repositórios e o sistema:
 
-	> sudo apt-get update
+	> sudo apt update
 
-	> sudo apt-get upgrade
+	> sudo apt upgrade
 
 2. Precisaremos da biblioteca **"curl"** instalada, para baixarmos o pacote Composer. Digite o comando a baixo para instalar:
 
-	> sudo apt-get install curl
+	> sudo apt install curl
 
 3. Com o comando a baixo, o Composer é baixado direto da fonte e instalado. Será baixado no **/home**:
 
@@ -30,11 +30,15 @@ Instalando e Configurando o Composer no Linux (Ubuntu)
 
 6. Assim será possível executar o Composer de qualquer lugar do computador, sem a necessidade da extensão **".phar"**.
 
+	- Verifica a versão instalada com o comando a baixo:
+
+		> composer --version
+
 --------------------
 
 ## O que foi instalado?!
 
- - **Composer =>** É uma ferramenta para gerenciamento de dependências para o PHP que vem ganhando espaço e se tornando cada vez mais indispensável. Com algumas poucas linhas de configurações você define todas as bibliotecas de terceiros ou mesmo suas que deseja/precisa utilizar em seu projeto, o composer encarrega-se de baixá-las e criar um autoloader deixando-as prontas para uso;
+ - **[Composer](https://getcomposer.org/) =>** É uma ferramenta para gerenciamento de dependências para o PHP que vem ganhando espaço e se tornando cada vez mais indispensável. Com algumas poucas linhas de configurações você define todas as bibliotecas de terceiros ou mesmo suas que deseja/precisa utilizar em seu projeto, o composer encarrega-se de baixá-las e criar um autoloader deixando-as prontas para uso;
 
  - **chmod +x =>** Comando que dá permissão de execução apenas;
 
