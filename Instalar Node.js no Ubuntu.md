@@ -25,7 +25,7 @@ Node.js é uma plataforma para desenvolvimento de aplicações server-side (que 
 
 3. Agora vamos baixar o script de instalação/atualização do NVM, a partir do repositório oficial e executá-lo com o comando a baixo.
 
-	> curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.2/install.sh | bash
+	> curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.34.0/install.sh | bash
 
 	- O número da versão **(v0.33.2)** pode mudar com o tempo, então acesse o [**repositório oficial**](https://github.com/creationix/nvm) para procurar a versão mais recente.
 
