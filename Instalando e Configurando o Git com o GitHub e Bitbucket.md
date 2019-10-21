@@ -32,7 +32,7 @@ Permite além reverter arquivos para um estado anterior, reverter um projeto int
 
 		> sudo apt install git-all
 
-	- Instale o visualizador grágico do histórico de todos os commits feitos:
+	- Instale o visualizador gráfico do histórico de todos os commits feitos:
 
 		> sudo apt install gitk
 
@@ -54,7 +54,7 @@ Permite além reverter arquivos para um estado anterior, reverter um projeto int
 
 	> git config --global core.autocrlf input
 
-4. Podemos configurar um editor de texto padrão, para ser usado quando o Git precisar que você escreva uma menssagem. 
+4. Podemos configurar um editor de texto padrão, para ser usado quando o Git precisar que você escreva uma mensagem. 
 
 	- Opcinalmente utilizo o Visual Studio Code. Para configurá-lo corretamente, siga os comandos a baixo:
 
