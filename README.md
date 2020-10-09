@@ -34,6 +34,8 @@ Tutorias para fins de facilitar instalações e tarefas.
 
 - [Como Listar os programas instalados no Linux](https://github.com/CristianAmbrosi/tutoriais/blob/master/articles/Ver%20programas%20instalados%20no%20Linux%20%28Ubuntu%29.md)
 
+- [Integrando o Cmder com o Hyper no Windows](https://github.com/cjambrosi/tutoriais/blob/master/articles/Integrando%20o%20Cmder%20com%20o%20Hyper%20no%20Windows.md)
+
 ## Autor
 
 | [<img src="https://avatars3.githubusercontent.com/u/9125404?s=460&v=4" width=115><br><sub>@cjambrosi</sub>](https://github.com/cjambrosi) 
