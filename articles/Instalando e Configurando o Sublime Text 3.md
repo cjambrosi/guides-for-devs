@@ -1,15 +1,9 @@
-Instalando e Configurando o Sublime Text 3 no Ubuntu
-===============================================
-
---------------------
+<h1 align="center">Instalando e Configurando o Sublime Text 3 no Ubuntu</h1>
 
 ## Antes de tudo, atualize os repositórios e o sistema:
 
-> sudo apt-get update
+> sudo apt-get update && apt-get upgrade
 
-> sudo apt-get upgrade
-
---------------------
 
 ## Instalando
 
@@ -43,8 +37,6 @@ Instalando e Configurando o Sublime Text 3 no Ubuntu
 
 		> sudo apt-get install sublime-text-installer
 
---------------------
-
 ## Instalar Plugins/Pacotes no Sublime Text
 
 1. Para instalar plugins no Sublime Text, é preciso ter instalado o plugin **Package Control**. Esse plugin é responsável por gerenciar todos os outros plugins, ou seja, é com ele que você vai instalar, desinstalar e configurar plugins.
@@ -68,8 +60,6 @@ Instalando e Configurando o Sublime Text 3 no Ubuntu
 		> remove package Color Highlighter
 
 	- Logo a baixo, há uma [lista com alguns bons plugins](#lista-de-alguns-plugins-para-usar-no-sublime-text) para serem instalados.
-
---------------------
 
 ## Configurações do Usuário
 
@@ -102,8 +92,6 @@ Instalando e Configurando o Sublime Text 3 no Ubuntu
 	&nbsp;&nbsp;&nbsp;&nbsp;`"bold_folder_labels": true`<br />
 	`}`<br />
 
---------------------
-
 ## Sublime Text como editor de texto padrão do sistema
 
 - Acesse o seguinte diretório:
@@ -119,8 +107,6 @@ Instalando e Configurando o Sublime Text 3 no Ubuntu
 	![](https://github.com/CristianAmbrosi/tutoriais/blob/master/images/st-editor-padrao.png)
 
 - Salve o arquivo e verifique nas opções se já é possível escolher o Sublime Text como editor de texto padrão para seus arquivos.
-
---------------------
 
 ## Lista de alguns plugins para usar no Sublime Text
 
@@ -148,46 +134,44 @@ Instalando e Configurando o Sublime Text 3 no Ubuntu
 
 - [AutoFileName](https://packagecontrol.io/packages/AutoFileName)
 
---------------------
-
 ## Referências
 
 - Instalação e configuração:
 
-	https://www.sublimetext.com/docs/3/linux_repositories.html
+	<https://www.sublimetext.com/docs/3/linux_repositories.html>
 
-	http://www.diolinux.com.br/2013/07/omo-instalar-o-sublime-text-3-no-via-ppa.html
+	<http://www.diolinux.com.br/2013/07/omo-instalar-o-sublime-text-3-no-via-ppa.html>
 
-	https://askubuntu.com/questions/396938/how-do-i-make-sublime-text-3-the-default-text-editor
+	<https://askubuntu.com/questions/396938/how-do-i-make-sublime-text-3-the-default-text-editor>
 
-	https://askubuntu.com/questions/172698/how-do-i-install-sublime-text-2-3
+	<https://askubuntu.com/questions/172698/how-do-i-install-sublime-text-2-3>
 
-	https://ubuntuforums.org/showthread.php?t=794255
+	<https://ubuntuforums.org/showthread.php?t=794255>
 
-	http://sublimetextdicas.com.br/
+	<http://sublimetextdicas.com.br>
 
 - Plugins/Pacotes:
 
-	https://packagecontrol.io/installation
+	<https://packagecontrol.io/installation>
 
-	http://sublimetextdicas.com.br/11-plugins-para-php-no-sublime-text/
+	<http://sublimetextdicas.com.br/11-plugins-para-php-no-sublime-text>
 
-	https://tableless.com.br/7-plugins-sublime-text-que-voce-deveria-conhecer/
+	<https://tableless.com.br/7-plugins-sublime-text-que-voce-deveria-conhecer>
 
-	https://medium.com/@juniorb2s/melhores-plugins-sublime-para-php-4b011aa02cdf
+	<https://medium.com/@juniorb2s/melhores-plugins-sublime-para-php-4b011aa02cdf>
 
-	https://willianjusten.com.br/meus-plugins-favoritos-do-sublime-text/
+	<https://willianjusten.com.br/meus-plugins-favoritos-do-sublime-text>
 
-	https://medium.com/@MariaSpr/sublime-text-3-essential-packages-2596133aead9
+	<https://medium.com/@MariaSpr/sublime-text-3-essential-packages-2596133aead9>
 
-	https://umdevweb.wordpress.com/2015/10/04/instalando-o-sublime-text-3-e-configurando-plugins-part-2/
+	<https://umdevweb.wordpress.com/2015/10/04/instalando-o-sublime-text-3-e-configurando-plugins-part-2>
 
-	http://aslanbakan.com/en/blog/33-essential-sublime-text-plugins-for-all-developers/
+	<http://aslanbakan.com/en/blog/33-essential-sublime-text-plugins-for-all-developers>
 
-	http://www.devmedia.com.br/sublime-text-ide-introducao-a-melhor-ide-para-desenvolvimento/34117
+	<http://www.devmedia.com.br/sublime-text-ide-introducao-a-melhor-ide-para-desenvolvimento/34117>
 
-	https://tableless.com.br/sublime-text-2-meu-novo-editor/
+	<https://tableless.com.br/sublime-text-2-meu-novo-editor>
 
-	https://nandovieira.com.br/configurando-o-sublime-text-2
+	<https://nandovieira.com.br/configurando-o-sublime-text-2>
 
-	https://webdesign.tutsplus.com/pt/articles/simple-visual-enhancements-for-better-coding-in-sublime-text--webdesign-18052
+	<https://webdesign.tutsplus.com/pt/articles/simple-visual-enhancements-for-better-coding-in-sublime-text--webdesign-18052>

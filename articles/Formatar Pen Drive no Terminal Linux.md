@@ -1,9 +1,6 @@
-Formatar Pen Drive no Terminal Linux
-===============================================
+<h1 align="center">Formatar Pen Drive no Terminal Linux</h1>
 
-#### Sistemas de Arquivos ou File System, refere-se à forma como os dados são armazenados, organizados e acessados no disco pelo sistema operacional. É um artifício imposto pelo sistema operacional e não pelo hardware da máquina. O processo conhecido como "formatação lógica de disco" estabelece um file system em uma partição de HD, em pen drives, disquetes e etc.
-
---------------------
+Sistemas de Arquivos ou File System, refere-se à forma como os dados são armazenados, organizados e acessados no disco pelo sistema operacional. É um artifício imposto pelo sistema operacional e não pelo hardware da máquina. O processo conhecido como "formatação lógica de disco" estabelece um file system em uma partição de HD, em pen drives, disquetes e etc.
 
 ## Identificando o Pen Drive
 1. Primeira Forma - Digite:
@@ -77,8 +74,6 @@ Formatar Pen Drive no Terminal Linux
 			sr0     11:0    1  1024M  0 rom
 
 
---------------------
-
 ## Desmontar a unidade do Pen Drive
 
  - Normalmente, quando colocamos o Pen Drive na porta USB, o Linux (ou qualquer outro SO) já o monta automaticamente, então para fazermos a formatação, devemos desmontá-lo. Digite o comando a baixo:
@@ -90,8 +85,6 @@ Formatar Pen Drive no Terminal Linux
 
 	 - Ou:
 		> sudo umount /media/usuario/PENDRIVE
-
---------------------
 
 ## Agora a formatação
 
@@ -119,8 +112,6 @@ Formatar Pen Drive no Terminal Linux
 
 		> sudo mkfs.vfat -n NOMEPENDRIVE -I /dev/sdb1
 
---------------------
-
 ## Lista de comandos utilizados
 
 **fdisk -l 	=>** Lista os particionamentos. fdisk é um utilitário presente em diversos sistemas operacionais que realiza particionamento de discos rígidos. Há versões do fdisk para Linux, DOS, Windows, FreeDOS e OS/2;
@@ -146,8 +137,6 @@ Formatar Pen Drive no Terminal Linux
 **ntfslabel =>** É uma ferramenta que possui a funcionalidade de renomear ou exibir o rótulo de um sistema de arquivos NTFS;
 
 **/dev/sdb1 =>** Partição do disco onde é montado o dispositivo conectado. Sendo a primeira partição do segundo disco rígido SATA ou SCSI. Pode haver vários, por isso devemos ter certeza da partição que queremos formatar.
-
---------------------
 
 ## Breve explicação sobre os Sistemas de Arquivos NTFS e FAT32
 
@@ -176,28 +165,26 @@ Formatar Pen Drive no Terminal Linux
 		- Tamanho máximo de arquivos: 4GB minus 2 Bytes;
 		- Número máximo de Clusters: 4177918.
 
---------------------
-
 ## Referências
 
-http://www.guiafoca.org/cgs/guia/iniciante/ch-disc.html
+<http://www.guiafoca.org/cgs/guia/iniciante/ch-disc.html>
 
-http://pajeonline.blogspot.com.br/2011/07/como-formatar-em-ntfs-no-linux-hd.html
+<http://pajeonline.blogspot.com.br/2011/07/como-formatar-em-ntfs-no-linux-hd.html>
 
-http://www.linuxdescomplicado.com.br/2013/12/voce-pergunta-como-formatar-um-pendrive.html
+<http://www.linuxdescomplicado.com.br/2013/12/voce-pergunta-como-formatar-um-pendrive.html>
 
-https://linux.die.net/man/8/mkntfs
+<https://linux.die.net/man/8/mkntfs>
 
-http://www.techtudo.com.br/dicas-e-tutoriais/noticia/2011/12/como-formatar-um-pen-drive-no-terminal-do-linux.html
+<http://www.techtudo.com.br/dicas-e-tutoriais/noticia/2011/12/como-formatar-um-pen-drive-no-terminal-do-linux.html>
 
-https://www.youtube.com/watch?v=6IuM2RHX6UQ
+<https://www.youtube.com/watch?v=6IuM2RHX6UQ>
 
-https://www.youtube.com/watch?v=Bq9whTuZ64Q
+<https://www.youtube.com/watch?v=Bq9whTuZ64Q>
 
-https://elias.praciano.com/2016/01/como-usar-o-comando-mount-para-visualizar-montar-e-desmontar-sistemas-de-arquivos-no-linux/
+<https://elias.praciano.com/2016/01/como-usar-o-comando-mount-para-visualizar-montar-e-desmontar-sistemas-de-arquivos-no-linux>
 
-http://www.uniriotec.br/~morganna/guia/umount.html
+<http://www.uniriotec.br/~morganna/guia/umount.html>
 
-http://www.uniriotec.br/~morganna/guia/lsblk.html
+<http://www.uniriotec.br/~morganna/guia/lsblk.html>
 
-http://fdtk.com.br/wiki/tiki-index.php?page=ntfslabel
+<http://fdtk.com.br/wiki/tiki-index.php?page=ntfslabel>

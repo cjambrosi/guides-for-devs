@@ -1,7 +1,4 @@
-Permissões de um Arquivo ou Diretório no Linux
-===============================================
-
---------------------
+<h1 align="center">Permissões de um Arquivo ou Diretório no Linux</h1>
 
 1. Abra o terminal do linux, escolha um diretório qualquer e dê o seguinte comando:
 	
@@ -147,14 +144,12 @@ Permissões de um Arquivo ou Diretório no Linux
 
 		  > sudo addgroup [nome_grupo]
 
---------------------
-
 ## Referências
 
-https://www.youtube.com/watch?v=C-X_HmtGqPk
+<https://www.youtube.com/watch?v=C-X_HmtGqPk>
 
-https://www.youtube.com/watch?v=nogVVjeeXLg
+<https://www.youtube.com/watch?v=nogVVjeeXLg>
 
-https://www.youtube.com/watch?v=_jR8tOl0yqU
+<https://www.youtube.com/watch?v=_jR8tOl0yqU>
 
-https://www.vivaolinux.com.br/dica/Chmod-+-dicas
+<https://www.vivaolinux.com.br/dica/Chmod-+-dicas>

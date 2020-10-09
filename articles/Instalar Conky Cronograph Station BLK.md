@@ -1,96 +1,88 @@
-Instalar Conky Cronograph Station BLK 8.4 Modificado no Ubuntu
-===============================================
+<h1 align="center">Instalar Conky Cronograph Station BLK 8.4 Modificado no Ubuntu</h1>
 
 ![](https://github.com/CristianAmbrosi/tutoriais/blob/master/images/conky-blk8.gif)
 
---------------------
+Este Conky foi modificado a meu gosto, se desejar seguindo os mesmos passos, pode instalar a versão mais recente do repositório [*oficial*](https://github.com/drxspace/cronoconky).
 
-- **Este Conky foi modificado a meu gosto, se desejar seguindo os mesmos passos, pode instalar a versão mais recente do repositório [*oficial*](https://github.com/drxspace/cronoconky).**
+## Antes de tudo, atualize os repositórios e o sistema:
 
---------------------
+	> sudo apt-get update && apt-get upgrade
 
-- Antes de tudo, atualize os repositórios e o sistema:
+## Instalação
 
-	> sudo apt-get update
+Baixe o arquivo compactado neste link e descompacte-o:
 
-	> sudo apt-get upgrade
+- [**Conky Cronograph Station BLK 8.4 Modificado**](/files/cronoconky-blk-8.0-modificado.tar.gz?raw=true)
 
-- Baixe o arquivo compactado neste link e descompacte-o:
+Descompactado o arquivo, entre na pasta pelo terminal e execute o arquivo *debians_install.sh*.
 
-	- [**Conky Cronograph Station BLK 8.4 Modificado**](/files/cronoconky-blk-8.0-modificado.tar.gz?raw=true)
+> ./debians_install.sh
 
-- Descompactado o arquivo, entre na pasta pelo terminal e execute o arquivo *debians_install.sh*.
+Siga os passos a baixo:
 
-	> ./debians_install.sh
+- `Do you want to continue? [Y/n]:` **`Y`**
+</br>`digite sua senha de super usuário`
 
-- Siga os passos a baixo:
+- `Do you want to continue? [Y/n]:` **`Y`**
 
-	- `Do you want to continue? [Y/n]:` **`Y`**
-	</br>`digite sua senha de super usuário`
+- `Do you want to install the hddtemp service as daemon? [Y/n]:` **`n`**
 
-	- `Do you want to continue? [Y/n]:` **`Y`**
+- `Celsius or Fahrenheit? [C/f]:` **`(Opcional)`**
 
-	- `Do you want to install the hddtemp service as daemon? [Y/n]:` **`n`**
+- `Do you want to add this conky to the Startup Applications list? [Y/n]:` **`Y`**
 
-	- `Celsius or Fahrenheit? [C/f]:` **`(Opcional)`**
+Acesse o site  [Yahoo Weather](https://www.yahoo.com/news/weather). Onde mostra a temperatura, altere para a que você escolheu na instalação *C (Celsius)* ou *F (Fahrenheit)* e procure pela cidade desejada utiliando o CEP. Ao selecionar a cidade, no final da URL copie o código da cidade.
 
-	- `Do you want to add this conky to the Startup Applications list? [Y/n]:` **`Y`**
+- Exemplo: `https://www.yahoo.com/news/weather/brazil/erechim/erechim-`**`12827913`**
 
-- Acesse o site  [Yahoo Weather](https://www.yahoo.com/news/weather). Onde mostra a temperatura, altere para a que você escolheu na instalação *C (Celsius)* ou *F (Fahrenheit)* e procure pela cidade desejada utiliando o CEP. Ao selecionar a cidade, no final da URL copie o código da cidade.
+Copiado o código, vá no diretório onde foi instalado o Conky, por padrão está em `/opt/cronograph_blk/`. Dentro do diretório vá em `yahooweather` e abra o arquivo chamado `forecasts.sh`. Na linha 50, altere a variável `WOEID='12827913'` pelo código obtido da sua cidade e salve.
 
-	- Exemplo: `https://www.yahoo.com/news/weather/brazil/erechim/erechim-`**`12827913`**
+> cd /opt/cronograph_blk/yahooweather/
 
-- Copiado o código, vá no diretório onde foi instalado o Conky, por padrão está em `/opt/cronograph_blk/`. Dentro do diretório vá em `yahooweather` e abra o arquivo chamado `forecasts.sh`. Na linha 50, altere a variável `WOEID='12827913'` pelo código obtido da sua cidade e salve.
+> sudo nano forecasts.sh
 
-	> cd /opt/cronograph_blk/yahooweather/
+![](https://github.com/CristianAmbrosi/tutoriais/blob/master/images/conky-forecasts.png)
 
-	> sudo nano forecasts.sh
+Volte uma pasta e execute o arquivo *start_crono.sh* para reiniciar o Conky com a modificação feita.
 
-	![](https://github.com/CristianAmbrosi/tutoriais/blob/master/images/conky-forecasts.png)
+> ./start_crono.sh
 
-- Volte uma pasta e execute o arquivo *start_crono.sh* para reiniciar o Conky com a modificação feita.
 
-	> ./start_crono.sh
+## Como desinstalar
 
---------------------
+Abra o terminal e digite o seguinte comando:
 
-- Desinstalar o Conky Cronograph BLK
+> sudo apt-get --purge remove conky*
 
-	- Abra o terminal e digite o seguinte comando:
+Feito isso, vá até a pasta onde foi instalado o Conky e siga os passos a baixo:
 
-		> sudo apt-get --purge remove conky*
+> cd /opt/
 
-	- Feito isso, vá até a pasta onde foi instalado o Conky e siga os passos a baixo:
+> ls -l
 
-		> cd /opt/
+> sudo rm -rfv cronograph_blk/
 
-		> ls -l
+## O que é o serviço hddtemp?
 
-		> sudo rm -rfv cronograph_blk/
-
---------------------
-
-- **O que é o serviço hddtemp?**</br>
 O aplicativo *hddtemp* serve para monitorar a temperatura do seu HD, através da leitura dos dados do S.M.A.R.T. O propósito do S.M.A.R.T é antecipar falhas no dispositivo de armazenamento, o que permite ao usuário se prevenir de perda de dados.</br>
-O *hddtemp* busca informações sobre a temperatura do disco rígido nos dados fornecidos pelo S.M.A.R.T — desde que o dispositivo tenha suporte ao recurso.</br>
+O *hddtemp* busca informações sobre a temperatura do disco rígido nos dados fornecidos pelo S.M.A.R.T — desde que o dispositivo tenha suporte ao recurso.
+
 O aplicativo pode ser executado como um comando simples ou como daemon (controla um serviço provido pelo seu sistema), para obter informações de todos os servidores.
 
---------------------
+## Referências
 
-- Referências
+<http://www.upubuntu.com/2012/06/conky-cronograph-station-elegant.html>
 
-	http://www.upubuntu.com/2012/06/conky-cronograph-station-elegant.html
+<https://www.youtube.com/watch?v=D3qDJRNXfJU>
 
-	https://www.youtube.com/watch?v=D3qDJRNXfJU
+<https://elias.praciano.com/2014/03/monitore-a-temperatura-do-seu-hd-com-hddtemp>
 
-	https://elias.praciano.com/2014/03/monitore-a-temperatura-do-seu-hd-com-hddtemp/
+<https://www.cyberciti.biz/tips/howto-monitor-hard-drive-temperature.html>
 
-	https://www.cyberciti.biz/tips/howto-monitor-hard-drive-temperature.html
+<http://manpages.ubuntu.com/manpages/zesty/man8/hddtemp.8.html>
 
-	http://manpages.ubuntu.com/manpages/zesty/man8/hddtemp.8.html
+<https://packages.debian.org/search?keywords=hddtemp>
 
-	https://packages.debian.org/search?keywords=hddtemp
+<https://www.vivaolinux.com.br/artigo/Entendendo-um-pouco-sobre-os-daemons>
 
-	https://www.vivaolinux.com.br/artigo/Entendendo-um-pouco-sobre-os-daemons
-
-	https://askubuntu.com/questions/26542/what-is-a-daemon
+<https://askubuntu.com/questions/26542/what-is-a-daemon>

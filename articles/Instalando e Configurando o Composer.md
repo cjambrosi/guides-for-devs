@@ -1,7 +1,4 @@
-Instalando e Configurando o Composer no Linux (Ubuntu)
-===============================================
-
---------------------
+<h1 align="center">Instalando e Configurando o Composer no Linux (Ubuntu)</h1>
 
 ## Instalar
 
@@ -34,8 +31,6 @@ Instalando e Configurando o Composer no Linux (Ubuntu)
 
 		> composer --version
 
---------------------
-
 ## O que foi instalado?!
 
  - **[Composer](https://getcomposer.org/) =>** É uma ferramenta para gerenciamento de dependências para o PHP que vem ganhando espaço e se tornando cada vez mais indispensável. Com algumas poucas linhas de configurações você define todas as bibliotecas de terceiros ou mesmo suas que deseja/precisa utilizar em seu projeto, o composer encarrega-se de baixá-las e criar um autoloader deixando-as prontas para uso;
@@ -46,8 +41,8 @@ Instalando e Configurando o Composer no Linux (Ubuntu)
 
 ### Referências
 
-http://gilbertoalbino.com/instalacao-do-composer-no-ubuntu/
+<http://gilbertoalbino.com/instalacao-do-composer-no-ubuntu>
 
-http://tableless.com.br/composer-para-iniciantes/
+<http://tableless.com.br/composer-para-iniciantes>
 
-http://php.net/manual/pt_BR/book.curl.php
+<http://php.net/manual/pt_BR/book.curl.php>

@@ -1,7 +1,5 @@
-Backup e Restore no Banco de Dados Firebird SQL | (Linha de Comando)
-===============================================
 
---------------------
+<h1 align="center">Backup e Restore no Banco de Dados Firebird SQL <br />(Linha de Comando)</h1>
 
 ## Backup
 
@@ -17,8 +15,6 @@ Ex:
 3. Em seguida digite no terminal os seguintes comandos:
 
 	> gbak -g -l -b -v -z /CAMINHO-DO-ARQUIVO/banco.fbd /CAMINHO-DO-BACKUP/banco.fbk -user USUARI_DO_BANCO -pas SENHA_DO_BANCO
-
---------------------
 
 ## Restore
 
@@ -36,8 +32,6 @@ Ex:
 	> gbak -c -v -z /CAMINHO-DO-BACKUP/banco.fbk /CAMINHO-DO-BACKUP/banco.fbd -user USUARI_DO_BANCO -pas SENHA_DO_BANCO
 
 	- **Obs: Se tiver dúvidas, pode criar um .NEW e depois renomear normalmente para .fbd.**
-
---------------------
 
 ## Lista de comandos utilizados
 
@@ -67,10 +61,8 @@ Ex:
 
   ![](https://github.com/CristianAmbrosi/tutoriais/blob/master/images/Tabela_Par%C3%A2metros_Firebird.png)
 
---------------------
-
 ## Referências
 	
-https://www.youtube.com/watch?v=NNV5M0nsaF8
+<https://www.youtube.com/watch?v=NNV5M0nsaF8>
 
-http://www.devmedia.com.br/utilizando-o-gbak-do-firebird-para-efetuar-backup-restore/4877
+<http://www.devmedia.com.br/utilizando-o-gbak-do-firebird-para-efetuar-backup-restore/4877>
