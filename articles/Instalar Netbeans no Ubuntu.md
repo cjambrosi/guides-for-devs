@@ -1,19 +1,12 @@
-Instalar Netbeans no Ubuntu
-===============================================
+<h1 align="center">Instalar Netbeans no Ubuntu</h1>
 
---------------------
+OBS: Antes de efetuar a instalação, deve-se ter o JAVA e o JDK instalados na máquina.
 
-#### **OBS: Antes de efetuar a instalação, deve-se ter o JAVA e o JDK instalados na máquina.**
+## Antes de tudo, atualize os repositórios e o sistema
 
---------------------
+  > sudo apt update && apt upgrade
 
-## Antes de tudo, atualize os repositórios e o sistema:
-
-  > sudo apt update
-
-  > sudo apt upgrade
-
-## Baixando e Executando o instalador:
+## Baixando e Executando o instalador
 
 1. Acessar o site do Netbeans.org, ir na página de downloads e baixar a versão que desejar.
 
@@ -33,9 +26,7 @@ Instalar Netbeans no Ubuntu
 
 	> /Downloads$	./netbeans-8.2-linux.sh
 
---------------------
-
-## Instalação:
+## Instalação
 
 1. Na primeira janela de instalação você pode optar pelo quê você quer instalar ou não.
 
@@ -52,8 +43,6 @@ Instalar Netbeans no Ubuntu
 
 5. Finalizar.
 
---------------------
-
 # Referências
 
-https://www.youtube.com/watch?v=74QEhBpzixs
+<https://www.youtube.com/watch?v=74QEhBpzixs>

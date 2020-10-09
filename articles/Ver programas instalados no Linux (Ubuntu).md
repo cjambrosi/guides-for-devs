@@ -1,18 +1,12 @@
-Ver programas instalados no Linux (Ubuntu)
-===============================================
-
---------------------
+<h1 align="center">Ver programas instalados no Linux (Ubuntu)</h1>
 
 ## Listar todos os programas instalados:										
 	
 > sudo dpkg --get-selections
 
-
 ## Buscar programas instalados por uma palavra chave:
 
 > sudo dpkg --get-selections | grep php
-
---------------------
 
 ## Breve explicação dos comandos:
 
@@ -28,14 +22,12 @@ Ver programas instalados no Linux (Ubuntu)
 
 - **php =>** Palavra chave à ser procurada.
 
---------------------
-
 ## Referências
 
-https://www.vivaolinux.com.br/dica/O-gerenciador-de-pacotes-dpkg
+<https://www.vivaolinux.com.br/dica/O-gerenciador-de-pacotes-dpkg>
 
-http://www.hardware.com.br/livros/entendendo-linux/usando-dpkg.html
+<http://www.hardware.com.br/livros/entendendo-linux/usando-dpkg.html>
 
-https://www.vivaolinux.com.br/dica/Usando-o-pipe
+<https://www.vivaolinux.com.br/dica/Usando-o-pipe>
 
-https://www.vivaolinux.com.br/artigo/Usando-grep-e-egrep
+<https://www.vivaolinux.com.br/artigo/Usando-grep-e-egrep>

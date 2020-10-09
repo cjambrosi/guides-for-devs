@@ -1,18 +1,17 @@
-Instalando e Configurando o Git com o GitHub e Bitbucket
-===============================================
+<h1 align="center">Instalando e Configurando o Git com o GitHub e Bitbucket</h1>
 
-#### O que é uma ferramenta de Controle de Versão?
+O que é uma ferramenta de Controle de Versão?
+
 Resumidamente, é um sistema que registra as mudanças feitas em um arquivo ou um conjunto de arquivos ao longo do tempo de forma que você possa recuperar versões específicas. Pode ser usado com praticamente qualquer tipo de arquivo em um computador.
 Permite além reverter arquivos para um estado anterior, reverter um projeto inteiro para um estado anterior, comparar mudanças feitas ao decorrer do tempo, ver quem foi o último a modificar algo que pode estar causando problemas, quem introduziu um bug e muito mais. Usar um VCS normalmente significa que se você estragou algo ou perdeu arquivos, poderá facilmente reavê-los. Além disso, você pode controlar tudo sem maiores esforços.
 
-#### Exemplos de ferramentas para Controle de Versão.
+Exemplos de ferramentas para Controle de Versão:
+
 - SubVersion (SVN);
 - Mercurial;
 - Microsoft Visual Studio - Team Foundation Server;
 - Git;
 - CVS.
-
---------------------
 
 ## Instalando
 
@@ -35,8 +34,6 @@ Permite além reverter arquivos para um estado anterior, reverter um projeto int
 	- Instale o visualizador gráfico do histórico de todos os commits feitos:
 
 		> sudo apt install gitk
-
---------------------
 
 ## Configurando o Git
 
@@ -131,8 +128,6 @@ Permite além reverter arquivos para um estado anterior, reverter um projeto int
 
 			`id_rsa  id_rsa.pub`
 
---------------------
-
 ## Configurando o GitHub
 
 1. Inserir no GitHub a chave SSH criada do Git
@@ -183,8 +178,6 @@ Permite além reverter arquivos para um estado anterior, reverter um projeto int
 
 		`Hi USER You've successfully authenticated, but GitHub does not provide shell access.`
 
---------------------
-
 ## Configurando o Bitbucket
 
 1. Inserir no Bitbucket a chave SSH criada do Git
@@ -223,8 +216,6 @@ Permite além reverter arquivos para um estado anterior, reverter um projeto int
 
 	- Ao chegar nessas mensagens, quer dizer que as configurações ocorreram corretamente e que a conexão está funcionando.
 
---------------------
-
 ## O que foi instalado?!
 
 **libcurl4-gnutls-dev =>** Pacote que fornece os arquivos de desenvolvimento (includes, static library, páginas manuais) que permitem construir softwares que usem libcurl;
@@ -241,30 +232,28 @@ Permite além reverter arquivos para um estado anterior, reverter um projeto int
 
 **xclip =>** Utilitário de linha de comando. Pode ler dados de padrão ou um arquivo e colocá-lo em uma seleção X (área de transferência) para colar em outras aplicações X. xclip também pode imprimir uma seleção X para a saída padrão, que pode então ser redirecionada para um arquivo ou outro programa.
 
---------------------
-
 ## Referências
 
 https://git-scm.com/book/pt-br/v1
 
-https://try.github.io/
+<https://try.github.io>
 
-https://confluence.atlassian.com/bitbucket/set-up-an-ssh-key-728138079.html
+<https://confluence.atlassian.com/bitbucket/set-up-an-ssh-key-728138079.html>
 
-https://www.youtube.com/watch?v=WVLhm1AMeYE&list=PLInBAd9OZCzzHBJjLFZzRl6DgUmOeG3H0
+<https://www.youtube.com/watch?v=WVLhm1AMeYE&list=PLInBAd9OZCzzHBJjLFZzRl6DgUmOeG3H0>
 
-https://help.github.com/articles/generating-an-ssh-key/
+<https://help.github.com/articles/generating-an-ssh-key>
 
-https://www.youtube.com/watch?v=UMhskLXJuq4
+<https://www.youtube.com/watch?v=UMhskLXJuq4>
 
-https://www.youtube.com/watch?v=iVUnXw64Ez8
+<https://www.youtube.com/watch?v=iVUnXw64Ez8>
 
-https://packages.debian.org/wheezy/libcurl4-gnutls-dev
+<https://packages.debian.org/wheezy/libcurl4-gnutls-dev>
 
-https://packages.debian.org/jessie/xclip
+<https://packages.debian.org/jessie/xclip>
 
-https://packages.debian.org/wheezy/libexpat1-dev
+<https://packages.debian.org/wheezy/libexpat1-dev>
 
-https://packages.debian.org/jessie/libssl-dev
+<https://packages.debian.org/jessie/libssl-dev>
 
-https://askubuntu.com/questions/765565/how-to-fix-processing-with-runit-and-git-daemon-run
+<https://askubuntu.com/questions/765565/how-to-fix-processing-with-runit-and-git-daemon-run>

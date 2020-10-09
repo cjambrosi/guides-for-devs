@@ -1,9 +1,6 @@
-Instalar as versões do PHP 5.6 e PHP 7.1 juntas no Ubuntu >= 14.04
-===============================================
+<h1 align="center">Instalar as versões do PHP 5.6 e PHP 7.1 juntas no Ubuntu >= 14.04</h1>
 
---------------------
-
-## Importante
+Importante!
 
 - Se você tiver uma versão do PHP mais recente instalada em seu sistema e precisa instalar uma versão mais antiga,  você precisará desinstalar a versão mais recente, instalar a mais antiga e depois reinstalar a versão mais recente.
 
@@ -11,15 +8,9 @@ Instalar as versões do PHP 5.6 e PHP 7.1 juntas no Ubuntu >= 14.04
 
 - Esse repositório (*ppa:ondrej/php*) é mantido pelo [Ondřej Surý](https://launchpad.net/~ondrej).
 
---------------------
-
 ## Antes de tudo, atualize os repositórios e o sistema:
 
-> sudo apt-get update
-
-> sudo apt-get upgrade
-
---------------------
+> sudo apt-get update && apt-get upgrade
 
 ## Para o Banco de Dados MySQL
 
@@ -67,8 +58,6 @@ Instalar as versões do PHP 5.6 e PHP 7.1 juntas no Ubuntu >= 14.04
 		`Zend Engine v3.1.0, Copyright (c) 1998-2017 Zend Technologies`</br>
 		    `with Zend OPcache v7.1.5-1+deb.sury.org~xenial+1, Copyright (c) 1999-2017, by Zend Technologies`</br>
 
---------------------
-
 ## Para o Banco de Dados PostgreSQL
 
 - Adicionar o repositório:
@@ -115,8 +104,6 @@ Instalar as versões do PHP 5.6 e PHP 7.1 juntas no Ubuntu >= 14.04
 		`Zend Engine v3.1.0, Copyright (c) 1998-2017 Zend Technologies`</br>
 		    `with Zend OPcache v7.1.5-1+deb.sury.org~xenial+1, Copyright (c) 1999-2017, by Zend Technologies`</br>
 
---------------------
-
 ## Configurando
 
 - Ativar as extensões *php5.6-mcrypt*, *php7.1-mcrypt* e *php5.6-mbstring*, *php7.1-mbstring*:
@@ -151,7 +138,6 @@ Instalar as versões do PHP 5.6 e PHP 7.1 juntas no Ubuntu >= 14.04
 
 		> sudo service apache2 restart
 
-
 - Teste se a instalação do PHP está correta. Crie um arquivo **"info.php"** no diretório dos projetos **"/var/www/html"** e dentro do arquivo insira a função a baixo e salve.
 
 	`<?php phpinfo(); ?>`
@@ -161,8 +147,6 @@ Instalar as versões do PHP 5.6 e PHP 7.1 juntas no Ubuntu >= 14.04
 	> "localhost/info.php" ou "127.0.0.1/info.php"
 
 - Se abrir a página de informações do PHP, a instalação da linguagem está correta.
-
---------------------
 
 ## Alternando entre as duas versões instaladas
 
@@ -181,8 +165,6 @@ Instalar as versões do PHP 5.6 e PHP 7.1 juntas no Ubuntu >= 14.04
 	- Ou:
 
 	> sudo a2dismod php7.1; sudo a2enmod php5.6; sudo service apache2 restart; echo 1 | sudo update-alternatives --config php
-
---------------------
 
 ## Testar as duas versões instaladas
 Para testar se a versão do PHP 7.1 está funcionando junto a do PHP 5.6, podemos utilizar um código simples usando o operador de comparação *Spaceship (nave espacial, <=>)*, que está disponível a partir do PHP 7.0.
@@ -213,8 +195,6 @@ Para testar se a versão do PHP 7.1 está funcionando junto a do PHP 5.6, podemo
 	`int(1)`</br>
 	`int(-1)`</br>
 
---------------------
-
 ### (*Opcional*) Podemos criar um par de *Alias* para não termos que digitar todo aquele comando enorme para alterar as versões do PHP
 
 - Para criá-los, é preciso modidificar o arquivo **.bashrc** que se encontra em **/home/USER/.bashrc** (se não existir o arquivo, crie-o). Abra o arquivo com privilégios de super usuário no editor de texto que preferir.
@@ -241,18 +221,16 @@ Para testar se a versão do PHP 7.1 está funcionando junto a do PHP 5.6, podemo
 
 	> source ~/.bashrc
 
---------------------
-
 ## Referências
 
-https://tecadmin.net/install-php5-on-ubuntu/
+<https://tecadmin.net/install-php5-on-ubuntu>
 
-https://phpraxis.wordpress.com/2016/05/16/install-php-5-6-or-5-5-in-ubuntu-16-04-lts-xenial-xerus/
+<https://phpraxis.wordpress.com/2016/05/16/install-php-5-6-or-5-5-in-ubuntu-16-04-lts-xenial-xerus>
 
-http://php.net/manual/pt_BR/language.operators.comparison.php
+<http://php.net/manual/pt_BR/language.operators.comparison.php>
 
-https://www.linuxdescomplicado.com.br/2015/06/criar-comandos-usando-alias.html
+<https://www.linuxdescomplicado.com.br/2015/06/criar-comandos-usando-alias.html>
 
-http://sejalivre.org/como-usar-aliases-para-personalizar-comandos-no-ubuntu/
+<http://sejalivre.org/como-usar-aliases-para-personalizar-comandos-no-ubuntu>
 
-http://ubuntuforum-br.org/index.php?topic=74091.0
+<http://ubuntuforum-br.org/index.php?topic=74091.0>

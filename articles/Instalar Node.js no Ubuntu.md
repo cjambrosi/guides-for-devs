@@ -1,15 +1,12 @@
-Instalar o Node.js no Ubuntu
-===============================================
+<h1 align="center">Instalar o Node.js no Ubuntu</h1>
 
---------------------
+O que é o Node.js?
 
-#### O que é o Node.js?<br/>
 Node.js é uma plataforma para desenvolvimento de aplicações server-side (que trabalha no lado do servidor) baseadas em rede utilizando JavaScript e o V8 JavaScript Engine, ou seja, com Node.js podemos criar uma variedade de aplicações Web utilizando apenas código em JavaScript (client-side, que trabalha no lado do cliente).
 
-- Nas distribuições baseadas no Debian (Ubuntu obviamente), é muito comum utilizarmos *apt-get install nome-do-pacote*. Com o Node isso pode ocasionar em problemas de conflito entre os nomes *node* e *node.js* (ao menos até o momento que escrevo esse passo-a-passo), pois o NPM que é o gerenciador de dependêcias ficará perdido e algumas funções não funcionaram.
-- O recomendado é instalar o **arquivo binário** do Node ou instalar o **NVM primeiro e depois o Node**, que é o que será feito aqui. Assim, se quisermos podemos instalar várias versões do Node e ficar alternando entre elas.
+Nas distribuições baseadas no Debian (Ubuntu obviamente), é muito comum utilizarmos *apt-get install nome-do-pacote*. Com o Node isso pode ocasionar em problemas de conflito entre os nomes *node* e *node.js* (ao menos até o momento que escrevo esse passo-a-passo), pois o NPM que é o gerenciador de dependêcias ficará perdido e algumas funções não funcionaram.
 
---------------------
+O recomendado é instalar o **arquivo binário** do Node ou instalar o **NVM primeiro e depois o Node**, que é o que será feito aqui. Assim, se quisermos podemos instalar várias versões do Node e ficar alternando entre elas.
 
 ## Instalação
 
@@ -45,18 +42,14 @@ Node.js é uma plataforma para desenvolvimento de aplicações server-side (que 
 
 	> node -v
 
---------------------
-
 ## Testar funcionamento
-
---------------------
 
 ## Referências
 
-https://nodejs.org/en/
+<https://nodejs.org/en>
 
-https://tableless.com.br/como-instalar-node-js-no-linux-corretamente-ubuntu-debian-elementary-os/
+<https://tableless.com.br/como-instalar-node-js-no-linux-corretamente-ubuntu-debian-elementary-os>
 
-https://github.com/creationix/nvm
+<https://github.com/creationix/nvm>
 
-https://tableless.com.br/o-que-nodejs-primeiros-passos-com-node-js/
+<https://tableless.com.br/o-que-nodejs-primeiros-passos-com-node-js>

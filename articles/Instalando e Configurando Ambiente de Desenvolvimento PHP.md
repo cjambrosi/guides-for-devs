@@ -1,24 +1,16 @@
-Instalando e Configurando Ambiente de Desenvolvimento PHP
-===============================================
+<h1 align="center">Instalando e Configurando Ambiente de Desenvolvimento PHP</h1>
 
-## Pilha: Apache, MariaDB, PHP 7
-
---------------------
+Pilha: Apache, MariaDB, PHP 7
 
 ## Antes de tudo, atualize os repositórios e o sistema:
 
-> sudo apt update
-
-> sudo apt upgrade
-
---------------------
+> sudo apt update && apt upgrade
 
 ## Apache
 
 1. Instalando:
 
 	> sudo apt install apache2 apache2-doc apache2-utils
-
 
 2. Configurando:
 
@@ -121,8 +113,6 @@ Instalando e Configurando Ambiente de Desenvolvimento PHP
 
 		> sudo apache2 -v
 
---------------------
-
 ## MariaDB
 
 1. Instalando:
@@ -206,8 +196,6 @@ Instalando e Configurando Ambiente de Desenvolvimento PHP
 
 		Threads: 1  Questions: 10  Slow queries: 0  Opens: 17  Flush tables: 1  Open tables: 11  Queries per second avg: 0.002
 		```
-
---------------------
 
 ## PHP 7
 
@@ -317,8 +305,6 @@ Instalando e Configurando Ambiente de Desenvolvimento PHP
 
 		- Se abrir a página de informações do PHP, a instalação da linguagem está correta.
 
---------------------
-
 ## Gerenciar os serviços Apache e MariaDB no sistema
 
 - Para verificar todos os serviços atualmente em execução, use o comando a baixo:
@@ -367,8 +353,6 @@ Instalando e Configurando Ambiente de Desenvolvimento PHP
 
     		> sudo systemctl restart mariadb
 
---------------------
-
 ## Encontrando Endereço do IP Público do seu Servidor
 
 Geralmente, esse é o endereço que você utiliza para se conectar ao seu servidor através do SSH.
@@ -391,76 +375,74 @@ Geralmente, esse é o endereço que você utiliza para se conectar ao seu servid
 
 		- Esse comando vai lhe retornar duas ou três linhas. Todos são endereços corretos, mas seu computador só poderá utilizar um deles, portanto, sinta-se livre para tentar cada um.
 
---------------------
-
 ## Referências
 
 - Pilha LAMP
 
-	https://elias.praciano.com/2017/07/como-instalar-um-servidor-web-lamp-no-debian-9/
+	<https://elias.praciano.com/2017/07/como-instalar-um-servidor-web-lamp-no-debian-9>
 
-	https://www.linuxbabe.com/debian/install-lamp-stack-debian-9-stretch
+	<https://www.linuxbabe.com/debian/install-lamp-stack-debian-9-stretch>
 
-	https://www.vivaolinux.com.br/topico/Apache-Web-Server/Erro-ao-acessar-o-apache2
+	<https://www.vivaolinux.com.br/topico/Apache-Web-Server/Erro-ao-acessar-o-apache2>
 
-	https://askubuntu.com/questions/256013/apache-error-could-not-reliably-determine-the-servers-fully-qualified-domain-n
+	<https://askubuntu.com/questions/256013/apache-error-could-not-reliably-determine-the-servers-fully-qualified-domain-n>
 
-	https://www.digitalocean.com/community/tutorials/how-to-install-linux-apache-mariadb-php-lamp-stack-debian9
+	<https://www.digitalocean.com/community/tutorials/how-to-install-linux-apache-mariadb-php-lamp-stack-debian9>
 
-	https://www.digitalocean.com/community/tutorials/como-instalar-a-pilha-linux-apache-mysql-php-lamp-no-ubuntu-16-04-pt
+	<https://www.digitalocean.com/community/tutorials/como-instalar-a-pilha-linux-apache-mysql-php-lamp-no-ubuntu-16-04-pt>
 
-	https://www.digitalocean.com/community/tutorials/how-to-install-and-secure-phpmyadmin-on-ubuntu-14-04
+	<https://www.digitalocean.com/community/tutorials/how-to-install-and-secure-phpmyadmin-on-ubuntu-14-04>
 
-	https://ubuntuserverguide.com/2014/06/how-to-install-lamp-in-ubuntu-server-14-04-lts.html
+	<https://ubuntuserverguide.com/2014/06/how-to-install-lamp-in-ubuntu-server-14-04-lts.html>
 
-	https://www.youtube.com/watch?v=Q2N5blJ4VIo
+	<https://www.youtube.com/watch?v=Q2N5blJ4VIo>
 
-	https://www.youtube.com/watch?v=bDi9h8LJHuE
+	<https://www.youtube.com/watch?v=bDi9h8LJHuE>
 
 - PHP
 
-	https://linuxize.com/post/how-to-install-php-on-debian-9/
+	<https://linuxize.com/post/how-to-install-php-on-debian-9>
 
-    https://www.rosehosting.com/blog/how-to-install-php-7-2-on-debian-9/
+    <https://www.rosehosting.com/blog/how-to-install-php-7-2-on-debian-9>
 
-    https://lukasmestan.com/install-libsodium-extension-in-php7/
+    <https://lukasmestan.com/install-libsodium-extension-in-php7>
 
-    https://stackoverflow.com/questions/48363789/warning-module-mcrypt-ini-file-doesnt-exist-under-etc-php-7-2-mods-available
+    <https://stackoverflow.com/questions/48363789/warning-module-mcrypt-ini-file-doesnt-exist-under-etc-php-7-2-mods-available>
 
-	https://www.digitalocean.com/community/tutorials/how-to-use-systemctl-to-manage-systemd-services-and-units
+	<https://www.digitalocean.com/community/tutorials/how-to-use-systemctl-to-manage-systemd-services-and-units>
 
-	https://www.vivaolinux.com.br/topico/Iniciantes-no-Linux/comando-service-e-invoke-rcd-nao-funciona-debian-8-help-me
+	<https://www.vivaolinux.com.br/topico/Iniciantes-no-Linux/comando-service-e-invoke-rcd-nao-funciona-debian-8-help-me>
 
-	https://pt.wikihow.com/Reiniciar-Servi%C3%A7os-no-Linux
+	<https://pt.wikihow.com/Reiniciar-Servi%C3%A7os-no-Linux>
 
-	https://matheuslima.com.br/instalando-o-nginx-php-7-mysql-lemp/
+	<https://matheuslima.com.br/instalando-o-nginx-php-7-mysql-lemp>
 
-	https://www.vivaolinux.com.br/topico/PHP/The-mbstring-extension-is-missing-Please-check-your-PHP-configuration
+	<https://www.vivaolinux.com.br/topico/PHP/The-mbstring-extension-is-missing-Please-check-your-PHP-configuration>
 
-	http://ubuntuforum-br.org/index.php?topic=74091.0
+	<http://ubuntuforum-br.org/index.php?topic=74091.0>
 
 - MariaDB
 
-	https://www.digitalocean.com/community/tutorials/how-to-install-mariadb-on-debian-9
+	<https://www.digitalocean.com/community/tutorials/how-to-install-mariadb-on-debian-9>
 
-	https://linuxize.com/post/how-to-install-mariadb-on-debian-9/
+	<https://linuxize.com/post/how-to-install-mariadb-on-debian-9>
 
-	http://eriberto.pro.br/blog/2018/09/04/instalando-e-configurando-mariadb-no-debian-9/
+	<http://eriberto.pro.br/blog/2018/09/04/instalando-e-configurando-mariadb-no-debian-9>
 
-	https://stackoverflow.com/questions/50409788/mysql-8-create-new-user-with-password-not-working
+	<https://stackoverflow.com/questions/50409788/mysql-8-create-new-user-with-password-not-working>
 
 - Módulos:
 
-	https://www.debian.org/
+	<https://www.debian.org/>
 
-	http://php.net/manual/pt_BR/intro.mcrypt.php
+	<http://php.net/manual/pt_BR/intro.mcrypt.php>
 
-	http://php.net/manual/pt_BR/intro.mbstring.php
+	<http://php.net/manual/pt_BR/intro.mbstring.php>
 
-	http://php.net/manual/pt_BR/function.readline.php
+	<http://php.net/manual/pt_BR/function.readline.php>
 
 - Habilitar mod_rewrite:
 
-	http://gilbertoalbino.com/linux-habilitar-mod_rewrite-no-ubuntu/
+	<http://gilbertoalbino.com/linux-habilitar-mod_rewrite-no-ubuntu>
 
-	http://book.cakephp.org/3.0/pt/installation.html
+	<http://book.cakephp.org/3.0/pt/installation.html>

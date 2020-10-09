@@ -1,19 +1,12 @@
-Instalar o compilador G++ e Code::Blocks no Ubuntu, para compilar C++
-===============================================
-
---------------------
+<h1 align="center">Instalar o compilador G++ e Code::Blocks no Ubuntu, para compilar C++</h1>
 
 ## Antes de tudo, atualize os repositórios e o sistema:
 
-> sudo apt-get update
-
-> sudo apt-get upgrade
-
---------------------
+> sudo apt-get update && apt-get upgrade
 
 ## Instalando o G++:
 
-- No momento a distribuição padrão do Ubuntu Linux inclui os compiladores GCC e G++. Para Ter certeza de que você já possui o compilador, digite o seguinte comando:
+No momento a distribuição padrão do Ubuntu Linux inclui os compiladores GCC e G++. Para Ter certeza de que você já possui o compilador, digite o seguinte comando:
 
 > g++ --version
 
@@ -22,13 +15,11 @@ Copyright (C) 2015 Free Software Foundation, Inc.
 This is free software; see the source for copying conditions.  There is NO
 warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.`
 
-- Se não possuir o compilador, abra o terminal e digite o seguinte comando:
+Se não possuir o compilador, abra o terminal e digite o seguinte comando:
 
-	> sudo apt-get install g++
+> sudo apt-get install g++
 
-	`Instala a última versão estável do compilador do C++`
-
---------------------
+`Instala a última versão estável do compilador do C++`
 
 ## Instalando e Configurando o Code::Blocks:
 
@@ -64,8 +55,6 @@ warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.`
 
 6. Efetuadas as alterações selecione **OK** para salvar e finalizar as configurações.
 
---------------------
-
 ## Desinstalar completamente o Code::Blocks do Ubuntu
 
 > sudo apt-get --purge remove codeblocks*
@@ -73,8 +62,6 @@ warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.`
 > sudo apt-get autoremove
 
 > sudo apt-get autoclean
-
---------------------
 
 ## Compilar algoritmo pelo terminal Linux
 
@@ -105,22 +92,20 @@ warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.`
 	- **-o   =>** Especifica o nome ao arquivo binário gerado, não é obrigatório.
 	- **.out =>** A extensão *.out* é facultativa, ou seja, posso deixar sem a extensão como também qualquer outra coisa, *.run*, *.exe*, *.bin* (menos .cpp).
 
---------------------
-
 ## Referências
 
-http://www.dummies.com/how-to/content/how-to-install-c-codeblocks-in-ubuntu-linux.html
+<http://www.dummies.com/how-to/content/how-to-install-c-codeblocks-in-ubuntu-linux.html>
 
-http://www.edivaldobrito.com.br/instalar-ide-codeblocks-no-ubuntu/
+<http://www.edivaldobrito.com.br/instalar-ide-codeblocks-no-ubuntu>
 
-http://ubuntuhandbook.org/index.php/2016/05/install-codeblocks-ide-ubuntu-16-04/
+<http://ubuntuhandbook.org/index.php/2016/05/install-codeblocks-ide-ubuntu-16-04>
 
-https://www.vivaolinux.com.br/topico/C-C++/Diferenca-entre-gcc-e-g++
+<https://www.vivaolinux.com.br/topico/C-C++/Diferenca-entre-gcc-e-g++>
 
-http://fig.if.usp.br/~esdobay/c/gcc.html
+<http://fig.if.usp.br/~esdobay/c/gcc.html>
 
-http://www.devfuria.com.br/c/como-compilar-no-linux/
+<http://www.devfuria.com.br/c/como-compilar-no-linux>
 
-https://khfw.wordpress.com/2010/11/04/compilar-programa-c-via-linha-de-comando/
+<https://khfw.wordpress.com/2010/11/04/compilar-programa-c-via-linha-de-comando>
 
 

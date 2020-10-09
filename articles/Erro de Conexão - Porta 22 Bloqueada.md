@@ -1,15 +1,10 @@
-Erro de Conexão do Git - Porta 22 Bloqueada
-===============================================
+<h1 align="center">Erro de Conexão do Git - Porta 22 Bloqueada</h1>
 
---------------------
+Na maioria das vezes optamos por utilizar conexão SSH para clonar repositórios, ao invés de usar a clonagem por [HTTPS](https://help.github.com/articles/caching-your-github-password-in-git/). Mas alguns firewalls e a maioria dos servidores Proxy podem interferir na conexão, bloqueando a porta utilizada, por exemplo:
 
-- Na maioria das vezes optamos por utilizar conexão SSH para clonar repositórios, ao invés de usar a clonagem por [HTTPS](https://help.github.com/articles/caching-your-github-password-in-git/). Mas alguns firewalls e a maioria dos servidores Proxy podem interferir na conexão, bloqueando a porta utilizada, por exemplo:
+![](https://github.com/CristianAmbrosi/tutoriais/blob/master/images/error-port22-git.png)
 
-    ![](https://github.com/CristianAmbrosi/tutoriais/blob/master/images/error-port22-git.png)
-
-- Para resolver o problema, alteramos a porta padrão que o Git utiliza, especificando para a porta 443 do servidor HTTPS.
-
---------------------
+Para resolver o problema, alteramos a porta padrão que o Git utiliza, especificando para a porta 443 do servidor HTTPS.
 
 ## Testando se a correção será possível
 
@@ -31,8 +26,6 @@ Erro de Conexão do Git - Porta 22 Bloqueada
 
     `Hi username! You've successfully authenticated, but GitHub does not provide shell access.`
 
---------------------
-
 ## Correção para o GitHub
 
 1. Abra o arquivo de configuração do Git com o comando a baixo, utilizando um editor de texto (geralmente está nesse caminho):
@@ -45,8 +38,6 @@ Erro de Conexão do Git - Porta 22 Bloqueada
     &nbsp;&nbsp;&nbsp;&nbsp;`Hostname ssh.github.com`</br>
     &nbsp;&nbsp;&nbsp;&nbsp;`Port 443`
 
---------------------
-
 ## Correção para o Bitbucket
 
 1. Abra o arquivo de configuração do Git com o comando a baixo, utilizando um editor de texto (geralmente está nesse caminho):
@@ -58,8 +49,6 @@ Erro de Conexão do Git - Porta 22 Bloqueada
     `Host bitbucket.org`</br>
     &nbsp;&nbsp;&nbsp;&nbsp;`Hostname  altssh.bitbucket.org`</br>
     &nbsp;&nbsp;&nbsp;&nbsp;`Port  443`
-
---------------------
 
 ## Correção para o GitLab
 
@@ -74,20 +63,16 @@ Erro de Conexão do Git - Porta 22 Bloqueada
     &nbsp;&nbsp;&nbsp;&nbsp;`User git`</br>
     &nbsp;&nbsp;&nbsp;&nbsp;`Port 443`
 
---------------------
-
 - Exemplo do arquivo modificado:
 
     ![](https://github.com/CristianAmbrosi/tutoriais/blob/master/images/correction-port-22-git.png)
 
---------------------
-
 ## Referências
 
-https://help.github.com/articles/using-ssh-over-the-https-port/
+<https://help.github.com/articles/using-ssh-over-the-https-port>
 
-https://stackoverflow.com/questions/7953806/github-ssh-via-public-wifi-port-22-blocked/
+<https://stackoverflow.com/questions/7953806/github-ssh-via-public-wifi-port-22-blocked>
 
-https://askubuntu.com/questions/610940/ssh-connect-to-host-github-com-port-22-connection-refused
+<https://askubuntu.com/questions/610940/ssh-connect-to-host-github-com-port-22-connection-refused>
 
-https://help.github.com/articles/error-permission-denied-publickey/
+<https://help.github.com/articles/error-permission-denied-publickey>
