@@ -42,3 +42,9 @@ Tutorias para fins de facilitar instalações e tarefas.
 | :---: |
 
 ## Como contribuir
+
+## License
+
+This content is licensed under a [Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License](/LICENCE).
+
+You can view additional details on [this page](https://creativecommons.org/licenses/by-nc-nd/4.0).
